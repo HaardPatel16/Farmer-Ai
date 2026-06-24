@@ -1,0 +1,2 @@
+=== VEGETABLE DRIP FERTIGATION METRICS ===
+Maintain soil electrical conductivity (EC) below 1.2 dS/m. Inject precise N and K splits every 4 days during active fruit harvest windows across solanaceous and cucurbit crops.

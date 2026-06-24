@@ -1,0 +1,100 @@
+================================================================================
+MANGO CROP CALENDAR — GUJARAT — FEBRUARY
+================================================================================
+
+CROP: Mango
+MONTH: February
+PRIMARY REGION: South Gujarat, Saurashtra
+DOCUMENT TYPE: Month-wise Activity Calendar
+
+================================================================================
+1. SOIL PREPARATION FOR FEBRUARY
+================================================================================
+  • Orchard soil management: apply organic manure (FYM 25-50 kg per tree) in basin around tree trunk
+  • Mulch the basin with dry grass or straw to conserve soil moisture and regulate temperature
+  • In heavy soils, ensure drainage to prevent root rot during pre-monsoon showers
+  • Soil pH should be 5.5-7.5; apply lime if pH < 5.5 (common in South Gujarat laterite soils)
+  • Conduct soil testing every 2-3 years to monitor nutrient status and pH
+
+================================================================================
+2. SOWING / PLANTING DATES
+================================================================================
+  • NO field sowing in February for mango — mango is a perennial orchard crop
+  • If planning new orchard, February is ideal for planting grafted seedlings in South Gujarat
+  • Dig pits 1m x 1m x 1m one month before planting; fill with FYM + soil + 100g DAP per pit
+  • Plant grafted seedlings (e.g., Kesar, Dasheri, Langda) at the same depth as in nursery bag
+  • For existing orchards, focus on flower bud initiation and fruit set management
+
+================================================================================
+3. IRRIGATION SCHEDULE
+================================================================================
+  • Pre-flowering irrigation: provide one deep irrigation (100mm) in first week of February to induce flowering
+  • In South Gujarat, mango orchards are often irrigated with drip or micro-sprinklers
+  • Critical irrigation at flower bud break and fruit set stages; do NOT allow moisture stress
+  • Avoid over-irrigation — waterlogging causes root rot and flower drop
+  • In Saurashtra, some farmers use basin irrigation for mango orchards
+
+================================================================================
+4. FERTILIZER TIMING & DOSES
+================================================================================
+  • Apply organic manure (FYM 25-50 kg per tree) + 500g DAP + 250g potash per tree in February
+  • Foliar spray of 2% urea + 0.5% potassium sulphate at pre-flowering for better flower bud initiation
+  • Micronutrients: foliar spray of 0.5% zinc sulphate + 0.2% boron at flower bud break for better fruit set
+  • If tree is too vigorous, reduce nitrogen and increase potash to promote flowering
+  • For alternate bearing trees, apply paclobutrazol (cultar) 10g per metre canopy diameter in February to induce flowering
+
+================================================================================
+5. PEST SCOUTING DATES
+================================================================================
+  • Mango hopper: spray Imidacloprid 0.3ml per litre before flower bud break; hoppers cause flower drop and sooty mould
+  • Mealy bug: if white cottony masses appear on trunk and branches, spray buprofezin 1.5ml per litre + bind sticker
+  • Powdery mildew: if white powdery patches appear on young leaves and flowers, spray Sulphur 2g per litre or Carbendazim 1g per litre
+  • Anthracnose: if black spots appear on leaves and twigs, spray Mancozeb 2.5g per litre
+  • Fruit fly: set up methyl eugenol traps (10 per hectare) at fruit set stage to monitor and control
+  • Scale insects: if scales appear on branches, spray Imidacloprid 0.5ml per litre or use horticultural mineral oil
+
+================================================================================
+6. HARVESTING WINDOWS
+================================================================================
+  • NO harvest in February for most mango varieties — this is flowering and fruit set stage
+  • Early varieties (some Dasheri) may have very early harvest in South Gujarat by month-end
+  • Continue monitoring flower bud initiation, fruit set, and fruit drop
+  • Record keeping: document flowering date for harvest planning (May-July)
+
+================================================================================
+7. POST-HARVEST OPERATIONS
+================================================================================
+  • NO post-harvest operations in February for most mango orchards
+  • Early harvested Dasheri: handle carefully to avoid bruising; pack in corrugated boxes with cushioning
+  • Grade mangoes by size, colour, and maturity; export-quality mangoes require hot water treatment (52°C for 5 minutes)
+  • Store harvested mangoes at 12-14°C for ripening; do NOT store below 10°C — causes chilling injury
+  • Contact exporters or APMC for price information and procurement schedules
+
+================================================================================
+8. WEATHER WATCH
+================================================================================
+  • Day temperatures rise to 28-35°C; nights 12-18°C; transition from winter to pre-summer
+  • This temperature range is ideal for mango flower bud initiation in most varieties
+  • Unseasonal rain in February can cause flower drop and fungal diseases (anthracnose, powdery mildew)
+  • Dew formation increases — favours fungal diseases; plan preventive sprays accordingly
+  • Wind speeds increase in Saurashtra — can cause flower and fruit drop; provide windbreaks if needed
+
+================================================================================
+9. GOVERNMENT SCHEME DEADLINES
+================================================================================
+  • Mango orchard development scheme: contact district horticulture office for subsidy on new plantation
+  • Drip irrigation subsidy under GGRC: apply for orchard drip system if not already installed
+  • Soil Health Card: collect updated card from KVK or ATMA office before fertilizer application
+  • PM-KISAN: verify installment eligibility and Aadhaar seeding status
+  • Horticulture Mission for North East & Himalayan States (HMNEH) — nursery subsidy claims
+
+================================================================================
+10. RELATED TOPICS & QUICK LINKS
+================================================================================
+  • Related: calendar_february.txt, calendar_march.txt, calendar_mango_february.txt
+  • Advisories: spray_safety.txt, post_harvest_veg_storage.txt, soil_testing_guide.txt
+  • Weather: imd_forecast_guide.txt, heat_wave_advisory.txt
+  • Helpline: Kisan Call Centre 1800-180-1551, Gujarat Horticulture Department 079-232-58191
+  • Online: https://ikhedut.gujarat.gov.in, https://www.nhb.gov.in (National Horticulture Board)
+
+================================================================================

@@ -1,0 +1,106 @@
+================================================================================
+TOMATO CROP CALENDAR — GUJARAT — NOVEMBER
+================================================================================
+
+CROP: Tomato
+MONTH: November
+PRIMARY REGION: South Gujarat, Saurashtra
+DOCUMENT TYPE: Month-wise Activity Calendar
+
+================================================================================
+1. SOIL PREPARATION FOR NOVEMBER
+================================================================================
+  • Well-drained sandy loam soils with pH 6.0-6.8 ideal for tomato
+  • Apply FYM 20-25 tonnes per hectare 2-3 weeks before transplanting
+  • Prepare raised beds (20-25 cm high) for better drainage and root development
+  • In main field, apply basal dose DAP 100 kg + potash 50 kg per hectare at transplanting
+  • Ensure excellent drainage — tomato is sensitive to waterlogging and root rot
+
+================================================================================
+2. SOWING / PLANTING DATES
+================================================================================
+  • Rabi tomato nursery sowing in September-October for transplanting in November-December
+  • Raise beds 15cm high, mix FYM 10kg per sq metre; sow seeds in 5cm spaced rows
+  • Cover with thin soil layer; water with rose can daily
+  • Treat seeds with Captan 3g per litre drench to prevent damping off before sowing
+  • Seed rate for nursery: 400-500g per hectare (main field area)
+  • Transplant 30-35 day old seedlings in well-prepared main field at 60cm x 45cm spacing
+
+================================================================================
+3. IRRIGATION SCHEDULE
+================================================================================
+  • First irrigation immediately after transplanting; then every 5-7 days depending on soil type
+  • Maintain soil moisture at 70-80% field capacity for optimal fruit development
+  • Critical irrigation at flowering and fruit setting stages; do NOT allow moisture stress
+  • Reduce irrigation 1 week before harvest to improve fruit firmness and shelf life
+  • Drip irrigation is highly recommended for tomato; use 4-6 litre/hour emitters
+  • Avoid overhead irrigation — increases fungal disease risk (early blight, late blight)
+
+================================================================================
+4. FERTILIZER TIMING & DOSES
+================================================================================
+  • Basal dose at transplanting: DAP 100 kg + potash 50 kg per hectare
+  • First top dressing (50 kg urea per hectare) at 20 days after transplanting
+  • Second top dressing (50 kg urea per hectare) at flowering stage (40 days after transplanting)
+  • Third top dressing (30 kg urea + 25 kg potash per hectare) at fruit development stage (60 days after transplanting)
+  • Micronutrients: foliar spray of 0.5% zinc sulphate + 0.2% boron at flowering for better fruit set
+  • Calcium application: if blossom end rot observed, apply calcium nitrate 20 kg per hectare
+
+================================================================================
+5. PEST SCOUTING DATES
+================================================================================
+  • Fruit borer (Helicoverpa armigera): if larvae found in fruits, spray Bacillus thuringiensis (Bt) 1g per litre or Indoxacarb 0.5ml/litre
+  • Whitefly: use yellow sticky traps; spray Buprofezin 1.5ml per litre if threshold crossed
+  • Aphids: if colonies exceed 10 per plant, spray Imidacloprid 0.5ml per litre
+  • Early blight (Alternaria solani): if brown spots with concentric rings appear, spray Mancozeb 2.5g per litre
+  • Late blight (Phytophthora infestans): if water-soaked lesions appear on leaves, spray Metalaxyl+Mancozeb 2.5g per litre immediately
+  • Root knot nematode: if galls observed on roots, apply Carbofuran 3G 20 kg per hectare at planting
+
+================================================================================
+6. HARVESTING WINDOWS
+================================================================================
+  • NO harvest in November for Rabi tomato — crop is in nursery or early vegetative stage after transplanting
+  • Kharif tomato (transplanted in July-August) may be in harvest stage in South Gujarat
+  • Harvest Kharif tomato when fruits turn fully red (or desired colour); pick every 3-4 days
+  • Do NOT harvest over-ripe fruits — reduces marketability and shelf life
+  • Grade fruits by size, colour, and firmness before marketing; pack in corrugated boxes with cushioning
+
+================================================================================
+7. POST-HARVEST OPERATIONS
+================================================================================
+  • Harvest Kharif tomato in early morning or late evening to avoid heat stress
+  • Pack in corrugated boxes with cushioning; do NOT pack over-ripe or damaged fruits
+  • Store at 10-12°C for ripening; do NOT store below 8°C — causes chilling injury
+  • For long-distance transport, harvest at breaker stage (pink colour) and ripen during transport
+  • Maintain records of quantity, grade, and sale price for PMFBY and income documentation
+  • Contact vegetable traders, processors, or eNAM for transparent pricing
+
+================================================================================
+8. WEATHER WATCH
+================================================================================
+  • Day temperatures: 28-32°C; nights 12-16°C; pleasant weather ideal for tomato transplanting
+  • November dew is heavy — favours fungal diseases (early blight, late blight); increase scouting frequency
+  • First western disturbances may bring light rain to North Gujarat; cover nursery with polythene if heavy rain predicted
+  • Cold wave risk in North Gujarat by month-end; protect young transplants with light mulch or row covers
+  • IMD forecast: monitor for western disturbance predictions and cold wave warnings
+
+================================================================================
+9. GOVERNMENT SCHEME DEADLINES
+================================================================================
+  • PMFBY enrollment: complete by 15th December for Rabi tomato; visit PACS or bank branch
+  • Tomato seed subsidy: purchase certified seeds from authorized dealers with bill and Aadhaar
+  • Polyhouse/greenhouse subsidy: contact district horticulture office for protected cultivation subsidy
+  • Soil Health Card: collect updated card from KVK or ATMA office before fertilizer application
+  • Kisan Credit Card (KCC): renew or apply for fresh credit before sowing season
+  • PM-KISAN: verify installment eligibility and Aadhaar seeding status
+
+================================================================================
+10. RELATED TOPICS & QUICK LINKS
+================================================================================
+  • Related: calendar_november.txt, calendar_december.txt, calendar_february.txt
+  • Advisories: post_harvest_veg_storage.txt, spray_safety.txt, soil_testing_guide.txt
+  • Weather: imd_forecast_guide.txt, cold_wave_frost_protection.txt
+  • Helpline: Kisan Call Centre 1800-180-1551, Gujarat Horticulture Department 079-232-58191
+  • Online: https://ikhedut.gujarat.gov.in, https://www.nhb.gov.in (National Horticulture Board)
+
+================================================================================

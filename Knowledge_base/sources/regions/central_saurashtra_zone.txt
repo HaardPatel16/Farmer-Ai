@@ -1,0 +1,130 @@
+================================================================================
+CENTRAL SAURASHTRA AGRO-CLIMATIC ZONE — COMPLETE REGIONAL PROFILE
+================================================================================
+
+1. REGION OVERVIEW & LOCATION
+--------------------------------------------------------------------------------
+Central Saurashtra is one of the most agriculturally significant yet water-stressed
+agro-climatic zones of Gujarat. It encompasses the districts of Surendranagar,
+Botad, Morbi, and parts of Rajkot district. Geographically, this zone lies in the
+heart of the Saurashtra peninsula, characterised by gently undulating terrain with
+scattered hillocks and extensive plains. It serves as a transitional zone between
+the more humid coastal Saurashtra and the arid western Saurashtra regions. The
+zone is heavily dependent on rainfed agriculture, with limited access to major
+river systems, making water management the central challenge for farmers.
+
+2. CLIMATE & RAINFALL
+--------------------------------------------------------------------------------
+Rainfall Pattern: The zone receives low to moderate rainfall ranging from 500mm to
+650mm annually, with the majority concentrated during the south-west monsoon
+(June to September). The coefficient of rainfall variability is high, often exceeding
+30%, which leads to frequent meteorological droughts.
+
+Temperature: Summer temperatures (April–June) range between 38°C and 44°C, with
+extreme peaks touching 46°C during heatwaves. Winter temperatures (December–February)
+are mild, ranging from 10°C to 28°C. The high summer temperatures accelerate
+evapotranspiration, further stressing water resources.
+
+Humidity: Relative humidity is low (25–40%) during the hot summer months, rising
+to 60–80% during the monsoon. The dry summer winds (locally called "loo") cause
+significant moisture stress in standing crops.
+
+Drought/Flood Risk: Drought is the dominant climatic risk. The zone experiences
+moderate to severe drought once every 3–4 years. Flooding is rare but localized
+waterlogging can occur in low-lying areas after intense monsoon showers. IMD
+advisories recommend kharif sowing only after assured rainfall of 80mm within a
+week.
+
+3. SOIL CHARACTERISTICS
+--------------------------------------------------------------------------------
+The dominant soil type is medium black cotton soil (vertisol), with patches of
+shallow black soil and rocky outcrops. The soil is clay-rich (40–50% clay content),
+which imparts high water-holding capacity but also causes poor drainage and
+waterlogging in depressions. Soil depth varies from 30cm to 80cm. Fertility status:
+moderate in potassium, low to moderate in available phosphorus, and generally low
+in organic matter (0.3–0.6%). Zinc deficiency is widespread. Soil crusting after
+heavy rains can impede seedling emergence in groundnut.
+
+4. MAJOR CROPS & CROP ROTATION
+--------------------------------------------------------------------------------
+Kharif Crops:
+  • Groundnut — the most important crop; Gujarat-1, GG-7, GG-20, and ICGV-91114
+    are recommended varieties. Sowing window: June 20 to July 15.
+  • Cotton — Bt cotton dominates on medium-heavy soils; popular hybrids include
+    RCH-2, Bunny, and various BG-II varieties. Sowing: June 15 to July 10.
+  • Bajra (Pearl Millet) — GHB-538, GHB-732 on lighter soils; drought escape crop.
+  • Sesame (Til) — GT-1, GT-2 as mixed or intercrop with groundnut.
+  • Castor — GCH-4, GCH-7 on deeper soils with residual moisture.
+
+Rabi Crops (limited, on residual moisture or irrigation):
+  • Wheat — GW-273, GW-322 on check-dam irrigated pockets.
+  • Chickpea — GG-1, GG-2 on medium black soils.
+  • Cumin — high-value spice crop in irrigated areas.
+
+Recommended Rotations:
+  • Groundnut – Wheat (irrigated)
+  • Cotton – Chickpea
+  • Bajra – Gram (on lighter soils)
+  • Groundnut + Castor (intercropping 6:2 ratio)
+
+5. WATER RESOURCES
+--------------------------------------------------------------------------------
+Groundwater is the primary source of irrigation, but water tables have declined
+by 2–4 metres over the past two decades due to over-extraction. The zone has no
+major river canal command except minor tributaries. Check dams, farm ponds, and
+percolation tanks are the backbone of water harvesting. The Sujalam Sufalam and
+Sauni Yojana schemes have improved canal and pipeline connectivity in some talukas.
+Lift irrigation from seasonal rivers (Bhogavo, Demi) is practiced in limited areas.
+
+6. AGRICULTURAL PRACTICES
+--------------------------------------------------------------------------------
+Sowing Windows: Kharif sowing is strictly tied to monsoon onset — typically
+June 20 to July 15. Delayed sowing beyond July 20 significantly reduces groundnut
+yields.
+
+Irrigation Methods: Drip irrigation is strongly promoted for cotton and groundnut
+under the PM-KISAN and GGRC (Gujarat Green Revolution Company) subsidy schemes.
+Sprinkler irrigation is used for wheat and fodder. Micro-irrigation coverage has
+expanded significantly in the last decade.
+
+Intercropping: Groundnut + Castor (6:2) and Groundnut + Cotton (1:1 in some
+areas) are common. Mixed cropping of bajra + pigeon pea is practiced in marginal
+areas.
+
+Soil & Water Conservation: Contour bunding, graded bunding, and farm pond construction
+are essential. Laser land levelling is gaining popularity for water-efficient
+irrigation.
+
+7. COMMON CHALLENGES
+--------------------------------------------------------------------------------
+  • Pests: Spodoptera in cotton, leaf miner in groundnut, white grub (Holotrichia)
+    in groundnut during monsoon.
+  • Diseases: Tikka leaf spot and collar rot in groundnut; wilt and bollworm
+    (despite Bt) in cotton.
+  • Weather: Delayed monsoon, mid-season dry spells (July–August breaks), and
+    terminal drought during pod-filling in groundnut.
+  • Soil: Zinc deficiency, iron chlorosis in calcareous patches, soil crusting
+    and poor drainage in black cotton soils.
+  • Groundwater: Salinity ingress in coastal fringe talukas; fluoride contamination
+    in some parts of Surendranagar.
+
+8. GOVERNMENT SCHEMES APPLICABLE
+--------------------------------------------------------------------------------
+  • Pradhan Mantri Krishi Sinchayee Yojana (PMKSY) — micro-irrigation subsidies
+  • Mukhya Mantri Sujalam Sufalam Jal Sanchay Yojana — water harvesting structures
+  • Soil Health Card Scheme — free soil testing and fertilizer recommendations
+  • National Food Security Mission (NFSM) — pulses and oilseeds
+  • Gujarat State Agricultural Marketing Board (GSAMB) — APMC infrastructure
+  • Kisan Call Centre (KCC) — 1800-180-1551 for crop advisory
+  • Crop Insurance: PMFBY (Pradhan Mantri Fasal Bima Yojana) — mandatory for
+    loanee farmers, optional for others.
+
+9. DISTRICTS INCLUDED IN THIS ZONE
+--------------------------------------------------------------------------------
+  • Surendranagar (entire district)
+  • Botad (entire district)
+  • Morbi (entire district)
+  • Rajkot district (partially — Dhoraji, Upleta, Jetpur talukas predominantly;
+    Rajkot city and surrounding areas fall under Middle Gujarat zone influence)
+
+================================================================================

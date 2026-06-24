@@ -1,0 +1,106 @@
+BEEKEEPING WITH APIS MELLIFERA (EUROPEAN HONEYBEE) IN GUJARAT
+===============================================================
+
+OVERVIEW
+Apis mellifera ligustica (Italian bee) is the most commercially kept bee in Gujarat 
+for large-scale honey production. Migratory beekeepers from Punjab, Haryana, and 
+Rajasthan regularly bring mellifera colonies into Gujarat during Rabi season for 
+mustard and other crop pollination and honey production.
+
+CHARACTERISTICS OF APIS MELLIFERA
+- Large colony size: 40,000-60,000 bees
+- High honey production: 25-50 kg/colony/year
+- Docile temperament; easier to manage than Apis cerana
+- Not native to India; more susceptible to Varroa mite
+- Less prone to absconding; stays in hive through lean periods
+- Ideal for commercial and migratory beekeeping
+
+HIVE SYSTEM — LANGSTROTH (STANDARD)
+- Brood box (Deep super): 50 × 41 × 24 cm; 10 frames
+- Honey supers (Shallow): added above brood box during honey flow
+- Bottom board, inner cover, telescoping outer cover
+- Standard across India; frames and parts interchangeable
+- Cost per hive: ₹1,200-1,800 (wooden); ₹2,500-3,500 (plastic)
+
+ESTABLISHING COLONIES
+- Purchase nucleus colony (NUC) from established beekeeper
+- NUC contains: marked queen, 3-4 frames brood, 1-2 frames honey, nurse bees
+- Cost: ₹1,800-2,500 per NUC colony
+- Transfer NUC to full Langstroth hive at location
+- Feed 1:1 sugar syrup for 2 weeks after transfer to establish
+
+SEASONAL MANAGEMENT IN GUJARAT
+
+Prime Honey Flow (November-March)
+- Mustard bloom (Banaskantha, Patan, Mehsana): November-January
+- Cumin and fennel (North Gujarat, Saurashtra): November-February
+- Coriander: November-January; yields 15-20 kg/colony
+- Sunflower: varies by district; good nectar flow
+This is the main earning period for Gujarat beekeepers.
+
+Monsoon (June-September)
+- Move colonies to areas with wild flowers (Gir, Dangs forests)
+- Colonies build strength on diverse flora
+- Honey not extracted (bees need stores); focus on colony strength
+
+Summer (March-May)
+- Scarce nectar; reduce colony to 1 super + brood box
+- Feed sugar syrup (1:1) to prevent starvation
+- Relocate to cooler zones or forest areas
+- Inspect for Varroa mite and treat if needed
+
+MIGRATORY BEEKEEPING IN GUJARAT
+Gujarat is a key destination for north Indian migratory beekeepers:
+- Colonies arrive from Punjab/Haryana in October-November
+- Follow mustard bloom: Banaskantha → Patan → Mehsana → Sabarkantha
+- Move to Rabi spice crops (cumin, fennel) in January-February
+- Return north before monsoon (May-June)
+Migratory route yields 30-50 kg honey/colony/season.
+
+HONEY EXTRACTION (COMMERCIAL)
+- Use radial or tangential extractor (stainless steel)
+- Uncap frames with heated knife or cold uncapping fork
+- Extract when frames are 80%+ capped (moisture <18%)
+- Strain through 200 micron and 400 micron filters
+- Fill in food-grade containers; label with flora type and date
+- Varieties: mustard honey, multiflora honey, forest honey (highest value)
+
+VARROA MITE MANAGEMENT (CRITICAL FOR MELLIFERA)
+- Most serious pest; can destroy colony within months if unmanaged
+- Monitor: sticky bottom board; count mite fall
+- Treatment options:
+  * Oxalic acid 3.2% solution: 5 ml/seam (brood-free period)
+  * Formic acid strips (MAQS): place in hive during honey flow
+  * Apivar (amitraz strips): effective but not during honey extraction
+- Integrated Pest Management: rotate treatments; never use banned chemicals
+
+QUEEN MANAGEMENT
+- Replace queens every 1-2 years for peak production
+- New queens available from queen-rearing operations in Punjab/Haryana
+- Mark queens with paint pen (year colour code) for easy identification
+- Signs of queenlessness: no eggs, agitated bees, multiple eggs/cell (laying workers)
+
+HONEY QUALITY AND CERTIFICATION
+- FSSAI license required for commercial honey sales
+- Agmark certification: national quality grading system
+- Organic honey: requires 3-year chemical-free record; APEDA certification
+- Adulteration testing: NMR test at CFTRI Mysore for premium buyers
+
+ECONOMICS (50 COLONIES, COMMERCIAL SETUP)
+- Setup cost: ₹3-5 lakh (hives, extractor, transport vehicle, protective gear)
+- Annual honey production: 50 colonies × 35 kg avg = 1,750 kg
+- Revenue (₹200/kg wholesale or ₹400/kg retail): ₹3.5-7.0 lakh
+- Pollination income: ₹500-1,500/colony/season: additional ₹25,000-75,000
+- Net profit (year 2 onwards): ₹1.5-3.0 lakh/year
+
+GOVERNMENT SUPPORT
+- National Bee Mission (NBM): subsidy on hives, extractors, beeswax equipment
+- NABARD: term loan for commercial apiaries at 4% interest
+- Honey testing labs at KVIC centres (subsidised testing)
+- Export support through APEDA for certified honey
+
+CONTACT
+- KVIC (Khadi and Village Industries Commission): 1800-3000-0034
+- National Bee Board: nbb.gov.in
+- Gujarat Agro: equipment and NUC colony procurement
+- All India Coordinated Research Project on Honey Bees, PAU Ludhiana

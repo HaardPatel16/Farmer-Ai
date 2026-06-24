@@ -1,0 +1,110 @@
+WEATHER-BASED IRRIGATION ADVISORY FOR GUJARAT FARMERS
+=======================================================
+
+OVERVIEW
+Irrigation accounts for 70-80% of total water use in Gujarat. Over-irrigation wastes water 
+and increases costs, while under-irrigation reduces yields. Weather-based irrigation 
+scheduling helps farmers apply the right amount of water at the right time, saving 
+water and improving crop productivity.
+
+KEY CONCEPTS
+
+Evapotranspiration (ET)
+- ET is the combination of soil evaporation and plant transpiration
+- It represents how much water crops actually use
+- Affected by temperature, humidity, wind speed, and solar radiation
+- Higher temperatures = higher ET = more irrigation needed
+
+Reference ET (ETo)
+- Standard ET calculated for a reference grass crop
+- Available from IMD agromet stations for Gujarat districts
+- Used to calculate actual crop water needs (ETc = ETo × Kc)
+
+Crop Coefficient (Kc)
+- Ratio of crop ET to reference ET
+- Changes through crop growth stages
+- Example for groundnut: Kc = 0.4 (early growth), 1.15 (peak), 0.6 (late season)
+
+DETERMINING WHEN TO IRRIGATE
+
+Feel Method (Simple, No Instruments)
+- Take soil from root zone depth (20-30 cm)
+- Press firmly in hand:
+  * Soil forms ball that breaks on slight pressure = RIGHT MOISTURE
+  * Soil doesn't form ball, feels dry = IRRIGATE NOW
+  * Soil is wet, sticks together, water drips = TOO WET, delay irrigation
+
+Tensiometer Method
+- Device measures soil water tension (suction)
+- Reading <20 centibars = sufficient moisture
+- Reading 20-40 centibars = irrigate soon
+- Reading >40-50 centibars = crop under stress, irrigate immediately
+- Cost: ₹800-1500 per set; available at KVK
+
+IMD-Based Approach
+- Use weekly ET data from IMD agromet advisory
+- If weekly rainfall < 60% of weekly ETc, apply irrigation
+- Available from Meghdoot app and KVK
+
+CROP-SPECIFIC IRRIGATION GUIDELINES FOR GUJARAT
+
+Groundnut (Kharif, Saurashtra)
+- Critical stages: Pegging (45-55 DAS), pod filling (60-80 DAS)
+- Skip irrigation in early rains if 50+ mm received in a week
+- Total water requirement: 450-550 mm in 120-day crop
+- Drip: 4-5 litres/plant/day during pod fill; 2-3 litres/plant at other stages
+- Avoid waterlogging during pod formation (causes pod rot)
+
+Cotton
+- Critical stages: Squaring (40-60 DAS), boll development (70-120 DAS)
+- Water requirement: 700-900 mm for entire season
+- Drip: 2.5-3 litres/plant/day at boll stage
+- Withhold irrigation 15 days before final harvest to force boll opening
+
+Castor (Kharif, North Gujarat)
+- Drought tolerant but responds well to 2-3 supplemental irrigations
+- Critical stage: Inflorescence emergence and capsule formation
+- Apply 40-50 mm at each critical stage if no rain
+
+Pearl Millet (Bajra)
+- Mostly rainfed in Gujarat; 1-2 supplemental irrigations increase yield 30%
+- Critical stages: Boot stage (panicle formation) and grain filling
+- Apply 30-40 mm at each stage if rainfall is inadequate
+
+Wheat (Rabi, Middle and South Gujarat)
+- Critical stages: Crown root initiation (20-25 DAS), tillering (40-45 DAS), 
+  jointing (55-60 DAS), flowering (75-80 DAS), grain filling (95-100 DAS)
+- 5-6 irrigations of 50-60 mm each = optimal
+- First irrigation most critical — never skip CRI stage
+
+Cumin (North Gujarat, Saurashtra Rabi)
+- Very sensitive to excess water — well-drained sandy loam required
+- 3-4 light irrigations (25-30 mm each)
+- Do not irrigate within 3 days of predicted rain
+- Withhold last irrigation 10 days before harvest
+
+DRIP IRRIGATION — SCHEDULING TIPS
+- Run drip for shorter, more frequent cycles rather than long cycles
+- Soil type matters: sandy soils need more frequent, shorter runs
+- Check tensiometer before running drip
+- Fertigate (inject fertilizer through drip) during active growth stages
+- Flush drip lines monthly to prevent clogging
+
+WATER SAVING TIPS
+- Irrigate in early morning or evening to reduce evaporation
+- Mulching reduces water need by 20-30%
+- Land levelling reduces run-off and improves water distribution
+- Use soil moisture sensors (tensiometers) to avoid guesswork
+- Avoid flood irrigation on sandy soils (high percolation loss)
+
+SUBSIDY FOR MICRO-IRRIGATION IN GUJARAT
+- Drip/Sprinkler irrigation subsidy: 55-80% of cost (SC/ST/small farmers: higher)
+- Apply through: iKhedut Portal (ikhedut.gujarat.gov.in)
+- Component: Gujarat Micro Irrigation Mission (GMIM) under PM Krishi Sinchayee Yojana
+- Process: Apply online → site inspection → installation by approved vendor → subsidy
+
+CONTACT
+- Gujarat Green Revolution Company (GGRC): ggrc.co.in — micro-irrigation support
+- IMD Agro advisory for ET data: Meghdoot App
+- Water and Sanitation Management Organisation (WASMO): rural water data
+- Nearest KVK for tensiometer demonstration

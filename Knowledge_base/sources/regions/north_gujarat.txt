@@ -1,0 +1,145 @@
+================================================================================
+NORTH GUJARAT AGRO-CLIMATIC ZONE — COMPLETE REGIONAL PROFILE
+================================================================================
+
+1. REGION OVERVIEW & LOCATION
+--------------------------------------------------------------------------------
+North Gujarat is the arid to semi-arid agro-climatic zone of Gujarat, characterised
+by high temperatures, low rainfall, and a heavy dependence on irrigation. It
+encompasses the districts of Banaskantha, Patan, Mehsana, Sabarkantha, and parts
+of Gandhinagar. The terrain is predominantly flat to gently rolling, with the
+Aravalli hills forming the eastern boundary in Sabarkantha. This zone is the
+"spice bowl" of Gujarat, producing world-famous cumin, fennel, and fenugreek.
+It is also a major potato-growing region, often called the "potato belt" of Gujarat.
+Agriculture here is almost entirely irrigated, either from the Narmada canal
+system or from deep borewells.
+
+2. CLIMATE & RAINFALL
+--------------------------------------------------------------------------------
+Rainfall Pattern: Annual rainfall is low to moderate, ranging from 550mm to 750mm,
+with the western parts (Patan, Banaskantha) receiving less than 600mm. The monsoon
+is short (mid-June to mid-September) and erratic. The zone relies heavily on
+post-monsoon rabi cultivation under irrigation.
+
+Temperature: Extreme temperatures. Summer (April–June) ranges from 40°C to 46°C,
+with heatwaves common. The highest temperatures in Gujarat are recorded in this
+zone. Winter (December–January) is cold, with temperatures from 6°C to 25°C.
+Frost events occur in January, posing a risk to potato and cumin crops.
+
+Humidity: Very low humidity (20–35%) during summer, rising to 55–70% during monsoon.
+The arid climate results in very high evapotranspiration demand.
+
+Drought/Flood Risk: Drought is frequent, particularly in Banaskantha and Patan.
+Flooding is rare but can occur along the Banas and Saraswati rivers during
+exceptional monsoon years. Hailstorms in March can damage maturing rabi crops.
+
+3. SOIL CHARACTERISTICS
+--------------------------------------------------------------------------------
+  • Sandy Loam Soils — Dominant in Mehsana, Patan, and Banaskantha. These are
+    well-drained but have low water-holding capacity and low organic matter.
+    pH 7.5–8.5. High calcium carbonate content in some areas.
+  • Alluvial Soils — Along the Banas and Saraswati river basins in Sabarkantha
+    and parts of Banaskantha. More fertile and deeper.
+  • Medium Black Soils — Patches in Mehsana and Sabarkantha. Better water retention
+    but prone to waterlogging if over-irrigated.
+
+General fertility: Low organic matter (0.2–0.5%), low nitrogen, moderate to high
+potassium, variable phosphorus. Zinc, iron, and boron deficiencies are common.
+Salinity is emerging in Narmada canal command areas with poor drainage.
+
+4. MAJOR CROPS & CROP ROTATION
+--------------------------------------------------------------------------------
+Kharif Crops (limited, mostly rainfed):
+  • Bajra (Pearl Millet) — GHB-538, GHB-732; the staple kharif crop on rainfed
+    sandy soils.
+  • Cotton — Short-duration Bt cotton in irrigated pockets of Mehsana and Patan.
+  • Castor — GCH-4 on deeper soils.
+  • Guar — drought-tolerant fodder and industrial crop.
+
+Rabi Crops (the dominant agricultural season):
+  • Potato — Kufri Chandramukhi, Kufri Pukhraj, Kufri Jyoti; the most important
+    cash crop. Sowing: October–November. Harvest: January–February.
+  • Cumin — Gujarat's most famous spice; GC-1, GC-2, Gujarat Cumin-4.
+    Sowing: November–December. Requires very precise irrigation and nitrogen
+    management.
+  • Fennel — Gujarat Fennel-1, GF-12; high-value aromatic seed crop.
+  • Fenugreek (Methi) — leafy and seed varieties for local and export markets.
+  • Mustard — Rai-5, GM-1 in non-irrigated areas.
+  • Wheat — GW-273, GW-322 in irrigated areas.
+
+Summer (Zaid) Crops:
+  • Watermelon, Muskmelon — on sandy soils with drip irrigation.
+  • Cluster Bean (Guar) — fodder and vegetable.
+
+Recommended Rotations:
+  • Potato – Cumin – Fallow (most profitable 2-year system)
+  • Bajra – Mustard (rainfed)
+  • Cotton – Wheat (irrigated)
+  • Potato – Fennel – Fenugreek (intensive spice rotation)
+
+5. WATER RESOURCES
+--------------------------------------------------------------------------------
+North Gujarat is critically dependent on irrigation:
+  • Narmada Canal System — The lifeline of the zone. The Narmada Main Canal and
+    branch canals (Saraswati, Dhora, etc.) command large parts of Mehsana, Patan,
+    Banaskantha, and Sabarkantha. However, canal water availability is seasonal
+    and sometimes inadequate.
+  • Groundwater — Deep tubewells (100–200m) are common in Mehsana and Patan,
+    where the water table has fallen dramatically over the past 30 years. In
+    some areas, fluoride and nitrate contamination is reported.
+  • Minor Rivers — Banas, Saraswati, and Meshwo rivers provide limited surface water.
+  • Check Dams and Farm Ponds — increasingly constructed under MGNREGA and state
+    schemes for rainwater harvesting.
+
+6. AGRICULTURAL PRACTICES
+--------------------------------------------------------------------------------
+Sowing Windows: Kharif sowing is delayed (July 1–20) due to late monsoon arrival.
+Rabi sowing (potato, cumin, fennel) is October–December. Zaid sowing is February–March.
+
+Irrigation Methods: Drip irrigation is dominant for potato, cumin, fennel, and
+vegetables. Sprinkler irrigation is used for wheat and mustard. Flood irrigation
+is still used for potato in some traditional areas but is being replaced by drip.
+
+Intercropping: Cumin + Fennel (alternate rows) is a traditional practice. Potato +
+Mustard is experimented with. Multi-tier cropping with castor + pigeon pea on
+marginal lands.
+
+Special Practices: For potato — precise nitrogen management (split application),
+earthing-up, and prophylactic blight sprays. For cumin — very light, frequent
+irrigations; weed control is critical in early stages. Mulching with straw for
+summer vegetables. Frost protection for potato and cumin using smoke or sprinkler
+irrigation during cold nights.
+
+7. COMMON CHALLENGES
+--------------------------------------------------------------------------------
+  • Pests: Potato tuber moth, red spider mite in cumin, aphids in mustard, whitefly
+    in cotton, thrips in onion.
+  • Diseases: Late blight and early blight in potato; wilt in cumin; powdery mildew
+    in fennel; leaf curl in chilli.
+  • Weather: Heatwaves during flowering in cumin (reduces seed set); frost damage
+    in January; hailstorms in March damaging potato and mustard.
+  • Soil: Rapid nutrient leaching in sandy soils; salinity build-up in canal command
+    areas with poor drainage; micronutrient deficiencies (zinc, iron, boron).
+  • Water: Severe groundwater depletion in Mehsana and Patan; rising irrigation
+    costs; canal water shortages in peak rabi season.
+
+8. GOVERNMENT SCHEMES APPLICABLE
+--------------------------------------------------------------------------------
+  • PMKSY — micro-irrigation subsidies (very high adoption in this zone).
+  • Narmada Canal Command Area Development — water distribution and canal lining.
+  • Soil Health Card Scheme — intensive soil testing for precision nutrient management.
+  • National Horticulture Mission — potato, onion, and vegetable cultivation support.
+  • Spices Board of India — cumin and fennel export promotion, quality improvement.
+  • PMFBY — crop insurance for potato, cumin, cotton, and bajra.
+  • MGNREGA — water harvesting structures and farm pond construction.
+  • Gujarat Agro Industries Corporation — subsidised farm machinery and drip kits.
+
+9. DISTRICTS INCLUDED IN THIS ZONE
+--------------------------------------------------------------------------------
+  • Banaskantha (entire district)
+  • Patan (entire district)
+  • Mehsana (entire district)
+  • Sabarkantha (entire district)
+  • Gandhinagar (partially — northern talukas; southern parts overlap with Middle Gujarat)
+
+================================================================================

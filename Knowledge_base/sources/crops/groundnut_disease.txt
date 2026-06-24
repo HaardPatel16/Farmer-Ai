@@ -1,0 +1,10 @@
+=== PATHOLOGICAL MANAGEMENT FOR GROUNDNUT ===
+Target Threats: Tikka Leaf Spot, Rust, and Collar/Stem Rot
+
+1. TIKKA LEAF SPOT (Early & Late Cercospora Spots)
+- Manifestation: Circular brown spots with yellow halos spreading across foliage, leading to premature leaf drop and reduced photosynthesis.
+- Fungicidal Schedule: Spray Hexaconazole 5% EC @ 15 ml or Tebuconazole 25.9% EC @ 10 ml per 10 liters of water at 45 and 60 days after sowing.
+
+2. STEM ROT (Sclerotium rolfsii)
+- Manifestation: White, web-like fungal mycelium appearing at the soil-stem interface, followed by rapid rotting of the collar region and pod shedding.
+- Biocontrol Protocol: Apply Trichoderma harzianum @ 2.5 kg mixed with 500 kg of well-decomposed organic manure or castor cake per hectare during the final interculturing phase.

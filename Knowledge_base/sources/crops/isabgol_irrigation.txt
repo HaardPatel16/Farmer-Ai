@@ -1,0 +1,2 @@
+=== ISABGOL PRECISION IRRIGATION CRITERIA ===
+Requires only 3 light irrigations in total. First: Immediately post-sowing. Second: 25-30 days after sowing. Third: 50-55 days at spikelet initiation. Critical warning: Any rainfall or heavy irrigation during maturity triggers seed shattering.

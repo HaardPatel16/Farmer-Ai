@@ -1,0 +1,87 @@
+1. SCHEME NAME & FULL OFFICIAL NAME
+   Gujarat State-Specific Agriculture Schemes — Comprehensive guide to Gujarat government schemes beyond central government programs, implemented by the Department of Agriculture, Farmers Welfare & Co-operation, Government of Gujarat.
+
+2. WHAT IS IT
+   Gujarat has several state-specific agriculture schemes that complement central government programs. These schemes are tailored to Gujarat's specific agro-climatic conditions, crop patterns, and farmer needs. The major state schemes include: Mukhyamantri Kisan Sahay Yojana (MKSY) for crop loss compensation without insurance premium; Kisan Suryodaya Yojana for daytime electricity; Gujarat Green Revolution Company (GGRC) for micro-irrigation; Krushi Mati Poshan Yojana (Soil Health Card); Agriculture Raths for mobile advisory; and the Khedut App for digital services. These schemes are funded entirely by the Gujarat state budget and are administered by the state agriculture department. Together, they form a comprehensive safety net for Gujarat farmers, covering insurance, irrigation, power, soil health, and market information.
+
+3. WHO IS ELIGIBLE
+   • All farmers with land records in Gujarat
+   • Specific eligibility varies by scheme:
+     - MKSY: All farmers with Kharif crops (automatic enrollment)
+     - Kisan Suryodaya: Farmers in 15,000+ villages with agricultural power connections
+     - GGRC: All farmers with water source
+     - Soil Health Card: All farmers (free)
+     - Khedut App: All farmers with smartphones
+   • No income limit for most state schemes
+   • SC/ST and small farmers get additional benefits in most schemes
+   • Exclusions: Farmers without land records in Gujarat; institutional landholders
+
+4. BENEFITS PROVIDED
+   • Mukhyamantri Kisan Sahay Yojana (MKSY): Rs 20,000/hectare for 33-60% crop loss; Rs 25,000/hectare for above 60% loss; up to 4 hectares; no premium required
+   • Kisan Suryodaya Yojana: 3-phase electricity for irrigation from 5 AM to 9 PM (previously only 6-8 hours, often at night)
+   • GGRC Micro-Irrigation: 80% subsidy for small farmers (below 5 acres); 55% for large farmers
+   • Soil Health Card (Krushi Mati Poshan Yojana): Free soil testing every 3 years with fertilizer recommendations
+   • Agriculture Raths: Mobile advisory vehicles visiting remote villages with experts
+   • Khedut App: Free weather alerts, mandi prices, pest warnings, and scheme information in Gujarati
+   • Ikhedut Portal: Online application for all state and central schemes with DBT payment
+   • Gujarat State Fertilizer and Chemicals (GSFC) subsidies: Additional state top-up on fertilizer subsidies
+   • State tractor subsidy: Additional 5-10% over central SMAM subsidy for Gujarat farmers
+
+5. HOW TO APPLY (STEP-BY-STEP)
+   For MKSY:
+   Step 1: No application needed — automatic enrollment based on land records.
+   Step 2: If crop loss occurs, the revenue talati conducts a survey.
+   Step 3: Compensation is approved by the district collector and credited to your bank account via DBT.
+   For Kisan Suryodaya:
+   Step 1: No separate application — implemented by the Gujarat Electricity Board (GEB/GUVNL) based on agricultural connection records.
+   Step 2: Power schedule is updated automatically in your area.
+   For GGRC Micro-Irrigation:
+   Step 1: Apply through iKhedut portal or GGRC office with land records and water source proof.
+   Step 2: Field survey and installation by empaneled company.
+   For Soil Health Card:
+   Step 1: Collect soil sample from your field (0-20 cm depth, mix 8-10 sub-samples).
+   Step 2: Submit at taluka agriculture office, KVK, or APMC soil lab with your details.
+   Step 3: Collect the card after 15-20 working days.
+   For Khedut App:
+   Step 1: Download from Play Store/App Store.
+   Step 2: Register with your mobile number and farmer ID.
+   Documents vary by scheme: generally Aadhaar, 7/12, bank passbook, and caste certificate.
+
+6. WHERE TO APPLY
+   • iKhedut portal: ikhedut.gujarat.gov.in — for most state schemes
+   • District Agriculture Office (DAO) — for MKSY grievances and GGRC applications
+   • Taluka Agriculture Office — for soil health card submission and general guidance
+   • KVK (Krishi Vigyan Kendra) — for soil testing and training
+   • GGRC district offices — for micro-irrigation applications
+   • GUVNL/GEB office — for Kisan Suryodaya electricity schedule inquiries
+   • CSC (Common Service Centre) — for online application help
+   • Khedut App — for information and price tracking (not for applications)
+
+7. GUJARAT-SPECIFIC DETAILS
+   Gujarat spends over Rs 5,000 crore annually on state agriculture schemes. MKSY has paid over Rs 2,000 crore in compensation to Gujarat farmers since launch. Kisan Suryodaya has covered 15,000+ villages and benefited 20+ lakh farmers. Gujarat has the highest micro-irrigation coverage in India (25+ lakh hectares). The Khedut App has 2+ million downloads and is among the top agriculture apps in India. Gujarat's Agriculture Raths cover 100% of villages on a rotating schedule. The state has digitized 100% of land records (7/12 extracts) and made them available online. Gujarat has the highest rate of DBT penetration among farmers in India. The state has launched a "Chief Minister's Agriculture Excellence Award" for farmers adopting innovative practices.
+
+8. COMMON PROBLEMS & SOLUTIONS
+   • MKSY compensation not received: Check if your village was declared a "affected area" by the district collector. If eligible but not paid, contact the taluka mamlatdar or district collector office with your 7/12 extract.
+   • Kisan Suryodaya power not available: Contact the local GEB/GUVNL office with your consumer number. The scheme is implemented in phases; some areas may be pending.
+   • GGRC installation delay: Contact the GGRC district office with your application reference number. If the company is delaying, GGRC can reassign.
+   • Soil Health Card not ready: Check at the same lab where you submitted after 20 days. If not ready, contact the district agriculture officer.
+   • Khedut App not working: Update the app; ensure internet connectivity; if issues persist, contact the Khedut support team within the app.
+   • iKhedut portal issues: Clear browser cache; use Chrome/Firefox; if still not working, visit the nearest CSC.
+
+9. RELATED SCHEMES
+   • PM-KISAN — central income support (Rs 6,000/year)
+   • PMFBY — central crop insurance
+   • PMKSY-PDMC — central micro-irrigation scheme (combined with GGRC)
+   • SMAM — central farm mechanization (combined with state tractor subsidy)
+   • AIF — central infrastructure fund (combined with state grants)
+   • Soil Health Card (Central) — combined with Gujarat's Krushi Mati Poshan Yojana
+
+10. CONTACT INFORMATION
+   • Gujarat Agriculture Department: 079-23251001
+   • Gujarat Agriculture Commissioner: 079-23251901
+   • Kisan Call Centre: 1800-180-1551
+   • iKhedut Portal: ikhedut.gujarat.gov.in
+   • Khedut App: Google Play Store / Apple App Store
+   • GGRC: 079-23251001, ggrc.gujarat.gov.in
+   • GUVNL: 1912 (electricity helpline)
+   • District Collector Office: For MKSY grievances and district-level agriculture issues

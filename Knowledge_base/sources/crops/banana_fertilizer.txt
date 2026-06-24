@@ -1,0 +1,2 @@
+=== BANANA FERTIGATION SCHEDULES ===
+Heavy feeder: Requires 300:90:300 grams NPK per plant. Apply full Phosphorus at planting. Split Nitrogen and Potash across 24 weekly drip injection cycles.

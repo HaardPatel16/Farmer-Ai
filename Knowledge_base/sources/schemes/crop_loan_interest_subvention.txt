@@ -1,0 +1,68 @@
+1. SCHEME NAME & FULL OFFICIAL NAME
+   Crop Loan Interest Subvention Scheme — Central Government Scheme under the Ministry of Agriculture & Farmers Welfare. Also known as the Interest Subvention Scheme for Short-Term Crop Loans.
+
+2. WHAT IS IT
+   This scheme provides heavily subsidized short-term crop loans to farmers for cultivation expenses, post-harvest operations, and maintenance of farm assets. The Central Government provides an interest subvention (subsidy) of 3% on crop loans up to Rs 3 lakh per farmer, reducing the interest rate from the normal bank rate to 4% per annum. Additionally, farmers who repay their loans on or before the due date receive an extra 3% prompt repayment incentive (PRI), bringing the effective interest rate down to just 1% per annum. This is one of the most beneficial financial schemes for farmers in India. The scheme aims to reduce the burden of debt on farmers, discourage them from borrowing from informal moneylenders at exorbitant rates (20-36% per annum), and ensure timely credit availability for agricultural operations. The Kisan Credit Card (KCC) is the primary delivery mechanism for this scheme.
+
+3. WHO IS ELIGIBLE
+   • All farmers, including small and marginal farmers, tenant farmers, and sharecroppers
+   • Farmers must have cultivable land (ownership or lease/tenancy agreement)
+   • Farmers must not be in default of previous crop loans (unless regularized by the bank)
+   • All categories: general, SC, ST, OBC, women farmers
+   • Joint borrowers (up to 5 members) are eligible for combined limits
+   • Fish farmers, animal husbandry farmers, and silk farmers are also eligible under revised guidelines
+   • Exclusions: Farmers with overdue crop loans (until regularized); farmers who have taken loans from moneylenders for the same crop
+
+4. BENEFITS PROVIDED
+   • Interest subvention of 3% on crop loans up to Rs 3 lakh
+   • Prompt repayment incentive of additional 3% for on-time repayment
+   • Effective interest rate: 4% (with subvention) or 1% (with subvention + PRI)
+   • Loan limit: Up to Rs 3 lakh per farmer for subsidized rate; above Rs 3 lakh at normal bank rates
+   • Coverage: All Kharif, Rabi, and Zaid crops
+   • Post-harvest expenses: Up to 6 months after harvest at the same subsidized rate
+   • Maintenance expenses for farm assets: Up to 6 months
+   • Insurance coverage: Personal Accident Insurance of Rs 2 lakh under PMJJBY (if opted)
+
+5. HOW TO APPLY (STEP-BY-STEP)
+   Step 1: Prepare documents — 7/12 land extract (or tenancy agreement), Aadhaar card, PAN card, 2 passport photos, bank passbook, and crop details.
+   Step 2: Visit your nearest District Cooperative Bank, Nationalised Bank (SBI, PNB, BOB, etc.), or Regional Rural Bank (RRB) branch.
+   Step 3: Fill out the crop loan application form and KCC application form (if not already a KCC holder).
+   Step 4: Submit documents along with the application. The bank officer will verify land records and eligibility.
+   Step 5: Bank sanctions the loan and issues a Kisan Credit Card (KCC) with a credit limit.
+   Step 6: The 3% interest subvention is applied automatically by the bank.
+   Step 7: Repay the loan on or before the due date (typically 12 months for Kharif, 18 months for Rabi) to get the additional 3% PRI.
+   Step 8: The PRI is credited back to your bank account after repayment.
+   Documents required: 7/12 land extract, Aadhaar, PAN, bank passbook, 2 passport photos, caste certificate (for SC/ST/OBC if applicable), and crop declaration.
+
+6. WHERE TO APPLY
+   • District Cooperative Banks (every district in Gujarat has one)
+   • Nationalised Banks: SBI, Bank of Baroda, PNB, Union Bank, Canara Bank, etc.
+   • Regional Rural Banks (RRBs): Gujarat Gramin Bank, Baroda Gujarat Gramin Bank
+   • Primary Agricultural Credit Societies (PACS) in villages
+   • Online: Some banks allow KCC renewal through their mobile banking apps
+   • NABARD refinancing available for cooperative banks
+
+7. GUJARAT-SPECIFIC DETAILS
+   Gujarat has over 55 lakh KCC holders. The Gujarat State Cooperative Bank and 18 District Cooperative Banks handle a majority of crop loans. The Gujarat government has launched the Kisan Suryodaya Yojana to ensure power availability for irrigation, which is linked to timely repayment. Gujarat farmers have a relatively high repayment rate (85-90%) due to good institutional credit penetration. The state has also integrated the KCC system with the iKhedut portal for easier application tracking. In Gujarat, the KCC limit has been revised to include post-harvest expenses and maintenance costs under the revised guidelines. Crop loans in Gujarat are heavily concentrated in Kharif (monsoon) season for cotton, groundnut, and castor.
+
+8. COMMON PROBLEMS & SOLUTIONS
+   • Loan application rejected: Common reasons include name mismatch between land record and Aadhaar, or overdue loan from previous season. Solution: Get name correction at Aadhaar center or mamlatdar office; regularize overdue loans by paying a minimum amount.
+   • PRI not credited after repayment: Contact the bank branch with your repayment receipt; the bank must claim PRI from NABARD within 30 days.
+   • Loan limit too low: If your landholding has increased, submit updated 7/12 extract to the bank for limit revision.
+   • Bank branch says no PRI for your crop: All notified crops are eligible; if denied, escalate to the bank's regional office or NABARD.
+   • KCC not renewed: KCC is valid for 5 years; if not renewed, submit fresh application with updated documents before the sowing season.
+   • High interest charged: Check your loan account statement; the 3% subvention should be applied from day one. If not, escalate to the bank manager.
+
+9. RELATED SCHEMES
+   • Kisan Credit Card (KCC) — the delivery mechanism for crop loans
+   • PM-KISAN — Rs 6,000/year income support (separate from crop loans)
+   • PMFBY / WBCIS — crop insurance linked to crop loans (compulsory for loanee farmers)
+   • Warehouse Receipt Financing — for post-harvest storage loans
+   • AIF (Agriculture Infrastructure Fund) — for long-term infrastructure loans
+
+10. CONTACT INFORMATION
+   • NABARD Toll-Free: 1800-103-4567
+   • Kisan Call Centre: 1800-180-1551 (6 AM to 10 PM)
+   • Gujarat State Cooperative Bank: 079-26587101
+   • RBI Complaint Portal: https://cms.rbi.org.in (for bank-related grievances)
+   • District Cooperative Bank: Contact your district’s cooperative bank branch

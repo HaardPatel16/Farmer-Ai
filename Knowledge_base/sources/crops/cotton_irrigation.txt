@@ -1,0 +1,14 @@
+=== PRECISION IRRIGATION & DRIP INFRASTRUCTURE FOR COTTON ===
+Regulatory Integration: Gujarat Green Revolution Company (GGRC) Framework
+
+1. CRITICAL MOISTURE WINDOWS
+Cotton requires a cumulative water profile of 700 to 800 mm. Four growth phases are highly critical; water stress during these windows triggers immediate square shedding, flower drop, and boll abortion:
+- Square Initiation Phase (40-45 Days After Sowing - DAS)
+- Flowering Peak Phase (60-70 DAS)
+- Boll Formulation Phase (80-90 DAS)
+- Boll Opening Phase (100-110 DAS)
+
+2. SYSTEM SPECIFICATIONS FOR IN-LINE DRIP IRRIGATION
+- Lateral Layout: Lay down inline laterals at a distance of 1.2 meters matching the crop row spacing.
+- Emitter Spacing and Discharge: Inline emitters set at 30 cm or 40 cm intervals with a calibrated water discharge of 2.0 to 4.0 liters per hour (LPH).
+- Operation Matrix: Run the system for 1.5 to 2.5 hours every alternate day during dry periods in September/October, cutting water usage by 40% while boosting fertilizer use efficiency.

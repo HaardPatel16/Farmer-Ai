@@ -1,0 +1,98 @@
+================================================================================
+GROUNDNUT CROP CALENDAR — GUJARAT — JULY
+================================================================================
+
+CROP: Groundnut
+MONTH: July
+PRIMARY REGION: Saurashtra, Kutch, North Gujarat
+DOCUMENT TYPE: Month-wise Activity Calendar
+
+================================================================================
+1. SOIL PREPARATION FOR JULY
+================================================================================
+  • If waterlogging occurred in June-July, apply gypsum 250 kg per hectare to improve soil structure
+  • In waterlogged fields, open drainage channels and aerate soil by shallow inter-culture
+  • Light hoeing between rows improves aeration and controls weeds
+  • Do NOT deep cultivate — groundnut pegs are shallow and easily damaged
+  • Maintain soil pH at 6.0-7.0; acidic soils require lime application
+
+================================================================================
+2. SOWING / PLANTING DATES
+================================================================================
+  • Gap filling within 10 days if germination is poor; maintain plant population of 15-20 plants per sq metre
+  • If gaps are severe (>20%), consider re-sowing only in small patches
+  • Weeding: first manual weeding at 20-25 days; second at 40-45 days
+  • In Saurashtra, some farmers use pre-emergence herbicide (Pendimethalin 1.0 kg/ha) for weed control
+  • Maintain weed-free field until canopy closure (45-50 days)
+
+================================================================================
+3. IRRIGATION SCHEDULE
+================================================================================
+  • Generally rainfed in July; one irrigation if dry spell exceeds 10 days during vegetative stage
+  • First irrigation at 20-25 days if no rain for 10+ days
+  • Maintain soil moisture at 60-70% field capacity during vegetative growth
+  • In Saurashtra, sprinkler irrigation can be used for uniform moisture distribution
+  • Ensure drainage after heavy rain — waterlogging causes collar rot and aflatoxin risk
+
+================================================================================
+4. FERTILIZER TIMING & DOSES
+================================================================================
+  • NO nitrogen top dressing — groundnut fixes atmospheric nitrogen through root nodules
+  • If crop shows yellowing, apply 20 kg DAP per hectare at 30 days (rarely needed)
+  • Micronutrient spray: 0.5% zinc sulphate + 0.2% boron at 30 days if deficiency symptoms appear
+  • Plan for gypsum application in August at flowering stage (250-400 kg/ha)
+  • In boron-deficient soils, foliar spray of 0.2% borax at flowering improves pod filling
+
+================================================================================
+5. PEST SCOUTING DATES
+================================================================================
+  • White grub: monitor for adult beetle activity at night; if severe, drench with Chlorpyriphos 2ml/litre
+  • Leaf miner (Aproaerema modicella): monitor from 30 days; spray if damage exceeds 5% leaf area
+  • Aphids: if colonies exceed 10 per plant, spray Imidacloprid 0.5ml per litre
+  • Collar rot (Aspergillus niger): if seedlings wilt, drench with Carbendazim 1g per litre
+  • Tikka leaf spot (Cercospora): if early infection appears, spray Mancozeb 2.5g per litre as preventive
+  • Stem rot (Sclerotium rolfsii): if white fungal growth appears at base, drench with Carbendazim 1g/litre + Metalaxyl 2.5g/litre
+
+================================================================================
+6. HARVESTING WINDOWS
+================================================================================
+  • NO harvest in July — groundnut is in vegetative stage (30-50 days after sowing)
+  • Continue monitoring crop growth and pest populations
+  • Record keeping: document sowing date, variety, fertilizer, and pest control measures for traceability
+
+================================================================================
+7. POST-HARVEST OPERATIONS
+================================================================================
+  • NO post-harvest operations in July
+  • Prepare harvesting equipment and storage facilities for September-October harvest
+  • Purchase required pesticides and store safely away from rain and sunlight
+  • Arrange for labour during peak digging season (September-October)
+
+================================================================================
+8. WEATHER WATCH
+================================================================================
+  • Peak monsoon month: heavy rainfall in Saurashtra; 250-350mm average in July
+  • Waterlogging risk highest in July; check drainage channels after every rain event
+  • Humidity 70-90%; favourable for fungal diseases — increase scouting frequency
+  • Day temperatures 28-32°C; nights 24-26°C; warm and humid
+  • IMD warnings: watch for heavy rainfall alerts (100mm+ in 24 hours) and flood warnings
+
+================================================================================
+9. GOVERNMENT SCHEME DEADLINES
+================================================================================
+  • PMFBY enrollment: complete by 31st July for Kharif groundnut
+  • Groundnut seed subsidy: claim through authorized dealer with GST bill and Aadhaar
+  • Drip/sprinkler irrigation subsidy: submit proposal to GGRC if not already done
+  • Kisan Credit Card: avail fresh credit for pesticide and fertilizer purchases
+  • Contact KVK for pest identification and spray recommendations
+
+================================================================================
+10. RELATED TOPICS & QUICK LINKS
+================================================================================
+  • Related: calendar_groundnut_june.txt, calendar_groundnut_august.txt, calendar_september.txt
+  • Advisories: spray_safety.txt, soil_testing_guide.txt, waterlogging_management.txt
+  • Weather: imd_forecast_guide.txt, monsoon_onset_advisory.txt
+  • Helpline: Kisan Call Centre 1800-180-1551, Gujarat Oilseeds Association 079-2657-6201
+  • Online: https://ikhedut.gujarat.gov.in, https://www.dgr.gov.in
+
+================================================================================

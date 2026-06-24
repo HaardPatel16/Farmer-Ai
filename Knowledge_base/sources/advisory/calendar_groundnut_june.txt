@@ -1,0 +1,102 @@
+================================================================================
+GROUNDNUT CROP CALENDAR — GUJARAT — JUNE
+================================================================================
+
+CROP: Groundnut
+MONTH: June
+PRIMARY REGION: Saurashtra, Kutch, North Gujarat
+DOCUMENT TYPE: Month-wise Activity Calendar
+
+================================================================================
+1. SOIL PREPARATION FOR JUNE
+================================================================================
+  • Summer ploughing should be completed by May; if not, do immediately with deep ploughing (20-25 cm)
+  • Apply FYM 10-15 tonnes per hectare 2-3 weeks before sowing
+  • Level the field with a leveller; groundnut requires uniform moisture for peg penetration
+  • In Saurashtra, apply gypsum 250 kg per hectare for sodic soil reclamation before sowing
+  • Soil pH should be 6.0-7.0; apply lime if pH < 5.5
+  • Ensure good drainage — groundnut is sensitive to waterlogging; prepare ridges in heavy soils
+
+================================================================================
+2. SOWING / PLANTING DATES
+================================================================================
+  • Sow after first good monsoon rain (at least 50-75mm received) in Saurashtra, Kutch, and North Gujarat
+  • Ideal sowing window: 15-30 June in Saurashtra; 20-30 June in North Gujarat; 15-25 June in Kutch
+  • Seed rate: 100-125 kg per hectare for bold varieties; 80-100 kg for small-seeded varieties
+  • Spacing: 30-45 cm between rows; 10-15 cm between plants (depending on variety and season)
+  • Sow 2 seeds per hill; thin to one plant per hill at 15 days if both germinate
+  • Treat seeds with Carbendazim 2g + Streptocycline 1g per kg OR Thiram 3g per kg to prevent seed rot
+
+================================================================================
+3. IRRIGATION SCHEDULE
+================================================================================
+  • If no rain within 3-5 days of sowing, provide light irrigation (25mm) to ensure uniform germination
+  • First irrigation at 15-20 days if dry spell occurs during early vegetative stage
+  • Maintain soil moisture at 60-70% field capacity during vegetative growth
+  • In Saurashtra, some farmers use sprinkler irrigation for uniform moisture distribution
+  • Ensure drainage after heavy rain — waterlogging for >24 hours causes collar rot and aflatoxin risk
+
+================================================================================
+4. FERTILIZER TIMING & DOSES
+================================================================================
+  • Basal dose at sowing: DAP 200 kg per hectare (provides phosphorus and nitrogen)
+  • Potash: apply 30-40 kg muriate of potash per hectare as basal if soil is deficient
+  • Gypsum: apply 250-400 kg per hectare at flowering stage (40-50 days) — NOT at sowing
+  • No nitrogen top dressing — groundnut fixes atmospheric nitrogen through root nodules
+  • Micronutrients: apply zinc sulphate 25 kg per hectare as basal if soil is deficient
+  • Boron: apply 10 kg borax per hectare as basal in boron-deficient soils (common in Saurashtra)
+
+================================================================================
+5. PEST SCOUTING DATES
+================================================================================
+  • White grub (Holotrichia spp.): major pest in Saurashtra; treat soil with Chlorpyriphos 2ml/litre drench if previous crop was pasture
+  • Collar rot (Aspergillus niger): if seedlings wilt, drench with Carbendazim 1g per litre
+  • Leaf miner (Aproaerema modicella): monitor from 30 days; spray if damage exceeds 5% leaf area
+  • Aphids: if colonies exceed 10 per plant, spray Imidacloprid 0.5ml per litre
+  • Termite: apply Chlorpyriphos 2ml per litre drench along rows if termite mounds observed
+  • Tikka leaf spot (Cercospora): if early infection appears, spray Mancozeb 2.5g per litre as preventive
+
+================================================================================
+6. HARVESTING WINDOWS
+================================================================================
+  • NO harvest in June — groundnut is in germination/early vegetative stage
+  • Prepare harvesting equipment (groundnut digger, thresher) and storage space for later months
+  • Arrange for labour for manual digging (September-October)
+  • Contact oil mills or market yards for October-November price information
+
+================================================================================
+7. POST-HARVEST OPERATIONS
+================================================================================
+  • NO post-harvest operations in June
+  • Prepare drying yards and storage godowns for later harvest
+  • Clean and repair digging equipment, threshers, and storage bins
+  • Arrange for aflatoxin testing facilities if planning to export or sell to oil mills
+
+================================================================================
+8. WEATHER WATCH
+================================================================================
+  • Monsoon onset month: typically 15-25 June in Saurashtra; 20-30 June in North Gujarat
+  • Pre-monsoon heat: 40-45°C before monsoon; hot dry winds can affect germination
+  • Heavy thunderstorms with strong winds — can damage young seedlings; provide support if needed
+  • Monitor IMD monsoon onset forecasts and daily weather bulletins
+  • Cyclone risk in Arabian Sea — coastal Saurashtra (Junagadh, Amreli, Bhavnagar) should be alert
+
+================================================================================
+9. GOVERNMENT SCHEME DEADLINES
+================================================================================
+  • PMFBY enrollment: complete by 31st July for Kharif groundnut; visit PACS or bank branch
+  • Groundnut seed subsidy: purchase certified seeds from authorized dealers with bill
+  • Drip irrigation subsidy under GGRC: apply for sprinkler or drip system in groundnut
+  • Gujarat State Oilseeds Mission: contact district agriculture office for technical support and subsidies
+  • Kisan Credit Card (KCC): renew or apply for fresh credit before sowing season
+
+================================================================================
+10. RELATED TOPICS & QUICK LINKS
+================================================================================
+  • Related: calendar_groundnut_july.txt, calendar_groundnut_august.txt, calendar_september.txt
+  • Advisories: spray_safety.txt, soil_testing_guide.txt, post_harvest_storage.txt
+  • Weather: imd_forecast_guide.txt, monsoon_onset_advisory.txt
+  • Helpline: Kisan Call Centre 1800-180-1551, Gujarat Oilseeds Association 079-2657-6201
+  • Online: https://ikhedut.gujarat.gov.in, https://www.dgr.gov.in (Directorate of Groundnut Research)
+
+================================================================================

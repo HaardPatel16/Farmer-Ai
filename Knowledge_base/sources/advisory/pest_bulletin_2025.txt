@@ -1,0 +1,95 @@
+PEST BULLETIN 2025 - GUJARAT AGRICULTURAL ADVISORY
+====================================================
+
+OVERVIEW
+This bulletin summarises major pest and disease threats for Gujarat's key crops in 2025, 
+based on State Department of Agriculture, KVK reports, and ICAR-NCIPM surveillance data. 
+It provides identification tips, economic thresholds, and management recommendations.
+
+KHARIF 2025 PEST ALERTS
+
+1. GROUNDNUT — SPODOPTERA (FALL ARMYWORM & TOBACCO CATERPILLAR)
+   Status: HIGH ALERT (Saurashtra, Junagadh, Amreli, Rajkot)
+   Identification:
+   - Young larvae skeletonise leaves; older larvae cause ragged holes
+   - Egg masses with hair-like coating on underside of leaves
+   - Active at night; hide in soil at base of plant during day
+   Economic Threshold: 2-3 larvae per plant or 10% leaf damage
+   Management:
+   - Install pheromone traps (10/ha) — Spodoptera litura lure
+   - Spray Chlorantraniliprole 18.5% SC @ 0.4 ml/litre (Coragen)
+   - OR Emamectin Benzoate 5% SG @ 0.5 g/litre
+   - Spray during evening hours for best effect
+
+2. COTTON — PINK BOLLWORM (Pectinophora gossypiella)
+   Status: MODERATE TO HIGH (Saurashtra cotton belt)
+   Identification:
+   - Larvae bore into green bolls leaving a circular hole
+   - Infested bolls show internal feeding and staining
+   - Rosette flowers (no petal opening) are a key sign
+   Economic Threshold: 10% rosette flowers or 10% damaged bolls
+   Management:
+   - Use Bt cotton varieties with bollworm resistance
+   - Install Pink Bollworm pheromone traps (5/acre)
+   - Spray Profenofos 50% EC @ 2 ml/litre
+   - OR Indoxacarb 14.5% SC @ 0.75 ml/litre
+   - Avoid repeated use of same insecticide class
+
+3. COTTON — WHITEFLY (Bemisia tabaci)
+   Status: HIGH ALERT (June-August — vector of Cotton Leaf Curl Virus)
+   Identification:
+   - Tiny white insects on underside of leaves
+   - Yellowing, curling, and stunted growth if CLCuV transmitted
+   - Honeydew deposits lead to black sooty mould
+   Economic Threshold: 6-8 nymphs per leaf (average of 10 leaves)
+   Management:
+   - Use yellow sticky traps (10/acre)
+   - Spray Spiromesifen 22.9% SC @ 1 ml/litre
+   - OR Flonicamid 50% WG @ 0.3 g/litre
+   - Do NOT use Neonicotinoids (resistance widespread in Gujarat)
+
+4. PEARL MILLET — DOWNY MILDEW (Sclerospora graminicola)
+   Status: WATCH (North Gujarat, Banaskantha, Patan)
+   Identification:
+   - Greenish-yellow streaks on leaves
+   - White downy growth on lower surface of leaves
+   - Systemic infection causes stunted, bushy plants ("green ear")
+   Management:
+   - Use resistant varieties: GHB-719, GHB-744
+   - Seed treatment with Metalaxyl 35% WS @ 6 g/kg seed
+   - Rogue out infected plants immediately
+   - Avoid excessive irrigation near crop base
+
+5. CASTOR — CAPSULE BORER (Conogethes punctiferalis)
+   Status: MODERATE (North Gujarat)
+   Identification:
+   - Larvae bore into developing capsules
+   - Webbing and frass on capsule surface
+   Economic Threshold: 5% capsule damage
+   Management:
+   - Spray Quinalphos 25% EC @ 2 ml/litre
+   - OR Lambda Cyhalothrin 5% EC @ 1 ml/litre
+   - Apply during early morning when larvae are surface feeding
+
+DISEASE ALERTS — RABI 2025 (ANTICIPATED)
+
+1. CUMIN — POWDERY MILDEW AND BLIGHT
+   - Expected surge in North Gujarat if rains occur November-December
+   - Preventive spray of Mancozeb 75% WP @ 2.5 g/litre at 30 days after sowing
+
+2. WHEAT — YELLOW RUST (Puccinia striiformis)
+   - Monitor from January in Banaskantha, Patan, and Mehsana
+   - Apply Propiconazole 25% EC @ 1 ml/litre at first symptom
+
+INTEGRATED PEST MANAGEMENT (IPM) PRINCIPLES
+- Scout fields weekly; do not spray on calendar basis
+- Always check economic threshold before spraying
+- Rotate insecticide groups to prevent resistance
+- Preserve natural enemies (ladybirds, spiders, parasitic wasps)
+- Use pheromone traps for monitoring before deciding on chemical control
+
+CONTACT FOR PEST IDENTIFICATION
+- Plant Protection Officer, District Agriculture Office
+- ICAR-NCIPM Helpline: 011-25846712
+- Gujarat Agricultural University (GAU), Junagadh: 0285-2672060
+- KVK Plant Clinic in your district

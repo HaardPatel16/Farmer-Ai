@@ -1,0 +1,113 @@
+================================================================================
+GUJARAT FARMING CALENDAR — OCTOBER (ભાદરવો / આસો (Bhadarvo / Aso))
+================================================================================
+
+OVERVIEW:
+October is a critical month for Gujarat agriculture. The state's diverse agro-climatic zones — Saurashtra, North Gujarat, South Gujarat, and Kutch — each have specific crop activities during this period. This calendar provides detailed, week-by-week guidance for farmers.
+
+CROPS IN FOCUS THIS MONTH:
+  • Cotton (picking)
+  • Groundnut (harvest)
+  • Paddy (harvest)
+  • Bajra (post-harvest)
+  • Rabi sowing begins
+
+================================================================================
+1. SOIL PREPARATION
+================================================================================
+  • Summer ploughing should be completed by now if not already done; deep ploughing (20-25 cm) improves water infiltration
+  • For heavy black cotton soils, apply organic matter / FYM (Farm Yard Manure) 10-15 tonnes per hectare at least 2-3 weeks before sowing
+  • Level the field using a leveller to ensure uniform irrigation and prevent waterlogging
+  • In Saurashtra, apply gypsum 250 kg per hectare for sodic soil reclamation before sowing
+  • Conduct soil testing: pH should be 6.5-7.5 for most crops; apply lime if pH < 6.0
+  • Prepare raised beds (15-20 cm high) for vegetable crops to improve drainage during monsoon
+
+================================================================================
+2. SOWING / PLANTING DATES
+================================================================================
+  • Rabi wheat sowing begins in North Gujarat and Saurashtra from mid-October; ideal window: 15 Oct - 15 Nov
+  • Rabi mustard sowing: 15 October to 15 November in North Gujarat, Saurashtra, and Kutch
+  • Gram (chana) sowing: mid-October to mid-November in Saurashtra and North Gujarat
+  • Cumin sowing: mid-October to early November in North Gujarat and Saurashtra
+  • Rabi chilli nursery sowing: mid-September to mid-October for transplanting in November-December
+  • Potato sowing: mid-October to mid-November in Saurashtra and North Gujarat
+
+================================================================================
+3. IRRIGATION SCHEDULE
+================================================================================
+  • Cotton: NO irrigation needed; crop is in harvest stage; allow field to dry for picking
+  • Groundnut: stop irrigation 15-20 days before harvest; allow soil to dry for easy digging
+  • Paddy: drain field 10-15 days before harvest; dry soil helps combine harvesting and reduces grain moisture
+  • Rabi wheat: first irrigation at CRI stage (20-25 days after sowing) — critical for tillering
+  • Rabi mustard: generally rainfed; one irrigation at flowering if dry spell occurs
+  • Gram: generally rainfed; one protective irrigation at pod filling if needed
+
+================================================================================
+4. FERTILIZER TIMING & DOSES
+================================================================================
+  • Cotton: NO fertilizer after boll opening; excess nitrogen at this stage reduces fibre quality and delays maturity
+  • Groundnut: NO more fertilizer; focus on harvest and post-harvest management
+  • Paddy: NO more fertilizer after flowering; grain filling depends on stored nutrients
+  • Wheat: apply basal dose — DAP 100 kg + potash 30 kg per hectare at sowing
+  • Mustard: apply basal dose — DAP 50 kg + urea 30 kg per hectare at sowing
+  • Gram: apply basal dose — DAP 100 kg per hectare at sowing; no nitrogen top dressing needed
+
+================================================================================
+5. PEST SCOUTING DATES
+================================================================================
+  • Cotton: pink bollworm — late season infestations damage open bolls; remove and destroy infested bolls
+  • Cotton: avoid spraying close to harvest; observe pre-harvest intervals (PHI) for all chemicals
+  • Groundnut: aflatoxin risk — harvest on time; do not leave pods in soil after maturity; dry immediately
+  • Paddy: brown plant hopper (BPH) — if BPH exceeds 5 per hill, spray Buprofezin 1.5ml/litre; avoid Imidacloprid for BPH
+  • Paddy: false smut (green balls on panicles) — remove and destroy affected panicles; spray Propiconazole if severe
+  • Rabi crops: termite risk in wheat and gram at seedling stage — treat seed with Chlorpyriphos 2ml per kg before sowing
+
+================================================================================
+6. HARVESTING WINDOWS
+================================================================================
+  • Cotton: first picking begins in early-sown crop (May-June sown); pick every 15-20 days; avoid mixing immature bolls
+  • Groundnut: harvest when 70-80% leaves turn yellow; dig with groundnut digger or plough; dry pods to 8% moisture
+  • Paddy: harvest when 80% panicles turn golden yellow; combine harvest when grain moisture is 20-22%; dry to 12-14%
+  • Bajra: harvest remaining crop; thresh and clean before storage
+  • Moong (intercrop): harvest when 80% pods turn black; do not delay — shattering losses increase
+
+================================================================================
+7. POST-HARVEST OPERATIONS
+================================================================================
+  • Clean and dry harvested produce immediately; moisture content should be reduced to safe levels (8-10% for grains, 10-12% for oilseeds)
+  • Use tarpaulins or cemented drying yards to avoid aflatoxin contamination in groundnut and cotton
+  • Store in properly ventilated godowns; use neem leaves or safe storage pesticides
+  • For cotton, ginning should be done within 15 days of picking to preserve fibre quality
+  • Grade produce before selling: separate A, B, and C grades for better market prices
+  • Maintain post-harvest records for traceability and insurance claims
+
+================================================================================
+8. WEATHER WATCH
+================================================================================
+  • Post-monsoon clear skies; day temperatures 32-36°C; nights 18-22°C; ideal for harvest and Rabi sowing
+  • Northeast monsoon (retreating monsoon) may bring scattered rain to South Gujarat; monitor forecasts
+  • Humidity drops to 50-70%; favourable for grain drying and storage preparation
+  • Cyclone risk in Arabian Sea decreases but not zero; monitor IMD October cyclone outlook
+  • First cold wave signals in North Gujarat and Kutch by month-end; protect sensitive Rabi seedlings if frost occurs
+
+================================================================================
+9. GOVERNMENT SCHEME DEADLINES
+================================================================================
+  • PM-KISAN installment verification: ensure Aadhaar seeding is complete before 15th of the month
+  • Soil Health Card scheme: collect updated cards from local Krushi Vigyan Kendra (KVK) or ATMA office
+  • PMFBY (Pradhan Mantri Fasal Bima Yojana) enrollment: last date for Kharif crops is usually 31st July; for Rabi crops, 15th December
+  • Gujarat State Farm Machinery Scheme: subsidy applications for tractor/power tiller due at district agriculture office
+  • Drip irrigation subsidy under GGRC (Gujarat Green Revolution Company): submit estimates before month-end
+  • Horticulture Mission for North East & Himalayan States (HMNEH) — nursery subsidy claims
+  • Contact your nearest VLE (Village Level Entrepreneur) for eNAM registration and online mandi selling
+
+================================================================================
+10. RELATED TOPICS & QUICK LINKS
+================================================================================
+  • Related calendar files: calendar_october.txt, spray_calendar_kharif.txt
+  • Advisories: weather_based_irrigation.txt, soil_testing_guide.txt, post_harvest_storage.txt
+  • Weather: imd_forecast_guide.txt, monsoon_onset_advisory.txt
+  • Helpline: Kisan Call Centre 1800-180-1551, Gujarat Agriculture Department 079-232-43746
+  • Online: https://ikhedut.gujarat.gov.in (Gujarat Ikhedut Portal for subsidies and schemes)
+
+================================================================================

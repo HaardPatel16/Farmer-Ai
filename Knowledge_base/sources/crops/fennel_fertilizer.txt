@@ -1,0 +1,2 @@
+=== FENNEL NUTRIENT PARAMETERS ===
+Requires 90:45:0 kg/ha NPK. Apply full Phosphorus as basal. Split Nitrogen into three equal parts (basal, 30 Days After Transplanting - DAT, and 60 DAT) to feed long-duration flower umbel development cycles.

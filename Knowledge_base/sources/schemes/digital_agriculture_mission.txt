@@ -1,0 +1,71 @@
+1. SCHEME NAME & FULL OFFICIAL NAME
+   Digital Agriculture Mission (DAM) — Government of India initiative under the Ministry of Agriculture & Farmers Welfare, with strong Gujarat state implementation.
+
+2. WHAT IS IT
+   The Digital Agriculture Mission is a comprehensive initiative to digitize all aspects of agriculture, from farmer identity and land records to soil health, crop monitoring, and market linkages. It aims to create a unified digital ecosystem where all farmer-related data is linked to a single digital identity, enabling seamless delivery of government schemes, personalized advisory services, and data-driven decision making. The mission leverages technologies like Aadhaar, GIS mapping, satellite remote sensing, drone technology, and mobile apps to transform agriculture. In Gujarat, the mission has been implemented through the Krishi Samridhi portal, Khedut app, and integration with the iKhedut portal. Key goals include: reducing paperwork, eliminating duplicate beneficiaries, providing real-time weather and market information, enabling precision agriculture, and improving the efficiency of scheme delivery.
+
+3. WHO IS ELIGIBLE
+   • All farmers with cultivable land in Gujarat
+   • Farmers must have Aadhaar card and bank account
+   • FPOs, cooperatives, and agri-entrepreneurs
+   • Farmers with smartphone access (for app-based services)
+   • No landholding limit; all categories eligible
+   • Farmers must register on the Krishi Samridhi portal or through CSC
+   • Exclusions: Farmers without Aadhaar or bank account (must get these first)
+
+4. BENEFITS PROVIDED
+   • Farmer Digital ID: A unique ID linking Aadhaar, land records, and bank account — mandatory for all new scheme benefits
+   • Free soil health card digitization: Results accessible online at krishi.gujarat.gov.in
+   • Kisan Drone subsidy: 40% subsidy (up to Rs 4 lakh) on agricultural drones for FPOs, cooperatives, and farmer groups; used for pesticide spraying and crop monitoring
+   • e-NAM integration: Online price discovery and digital payment at APMCs
+   • Satellite-based crop monitoring: Crop insurance companies use remote sensing for loss estimation
+   • Real-time weather alerts and pest warnings via Khedut app
+   • Digital mandi price information: Live prices from all Gujarat APMCs
+   • GPS-based sowing data: Helps resolve crop insurance disputes by proving sowing date and location
+   • Reduced claim settlement time from 6 months to 45 days through digital verification
+
+5. HOW TO REGISTER (STEP-BY-STEP)
+   Step 1: Visit the nearest Common Service Centre (CSC) or Krishi Vigyan Kendra (KVK) with your documents.
+   Step 2: Provide Aadhaar card, land records (7/12 extract), and bank passbook.
+   Step 3: The CSC operator will enter your details into the Krishi Samridhi portal.
+   Step 4: Your Aadhaar will be verified through biometric authentication (fingerprint/iris scan).
+   Step 5: Land records will be matched with the Revenue Department database.
+   Step 6: Bank account will be seeded with Aadhaar for DBT transfers.
+   Step 7: You will receive a Farmer Digital ID (FID) number via SMS.
+   Step 8: Download the Khedut app from Play Store/App Store and log in using your FID.
+   Step 9: Access all digital services: weather, mandi prices, scheme applications, soil health reports.
+   Documents: Aadhaar, 7/12 land extract, bank passbook, mobile phone, and 2 passport photos.
+
+6. WHERE TO REGISTER
+   • Common Service Centres (CSCs) in every village/taluka
+   • Krishi Vigyan Kendra (KVK) in every district
+   • Taluka Agriculture Office
+   • Online: krishi.gujarat.gov.in (for some services; full registration requires CSC visit for biometric verification)
+   • Gujarat State Agricultural Marketing Board (GSAMB) offices for e-NAM registration
+
+7. GUJARAT-SPECIFIC DETAILS
+   Gujarat is one of the leading states in digital agriculture implementation. Over 55 lakh farmers have been registered on the Krishi Samridhi portal. The Gujarat government has mapped 100% of agricultural land using GIS. The Khedut app has over 2 million downloads and provides services in Gujarati. Gujarat has deployed 500+ agricultural drones under the subsidy scheme, primarily in cotton and groundnut belts. The state has integrated the iKhedut portal with the Digital Agriculture Mission, allowing single-sign-on for all scheme applications. Gujarat's "Agriculture Rath" (mobile advisory vehicle) program is also digitized, with schedules available on the Khedut app. The state has achieved 95% Aadhaar seeding of farmer bank accounts, enabling direct DBT for all subsidies. Gujarat farmers can view their soil health card, apply for schemes, check PM-KISAN status, and get weather alerts — all through one app.
+
+8. COMMON PROBLEMS & SOLUTIONS
+   • Biometric verification fails: Common with elderly farmers or worn fingerprints. Solution: Try iris scan or visit a different CSC with better quality scanners.
+   • Land record mismatch: If 7/12 extract shows different name than Aadhaar, get name correction at the mamlatdar office or Aadhaar centre.
+   • Bank account not seeded: Visit your bank branch with Aadhaar and request Aadhaar seeding; takes 3-7 days.
+   • Khedut app not working: Ensure you have the latest version; clear cache; if still not working, contact the Khedut app helpline.
+   • Farmer ID not received: Check SMS in Gujarati/English; if not received after 7 days, contact the CSC where you registered.
+   • Duplicate farmer ID: If you have multiple IDs, contact the district agriculture office for merger; having multiple IDs can block scheme benefits.
+
+9. RELATED SCHEMES
+   • iKhedut Portal — for scheme applications
+   • Khedut App — for mobile-based services
+   • Soil Health Card Scheme — for digital soil health reports
+   • e-NAM — for online market linkage
+   • PM-KISAN — for income support (requires digital registration)
+   • PMFBY — for crop insurance (uses digital sowing data)
+
+10. CONTACT INFORMATION
+   • Khedut App Support: Available within the app
+   • Gujarat Agriculture Department IT Cell: 079-23251001
+   • CSC Helpline: 1800-3000-3468
+   • Kisan Call Centre: 1800-180-1551
+   • Krishi Samridhi Portal: krishi.gujarat.gov.in
+   • Khedut App: Available on Google Play Store and Apple App Store

@@ -1,0 +1,134 @@
+MICRO-IRRIGATION BEST PRACTICES FOR GUJARAT FARMERS
+
+1. INTRODUCTION
+Micro-irrigation (drip and sprinkler) has transformed Gujarat agriculture. The state leads India in micro-irrigation adoption, with over 15 lakh hectares covered. Under the "Per Drop More Crop" component of PMKSY, Gujarat farmers receive subsidies of 50-70% for drip and sprinkler systems. However, many systems fail prematurely due to poor design, clogging, or maintenance neglect. This guide covers best practices for successful micro-irrigation in Gujarat's conditions.
+
+2. DRIP IRRIGATION SYSTEMS
+
+2.1 Components of a Drip System
+- Head assembly: Control valve, filter (screen or disc type), fertilizer injector (venturi), pressure gauge, and air release valve
+- Main line: PVC or HDPE pipe (75-110mm diameter) carrying water from the source to the field
+- Sub-main: Smaller pipe (50-63mm) distributing water to lateral lines
+- Laterals: Drip tubes (12-20mm diameter) laid along crop rows; emitters are spaced at plant-to-plant distance
+- Emitters: Online (point source) or inline (labyrinth path) emitters with discharge rates of 2-8 liters per hour
+
+2.2 Design Considerations for Gujarat
+- Water source: Borewell water often has high TDS and iron; use disc filters (120-130 mesh) rather than screen filters, and consider sand media filters for very poor water
+- Pressure: Drip systems operate at 1.0-2.5 kg/cm2. If the borewell pump delivers higher pressure, install a pressure regulator at the head.
+- Emitter spacing: For cotton and groundnut (common in Gujarat), use 60cm x 60cm or 90cm x 60cm spacing with inline laterals at 60-90cm row spacing
+- For orchards (mango, guava, citrus): Use one or two online emitters per tree, 4-8 liters/hour each, placed at the canopy drip line
+- For vegetables (tomato, brinjal, chilli): Use closely spaced inline drip (20-30cm emitter spacing) or thin-walled drip tape
+
+2.3 Drip Installation Best Practices
+- Lay laterals along the crop row, not across slopes, to maintain uniform pressure
+- In undulating fields, install pressure-compensating emitters to ensure equal discharge at all elevations
+- Flush laterals before connecting emitters to remove manufacturing debris
+- Install air release valves at high points to prevent vacuum damage and airlocks
+- Use a bypass assembly for the fertilizer injector so the main line can operate without fertigation when needed
+- Cover emitters with soil or mulch to prevent UV damage and algae growth
+- For Gujarat's high temperatures, use thicker-walled laterals (0.4-0.6mm) rather than thin-walled tape, which degrades faster in heat
+
+3. SPRINKLER IRRIGATION SYSTEMS
+
+3.1 Types of Sprinklers for Gujarat
+- Overhead impact sprinklers: Traditional brass or plastic impact sprinklers for field crops (cotton, groundnut, wheat)
+- Mini-sprinklers: For orchards, vineyards, and vegetables; 40-100 liters per hour; wetting diameter 3-6 meters
+- Rain guns (high-volume sprinklers): For large fields and commercial farms; 200-500 liters per hour; require higher pressure (3-5 kg/cm2)
+- Micro-sprinklers: For orchards and plantations; apply water directly to the root zone with less evaporation loss
+
+3.2 Design and Installation
+- Spacing: Overhead sprinklers at 12m x 12m or 12m x 18m for medium-pressure systems; overlap should be 65% for uniform coverage
+- Operating pressure: 2.0-3.5 kg/cm2 for most sprinklers; rain guns need 4.0-5.5 kg/cm2
+- Sprinkler height: 0.5-1.0m above the crop canopy to minimize evaporation and wind drift
+- In windy areas (coastal Gujarat and Kutch), use low-angle nozzles and closer spacing to reduce wind drift
+- For row crops, install sprinklers in a triangular pattern rather than square for better uniformity
+
+4. CLOGGING PREVENTION AND MAINTENANCE
+
+4.1 Types of Clogging
+- Physical clogging: Sand, silt, and debris from borewells or open water sources
+- Chemical clogging: Calcium carbonate precipitation (common in Gujarat's hard water), iron oxide, and manganese deposits
+- Biological clogging: Bacterial slime, algae growth in open systems, and root intrusion into emitters
+
+4.2 Prevention Strategies
+- Filtration: Always install the correct filter. For borewell water with sand, use sand media filters followed by screen/disc filters. For canal water, use sand media + disc filters. Clean filters daily or as indicated by pressure differential.
+- Acid treatment: If water has high calcium hardness (common in Saurashtra and North Gujarat), inject dilute hydrochloric acid or N-pHuric acid through the venturi during flushing to dissolve carbonate deposits. Test water pH after injection to ensure it stays above 4.0.
+- Chlorination: For biological clogging, inject chlorine (sodium hypochlorite or calcium hypochlorite) at 10-20 ppm for 30 minutes every 2-4 weeks during the irrigation season. This kills algae and bacterial slime.
+- Flushing: Flush the entire system (open all lateral ends) at least once every 2 weeks during the irrigation season. Flush for 5-10 minutes until water runs clear. In Gujarat's dusty conditions, flush weekly during peak summer.
+- Root barriers: For subsurface drip systems, apply a root-inhibiting herbicide (trifluralin) or use copper-impregnated emitters to prevent root intrusion
+
+4.3 Maintenance Schedule
+- Daily: Check filter pressure differential; clean if it exceeds 0.5 kg/cm2. Inspect the head assembly for leaks.
+- Weekly: Flush all laterals, check for broken or clogged emitters, inspect main and sub-main lines for leaks
+- Monthly: Check system pressure at multiple points, test water quality (EC and pH), clean fertilizer injector, check air release valves
+- End of season: Drain all lines, flush thoroughly, remove and store plastic laterals if possible, inspect and service all valves and filters
+- Before next season: Pressure-test the system, replace damaged emitters, recalibrate fertilizer injector, check pump performance
+
+5. FERTIGATION (FERTILIZER APPLICATION THROUGH IRRIGATION)
+
+5.1 Advantages of Fertigation
+- Fertilizer use efficiency increases from 30-40% (soil application) to 80-90% (fertigation)
+- Uniform application across the field; no plant-to-plant variation
+- Can apply small, frequent doses matching crop demand precisely
+- Reduces labor costs and fertilizer wastage
+- Common in Gujarat for cotton, banana, sugarcane, and horticultural crops
+
+5.2 Fertilizer Selection for Fertigation
+- Urea: Highly soluble; suitable for all drip systems; apply at 1-2% solution concentration
+- DAP (Di-Ammonium Phosphate): Good source of N and P; dissolve in warm water before injection
+- MOP (Muriate of Potash): Soluble; suitable for fertigation; apply at 1-2% solution
+- Calcium nitrate, potassium nitrate: Excellent for fertigation but more expensive
+- Water-soluble NPK fertilizers (19-19-19, 20-20-20): Pre-formulated blends for fertigation
+- Micronutrient chelates (EDTA forms): Soluble and stable in irrigation water; apply as per soil test recommendations
+- Avoid: Ordinary single super phosphate (not water-soluble), calcium ammonium nitrate (can precipitate in hard water), and any fertilizer containing insoluble fillers
+
+5.3 Fertigation Schedule Examples
+- Cotton (Gujarat): 30% of N and K through fertigation at weekly intervals from flowering to boll development; 20% of P at planting through fertigation
+- Banana: Daily fertigation with 1-2 g N, 0.5-1 g P, and 2-3 g K per plant per day after 4 months of planting
+- Tomato: Weekly fertigation with 2-3 kg urea, 1-2 kg MOP, and 1 kg 19-19-19 per 1000 sqm during fruiting stage
+
+5.4 Fertigation Equipment
+- Venturi injector: Simple, no moving parts, operates on pressure differential; suitable for small farms; cost Rs. 2,000-5,000
+- Fertilizer tank (bypass type): Tank connected to the main line via a bypass; water flows through the tank dissolving fertilizer; simple but less precise; cost Rs. 3,000-8,000
+- Dosing pump: Electric or hydraulic pump that injects precise amounts; suitable for large commercial farms; cost Rs. 15,000-50,000
+
+6. WATER USE EFFICIENCY AND CROP PERFORMANCE
+
+6.1 Water Savings Compared to Flood Irrigation
+- Drip irrigation: Saves 40-60% water compared to flood irrigation
+- Sprinkler irrigation: Saves 30-50% water compared to flood irrigation
+- Drip + mulching: Saves 60-70% water; the combination is highly recommended for Gujarat's water-scarce regions
+
+6.2 Yield Improvements in Gujarat
+- Cotton: 15-25% yield increase with drip irrigation due to better water and nutrient management
+- Groundnut: 20-30% yield increase; especially effective in Saurashtra where water is limiting
+- Banana: 30-50% yield increase with drip fertigation; almost universal in Gujarat's banana belt
+- Vegetables: 25-40% yield increase with drip + fertigation
+- Sugarcane: 20-30% yield increase with drip; also improves sugar content
+
+7. SUBSIDIES AND FINANCIAL SUPPORT IN GUJARAT
+
+7.1 PMKSY (Per Drop More Crop) Subsidy
+- Small and marginal farmers: 70% subsidy (55% central + 15% state)
+- Other farmers: 50% subsidy (35% central + 15% state)
+- SC/ST farmers: Additional 10% state subsidy in some districts
+- Maximum area: 5 hectares per farmer; can be extended for FPOs and cooperatives
+- Application: Through the Gujarat Green Revolution Company (GGRC) or district agriculture office
+- Required documents: 7/12 extract, Aadhaar, bank passbook, caste certificate if applicable, and water source proof
+
+7.2 GGRC (Gujarat Green Revolution Company)
+GGRC is the nodal agency for micro-irrigation in Gujarat. They empanel system manufacturers, process applications, and conduct field inspections. Contact GGRC at their district offices or through their website for application forms and empanelled vendor lists.
+
+7.3 Cost Estimates (After Subsidy, 2024 rates)
+- Drip for row crops (cotton/groundnut): Rs. 25,000-35,000 per hectare (after 50% subsidy)
+- Drip for orchard crops: Rs. 40,000-60,000 per hectare (after 50% subsidy)
+- Sprinkler for field crops: Rs. 15,000-25,000 per hectare (after 50% subsidy)
+- Mini-sprinkler for vegetables: Rs. 30,000-45,000 per hectare (after 50% subsidy)
+
+8. COMMON MISTAKES TO AVOID
+- Oversizing the pump: A high-discharge pump with a micro-irrigation system causes excessive pressure, pipe bursts, and emitter damage. Match the pump to the system design.
+- Neglecting filtration: The biggest cause of system failure in Gujarat is inadequate filtration. Invest in good filters and maintain them.
+- Poor system layout: Laying laterals across slopes causes uneven water distribution; always follow contour lines.
+- Using the wrong fertilizers: Insoluble fertilizers clog emitters permanently. Only use water-soluble or specially formulated fertigation-grade fertilizers.
+- Ignoring maintenance: A micro-irrigation system requires regular maintenance. The farmer who saves 50% on water but spends 20% more on maintenance still comes out far ahead.
+- Not training laborers: Farm workers should know how to clean filters, flush lines, and recognize clogging symptoms.

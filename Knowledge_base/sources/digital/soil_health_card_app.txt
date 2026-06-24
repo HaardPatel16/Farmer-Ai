@@ -1,0 +1,202 @@
+SOIL HEALTH CARD APPLICATION AND INTERPRETATION FOR GUJARAT FARMERS
+
+1. INTRODUCTION
+The Soil Health Card (SHC) scheme is a flagship program of the Government of India that provides farmers with a card containing the nutrient status of their farmland. In Gujarat, the scheme is implemented by the Department of Agriculture through the Gujarat State Fertilizer Company and district soil testing laboratories. Every farmer in Gujarat is entitled to a free Soil Health Card every 2 years. The SHC app allows farmers to access their soil test results digitally, understand the recommendations, and track soil health over time. This guide explains how to use the SHC app, interpret results, and implement corrective measures.
+
+2. WHAT IS THE SOIL HEALTH CARD?
+
+2.1 Physical Card
+The physical Soil Health Card is a printed document given to the farmer that contains:
+- Farmer details (name, address, survey number)
+- Soil test results for 12 parameters: N (Nitrogen), P (Phosphorus), K (Potassium), S (Sulphur), Zn (Zinc), Fe (Iron), Cu (Copper), Mn (Manganese), B (Boron), pH, EC (Electrical Conductivity), and OC (Organic Carbon)
+- Fertilizer recommendations for the farmer's main crops
+- Dosage recommendations for organic and bio-fertilizers
+
+2.2 Digital Access
+The SHC scheme also provides digital access through:
+- The Soil Health Card portal (soilhealth.dac.gov.in)
+- The Soil Health Card mobile app (available on Android)
+- SMS-based query service
+
+3. HOW TO GET YOUR SOIL TESTED IN GUJARAT
+
+3.1 Soil Sample Collection
+Proper sample collection is critical for accurate results:
+- Divide your farm into homogeneous units (same soil type, color, slope, and management history)
+- Collect 15-20 subsamples from each unit in a zigzag pattern using a soil auger or spade
+- Depth: 0-15cm for most crops; 15-30cm for deep-rooted crops and orchards
+- Mix all subsamples in a clean plastic bucket and take approximately 0.5 kg as the composite sample
+- Remove stones, roots, and organic debris
+- Air-dry the sample in shade (do not oven-dry or heat)
+- Place in a clean cloth bag or plastic container with the label showing: Farmer name, village, survey number, depth, and date
+
+3.2 Where to Submit Samples
+- District Soil Testing Laboratory (every district in Gujarat has one)
+- Taluka-level mini soil testing labs (being expanded under the scheme)
+- Krishi Vigyan Kendras (KVKs) in Gujarat
+- Mobile soil testing vans that visit villages during campaigns
+- Private NABL-accredited laboratories (if immediate testing is needed, but not free)
+
+3.3 Free Testing Process
+- Submit your sample at the nearest government soil testing lab
+- Provide your Aadhaar number, mobile number, and land records (7/12 extract)
+- The lab tests the sample within 15-30 days
+- Results are uploaded to the national SHC database
+- You receive an SMS when the card is ready
+- Collect the physical card from the agriculture office or download the digital version
+
+4. USING THE SOIL HEALTH CARD APP
+
+4.1 Download and Registration
+- Download the "Soil Health Card" app from Google Play Store
+- Open the app and select language (Gujarati is available)
+- Register with your mobile number and Aadhaar number
+- Complete the OTP verification
+- Your previously issued SHCs will be linked automatically if your mobile/Aadhaar matches the database
+
+4.2 App Features
+- View SHC: Access all your soil health cards by survey number or farm ID
+- Fertilizer Calculator: Input your crop and area; the app calculates the exact fertilizer dose based on your soil test
+- Dealer Locator: Find nearby fertilizer dealers and their stock
+- Market Prices: Check local market prices for inputs
+- Advisory: Get crop-specific recommendations based on your soil health
+- History: Track changes in soil health over multiple testing cycles
+- Share: Share your SHC with input dealers, extension workers, or advisors
+
+4.3 SMS Query Service
+Farmers without smartphones can SMS their SHC ID to a designated number to receive basic information. Contact your district agriculture office for the current SMS query number.
+
+5. INTERPRETING SOIL HEALTH CARD RESULTS
+
+5.1 Understanding Soil Test Parameters
+
+Nitrogen (N):
+- Low: <140 kg/ha (requires 80-120 kg N/ha for most crops)
+- Medium: 140-280 kg/ha
+- High: >280 kg/ha
+- Correction: Apply urea, organic manure, or grow legumes
+
+Phosphorus (P):
+- Low: <10 kg/ha (requires 40-60 kg P2O5/ha)
+- Medium: 10-25 kg/ha
+- High: >25 kg/ha
+- Correction: Apply DAP, SSP, or rock phosphate
+
+Potassium (K):
+- Low: <120 kg/ha (requires 40-60 kg K2O/ha)
+- Medium: 120-280 kg/ha
+- High: >280 kg/ha
+- Correction: Apply MOP or organic manure
+
+Sulphur (S):
+- Low: <10 ppm (requires 20-40 kg S/ha)
+- Medium: 10-20 ppm
+- High: >20 ppm
+- Correction: Apply gypsum, sulphur bentonite, or ammonium sulphate
+
+Zinc (Zn):
+- Deficient: <0.5 ppm (requires 25 kg zinc sulphate/ha)
+- Sufficient: 0.5-1.0 ppm
+- High: >1.0 ppm
+- Correction: Apply zinc sulphate (21% Zn) or Zn-EDTA chelate
+
+Iron (Fe):
+- Deficient: <4.5 ppm (requires foliar spray of ferrous sulphate 0.5%)
+- Sufficient: 4.5-10 ppm
+- Correction: Foliar spray of 0.5% ferrous sulphate + 0.1% citric acid
+
+Copper (Cu), Manganese (Mn), Boron (B):
+- Deficiency thresholds vary; follow SHC recommendations
+- Correction: Apply specific micronutrient fertilizers or foliar sprays
+
+pH:
+- Acidic: <6.0 (rare in Gujarat; if found, apply lime)
+- Normal: 6.5-7.5 (ideal for most crops)
+- Alkaline: 7.5-8.5 (common in Gujarat; apply gypsum or sulphur if problematic)
+- Strongly alkaline: >8.5 (requires reclamation with gypsum and leaching)
+
+Electrical Conductivity (EC):
+- Normal: <1.0 dS/m (non-saline)
+- Slightly saline: 1.0-2.0 dS/m
+- Moderately saline: 2.0-4.0 dS/m
+- Strongly saline: >4.0 dS/m (requires salt-tolerant crops and drainage)
+
+Organic Carbon (OC):
+- Very low: <0.4% (requires heavy organic manure application)
+- Low: 0.4-0.75% (most Gujarat soils fall here)
+- Medium: 0.75-1.25%
+- High: >1.25% (ideal; indicates good soil health)
+- OC is directly correlated with soil fertility, water-holding capacity, and microbial activity
+
+6. CORRECTIVE MEASURES BASED ON SHC RESULTS
+
+6.1 For Low Nitrogen
+- Apply 5-10 tonnes per hectare of farmyard manure (FYM) or compost before planting
+- Use nitrogen-fixing biofertilizers (Azotobacter, Rhizobium for legumes)
+- Split nitrogen application: 50% basal, 25% at tillering/vegetative, 25% at flowering/fruiting
+- Include legumes in crop rotation (green gram, black gram, pigeon pea, chickpea)
+- Grow green manure crops (dhaincha, sunnhemp) and incorporate before flowering
+
+6.2 For Low Phosphorus
+- Apply DAP or SSP as basal dressing at planting
+- Apply rock phosphate in acidic soils (not common in Gujarat)
+- Use phosphate-solubilizing bacteria (PSB) biofertilizer
+- Apply FYM or compost, which improves phosphorus availability
+- Band placement of phosphorus below the seed is more efficient than broadcasting
+
+6.3 For Low Potassium
+- Apply MOP (muriate of potash) at recommended rates
+- Use wood ash or crop residues (especially cotton stalks, pigeon pea stalks)
+- Apply FYM or compost; organic matter contains significant potassium
+- For fruit crops, apply potassium in split doses during fruit development
+
+6.4 For Micronutrient Deficiencies (Common in Gujarat)
+- Zinc deficiency: Apply 25 kg zinc sulphate per hectare at sowing; for standing crops, spray 0.5% zinc sulphate
+- Iron deficiency: Common in high-pH soils; apply 0.5% ferrous sulphate foliar spray; for severe cases, apply Fe-EDTA in the root zone
+- Boron deficiency: Apply 10 kg borax per hectare or spray 0.2% borax solution
+- Sulphur deficiency: Apply gypsum (400 kg/ha) or ammonium sulphate as part of the nitrogen dose
+
+6.5 For Saline Soils (High EC)
+- Apply gypsum based on soil test recommendations (typically 2-5 tonnes/ha)
+- Improve drainage to allow leaching of salts
+- Use drip irrigation to maintain high soil moisture and reduce salt concentration
+- Grow salt-tolerant crops: barley, cotton, sorghum, mustard, and date palm
+- Add organic matter to improve soil structure and salt tolerance
+
+6.6 For Low Organic Carbon (Most Common Problem in Gujarat)
+- Apply 10 tonnes/ha FYM or compost every year
+- Adopt residue retention or zero tillage instead of burning crop residues
+- Practice green manuring with dhaincha or sunnhemp
+- Use vermicompost (2-3 tonnes/ha) for faster nutrient release
+- Adopt intercropping with legumes
+- Apply biochar if available locally
+
+7. INTEGRATED NUTRIENT MANAGEMENT (INM) APPROACH
+The SHC recommends an INM approach that combines:
+- Chemical fertilizers (based on soil test results, not blanket recommendations)
+- Organic manures (FYM, compost, vermicompost)
+- Biofertilizers (Azotobacter, PSB, Rhizobium, VAM)
+- Green manuring
+- Crop residues
+This integrated approach reduces fertilizer costs by 20-30%, improves soil health, and prevents nutrient imbalances.
+
+8. TRACKING SOIL HEALTH OVER TIME
+- Get your soil tested every 2 years (as per the SHC scheme cycle)
+- Maintain a file of all SHCs and compare results over time
+- Record the fertilizers, manures, and amendments applied each season
+- If soil health is not improving, consult a soil scientist at the nearest KVK or GAU (Gujarat Agricultural University)
+- Target: Increase organic carbon from <0.5% to >0.75% over 5 years; bring all nutrients to the "medium" or "high" range
+
+9. GOVERNMENT SCHEMES AND SUPPORT
+- Soil Health Card Scheme: Free soil testing every 2 years for all farmers
+- Paramparagat Krishi Vikas Yojana (PKVY): Supports organic farming and soil health improvement
+- National Mission on Sustainable Agriculture (NMSA): Provides subsidies for micronutrients, organic manure, and biofertilizers
+- Gujarat State: Additional subsidies for gypsum application in saline areas and micronutrient sprays
+- KVKs and ATMA (Agricultural Technology Management Agency) provide training on SHC interpretation and INM
+
+10. FREQUENTLY ASKED QUESTIONS
+Q: Is soil testing really free? A: Yes, under the Soil Health Card scheme, soil testing is completely free at government laboratories.
+Q: How long do results take? A: 15-30 days at government labs; 3-7 days at private labs (paid service).
+Q: Can I test my soil every year? A: The scheme provides free testing every 2 years, but you can pay for additional tests if needed.
+Q: What if my SHC recommendations don't match my experience? A: SHC recommendations are based on soil tests, but local conditions, climate, and crop varieties may require adjustment. Consult a local agronomist.
+Q: Does the SHC app work offline? A: The app requires internet for downloading data, but viewed cards can be accessed offline.

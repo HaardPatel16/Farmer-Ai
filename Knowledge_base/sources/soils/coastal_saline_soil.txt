@@ -1,0 +1,225 @@
+================================================================================
+COASTAL SALINE SOIL — COMPLETE SOIL PROFILE
+================================================================================
+
+1. SOIL TYPE NAME & CLASSIFICATION
+--------------------------------------------------------------------------------
+Coastal saline soils are salt-affected soils found in the maritime zones of Gujarat,
+formed by the combined action of seawater intrusion, tidal flooding, and capillary rise
+of saline groundwater. In the WRB classification, they are often Salic Fluvisols, Salic
+Arenosols, or Solonchaks. In the USDA system, they are classified as Salids (Aridisols)
+or Salic subgroups of Entisols and Inceptisols. These soils are characterised by high
+electrical conductivity (ECe > 4 dS/m), sodium adsorption ratio (SAR > 13), and often
+visible white salt crusts on the soil surface. They represent the most challenging
+agricultural environment in Gujarat but can be reclaimed with sustained effort.
+
+2. PHYSICAL PROPERTIES
+--------------------------------------------------------------------------------
+Texture: Sandy loam to sandy clay loam near the coast; clay loam in backwater and estuarine
+areas. The texture varies with distance from the shoreline and the depositional environment.
+
+Structure: Weak structure due to high sodium content. Sodium disperses clay particles,
+destroying aggregates and creating a massive, hard-setting surface. The soil becomes
+puddled and impermeable when wet.
+
+Colour: Grey to greyish-brown with white salt efflorescence (salt crust) on the surface
+during dry periods. In severely affected areas, the surface may appear almost white due
+to salt crystallisation. Darker colours indicate organic matter in marshy areas.
+
+Depth: Variable — shallow to deep. In some areas, a hard saline pan may occur at 20–50
+cm depth, restricting root penetration.
+
+Drainage: Poor to very poor. High sodium content causes clay dispersion, which blocks soil
+pores and reduces infiltration rates to near zero. Water stands on the surface for days
+after rainfall or irrigation.
+
+Water-Holding Capacity: Low to moderate, but the high salinity makes much of the water
+unavailable to plants (osmotic stress). Even when soil moisture is adequate, plants cannot
+absorb water due to the high salt concentration in the soil solution.
+
+3. CHEMICAL PROPERTIES
+--------------------------------------------------------------------------------
+pH Range: 8.0 to 9.0, typically alkaline. The high pH is due to the presence of sodium
+carbonate and sodium bicarbonate. In some areas, pH may exceed 9.5 during the dry season
+when carbonate precipitates.
+
+Electrical Conductivity (ECe): 4 to 30+ dS/m. Moderately saline (4–8 dS/m) soils can support
+salt-tolerant crops; strongly saline (8–16 dS/m) soils require reclamation; very strongly
+saline (>16 dS/m) soils are difficult to reclaim for agriculture.
+
+Sodium Adsorption Ratio (SAR): 13 to 60+. High SAR indicates sodium dominance on the
+exchange complex, which causes soil dispersion and poor physical conditions.
+
+Exchangeable Sodium Percentage (ESP): 15 to 50+. ESP > 15 indicates sodic conditions; ESP
+> 40 indicates severe sodicity.
+
+Organic Matter: Very low (0.1–0.4%). The hostile environment (salinity, poor aeration)
+suppresses microbial activity and organic matter decomposition.
+
+NPK Status:
+  • Nitrogen: Very low (80–150 kg/ha available N). Salinity inhibits nitrogen mineralisation
+    and nitrification.
+  • Phosphorus: Low (8–15 kg/ha available P). High calcium and sodium fix phosphorus into
+    unavailable forms.
+  • Potassium: Variable. Sodium competes with potassium for uptake, causing potassium
+    deficiency even when soil K is adequate.
+
+Micronutrients: Zinc, iron, and manganese deficiencies are common due to high pH and poor
+aeration. Boron toxicity can occur in some coastal areas due to seawater boron.
+
+4. WHERE FOUND IN GUJARAT
+--------------------------------------------------------------------------------
+Coastal saline soils are found along the entire coastline of Gujarat:
+  • Saurashtra Coast: Jamnagar, Devbhoomi Dwarka, Porbandar, Gir Somnath, Junagadh (coastal
+talukas), Amreli (coastal talukas), Bhavnagar (coastal areas).
+  • Kutch Coast: Mundra, Mandvi, Lakhpat, Abdasa — extensive areas of coastal salinity
+    due to the proximity of the Rann of Kutch and the Arabian Sea.
+  • South Gujarat Coast: Valsad, Navsari, Surat (coastal talukas), Bharuch (Gulf of Khambhat
+    side). Salinity is less severe here due to higher rainfall but occurs in estuarine areas.
+  • Gulf of Kutch: The entire Gulf of Kutch coastline has saline soils extending 5–20 km inland.
+
+Extent: Approximately 5–7% of Gujarat's total geographical area. The most severely affected
+districts are Jamnagar, Devbhoomi Dwarka, Porbandar, and Kutch.
+
+5. SUITABILITY FOR CROPS
+--------------------------------------------------------------------------------
+Salt-Tolerant Crops (Best Options):
+  • Cotton — Moderately salt-tolerant. Grows on soils with ECe up to 8–10 dS/m with proper
+    management. Bt cotton hybrids are grown in coastal Saurashtra. Yields: 1.5–2.5 quintals/ha
+    (lint) under saline conditions.
+  • Barley — Highly salt-tolerant cereal. Can grow on soils with ECe up to 12–16 dS/m.
+    Not commonly grown in Gujarat but useful for reclamation and fodder.
+  • Safflower — Moderately salt-tolerant oilseed. Good for partially reclaimed soils.
+  • Sugarbeet — Highly salt-tolerant root crop. Can be grown on moderately saline soils with
+    high irrigation.
+  • Sorghum — Moderately salt-tolerant. Forage sorghum for green fodder.
+  • Sesame (Til) — Moderately salt-tolerant oilseed. GT-1, GT-2 can tolerate ECe up to 6–8 dS/m.
+  • Cluster Bean (Guar) — Moderately salt-tolerant and drought-tolerant. Useful for reclaiming
+    saline soils while providing income.
+
+Less Suitable (require significant reclamation):
+  • Groundnut — Sensitive to salinity; pod rot increases in saline conditions. Only for
+    mildly saline soils (ECe < 4 dS/m).
+  • Wheat — Moderately sensitive; can grow on mildly saline soils with extra irrigation.
+  • Bajra — Moderately tolerant but prefers non-saline conditions.
+
+Unsuitable:
+  • Rice — requires very low salinity; only for fully reclaimed or naturally non-saline pockets.
+  • Citrus and most fruit crops — highly sensitive to salinity.
+  • Vegetables — most are sensitive to salinity and should not be grown until reclamation
+    is complete.
+
+Yield Potential: Low to moderate under saline conditions. Reclaimed soils can achieve
+yields comparable to non-saline soils. The key is that reclamation is a gradual process
+(3–5 years) and farmers must use salt-tolerant crops during the reclamation period.
+
+6. MANAGEMENT PRACTICES
+--------------------------------------------------------------------------------
+Fertiliser Recommendations:
+  • Nitrogen: 80–120 kg N/ha for tolerant cereals; 120–150 kg N/ha for cotton. Use ammonium
+    sulphate or calcium ammonium nitrate rather than urea (reduces ammonia volatilisation at
+    high pH). Split applications are essential.
+  • Phosphorus: 40–60 kg P2O5/ha. Band placement is more effective than broadcasting. Use DAP
+    or SSP. Phosphorus availability is very low in saline-sodic soils.
+  • Potassium: 30–50 kg K2O/ha. Extra K may be needed because sodium competes with K for uptake.
+  • Zinc: 25 kg zinc sulphate/ha — essential in saline soils. Foliar spray of 0.5% ZnSO4 for
+    standing crops.
+  • Iron: Foliar spray of 0.5% FeSO4 (2–3 sprays) for chlorosis. Iron availability is severely
+    reduced in saline-sodic conditions.
+  • Sulphur: 20–30 kg S/ha. Sulphur is needed for protein synthesis and helps in sodium
+    displacement (as calcium sulphate/gypsum).
+
+Irrigation: Leaching is the key reclamation strategy. Apply irrigation in excess of crop
+water requirement (leaching fraction of 15–20%) to dissolve salts and move them below the
+root zone. Drip irrigation is preferred for established crops as it maintains uniform soil
+moisture and prevents salt accumulation at the root zone. Never allow the soil to dry
+completely — salt concentration increases as water evaporates.
+
+Tillage: Minimal tillage to avoid bringing salts to the surface. Tillage also destroys the
+thin surface mulch that reduces evaporation. If tillage is necessary, do it immediately
+after irrigation when salts are leached downward.
+
+Special Practices: Raised bed cultivation for salt-tolerant crops to improve drainage and
+prevent waterlogging. Mulching with straw or plastic to reduce evaporation and salt
+accumulation at the surface. Planting on the sides of ridges rather than the top (where
+salts accumulate).
+
+7. PROBLEMS & REMEDIES
+--------------------------------------------------------------------------------
+  • High Salinity (ECe > 8 dS/m): Remedy: Leach with excess irrigation water (canal or fresh
+    groundwater); install subsurface drainage (mole drains or perforated pipes) to remove
+    saline water from the root zone; grow salt-tolerant crops during reclamation.
+  • Sodicity (ESP > 15): Remedy: Apply gypsum (calcium sulphate) at 5–10 tonnes/ha. Gypsum
+    replaces sodium on the exchange complex with calcium, which improves soil structure
+    and permeability. The replaced sodium is then leached out with irrigation. For severely
+    sodic soils (ESP > 40), apply 10–15 tonnes/ha. This is the most important reclamation
+    amendment for coastal saline soils in Gujarat.
+  • Poor Drainage: Remedy: Open drainage channels; subsurface drainage systems; raised bed
+    cultivation; avoid over-irrigation; break up hardpans with deep tillage.
+  • Salt Crust Formation: Remedy: Mechanical removal of salt crusts (not recommended as it
+    returns salts to the soil); light irrigation or rainfall to dissolve crusts; mulching
+    to prevent evaporation; avoid fallowing (bare soil accumulates more salt).
+  • Nutrient Imbalance: Remedy: Regular soil testing; balanced fertilisation; extra K to
+    counteract Na competition; micronutrient foliar sprays.
+  • Waterlogging: Remedy: Install drainage systems; grow rice in the first year of reclamation
+    (rice tolerates waterlogging and helps leach salts); use raised beds for other crops.
+  • Seawater Ingress: Remedy: In coastal aquifers, reduce groundwater pumping to prevent
+    seawater intrusion; construct subsurface barriers where feasible; use only fresh water
+    for irrigation.
+
+Reclamation Sequence:
+  Year 1: Apply gypsum (5–10 t/ha); leach heavily; grow dhaincha (Sesbania) or rice (puddling
+    helps leaching). If no irrigation, grow salt-tolerant grasses or leave fallow with mulching.
+  Year 2: Reapply gypsum (2–5 t/ha); grow barley or cotton. Continue leaching.
+  Year 3: Apply gypsum as needed based on soil test; grow cotton or sorghum. Begin regular
+    cropping.
+  Year 4+: Normal cropping with salt-tolerant varieties; maintain leaching fraction; monitor
+    soil salinity annually.
+
+8. SOIL TESTING INTERPRETATION for this soil type
+--------------------------------------------------------------------------------
+When interpreting soil test results for coastal saline soils:
+
+  • ECe (Electrical Conductivity): < 4 dS/m = non-saline; 4–8 = moderately saline (salt-
+    tolerant crops possible); 8–16 = strongly saline (reclamation needed); > 16 = very
+    strongly saline (difficult to reclaim).
+  • pH: 8.0–8.5 = mildly alkaline; 8.5–9.0 = moderately alkaline (sodic); > 9.0 = strongly
+    alkaline (severe sodicity). Apply gypsum if pH > 8.5 and ESP > 15.
+  • SAR (Sodium Adsorption Ratio): < 13 = non-sodic; 13–20 = marginally sodic; 20–40 = sodic;
+    > 40 = strongly sodic. Apply gypsum if SAR > 13.
+  • ESP (Exchangeable Sodium Percentage): < 15 = non-sodic; 15–30 = sodic; 30–50 = strongly
+    sodic; > 50 = very strongly sodic. Gypsum rate: 5 t/ha for ESP 15–30; 10 t/ha for ESP
+    30–50; 15 t/ha for ESP > 50.
+  • Organic Matter: Target > 0.5%. Apply FYM 20–25 tonnes/ha to improve structure and microbial
+    activity.
+  • Nitrogen: If available N < 120 kg/ha, increase N application and use ammonium forms.
+  • Phosphorus: If available P < 10 kg/ha, apply 60–80 kg P2O5/ha in bands.
+  • Zinc: Critical level 0.5 ppm. Apply 25 kg ZnSO4/ha prophylactically.
+  • Iron: DTPA-Fe < 4.5 ppm indicates deficiency. Foliar Fe spray is essential.
+
+9. ORGANIC MATTER IMPROVEMENT STRATEGIES
+--------------------------------------------------------------------------------
+  • Farm Yard Manure (FYM): Apply 20–25 tonnes/ha annually. Organic matter is critical for
+    improving soil structure in saline-sodic soils. Humic substances from organic matter
+    help flocculate dispersed clay particles and improve permeability.
+  • Green Manuring: Grow dhaincha (Sesbania aculeata) or sunnhemp (Crotalaria juncea) during
+    the reclamation phase. These salt-tolerant legumes add biomass, fix nitrogen, and improve
+    soil structure. Incorporate before flowering.
+  • Compost: Use well-decomposed compost or vermicompost (5–8 tonnes/ha) to avoid salt
+    addition from raw manure. Vermicompost is rich in humic acids which improve soil structure.
+  • Crop Residue Management: Incorporate salt-tolerant crop residues (cotton, barley, sorghum)
+    rather than burning. Residue mulch on the soil surface reduces evaporation and salt accumulation.
+  • Biofertilisers: Use VAM (Vesicular Arbuscular Mycorrhiza) fungi which improve plant
+    tolerance to salinity and enhance nutrient uptake. Azotobacter and phosphate-solubilising
+    bacteria (PSB) help in nutrient-poor saline soils.
+  • Afforestation: Plant salt-tolerant trees (Casuarina, Eucalyptus, Acacia, Prosopis) on
+    field boundaries and degraded patches. Trees reduce wind speed, lower evaporation, and
+    add leaf litter. Casuarina is particularly successful in coastal Gujarat.
+  • Cover Cropping: Use cluster bean, cowpea, or horse gram during the reclamation period
+    to cover the soil, add biomass, and prevent salt accumulation at the surface.
+  • Organic Farming: Full organic farming is difficult on saline soils during the reclamation
+    phase because organic matter decomposition is slow and nutrient release is insufficient
+    for high yields. However, after 4–5 years of reclamation, organic practices can maintain
+    soil health. Use compost tea and vermiwash as foliar supplements.
+
+================================================================================

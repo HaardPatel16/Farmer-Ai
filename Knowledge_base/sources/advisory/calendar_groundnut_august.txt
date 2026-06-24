@@ -1,0 +1,98 @@
+================================================================================
+GROUNDNUT CROP CALENDAR — GUJARAT — AUGUST
+================================================================================
+
+CROP: Groundnut
+MONTH: August
+PRIMARY REGION: Saurashtra, Kutch, North Gujarat
+DOCUMENT TYPE: Month-wise Activity Calendar
+
+================================================================================
+1. SOIL PREPARATION FOR AUGUST
+================================================================================
+  • If waterlogging occurred in July, apply gypsum 250 kg per hectare to reclaim sodic patches
+  • Light inter-culture with hand hoe between rows improves aeration and soil temperature
+  • Do NOT deep cultivate — pegs are entering soil and pods are forming; any disturbance reduces yield
+  • Maintain drainage channels; August floods can cause aflatoxin contamination
+  • In waterlogged fields, remove excess water within 24 hours to prevent pod rot
+
+================================================================================
+2. SOWING / PLANTING DATES
+================================================================================
+  • NO sowing in August — too late for profitable groundnut crop in Gujarat
+  • Focus on crop management: weed control, pest scouting, and gypsum application
+  • If gaps are severe, no replanting is recommended at this stage
+  • Remove waterlogged and dead plants; maintain healthy plant population
+
+================================================================================
+3. IRRIGATION SCHEDULE
+================================================================================
+  • Critical irrigation at flowering and pegging stage (40-60 days); if no rain for 10 days, apply 25mm
+  • Maintain soil moisture at 60-70% field capacity during pod formation
+  • In Saurashtra, sprinkler irrigation is ideal for groundnut at this stage
+  • Avoid waterlogging — August floods cause pod rot and aflatoxin contamination
+  • Remove excess water within 24 hours of flooding; aerate soil if possible
+
+================================================================================
+4. FERTILIZER TIMING & DOSES
+================================================================================
+  • Apply gypsum 250-400 kg per hectare at flowering stage (40-50 days) — THIS IS THE CRITICAL APPLICATION
+  • Gypsum provides calcium for pod development and improves pod filling
+  • Spread gypsum between rows when soil is moist; do NOT apply during heavy rain
+  • NO nitrogen application — groundnut fixes its own nitrogen
+  • If micronutrient deficiency was observed earlier, apply 0.2% borax foliar spray at flowering
+
+================================================================================
+5. PEST SCOUTING DATES
+================================================================================
+  • Leaf spot (Cercospora and Alternaria): spray Mancozeb 2.5g per litre if spots appear after rain
+  • White grub: if damage is observed, drench with Chlorpyriphos 2ml per litre around affected plants
+  • Aphids: if colonies exceed 10 per plant, spray Imidacloprid 0.5ml per litre
+  • Stem rot (Sclerotium rolfsii): if white fungal growth appears at base, drench with Carbendazim 1g/litre
+  • Tikka leaf spot: if infection is severe, spray Mancozeb 2.5g per litre + Carbendazim 1g per litre
+  • Rust (Puccinia arachidis): if orange pustules appear, spray Propiconazole 1ml per litre immediately
+
+================================================================================
+6. HARVESTING WINDOWS
+================================================================================
+  • NO harvest in August — groundnut is in flowering and pod formation stage (40-80 days)
+  • Continue monitoring crop growth and pest populations
+  • Record keeping: document flowering date for harvest planning (90-110 days after sowing)
+  • Prepare harvesting equipment and storage facilities for September-October
+
+================================================================================
+7. POST-HARVEST OPERATIONS
+================================================================================
+  • NO post-harvest operations in August
+  • Prepare drying yards, threshers, and storage godowns for September-October harvest
+  • Clean and repair digging equipment; arrange for transport
+  • Contact oil mills or market yards for price information and procurement schedules
+
+================================================================================
+8. WEATHER WATCH
+================================================================================
+  • August is the wettest month in Gujarat: 300-450mm average rainfall
+  • Waterlogging and flood risk remains high; prioritize drainage over irrigation
+  • Humidity 75-95%; favourable for fungal diseases — increase scouting to twice per week
+  • Day temperatures 28-32°C; nights 24-26°C; warm and humid
+  • IMD warnings: heavy rainfall alerts (100mm+ in 24 hours) and flood warnings for Saurashtra
+
+================================================================================
+9. GOVERNMENT SCHEME DEADLINES
+================================================================================
+  • PMFBY: if crop damage from waterlogging or pest, notify within 72 hours and file claim
+  • Crop damage survey: contact local agriculture officer for assessment
+  • Groundnut seed subsidy: no new claims in August; focus on crop protection
+  • Kisan Credit Card: avail credit for pesticide and labour costs
+  • Contact KVK for pest identification and spray recommendations
+
+================================================================================
+10. RELATED TOPICS & QUICK LINKS
+================================================================================
+  • Related: calendar_groundnut_june.txt, calendar_groundnut_july.txt, calendar_september.txt
+  • Advisories: spray_safety.txt, soil_testing_guide.txt, post_harvest_storage.txt
+  • Weather: imd_forecast_guide.txt, monsoon_onset_advisory.txt
+  • Helpline: Kisan Call Centre 1800-180-1551, Gujarat Oilseeds Association 079-2657-6201
+  • Online: https://ikhedut.gujarat.gov.in, https://www.dgr.gov.in
+
+================================================================================

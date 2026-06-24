@@ -1,0 +1,115 @@
+================================================================================
+GUJARAT FARMING CALENDAR — AUGUST (આષાઢ / શ્રાવણ (Ashadh / Shravan))
+================================================================================
+
+OVERVIEW:
+August is a critical month for Gujarat agriculture. The state's diverse agro-climatic zones — Saurashtra, North Gujarat, South Gujarat, and Kutch — each have specific crop activities during this period. This calendar provides detailed, week-by-week guidance for farmers.
+
+CROPS IN FOCUS THIS MONTH:
+  • Cotton (flowering/boll)
+  • Groundnut (podding)
+  • Bajra (heading)
+  • Paddy (tillering)
+  • Castor (vegetative)
+  • Heavy monsoon
+
+================================================================================
+1. SOIL PREPARATION
+================================================================================
+  • Summer ploughing should be completed by now if not already done; deep ploughing (20-25 cm) improves water infiltration
+  • For heavy black cotton soils, apply organic matter / FYM (Farm Yard Manure) 10-15 tonnes per hectare at least 2-3 weeks before sowing
+  • Level the field using a leveller to ensure uniform irrigation and prevent waterlogging
+  • In Saurashtra, apply gypsum 250 kg per hectare for sodic soil reclamation before sowing
+  • Conduct soil testing: pH should be 6.5-7.5 for most crops; apply lime if pH < 6.0
+  • Prepare raised beds (15-20 cm high) for vegetable crops to improve drainage during monsoon
+
+================================================================================
+2. SOWING / PLANTING DATES
+================================================================================
+  • NO new sowing of main Kharif crops in August — too late for most crops
+  • Fodder crops (jowar, maize) can be sown for green fodder in South Gujarat with assured drainage
+  • Vegetable sowing (cucumber, ridge gourd, bitter gourd) for late Kharif in South Gujarat
+  • Intercropping of moong in standing cotton or groundnut — possible until first week of August in Saurashtra
+  • No major field sowing; focus on crop management and protection
+
+================================================================================
+3. IRRIGATION SCHEDULE
+================================================================================
+  • Cotton: generally rainfed; if dry spell exceeds 10 days during boll formation, provide 25mm irrigation
+  • Groundnut: critical irrigation at pod filling stage (60-80 days); if no rain for 10 days, apply 25mm
+  • Bajra: rainfed; one irrigation at heading stage if dry spell exceeds 15 days
+  • Paddy: maintain 10 cm water layer; drain if heavy rain causes waterlogging; re-irrigate after rain stops
+  • Castor: rainfed; one irrigation at 50-60 days if dry spell occurs during flowering
+  • All crops: August floods are common; prioritize drainage over irrigation
+
+================================================================================
+4. FERTILIZER TIMING & DOSES
+================================================================================
+  • Cotton: second nitrogen top dressing (50 kg urea per hectare) at boll formation stage (60-65 days)
+  • Groundnut: apply gypsum 250 kg per hectare at flowering (40-50 days) for better pod development
+  • Bajra: second nitrogen top dressing (30-40 kg urea per hectare) at tillering stage (35-45 days)
+  • Paddy: second top dressing (50 kg urea per hectare) at panicle initiation stage (40-50 days after transplanting)
+  • Castor: second nitrogen top dressing (40 kg urea per hectare) at 60 days after sowing
+  • All crops: avoid fertilizer application during heavy rain — nutrients will leach; apply after rain stops
+
+================================================================================
+5. PEST SCOUTING DATES
+================================================================================
+  • Cotton: pink bollworm (Pectinophora gossypiella) — pheromone trap catches peak; if >8 moths/trap/week, spray
+  • Cotton: American bollworm (Helicoverpa armigera) — scout for eggs and larvae; spray Bt 1g/litre or HaNPV at dusk
+  • Cotton: mirid bug — causes leaf crumpling; spray acetamiprid if secondary pest emergence observed
+  • Groundnut: leaf spot (Cercospora and Alternaria) — spray Mancozeb 2.5g per litre if spots appear after rain
+  • Groundnut: white grub — if damage seen, apply Chlorpyriphos 2ml per litre drench around affected plants
+  • Bajra: ergot (honeydew stage) — black sticky fluid on ears; spray Mancozeb 2.5g per litre at early ear emergence
+  • Paddy: brown spot (Helminthosporium) — spray Mancozeb 2.5g per litre if lesions appear
+  • Paddy: gall midge (silver shoot) — remove and destroy affected shoots; apply Carbofuran 3G if severe
+
+================================================================================
+6. HARVESTING WINDOWS
+================================================================================
+  • NO main crop harvest in August — cotton, groundnut, and paddy are in reproductive stage
+  • Early bajra (sown in May) may be ready for harvest in South Gujarat if monsoon was good
+  • Fodder crops (jowar, maize) — first cut for green fodder at 45-50 days after sowing
+  • Vegetables (okra, cucumber) — regular harvesting every 3-5 days for marketable quality
+  • Mango: harvest of late varieties continues; post-rain harvest requires careful drying
+
+================================================================================
+7. POST-HARVEST OPERATIONS
+================================================================================
+  • Clean and dry harvested produce immediately; moisture content should be reduced to safe levels (8-10% for grains, 10-12% for oilseeds)
+  • Use tarpaulins or cemented drying yards to avoid aflatoxin contamination in groundnut and cotton
+  • Store in properly ventilated godowns; use neem leaves or safe storage pesticides
+  • For cotton, ginning should be done within 15 days of picking to preserve fibre quality
+  • Grade produce before selling: separate A, B, and C grades for better market prices
+  • Maintain post-harvest records for traceability and insurance claims
+
+================================================================================
+8. WEATHER WATCH
+================================================================================
+  • August is the wettest month in Gujarat: average rainfall 300-450mm; heavy rain in Saurashtra and South Gujarat
+  • Waterlogging and flood risk remains high; check drainage channels after every heavy rain event
+  • Humidity: 75-95%; ideal for fungal diseases — increase scouting frequency to twice per week
+  • Day temperatures: 28-32°C; nights 24-26°C; warm and humid conditions
+  • IMD warnings: watch for heavy rainfall alerts (100mm+ in 24 hours) and flood warnings for coastal districts
+
+================================================================================
+9. GOVERNMENT SCHEME DEADLINES
+================================================================================
+  • PM-KISAN installment verification: ensure Aadhaar seeding is complete before 15th of the month
+  • Soil Health Card scheme: collect updated cards from local Krushi Vigyan Kendra (KVK) or ATMA office
+  • PMFBY (Pradhan Mantri Fasal Bima Yojana) enrollment: last date for Kharif crops is usually 31st July; for Rabi crops, 15th December
+  • Gujarat State Farm Machinery Scheme: subsidy applications for tractor/power tiller due at district agriculture office
+  • Drip irrigation subsidy under GGRC (Gujarat Green Revolution Company): submit estimates before month-end
+  • Horticulture Mission for North East & Himalayan States (HMNEH) — nursery subsidy claims
+  • Contact your nearest VLE (Village Level Entrepreneur) for eNAM registration and online mandi selling
+
+================================================================================
+10. RELATED TOPICS & QUICK LINKS
+================================================================================
+  • Related calendar files: calendar_august.txt, spray_calendar_kharif.txt
+  • Advisories: weather_based_irrigation.txt, soil_testing_guide.txt, post_harvest_storage.txt
+  • Weather: imd_forecast_guide.txt, monsoon_onset_advisory.txt
+  • Helpline: Kisan Call Centre 1800-180-1551, Gujarat Agriculture Department 079-232-43746
+  • Online: https://ikhedut.gujarat.gov.in (Gujarat Ikhedut Portal for subsidies and schemes)
+
+================================================================================

@@ -1,0 +1,102 @@
+================================================================================
+COTTON CROP CALENDAR — GUJARAT — JUNE
+================================================================================
+
+CROP: Cotton
+MONTH: June
+PRIMARY REGION: Saurashtra, North Gujarat, South Gujarat
+DOCUMENT TYPE: Month-wise Activity Calendar
+
+================================================================================
+1. SOIL PREPARATION FOR JUNE
+================================================================================
+  • Deep summer ploughing (20-25 cm) should have been completed by May; if not, do immediately
+  • Apply FYM 10-15 tonnes per hectare 2-3 weeks before sowing
+  • Level the field with a leveller; cotton requires uniform moisture distribution
+  • In heavy black cotton soils, open drainage channels at 15-20 metre intervals to prevent waterlogging
+  • Soil pH should be 6.5-7.5; apply lime if pH < 6.0
+  • Prepare ridges and furrows in heavy soils for better drainage during monsoon
+
+================================================================================
+2. SOWING / PLANTING DATES
+================================================================================
+  • Sow cotton with the onset of monsoon rains (first good shower of 25-50mm)
+  • Ideal sowing window: 10-25 June in Saurashtra; 15-30 June in North Gujarat; 15-25 June in South Gujarat
+  • Seed rate: 1.5-2.0 kg per hectare for Bt hybrid varieties (e.g., Gujarat Cotton Hybrid-1, GCH-2)
+  • Spacing: 90-120 cm between rows; 45-60 cm between plants (depending on variety)
+  • Sow 2-3 seeds per hill; thin to one plant per hill at 15-20 days after germination
+  • Treat seeds with Carbendazim 2g + Streptocycline 1g per kg to prevent seedling diseases
+
+================================================================================
+3. IRRIGATION SCHEDULE
+================================================================================
+  • If no rain within 3 days of sowing, provide light irrigation (25mm) to ensure uniform germination
+  • First irrigation at 15-20 days if dry spell occurs during seedling stage
+  • Maintain soil moisture at 60-70% field capacity during vegetative growth
+  • In South Gujarat irrigated tracts, drip irrigation can be used with 4-6 litre per hour emitters
+  • Ensure drainage channels are functional before sowing — June storms can cause flash flooding
+
+================================================================================
+4. FERTILIZER TIMING & DOSES
+================================================================================
+  • Basal dose at sowing: DAP 100 kg + potash 30 kg per hectare
+  • Apply all phosphorus and potash as basal; nitrogen is split into 2-3 top dressings
+  • First nitrogen top dressing (40-50 kg urea per hectare) at 30-35 days (knee-high stage)
+  • Second nitrogen top dressing (50 kg urea per hectare) at boll formation stage (60-65 days)
+  • No nitrogen after boll opening — excess N delays maturity and reduces fibre quality
+  • Micronutrients: apply zinc sulphate 25 kg per hectare as basal if soil is deficient
+
+================================================================================
+5. PEST SCOUTING DATES
+================================================================================
+  • Seedling diseases: damping off — treat seed before sowing; drench with Carbendazim if damping off observed
+  • Sucking pests (jassids, aphids, thrips): monitor from 15 days; spray Imidacloprid 0.5ml/litre if damage exceeds 5%
+  • Whitefly (Bemisia tabaci): use yellow sticky traps; spray Buprofezin 1.5ml/litre if threshold crossed
+  • Set up pheromone traps for pink bollworm (Pectinophora gossypiella) at 45 days — 5 traps per hectare
+  • Alternaria leaf spot: spray Mancozeb 2.5g per litre if circular brown spots appear after rain
+  • Termite: apply Chlorpyriphos 2ml per litre drench along rows if termite mounds observed
+
+================================================================================
+6. HARVESTING WINDOWS
+================================================================================
+  • NO harvest in June — cotton is in germination/seedling stage
+  • Prepare harvesting equipment and storage space for later months
+  • Arrange for pickers or labour for manual picking (October-March)
+  • Contact ginning mills for October-November processing slots
+
+================================================================================
+7. POST-HARVEST OPERATIONS
+================================================================================
+  • NO post-harvest operations in June
+  • Prepare drying yards and storage godowns for later harvest
+  • Clean and repair picking bags, storage bins, and transport vehicles
+  • Arrange for market information and price tracking via eNAM or local mandi
+
+================================================================================
+8. WEATHER WATCH
+================================================================================
+  • Monsoon onset month: typically 10-15 June in South Gujarat; 15-25 June in Saurashtra
+  • Pre-monsoon heat: 40-45°C before monsoon; hot dry winds can desiccate seedlings
+  • Heavy thunderstorms with strong winds — can damage young seedlings; provide support if needed
+  • Monitor IMD monsoon onset forecasts and daily weather bulletins
+  • Cyclone risk in Arabian Sea — coastal districts (Bhavnagar, Amreli, Valsad, Navsari) should be alert
+
+================================================================================
+9. GOVERNMENT SCHEME DEADLINES
+================================================================================
+  • PMFBY enrollment: complete by 31st July for Kharif cotton; visit PACS or bank branch
+  • Bt cotton seed subsidy: purchase certified seeds from authorized dealers with bill
+  • Drip irrigation subsidy under GGRC: apply before sowing for best results
+  • Gujarat State Cotton Mission: contact district agriculture office for technical support and subsidies
+  • Kisan Credit Card (KCC): renew or apply for fresh credit before sowing season
+
+================================================================================
+10. RELATED TOPICS & QUICK LINKS
+================================================================================
+  • Related: calendar_cotton_july.txt, calendar_cotton_august.txt, calendar_cotton_october.txt
+  • Advisories: spray_safety.txt, pest_bulletin_kharif_2025.txt, monsoon_onset_advisory.txt
+  • Weather: imd_forecast_guide.txt, weather_based_irrigation.txt
+  • Helpline: Kisan Call Centre 1800-180-1551, Gujarat Cotton Association 079-2657-5141
+  • Online: https://ikhedut.gujarat.gov.in, https://www.indiamet.gov.in (IMD)
+
+================================================================================

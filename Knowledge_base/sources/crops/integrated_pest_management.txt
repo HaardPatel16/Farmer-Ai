@@ -1,0 +1,2 @@
+=== INDUSTRIAL IPM CORE SYSTEM ARCHITECTURE ===
+Integrates yellow sticky traps, pheromone traps, bird perches, and biological assets (Trichoderma, Beauveria) before utilizing targeted chemical options.

@@ -1,0 +1,124 @@
+CANAL IRRIGATION GUIDE FOR GUJARAT FARMERS
+
+1. INTRODUCTION
+The Sardar Sarovar Narmada Dam and its canal network is the largest irrigation project in Gujarat. The Narmada Main Canal (NMC), 458 km long, runs from Kevadia to the Rajasthan border, with thousands of kilometers of branch canals, distributaries, and minors. Over 35 lakh hectares in Gujarat are planned to be irrigated by Narmada waters, transforming the arid regions of Kutch, Saurashtra, and North Gujarat. This guide covers everything a Gujarat farmer needs to know about accessing, using, and maintaining canal irrigation.
+
+2. THE NARMADA CANAL SYSTEM
+
+2.1 Main Canal Network
+- Narmada Main Canal (NMC): 458 km, capacity 40,000 cusecs, originates at Kevadia (Narmada dam)
+- Branch Canals: 38 branch canals take off from NMC, including the Saurashtra Branch Canal (SBC), Kachchh Branch Canal (KBC), and Rajasthan Branch Canal
+- Distributaries: Over 4,000 km of distributary canals (D1, D2, D3...) serve specific areas
+- Minors: Smallest channels (10-20 cusecs) that reach individual village command areas
+- Sub-minors and field channels: Final delivery channels to farmer fields
+
+2.2 Coverage Areas
+- Saurashtra Branch Canal: Covers Rajkot, Jamnagar, Porbandar, Junagadh, Bhavnagar, Amreli, and parts of Surendranagar
+- Kachchh Branch Canal: Covers Kutch district, bringing water to India's most arid district
+- North Gujarat: Covers Mehsana, Patan, Banaskantha, Sabarkantha, and parts of Gandhinagar
+- Central Gujarat: Vadodara, Anand, Kheda, Panchmahal, and Dahod receive direct NMC water
+- South Gujarat: Surat, Narmada, and Bharuch are served by the lower reaches
+
+3. WATER ALLOCATION AND ENTITLEMENTS
+
+3.1 Water Allocation Rules
+Gujarat follows the "Warabandi" system (rotational water supply) where each farmer gets water for a fixed duration based on their land area. The allocation is typically:
+- Kharif season: One full irrigation or two light irrigations depending on rainfall
+- Rabi season: 3-4 irrigations for wheat, 2-3 for gram, 1-2 for cumin
+- Summer: Only for perennial crops (sugarcane, banana) with special permission
+
+3.2 Water Charges
+Water charges are collected by the Irrigation Department based on crop type and area:
+- Kharif food grains: Rs. 100-150 per hectare
+- Kharif cash crops (cotton, groundnut): Rs. 200-300 per hectare
+- Rabi wheat: Rs. 150-200 per hectare
+- Sugarcane (perennial): Rs. 500-700 per hectare
+- These rates are revised periodically by the Gujarat government
+
+3.3 How to Get Water Allocation
+- Apply at the Taluka Irrigation Office (Taluka Sichai Karyalaya) before the season starts
+- Submit Form I-1 (application for irrigation water) with land records (7/12 extract)
+- Pay the advance water charge as notified
+- The water rotation schedule (warabandi) is published 15 days before the season
+- Farmers must maintain field channels from the minor outlet to their field boundary
+
+4. CANAL WATER SCHEDULING AND ROTATION
+
+4.1 Warabandi System
+In the warabandi system, water flows continuously in the canal, and farmers take turns drawing water from the field outlet (mogha) according to a fixed roster. The typical schedule:
+- Water delivery time = (Total available time x Farm area) / Total command area
+- A farmer with 1 hectare in a 100-hectare command might get 2-4 hours of flow per turn
+- Turns repeat every 7-14 days depending on canal supply and demand
+
+4.2 Schedule Notifications
+- The Irrigation Department publishes the water schedule on notice boards at the minor level
+- In many areas, the schedule is now communicated via SMS to registered farmers
+- Contact your Village Level Worker (VLW) or Sarpanch for schedule updates
+
+5. FIELD CHANNEL MAINTENANCE AND WATER MANAGEMENT
+
+5.1 Field Channel Standards
+- Farmers must construct and maintain field channels (pat) from the minor outlet to their field
+- Channel lining is recommended: use concrete, brick, or plastic lining to reduce seepage losses (which can be 30-40% in unlined channels)
+- Channel gradient should be 1:1000 to 1:2000 for adequate flow without erosion
+- The channel cross-section should be sufficient to carry the allocated flow rate (typically 10-30 liters per second)
+
+5.2 Water Application Techniques
+- Do not flood irrigate; adopt border strip or check basin methods for efficient water use
+- For row crops (cotton, groundnut), use furrow irrigation from the field channel
+- Apply water during early morning or evening to reduce evaporation losses
+- Measure water application: use the W-S relationship (width of flow x speed = discharge)
+
+5.3 On-Farm Water Storage
+- If canal water is erratic, construct on-farm storage ponds (0.05-0.1 hectares) to store allocated water
+- Use stored canal water for critical irrigation during dry spells
+- Combine with micro-irrigation: store canal water and apply through drip systems for high-value crops
+
+6. CANAL WATER QUALITY
+Narmada water is generally of excellent quality for irrigation:
+- Electrical Conductivity (EC): 0.2-0.4 dS/m (low salinity, suitable for all crops)
+- Sodium Adsorption Ratio (SAR): 1.0-2.0 (low sodium, no soil sodicity risk)
+- pH: 7.2-7.8 (neutral to slightly alkaline, ideal)
+- Chloride: Less than 50 ppm (safe for all crops)
+- Suspended sediment: 100-500 ppm during monsoon; settle in farm ponds before use
+
+Farmers in tail-end areas (last villages on the canal) may receive slightly poorer quality due to evaporation concentration, but Narmada water remains safe for irrigation throughout the command.
+
+7. RIGHTS, RESPONSIBILITIES, AND DISPUTES
+
+7.1 Farmer Responsibilities
+- Maintain field channels from the minor outlet to the farm boundary
+- Pay water charges on time; non-payment can result in water stoppage
+- Do not tamper with canal structures, outlets, or upstream gates
+- Do not use motorized pumps to draw additional water from canals (illegal and punishable)
+- Do not let livestock enter canals or damage embankments
+
+7.2 Common Disputes and Resolution
+- Head-tail conflict: Farmers at the head of the minor often take more than their share, depriving tail-end farmers. This is resolved through the warabandi schedule and vigilance by the Chowkidar (canal guard).
+- Outlet tampering: If a farmer enlarges their outlet, they steal water from neighbors. Report to the Canal Inspector (Sichai Nirikshak).
+- Water timing conflicts: If a farmer misses their turn, they usually must wait for the next cycle. The Canal Inspector can sometimes adjust for genuine emergencies.
+- Contact: The Assistant Engineer (Sichai) at the Taluka level handles disputes and technical issues.
+
+8. NARMADA WATER AND GROUNDWATER INTERACTION
+The arrival of Narmada canal water has transformed groundwater in many areas:
+- In Saurashtra, water tables have risen by 5-10 meters in canal command areas
+- Seepage from canals contributes to aquifer recharge
+- However, over-irrigation and poor drainage in some areas have caused waterlogging (e.g., parts of Bharuch, Anand, and Vadodara)
+- Farmers should monitor groundwater levels and avoid over-irrigation to prevent waterlogging and salinity buildup
+
+9. SUBSIDIES AND SCHEMES FOR CANAL COMMAND AREAS
+- On-Farm Water Management (OFWM): Subsidy for constructing field channels, land leveling, and adoption of micro-irrigation using Narmada water
+- Sardar Patel Sichai Yojana: Financial assistance for water-saving devices and structures
+- The Gujarat Green Revolution Company (GGRC) promotes drip irrigation in Narmada command areas with 50-70% subsidy
+- In some areas, collective micro-irrigation schemes are implemented by Water User Associations (WUAs)
+
+10. WATER USER ASSOCIATIONS (WUAs)
+Farmers in canal command areas are encouraged to form Water User Associations:
+- WUAs participate in maintenance of distributaries and minors
+- They receive a portion of water charges for maintenance work
+- They help enforce the warabandi schedule and resolve local disputes
+- To form a WUA, contact the Irrigation Department office; minimum 20 farmer members required
+- WUA registration is done under the Gujarat Irrigation and Drainage Act
+
+11. FUTURE OF CANAL IRRIGATION IN GUJARAT
+The Narmada project is still expanding. New lift irrigation schemes (lifting water from canals to higher areas) are being constructed in Saurashtra and Kutch. The SAUNI (Saurashtra Narmada Avartran Irrigation) Yojana is filling 115 reservoirs in Saurashtra with Narmada water. Farmers in these areas should stay updated on new minor canal extensions and reservoir filling schedules through the Gujarat Water Resources Development Corporation (GWRDC) and local Irrigation Department offices.

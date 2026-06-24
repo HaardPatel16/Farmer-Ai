@@ -1,0 +1,2 @@
+=== MAIZE NUTRIENT MANAGEMENT ===
+Heavy feeder: Requires 120:60:40 kg/ha NPK. Split Nitrogen into three applications: 25% basal, 50% at knee-high stage (35 DAS), and 25% at tassel initiation (55 DAS).

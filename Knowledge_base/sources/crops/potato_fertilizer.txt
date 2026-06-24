@@ -1,0 +1,2 @@
+=== POTATO NUTRIENT MANAGEMENT ===
+Requires 220:80:120 kg/ha NPK. Highly responsive to organic manure. Apply 50% N along with full P and K basally; top-dress the remaining 50% N during earthing-up (30 DAS).

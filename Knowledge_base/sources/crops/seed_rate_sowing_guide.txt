@@ -1,0 +1,2 @@
+=== REGIONAL SEED LOGISTICS GUIDE ===
+Master calibration tables linking row spacings, seed treatment chemicals, and exact seed rates per hectare for major regional crops.

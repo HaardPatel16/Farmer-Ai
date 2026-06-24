@@ -1,0 +1,70 @@
+1. SCHEME NAME & FULL OFFICIAL NAME
+   Custom Hiring Centre (CHC) Scheme — Under Sub-Mission on Agricultural Mechanisation (SMAM), Central Sector Scheme, Ministry of Agriculture & Farmers Welfare.
+
+2. WHAT IS IT
+   The Custom Hiring Centre scheme provides financial assistance to entrepreneurs, cooperatives, FPOs, and individual farmers to establish farm machinery rental centres. Many small and marginal farmers in Gujarat cannot afford to purchase expensive farm machinery like tractors, power tillers, combine harvesters, and advanced implements. CHCs allow these farmers to rent machinery on a per-hour or per-acre basis, drastically reducing their input costs. The scheme subsidizes the purchase of machinery for the CHC owner, who then makes the machinery available to other farmers at reasonable rental rates. This model has been highly successful in Gujarat, where the average landholding is small (1.5-2 hectares) and mechanization is essential for timely operations. CHCs help reduce the drudgery of manual labor, ensure timely sowing and harvesting, and improve crop productivity by 15-25%.
+
+3. WHO IS ELIGIBLE
+   • Individual farmers (general category)
+   • Small and marginal farmers (below 2 hectares)
+   • SC/ST farmers
+   • Women farmers
+   • Farmer Producer Organizations (FPOs)
+   • Cooperative societies
+   • Self-Help Groups (SHGs) and Joint Liability Groups (JLGs)
+   • Rural entrepreneurs and agri-startups
+   • Must have adequate space for machinery storage and maintenance
+   • Must have a business plan for hiring services
+
+4. BENEFITS PROVIDED
+   • Subsidy up to 40% for general category farmers/entrepreneurs
+   • Subsidy up to 50% for SC/ST farmers, small and marginal farmers, and women farmers
+   • Maximum subsidy cap varies by machinery type (typically Rs 10-25 lakh per CHC)
+   • Eligible machinery: tractors, power tillers, combine harvesters, rotavators, seed drills, transplanters, sprayers, threshers, and post-harvest equipment
+   • Training on machinery operation and maintenance is provided free
+   • Priority given to areas with low farm power availability (below 2 kW/ha)
+   • The CHC owner can recover the investment within 3-5 years through rental income
+
+5. HOW TO APPLY (STEP-BY-STEP)
+   Step 1: Identify the machinery needed based on demand in your area. Consult local farmers to understand which machinery is most needed.
+   Step 2: Get quotations from 2-3 empaneled manufacturers/dealers. Only machinery from empaneled vendors is eligible for subsidy.
+   Step 3: Register/login on the iKhedut portal (ikhedut.gujarat.gov.in) under the "Farm Mechanisation" category.
+   Step 4: Fill out the CHC application form with your details, proposed machinery list, and business plan.
+   Step 5: Upload documents: Aadhaar, 7/12 land extract, bank passbook, caste certificate (if applicable), quotations from vendors, and storage space proof.
+   Step 6: Submit the application before the scheme window closes (typically open January-March for the financial year).
+   Step 7: After online approval, the District Agriculture Office (DAO) conducts a physical verification of your site.
+   Step 8: Upon successful verification, the subsidy is released directly to your bank account (DBT) or to the vendor (in some cases).
+   Step 9: Purchase the machinery and start the CHC service. Maintain a rental register.
+   Documents: Aadhaar, 7/12, bank passbook, caste certificate, vendor quotations, site photos, and business plan.
+
+6. WHERE TO APPLY
+   • iKhedut portal: ikhedut.gujarat.gov.in (primary online application channel)
+   • Common Service Centres (CSCs) in every taluka for help with online application
+   • District Agriculture Office (DAO) for offline guidance and verification
+   • Taluka Agriculture Office for preliminary consultation
+   • Krishi Vigyan Kendra (KVK) for machinery selection advice
+
+7. GUJARAT-SPECIFIC DETAILS
+   Gujarat has over 5,000 registered CHCs, one of the highest numbers in India. The state government has identified "Farm Mechanisation Clusters" in each district. In Gujarat, CHCs are especially popular for cotton picking machines (in Saurashtra), groundnut harvesters, and paddy transplanters (in South Gujarat). The Gujarat government provides additional top-up subsidy of 5-10% over and above the central subsidy under the state mechanization scheme. CHC owners in Gujarat are also eligible for bank loans under the Agriculture Infrastructure Fund (AIF) for additional machinery. The state has training programs for CHC operators at agricultural engineering colleges and KVKs. Gujarat farmers save an average of Rs 3,000-5,000 per acre by renting machinery instead of manual labor.
+
+8. COMMON PROBLEMS & SOLUTIONS
+   • Application rejected: Common reasons include missing caste certificate, non-empaneled vendor quotation, or incomplete site photos. Solution: Ensure all documents are uploaded correctly; use only empaneled vendors listed on the iKhedut portal.
+   • Subsidy not received: Check application status on iKhedut; if pending at DAO, visit the district agriculture office with your reference number.
+   • Vendor not delivering on time: The subsidy is linked to the vendor; if they delay, the scheme may close. Solution: Choose a vendor with a track record and confirm delivery timeline in writing.
+   • No space for storage: You need a covered shed of at least 200 sq ft. If you don't have space, consider partnering with a cooperative or FPO that has land.
+   • Low demand for services: Market your CHC through village sarpanch, KVK, and farmer groups. Offer competitive rates.
+   • Machinery breakdown: Ensure you receive training on maintenance; keep spare parts and contact the manufacturer for warranty claims.
+
+9. RELATED SCHEMES
+   • SMAM (Sub-Mission on Agricultural Mechanisation) — for individual machinery purchase subsidy
+   • AIF (Agriculture Infrastructure Fund) — for CHC infrastructure loans
+   • RKVY — for farm mechanization grants
+   • FPO Scheme — for FPOs setting up CHCs
+
+10. CONTACT INFORMATION
+   • iKhedut Portal: ikhedut.gujarat.gov.in
+   • Kisan Call Centre: 1800-180-1551
+   • Gujarat Agriculture Department: 079-23251001
+   • District Agriculture Officer (DAO): Contact your district Collector Office
+   • SMAM National Helpline: 011-23384050
+   • Manufacturer empaneled list: Available on iKhedut portal

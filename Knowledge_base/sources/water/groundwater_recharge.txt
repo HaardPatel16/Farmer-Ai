@@ -1,0 +1,97 @@
+GROUNDWATER RECHARGE TECHNIQUES FOR GUJARAT AGRICULTURE
+
+1. INTRODUCTION
+Groundwater is the lifeline of Gujarat agriculture, with over 70% of irrigation dependent on wells and borewells. However, decades of over-extraction have led to critical depletion in Saurashtra, North Gujarat, and Kutch. The Central Ground Water Board classifies 80% of Gujarat's talukas as "over-exploited" or "critical." Artificial recharge is no longer optional; it is essential for agricultural survival. This guide covers proven groundwater recharge techniques suitable for Gujarat's geology, climate, and farming systems.
+
+2. BOREWELL RECHARGE (Injection Wells)
+Borewell recharge directly injects filtered rainwater into the aquifer through an existing or specially drilled bore, bypassing the slow percolation process.
+
+Suitable for: Saurashtra, North Gujarat, Kutch where aquifers are deep and surface recharge is inefficient.
+
+Construction steps:
+- Step 1: Identify the source of rainwater (rooftop, farm pond, or check dam overflow)
+- Step 2: Excavate a recharge pit around the borewell, 2m x 2m x 2m
+- Step 3: Fill the pit with graded filter media: 500mm boulders at bottom, 300mm gravel, 200mm coarse sand, and 100mm fine sand on top
+- Step 4: Install a slotted PVC pipe (0.5m diameter) from the surface to the static water level, connecting to the borewell casing
+- Step 5: Build a concrete collar around the pipe to prevent contamination
+- Step 6: Connect rooftop or farm runoff via PVC pipe to the recharge pit
+- Step 7: Install a first-flush diverter to remove initial dirty water
+- Step 8: Add a silt chamber before the recharge pit to prevent clogging
+
+Filter maintenance: The sand layer must be replaced every 2-3 monsoons. The silt chamber should be cleaned before every rainy season. If injection rate declines, backwash the filter or reverse flush the bore.
+
+Expected results: A well-constructed borewell recharge can raise the water level within 500m radius by 2-5 meters over 3 years.
+
+3. INJECTION WELLS (Recharge Shafts with Bores)
+Injection wells are similar to borewell recharge but use dedicated bore pipes drilled specifically for recharge rather than existing irrigation bores. They are essential where the existing borewell pump blocks the casing.
+
+Specifications for Gujarat conditions:
+- Depth: 30-100m depending on the aquifer depth
+- Diameter: 150-200mm
+- Casing: Slotted PVC or steel pipe with screen in the aquifer zone
+- Gravel pack: 10-20mm washed gravel around the screen
+- Filter pit: 3m x 3m x 3m with three-layer filter (boulder, gravel, sand)
+- Recharge rate: 5-10 cubic meters per hour depending on aquifer transmissivity
+
+Cost: Rs. 50,000-1,00,000 per injection well depending on depth and drilling cost.
+
+4. RECHARGE PITS AND RECHARGE TRENCHES
+Recharge pits are shallow excavations filled with permeable material that allow rainwater to percolate into the subsoil. They are the simplest and cheapest recharge structures, ideal for farms with shallow water tables (less than 15m depth).
+
+Design types:
+- Pit recharge: 2m x 2m x 2m pits along field boundaries, filled with boulders and gravel
+- Trench recharge: 50m long x 1m wide x 1m deep trenches along contour lines, backfilled with gravel and sand
+- French drain style: Perforated pipe surrounded by gravel in a shallow trench, collecting runoff from farm roads
+
+For Gujarat's black cotton soil (vertisols): The low permeability of black cotton soil makes surface recharge less effective. Recharge pits should be dug to the weathered rock layer, or use recharge borewells instead. In Saurashtra's limestone terrain, recharge pits combined with check dams show excellent results.
+
+5. SPREADING BASINS AND FLOOD WATER HARVESTING
+Spreading basins are large, shallow, levelled areas where floodwater is temporarily impounded to increase infiltration. They are ideal for the seasonal riverbeds (sandy rivers) of Gujarat.
+
+Locations: Floodplains of Sabarmati, Mahi, Narmada, Vishwamitri, and seasonal rivers in Saurashtra.
+
+Construction:
+- Select a gently sloping area with 2-5m permeable soil over the aquifer
+- Level the area using a bullock-drawn level or tractor
+- Construct low bunds (0.5m height) to pond water to 0.3m depth
+- Maintain the basin after each flood event by removing deposited silt
+- Silt removal should be done every 2 years; the removed silt can be used on farm fields
+
+Floodwater harvesting can recharge 50-70% of impounded water, with rates of 10,000-50,000 cubic meters per hectare per year in good locations.
+
+6. SUBSURFACE DAMS
+Subsurface dams (underground bunds) are constructed by digging a trench across the groundwater flow and filling it with impermeable material (clay, concrete, or geomembrane). They block subsurface flow and raise the water table upstream.
+
+Best suited for: Coastal alluvial tracts of South Gujarat (Valsad, Navsari, Surat) where fresh groundwater flows over saline water.
+
+Construction method:
+- Identify groundwater flow direction using existing wells
+- Excavate a trench 3m deep across the flow direction, using JCB or backhoe
+- Fill the bottom 2m with compacted clay or puddle clay
+- Insert a geomembrane sheet (1.5mm HDPE) in the trench
+- Backfill with native soil and compact in layers
+- The subsurface dam raises the water table upstream by 2-4m
+
+7. RECHARGE AND DRAINAGE IN SALINE AREAS (Kutch and Coastal Gujarat)
+In areas with saline groundwater, recharge must be combined with drainage to prevent salt accumulation.
+
+Technique: Bio-drainage using salt-tolerant trees (Casuarina, Eucalyptus, Prosopis) planted along the field boundaries to transpire excess water. Combine with low-quality recharge from farm ponds where the aquifer is already brackish. Avoid deep recharge in areas where it could mobilize deep-seated salts.
+
+8. MONITORING AND MEASUREMENT
+Farmers should monitor their recharge effectiveness by:
+- Measuring water levels in observation wells before and after monsoon
+- Recording borewell yield (discharge rate) annually
+- Tracking water quality (TDS, chloride) to detect salt mobilization
+- Using the Gujarat Water Resources Development Corporation's well monitoring program
+
+9. COST-BENEFIT ANALYSIS
+A typical borewell recharge system costs Rs. 30,000-60,000. If it raises the water table by 3 meters, the additional yield can irrigate 0.5-1.0 additional hectares, generating Rs. 50,000-1,00,000 additional annual income. Payback period is typically 1-2 years.
+
+10. COMMON MISTAKES TO AVOID
+- Never inject surface water directly into a borewell without filtration; it will clog the aquifer permanently
+- Do not construct recharge pits in areas with contaminated surface runoff (near septic tanks, industries, or heavy pesticide use)
+- Avoid recharging into confined aquifers without hydrogeological assessment; it can cause artesian pressure problems
+- Do not neglect maintenance; a clogged recharge structure is worse than no structure at all
+
+11. GOVERNMENT SUPPORT
+The Gujarat Ground Water Authority mandates rainwater harvesting for all new buildings and offers technical support for farm-level recharge. Contact your district groundwater office (District Development Officer - Water Resources) for site-specific recharge designs and subsidy eligibility under PMKSY and state water conservation schemes.

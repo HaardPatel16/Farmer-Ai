@@ -1,0 +1,146 @@
+WATERSHED MANAGEMENT FOR GUJARAT FARMERS
+
+1. INTRODUCTION
+Watershed management is the integrated management of land, water, and vegetation within a natural drainage basin (watershed) to conserve soil, harvest rainwater, recharge groundwater, and improve agricultural productivity. In Gujarat, where 80% of talukas are classified as over-exploited or critical for groundwater, watershed management is not just an option but a necessity for survival. This guide covers the key techniques of watershed management adapted to Gujarat's diverse topography, soils, and climate.
+
+2. UNDERSTANDING WATERSHEDS IN GUJARAT
+
+2.1 What is a Watershed?
+A watershed is an area of land that drains into a common point such as a stream, river, lake, or reservoir. In Gujarat, watersheds range from small microwatersheds (50-100 hectares) to large river basins like the Sabarmati, Mahi, and Narmada. Most farm-level watershed management focuses on microwatersheds of 100-500 hectares that can be managed by a village or a group of farmers.
+
+2.2 Gujarat's Watershed Characteristics
+- Saurashtra: Undulating terrain with shallow soils over basalt; high runoff potential; many seasonal streams
+- North Gujarat: Flat to gently sloping terrain; alluvial soils; high groundwater exploitation
+- Kutch: Arid, flat to hilly; saline soils; extreme water scarcity; low but intense rainfall when it occurs
+- South Gujarat: Hilly terrain (Western Ghats foothills); high rainfall; high runoff; erosion-prone
+- Central Gujarat: Mixed terrain; black cotton soils; moderate rainfall; both waterlogging and drought occur
+
+3. CONTOUR BUNDS (Katkal Bandh)
+Contour bunds are embankments constructed along the contour lines of sloping land to intercept runoff, increase infiltration, and reduce soil erosion. They are the most fundamental watershed structure for Gujarat's undulating terrain.
+
+3.1 Design and Construction
+- Spacing: Depends on slope. For Saurashtra's gentle slopes (2-5%), spacing is 50-100m. For steeper slopes (5-10%), spacing is 30-50m.
+- Height: 0.5-1.0m above ground level, with a 2:1 upstream and 1.5:1 downstream slope
+- Top width: 0.5m for stability and maintenance access
+- Cross-section: Trapezoidal; side slopes stabilized with grass planting
+- Borrow pits: Excavated on the upstream side; the excavated soil forms the bund; the pit becomes a mini-percolation pond
+- Keyway: A trench cut into the foundation and filled with compacted clay to prevent piping under the bund
+
+3.2 Construction Steps
+- Step 1: Mark contour lines using an A-frame, water tube level, or dumpy level
+- Step 2: Clear vegetation along the contour line (2m width)
+- Step 3: Excavate the borrow pit (upstream) and keyway trench
+- Step 4: Build the bund in 0.2m layers, compacting each layer
+- Step 5: Plant grass (Cenchrus ciliaris, Dichanthium annulatum) on the bund and borrow pit slopes
+- Step 6: Construct a stone outlet or grassed waterway for excess flow during extreme events
+
+3.3 Benefits
+- Reduces runoff velocity by 50-70%
+- Increases soil moisture by 10-15% in the command area below the bund
+- Reduces soil erosion by 60-80% on moderate slopes
+- Cost: Rs. 10,000-20,000 per hectare; eligible for 60% subsidy under PMKSY-Watershed
+
+4. GULLY PLUGGING (Nala Bunds and Gabions)
+Gullies are channels formed by concentrated runoff that erode soil rapidly. In Gujarat's Saurashtra and South Gujarat, gully erosion is a major problem. Gully plugging structures slow the flow, trap sediment, and promote vegetation recovery.
+
+4.1 Types of Gully Plugs
+- Loose stone check dams: Wall of stones built across the gully; suitable for small gullies (width < 3m) in Saurashtra
+- Gabion structures: Wire mesh cages filled with stones; more stable than loose stone; suitable for larger gullies and steeper slopes
+- Masonry check dams: Stone or concrete walls for larger, more permanent structures; suitable for village drainage lines
+- Brushwood check dams: Bundles of branches and stakes across small gullies; cheapest option; good for initiating vegetation recovery
+- Silt fences: Geotextile fabric supported by posts; temporary measure for sediment control during construction
+
+4.2 Construction Specifications
+- Height: 1-2m above the gully bed
+- Foundation: 0.5m into stable soil or rock
+- Spacing: Multiple check dams are spaced so that the crest of the downstream dam is at the same level as the base of the upstream dam (creating a series of steps)
+- Weir: A central overflow section (V-notch or rectangular) sized to pass the expected peak flow
+- Apron: Stone-pitched downstream apron to prevent scour
+
+4.3 Vegetation for Gully Stabilization
+After constructing gully plugs, plant vegetation to stabilize the gully sides:
+- Grasses: Vetiver (Vetiveria zizanioides), lemon grass, Cenchrus, Dichanthium
+- Shrubs: Lantana (if controlled), ipomoea, and local fodder shrubs
+- Trees: Neem, acacia, subabul, and bamboo on the gully edges (not in the channel itself)
+
+5. VEGETATIVE BARRIERS (Live Bunds)
+Vegetative barriers are lines of dense, perennial grasses or shrubs planted along contours to act as living bunds. They are cheaper than earth bunds and improve over time.
+
+5.1 Species for Gujarat
+- Vetiver grass (Vetiveria zizanioides): Deep-rooted (up to 3m), dense growth, excellent for slope stabilization and moisture conservation; the best choice for Gujarat's hot climate
+- Lemon grass (Cymbopogon): Aromatic, marketable, good for bunds and soil conservation
+- Subabul (Leucaena leucocephala): Fast-growing shrub; provides fodder and shade; useful for farm boundary barriers
+- Stylo (Stylosanthes hamata): Leguminous cover crop; good for bunds and fodder
+- Napier grass (Pennisetum purpureum): Excellent for bunds and fodder; requires irrigation but is highly productive
+
+5.2 Establishment
+- Plant in a single or double row along the contour
+- Spacing: 10-15cm between plants within the row
+- Establish in the monsoon; irrigate if the post-monsoon period is dry
+- Cut back annually to 0.3m height to encourage bushy growth and prevent trees from shading crops
+- Never uproot; vegetative barriers are permanent investments
+
+6. PERCOLATION AND RECHARGE STRUCTURES
+
+6.1 Farm Ponds (See separate farm pond guide)
+Farm ponds within the watershed store runoff for direct use and indirect recharge.
+
+6.2 Recharge Trenches and Pits
+- Recharge trenches: 50-100m long, 1m wide, 1m deep trenches along contours, backfilled with gravel and sand; filter runoff and recharge groundwater
+- Recharge pits: 2m x 2m x 2m pits at key points in the drainage line; filled with graded stone and sand
+- Recharge shafts: Borewells specifically for injecting filtered rainwater into the aquifer (see groundwater recharge guide)
+
+6.3 Percolation Tanks
+Small percolation tanks (2-10 hectares) on permeable strata allow water to slowly infiltrate. Best for Saurashtra's limestone and basalt terrain where surface infiltration is limited.
+
+7. INTEGRATED WATERSHED MANAGEMENT MODEL FOR GUJARAT
+
+7.1 The Treatment Sequence ( Ridge-to-Valley Approach )
+The most effective watershed management follows a ridge-to-valley sequence:
+- Ridge treatment: Afforestation with drought-tolerant species (neem, acacia, bamboo) to reduce runoff at the source
+- Upper slopes: Contour bunds or vegetative barriers to intercept and infiltrate runoff
+- Middle slopes: Farm ponds, percolation tanks, and check dams to store and recharge water
+- Valley bottom: Gully plugging, drainage line treatment, and the main storage reservoir
+- Command area: Improved farming practices (micro-irrigation, balanced fertilization, improved seeds) to maximize the benefit of conserved water
+
+7.2 Community Participation
+Watershed management is most effective when the entire community participates:
+- Form a Watershed Committee (Watershed Development Committee) with representatives from all landholding groups
+- Develop a Watershed Development Plan (WDP) with technical support from the Soil Conservation Department
+- Implement works through a combination of MGNREGA labor, PMKSY funds, and farmer contributions
+- Ensure equitable benefit sharing: water and soil conservation benefits should reach all farmers, including small and marginal holders
+- Maintain transparency in financial management and work records
+
+8. GOVERNMENT PROGRAMS AND SUPPORT
+
+8.1 PMKSY (Watershed Development Component)
+- Coverage: 2.5 lakh watersheds across India, including thousands in Gujarat
+- Funding: 60:40 central-state sharing for non-tribal areas; 90:10 for tribal areas
+- Activities: Soil and water conservation, afforestation, horticulture, livestock support, and farmer training
+- Duration: 4-7 years per watershed project
+- Implementing agencies: Soil Conservation Department, Gujarat; DRDA (District Rural Development Agency)
+
+8.2 MGNREGA (Integrated with Watershed)
+- Labor component for all watershed structures (bunds, ponds, check dams, plantations) can be paid through MGNREGA
+- Material component is paid through PMKSY or other schemes
+- Unskilled labor wages are paid by MGNREGA; skilled labor and materials by project funds
+- The convergence of MGNREGA and PMKSY has greatly accelerated watershed work in Gujarat
+
+8.3 Sujalam Sufalam Jal Sanchay Abhiyan (Gujarat State Initiative)
+- Massive state-driven program for water conservation
+- Target: 1.5 lakh structures (check dams, farm ponds, percolation tanks) across Gujarat
+- Implemented through community participation and government departments
+- Focus on Saurashtra and North Gujarat where depletion is most severe
+
+9. MONITORING AND EVALUATION
+- Measure groundwater levels in observation wells before and after the project
+- Record soil moisture during the cropping season
+- Monitor runoff from treated and untreated areas during rain events
+- Track crop yields and income changes
+- Survey farmer satisfaction and participation levels
+- Document the number and condition of structures built
+
+10. SUCCESS STORIES FROM GUJARAT
+- Raj-Samadhiyala (Rajkot): Through watershed management, 32 check dams and 150 farm ponds transformed the village from water-scarce to water-secure, with 100% irrigation coverage and Rs. 2 crore annual agricultural income.
+- Rapar Taluka (Kutch): Watershed treatment combined with farm ponds and check dams raised groundwater levels by 8 meters, allowing farmers to shift from bajra to high-value cumin and cotton.
+- The Indo-German Watershed Development Program (IGWDP) in Gujarat demonstrated that community-managed watersheds achieved 30-40% increases in groundwater levels and 50% increases in crop yields over 5 years.

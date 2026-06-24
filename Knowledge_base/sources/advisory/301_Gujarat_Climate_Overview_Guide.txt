@@ -1,0 +1,102 @@
+================================================================================
+           GUJARAT FARMER KNOWLEDGE BASE
+           Agricultural Guide - File 301/407
+================================================================================
+
+TOPIC: Gujarat Climate Overview
+GUJARATI NAME: Gujarat Vayu Mandal
+CATEGORY: Climate
+GUIDE TYPE: Comprehensive Technical Manual
+REGION: Gujarat State - All Agro-Climatic Zones
+DOCUMENT DATE: June 23, 2026
+================================================================================
+
+1. INTRODUCTION
+Gujarat has a diverse climate ranging from arid in the northwest to tropical wet in the south. Understanding the state's climate is essential for successful farming.
+
+2. CLIMATE CLASSIFICATION
+Based on Koppen Classification:
+- BWh (Hot desert): Kutch, North Gujarat
+- BSh (Hot semi-arid): Saurashtra, North Gujarat
+- Aw (Tropical savanna): South Gujarat
+- Am (Tropical monsoon): Dangs, Valsad
+
+3. SEASONAL PATTERN
+Summer (March-June):
+- Temperature: 35-48C
+- Highest: 45-48C in Kutch, North Gujarat
+- Heat waves: April-May
+- Irrigation demand: Peak
+
+Monsoon (June-September):
+- Onset: Second week of June (South Gujarat)
+- Peak: July-August
+- Withdrawal: September end
+- Distribution: Uneven across state
+
+Post-Monsoon (October-November):
+- Temperature: 25-35C
+- Humidity: Moderate
+- Best for Rabi planting
+
+Winter (December-February):
+- Temperature: 10-30C
+- Lowest: 5-10C in North Gujarat
+- Frost risk: Minimal except hills
+- Best for vegetable production
+
+4. AGRO-CLIMATIC ZONES
+Zone 1 - South Gujarat:
+- Rainfall: 1200-2000 mm
+- Crops: Rice, sugarcane, mango, chikoo
+
+Zone 2 - Middle Gujarat:
+- Rainfall: 800-1000 mm
+- Crops: Cotton, wheat, cumin, bajra
+
+Zone 3 - North Gujarat:
+- Rainfall: 500-700 mm
+- Crops: Castor, cotton, wheat, mustard
+
+Zone 4 - Saurashtra:
+- Rainfall: 400-700 mm
+- Crops: Groundnut, cotton, bajra, sesame
+
+Zone 5 - Kutch:
+- Rainfall: 300-400 mm
+- Crops: Date palm, bajra, guar fodder
+
+5. CLIMATE CHANGE IMPACTS
+Observed Changes:
+- Increasing temperature: 0.5C per decade
+- Erratic rainfall: More intense but fewer rainy days
+- Delayed monsoon: Shifted by 7-10 days
+- Increased drought frequency
+
+Projected Impacts:
+- 10-20% reduction in wheat yield by 2050
+- Increased pest/disease pressure
+- Water scarcity intensification
+- Coastal salinity intrusion
+
+6. ADAPTATION STRATEGIES
+Short-term:
+- Weather-based agro-advisories
+- Crop insurance
+- Contingency plans
+
+Medium-term:
+- Climate-resilient varieties
+- Water harvesting
+- Crop diversification
+
+Long-term:
+- Changing cropping patterns
+- Protected cultivation expansion
+- Integrated farming systems
+
+================================================================================
+                         END OF FILE 301
+              Topic: Gujarat Climate Overview
+              COMPLETION: 301/407 files
+================================================================================

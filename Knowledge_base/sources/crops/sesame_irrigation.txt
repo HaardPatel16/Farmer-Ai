@@ -1,0 +1,2 @@
+=== SESAME WATER SCHEDULING ===
+Summer crops require watering every 8-10 days. Critical phases: Flowering phase (30 DAS) and Capsule development stage (55 DAS). Avoid water logging.

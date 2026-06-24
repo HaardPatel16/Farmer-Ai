@@ -1,0 +1,2 @@
+=== INTERCROPPING MATRIX: WHEAT + MUSTARD ===
+Row configuration: 9:1 parallel layout. Mustard acts as a highly effective companion row, diversifying market yield returns without lowering wheat counts.

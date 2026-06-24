@@ -1,0 +1,11 @@
+=== GUJARAT BT COTTON CULTIVATION AND FIELD ARCHITECTURE MASTER GUIDE ===
+Agro-Climatic Zones: Saurashtra Peninsula (Zones 6 & 7), Central Gujarat Alluvial Plains (Zone 3), South Gujarat (Zone 2)
+Source Standards: Main Cotton Research Station (MCRS), Anand Agricultural University (AAU)
+
+1. SYSTEMIC SOWING WINDOWS & MONSOON ALIGNMENT
+- Pre-monsoon Irrigated Sowing: May 15 to June 5. Heavily utilized in Saurashtra (Rajkot, Surendranagar, Morbi, Amreli) via extensive tube-well networks. Sowing during this window extends the crop's total vegetative growth phase, resulting in a 15-20% higher yield due to increased sympodial branch formation and early canopy closure.
+- Rainfed Monsoon Sowing: June 15 to July 5. Must be strictly synchronized with the Southwest monsoon onset. Sowing must be delayed if cumulative precipitation is below 50mm to prevent post-germination seed mortality caused by extreme soil thermal spikes.
+
+2. SEEDBED MANAGEMENT & FIELD ARCHITECTURE
+- Land Preparation: Execute deep summer ploughing with a moldboard plough once every three years to break up hard subsoil pans, expose soil-borne pathogens, and desiccate resting pupae of Pink Bollworm. Prepare the field with 2-3 harrowings using a disc harrow followed up by heavy planking to create a fine, crumb-structured tilth.
+- Sowing Method & Spatial Geometry: Dibbling at a uniform depth of 3 to 5 cm into pre-formed ridges and furrows. For irrigated Bt hybrids, maintain a precise spacing of 120 cm x 45 cm or 150 cm x 45 cm. For rainfed setups, contract the geometry to 90 cm x 30 cm or 90 cm x 45 cm to optimize plant populations per hectare.

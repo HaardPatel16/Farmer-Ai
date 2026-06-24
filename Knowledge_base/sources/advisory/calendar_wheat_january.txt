@@ -1,0 +1,99 @@
+================================================================================
+WHEAT CROP CALENDAR — GUJARAT — JANUARY
+================================================================================
+
+CROP: Wheat
+MONTH: January
+PRIMARY REGION: North Gujarat, Saurashtra, Kutch
+DOCUMENT TYPE: Month-wise Activity Calendar
+
+================================================================================
+1. SOIL PREPARATION FOR JANUARY
+================================================================================
+  • Light hoeing between rows improves aeration and controls late-emerging weeds
+  • Do NOT deep cultivate — wheat roots are shallow and easily damaged at this stage
+  • In waterlogged fields, open drainage channels and aerate soil by shallow cultivation
+  • Maintain soil pH at 6.5-7.5; apply lime if pH < 6.0
+  • Ensure good drainage — waterlogging at tillering stage reduces tiller survival
+
+================================================================================
+2. SOWING / PLANTING DATES
+================================================================================
+  • NO sowing in January — too late for Rabi wheat; yield potential is severely reduced
+  • Focus on crop management: irrigation, fertilizer, and pest control for established crop
+  • If gaps are severe, no replanting is recommended at this stage
+  • Remove weeds and waterlogged plants; maintain healthy plant population
+
+================================================================================
+3. IRRIGATION SCHEDULE
+================================================================================
+  • Second irrigation at tillering stage (40-45 days after sowing); apply 50-60mm water
+  • Third irrigation at boot leaf/flag leaf stage (60-70 days); apply 60mm water
+  • In North Gujarat, check-basin or flood irrigation is common
+  • Avoid irrigation during cold wave/frost events; irrigate during daytime in winter
+  • If frost is predicted, light irrigation in evening can provide some protection (latent heat release)
+
+================================================================================
+4. FERTILIZER TIMING & DOSES
+================================================================================
+  • Second nitrogen top dressing (40 kg urea per hectare) at tillering (40-45 days after sowing)
+  • Third nitrogen top dressing (30 kg urea per hectare) at boot leaf stage (60-70 days) if needed
+  • Foliar spray of 2% urea + 0.5% zinc sulphate at tillering if crop shows deficiency symptoms
+  • If crop is too vigorous and dark green, reduce nitrogen dose to avoid lodging
+  • No potash top dressing needed if basal potash was applied
+  • Plan for grain filling stage irrigation and fertilizer in February
+
+================================================================================
+5. PEST SCOUTING DATES
+================================================================================
+  • Yellow rust (Puccinia striiformis): peak risk month in North Gujarat; scout every 5-7 days
+  • If yellow rust appears (yellow-orange streaks on leaves), spray Propiconazole 1ml per litre immediately
+  • Alert agriculture department if yellow rust is detected — it is a quarantine disease in Gujarat
+  • Aphids: if colonies exceed 10 per tiller, spray Dimethoate 2ml per litre
+  • Karnal bunt (Tilletia indica): remove and destroy infected heads; apply Tebuconazole 1ml per litre at boot stage
+  • Termite: if damage observed, drench with Chlorpyriphos 2ml per litre along affected rows
+
+================================================================================
+6. HARVESTING WINDOWS
+================================================================================
+  • NO harvest in January — wheat is in tillering to boot leaf stage (40-70 days)
+  • Early sown bajra (fodder) may be harvested for green fodder in South Gujarat
+  • Continue monitoring crop growth and pest populations
+  • Record keeping: document tillering and boot leaf dates for harvest planning (March-April)
+
+================================================================================
+7. POST-HARVEST OPERATIONS
+================================================================================
+  • NO post-harvest operations in January
+  • Prepare storage facilities and threshing equipment for March-April harvest
+  • Contact grain market or FCI procurement centre for price information
+  • Arrange for combine harvester or labour in advance for March-April peak season
+
+================================================================================
+8. WEATHER WATCH
+================================================================================
+  • January is the coldest month in Gujarat; minimum temperatures 5-10°C in North Gujarat and Kutch
+  • Frost risk in North Gujarat (Banaskantha, Patan, Mehsana) and Kutch — protect wheat with light irrigation or smoke
+  • Day temperatures: 25-30°C; nights 8-15°C; ideal for wheat growth
+  • Watch for unseasonal rain — January rain can cause lodging in wheat and fungal diseases
+  • IMD Cold Wave warnings: if minimum temperature forecast is 4°C or below for 2+ days, activate frost protection measures
+
+================================================================================
+9. GOVERNMENT SCHEME DEADLINES
+================================================================================
+  • PMFBY: if crop damage from frost or pest, notify within 72 hours and file claim
+  • Crop damage survey: contact local agriculture officer for assessment
+  • Wheat seed subsidy: no new claims in January; focus on crop protection
+  • Kisan Credit Card: avail credit for fertilizer and irrigation costs
+  • PM-KISAN: verify installment eligibility and Aadhaar seeding status
+
+================================================================================
+10. RELATED TOPICS & QUICK LINKS
+================================================================================
+  • Related: calendar_wheat_november.txt, calendar_wheat_december.txt, calendar_wheat_march.txt
+  • Advisories: cold_wave_frost_protection.txt, spray_safety.txt, soil_testing_guide.txt
+  • Weather: imd_forecast_guide.txt, imd_seasonal_forecast_guide.txt
+  • Helpline: Kisan Call Centre 1800-180-1551, Gujarat Agriculture Department 079-232-43746
+  • Online: https://ikhedut.gujarat.gov.in, https://www.dwr.res.in
+
+================================================================================

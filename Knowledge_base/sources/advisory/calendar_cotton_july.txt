@@ -1,0 +1,98 @@
+================================================================================
+COTTON CROP CALENDAR — GUJARAT — JULY
+================================================================================
+
+CROP: Cotton
+MONTH: July
+PRIMARY REGION: Saurashtra, North Gujarat, South Gujarat
+DOCUMENT TYPE: Month-wise Activity Calendar
+
+================================================================================
+1. SOIL PREPARATION FOR JULY
+================================================================================
+  • If sowing was delayed to early July, complete soil preparation immediately
+  • For fields with waterlogging in June, apply gypsum 250 kg per hectare to improve soil structure
+  • In waterlogged fields, open additional drainage channels and aerate soil by shallow cultivation
+  • Apply organic matter / FYM if not applied before sowing
+  • Maintain soil pH at 6.5-7.5; acidic soils require lime application
+
+================================================================================
+2. SOWING / PLANTING DATES
+================================================================================
+  • Gap filling within first 15 days using extra seeds kept at sowing time
+  • Thinning to one plant per hill at 15-20 days where germination is excess
+  • First weeding at 20-25 days — critical as competition in first 30 days heavily impacts final yield
+  • Second weeding at 40-45 days; maintain weed-free field until canopy closure
+  • If sowing is very late (after 15 July), consider short-duration varieties (e.g., GCH-7)
+
+================================================================================
+3. IRRIGATION SCHEDULE
+================================================================================
+  • Generally rainfed in July; one irrigation if dry spell exceeds 10-15 days during vegetative stage
+  • First irrigation at 15-20 days if no rain after sowing
+  • Maintain soil moisture at 60-70% field capacity
+  • In South Gujarat irrigated tracts, schedule drip irrigation every 3-4 days (8-10 mm)
+  • Ensure drainage after heavy rain — waterlogging for >24 hours causes root rot and sudden wilt
+
+================================================================================
+4. FERTILIZER TIMING & DOSES
+================================================================================
+  • First nitrogen top dressing (40-50 kg urea per hectare) at 30-35 days when plants are knee-high
+  • If basal DAP was not applied, apply 50 kg DAP per hectare at first weeding (20-25 days)
+  • Micronutrient spray: 0.5% zinc sulphate + 0.2% boron at 30 days if deficiency symptoms appear
+  • No potassium top dressing needed if basal potash was applied
+  • Plan for second nitrogen top dressing in August at boll formation stage
+
+================================================================================
+5. PEST SCOUTING DATES
+================================================================================
+  • Sucking pests: jassids, aphids, thrips — spray Imidacloprid 0.5ml per litre if damage exceeds 5% leaf area
+  • Whitefly: monitor using yellow sticky traps; spray Buprofezin 1.5ml/litre if >5 whiteflies per leaf
+  • Alternaria leaf spot: spray Mancozeb 2.5g per litre if circular brown spots appear after rain
+  • Set up pheromone traps for pink bollworm at 45 days — 5 traps per hectare
+  • Monitor for American bollworm (Helicoverpa armigera) eggs on leaves and squares from 40 days
+  • Root rot: if waterlogging occurs, drench affected plants with Copper oxychloride 2.5g per litre + Metalaxyl 2.5g/litre
+
+================================================================================
+6. HARVESTING WINDOWS
+================================================================================
+  • NO harvest in July — cotton is in vegetative/early reproductive stage
+  • Continue monitoring crop growth and pest populations
+  • Record keeping: document sowing date, variety, fertilizer, and pest control measures for traceability
+
+================================================================================
+7. POST-HARVEST OPERATIONS
+================================================================================
+  • NO post-harvest operations in July
+  • Prepare spray equipment and calibrate nozzles for August peak pest season
+  • Purchase required pesticides and store safely away from rain and sunlight
+  • Arrange for labour during peak picking season (October-December)
+
+================================================================================
+8. WEATHER WATCH
+================================================================================
+  • Peak monsoon month: heavy rainfall in Saurashtra and South Gujarat; 250-350mm average
+  • Waterlogging risk highest in July; check drainage channels after every rain event
+  • Humidity 70-90%; favourable for fungal diseases — increase scouting frequency
+  • Day temperatures 28-32°C; nights 24-26°C; warm and humid
+  • IMD warnings: watch for heavy rainfall alerts (100mm+ in 24 hours) and flood warnings
+
+================================================================================
+9. GOVERNMENT SCHEME DEADLINES
+================================================================================
+  • PMFBY enrollment: complete by 31st July for Kharif cotton
+  • Bt cotton seed subsidy: claim through authorized dealer with GST bill and Aadhaar
+  • Drip irrigation subsidy: submit proposal to GGRC if not already done
+  • Kisan Credit Card: avail fresh credit for pesticide and fertilizer purchases
+  • Contact VLE for eNAM registration and online mandi selling
+
+================================================================================
+10. RELATED TOPICS & QUICK LINKS
+================================================================================
+  • Related: calendar_cotton_june.txt, calendar_cotton_august.txt, calendar_cotton_october.txt
+  • Advisories: spray_safety.txt, pest_bulletin_kharif_2025.txt, waterlogging_management.txt
+  • Weather: imd_forecast_guide.txt, weather_based_irrigation.txt
+  • Helpline: Kisan Call Centre 1800-180-1551, Gujarat Cotton Association 079-2657-5141
+  • Online: https://ikhedut.gujarat.gov.in, https://www.indiamet.gov.in
+
+================================================================================

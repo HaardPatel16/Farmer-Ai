@@ -1,0 +1,134 @@
+================================================================================
+           GUJARAT FARMER KNOWLEDGE BASE
+           Agricultural Guide - File 105/407
+================================================================================
+
+TOPIC: Vermicomposting
+GUJARATI NAME: Kechua Khad
+CATEGORY: Soil Science
+GUIDE TYPE: Comprehensive Technical Manual
+REGION: Gujarat State - All Agro-Climatic Zones
+DOCUMENT DATE: June 23, 2026
+================================================================================
+
+1. INTRODUCTION
+Vermicomposting uses earthworms to convert organic waste into nutrient-rich compost. It produces fine, humus-like material with beneficial microorganisms.
+
+2. EARTHWORM SPECIES FOR VERMICOMPOSTING
+Eisenia fetida (Red Wiggler):
+- Most common species
+- Adaptable to Gujarat climate
+- Reproduction: 1 cocoon/week, 2-3 worms/cocoon
+- Processing capacity: 2-3 times body weight/day
+
+Eudrilus eugeniae (African Nightcrawler):
+- Larger size, faster processing
+- Prefers warmer conditions
+- Ideal for South Gujarat
+
+Perionyx excavatus (Blue Worm):
+- Small but prolific
+- Surface feeder
+- Good for tropical conditions
+
+3. VERMICOMPOSTING UNIT DESIGN
+Location:
+- Shaded area (under trees, shed)
+- Well-drained, protected from rain
+- Accessible for feeding and harvesting
+
+Bed Preparation:
+Size: 3m x 1m x 0.6m (100 kg biomass capacity)
+Material: Brick/cement/concrete/wooden
+Base: Sand layer for drainage
+
+Bedding Material:
+- Coconut coir, dried leaves, straw
+- Pre-decomposed for 2 weeks
+- Moisture: 60-70%
+- pH: 6.5-7.5
+
+4. FEEDING MATERIALS
+Ideal Feed (50-60% moisture):
+- Cattle dung (3-4 days old)
+- Crop residues (chopped)
+- Kitchen waste
+- Fruit/vegetable waste
+- Tea/coffee grounds
+
+Avoid:
+- Fresh manure (ammonia toxicity)
+- Onion/garlic (repel worms)
+- Citrus (acidity)
+- Meat/dairy (odor, pests)
+- Oily foods
+- Pesticide-treated material
+
+5. PROCESS MANAGEMENT
+Initial Setup:
+Day 1: Place 10-15 cm bedding
+Day 3: Add 1 kg worms (1000-1500 adults)
+Day 5: Start feeding 500g waste daily
+Increase gradually to 2-3 kg/day
+
+Daily Care:
+- Check moisture (squeeze test)
+- Feed in small pockets
+- Cover with gunny bag/cloth
+- Monitor temperature (20-30C ideal)
+
+Monthly Maintenance:
+- Turn gently for aeration
+- Check worm population
+- Adjust feeding rate
+- Harvest excess vermicompost
+
+6. HARVESTING
+Timeline: 45-60 days for first harvest
+Signs of readiness:
+- Dark, granular material
+- No recognizable feed
+- Earthy smell
+- Worms moving to fresh feed
+
+Separation Methods:
+- Heap and scrape method
+- Light exposure migration
+- Mesh screen sieving (3-4 mm)
+
+7. PRODUCTION ESTIMATES
+Input: 100 kg biomass + 1 kg worms
+Output: 40-60 kg vermicompost + 2 kg worm biomass
+Cycle: 60-75 days
+Annual production (1 unit): 300-400 kg
+
+8. QUALITY STANDARDS
+NPK Content: 1.5-2.5% N, 1.0-2.0% P, 0.5-1.5% K
+Micronutrients: Rich in Fe, Zn, Mn, Cu
+Microbial load: 10^6-10^8 CFU/g beneficial microbes
+Hormones: Auxins, gibberellins present
+pH: 6.5-7.5
+
+9. APPLICATION
+Dosage: 2-5 t/ha (field crops), 5-10 kg/plant (horticulture)
+Timing: At planting/sowing, top dressing
+Method: Mix with soil, band application, foliar extract
+Foliar spray: 5% solution filtered
+
+10. ECONOMICS
+Setup cost: Rs. 5,000-15,000 (100 kg unit)
+Operating cost: Rs. 3-5/kg produced
+Selling price: Rs. 15-30/kg
+Income potential: Rs. 50,000-1,00,000/year (commercial unit)
+
+11. COMMON PROBLEMS
+Ant infestation: Moat of water around bed
+Fruit flies: Bury food, cover properly
+Bad smell: Reduce moisture, add dry material
+Worms escaping: Check pH, moisture, temperature
+Slow processing: Reduce feed, check worm health
+
+================================================================================
+                         END OF FILE 105
+              Topic: Vermicomposting
+================================================================================

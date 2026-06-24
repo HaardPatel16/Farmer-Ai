@@ -1,0 +1,109 @@
+================================================================================
+GUJARAT FARMING CALENDAR — APRIL (ફાગણ / ચૈત્ર (Phagun / Chaitra))
+================================================================================
+
+OVERVIEW:
+April is a critical month for Gujarat agriculture. The state's diverse agro-climatic zones — Saurashtra, North Gujarat, South Gujarat, and Kutch — each have specific crop activities during this period. This calendar provides detailed, week-by-week guidance for farmers.
+
+CROPS IN FOCUS THIS MONTH:
+  • Summer groundnut (Saurashtra)
+  • Bajra (summer)
+  • Cotton (early sowing in South Gujarat)
+  • Sesame
+  • Vegetables
+
+================================================================================
+1. SOIL PREPARATION
+================================================================================
+  • Summer ploughing should be completed by now if not already done; deep ploughing (20-25 cm) improves water infiltration
+  • For heavy black cotton soils, apply organic matter / FYM (Farm Yard Manure) 10-15 tonnes per hectare at least 2-3 weeks before sowing
+  • Level the field using a leveller to ensure uniform irrigation and prevent waterlogging
+  • In Saurashtra, apply gypsum 250 kg per hectare for sodic soil reclamation before sowing
+  • Conduct soil testing: pH should be 6.5-7.5 for most crops; apply lime if pH < 6.0
+  • Prepare raised beds (15-20 cm high) for vegetable crops to improve drainage during monsoon
+
+================================================================================
+2. SOWING / PLANTING DATES
+================================================================================
+  • Summer groundnut sowing continues in Saurashtra until mid-April; irrigated varieties only
+  • Cotton early sowing in South Gujarat (irrigated tracts) with borewell irrigation — seed rate 1.5-2 kg/ha
+  • Summer bajra sowing continues in Kutch and North Gujarat with drip irrigation
+  • Guar (cluster bean) summer sowing in Saurashtra — drought-tolerant crop for light soils
+  • Vegetable sowing (okra, cucumber, ridge gourd, bottle gourd) throughout the month in South Gujarat
+
+================================================================================
+3. IRRIGATION SCHEDULE
+================================================================================
+  • Summer groundnut: critical irrigation at flowering (30-40 days) and pegging stage (50-60 days); every 7-10 days
+  • Cotton: first irrigation immediately after sowing; second at 15 days; then every 10-12 days depending on soil
+  • Bajra: irrigate every 10-15 days; critical stages are tillering and heading
+  • Sesame: light irrigation every 12-15 days; sesame is drought-tolerant but needs moisture at flowering
+  • Vegetables: drip irrigation every 3-5 days depending on crop; maintain 60-70% soil moisture
+
+================================================================================
+4. FERTILIZER TIMING & DOSES
+================================================================================
+  • Summer groundnut: top dressing of 30 kg urea per hectare at 30 days; gypsum 250 kg at flowering
+  • Cotton: first nitrogen top dressing (40-50 kg urea per hectare) at 30-35 days after sowing (knee-high stage)
+  • Bajra: second nitrogen top dressing (40 kg urea per hectare) at tillering stage (35-45 days)
+  • Sesame: apply 20 kg urea per hectare at 30 days after sowing
+  • Vegetables: apply 20 kg urea per hectare at 20 days after sowing; repeat at fruiting stage
+
+================================================================================
+5. PEST SCOUTING DATES
+================================================================================
+  • Summer groundnut: leaf miner and aphids — spray Imidacloprid 0.5ml per litre if damage exceeds 5% leaf area
+  • Cotton: jassids, aphids, thrips — spray Imidacloprid 0.5ml per litre at 20-30 days; monitor for whitefly
+  • Cotton: set up pheromone traps for pink bollworm at 45 days after sowing
+  • Bajra: stem borer — look for dead heart; apply Carbofuran 3G if >5% incidence
+  • Vegetables: fruit borer (tomato, brinjal) — spray Bacillus thuringiensis (Bt) 1g per litre or Indoxacarb 0.5ml/litre
+
+================================================================================
+6. HARVESTING WINDOWS
+================================================================================
+  • Early summer groundnut (sown in February) may be ready for harvest in last week of April in South Gujarat
+  • Summer moong (sown in January-February) harvest continues; thresh and dry to 8% moisture
+  • Potato (second crop) harvest in South Gujarat; store in cool, ventilated godowns
+  • Mango: Dasheri and Kesar varieties begin early harvest in Saurashtra and South Gujarat
+  • Wheat: harvest continues in North Gujarat; complete by mid-April to avoid heat damage
+
+================================================================================
+7. POST-HARVEST OPERATIONS
+================================================================================
+  • Clean and dry harvested produce immediately; moisture content should be reduced to safe levels (8-10% for grains, 10-12% for oilseeds)
+  • Use tarpaulins or cemented drying yards to avoid aflatoxin contamination in groundnut and cotton
+  • Store in properly ventilated godowns; use neem leaves or safe storage pesticides
+  • For cotton, ginning should be done within 15 days of picking to preserve fibre quality
+  • Grade produce before selling: separate A, B, and C grades for better market prices
+  • Maintain post-harvest records for traceability and insurance claims
+
+================================================================================
+8. WEATHER WATCH
+================================================================================
+  • Peak summer month: day temperatures 38-42°C; nights 22-26°C; minimal humidity
+  • Heat waves common in Saurashtra and Kutch; day temperatures may exceed 43°C
+  • Hot dry winds (loo) can desiccate young cotton and groundnut plants; provide protective irrigation
+  • Pre-monsoon showers (thunderstorms) may occur in South Gujarat; beneficial for soil moisture but risky for cotton
+  • IMD Heat Wave Advisory: monitor daily forecasts; if temperatures exceed 40°C, provide evening irrigation
+
+================================================================================
+9. GOVERNMENT SCHEME DEADLINES
+================================================================================
+  • PM-KISAN installment verification: ensure Aadhaar seeding is complete before 15th of the month
+  • Soil Health Card scheme: collect updated cards from local Krushi Vigyan Kendra (KVK) or ATMA office
+  • PMFBY (Pradhan Mantri Fasal Bima Yojana) enrollment: last date for Kharif crops is usually 31st July; for Rabi crops, 15th December
+  • Gujarat State Farm Machinery Scheme: subsidy applications for tractor/power tiller due at district agriculture office
+  • Drip irrigation subsidy under GGRC (Gujarat Green Revolution Company): submit estimates before month-end
+  • Horticulture Mission for North East & Himalayan States (HMNEH) — nursery subsidy claims
+  • Contact your nearest VLE (Village Level Entrepreneur) for eNAM registration and online mandi selling
+
+================================================================================
+10. RELATED TOPICS & QUICK LINKS
+================================================================================
+  • Related calendar files: calendar_april.txt, spray_calendar_kharif.txt
+  • Advisories: weather_based_irrigation.txt, soil_testing_guide.txt, post_harvest_storage.txt
+  • Weather: imd_forecast_guide.txt, monsoon_onset_advisory.txt
+  • Helpline: Kisan Call Centre 1800-180-1551, Gujarat Agriculture Department 079-232-43746
+  • Online: https://ikhedut.gujarat.gov.in (Gujarat Ikhedut Portal for subsidies and schemes)
+
+================================================================================

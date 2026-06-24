@@ -1,0 +1,110 @@
+================================================================================
+GUJARAT FARMING CALENDAR — JANUARY (માગશર / પોષ (Magshar / Posh))
+================================================================================
+
+OVERVIEW:
+January is a critical month for Gujarat agriculture. The state's diverse agro-climatic zones — Saurashtra, North Gujarat, South Gujarat, and Kutch — each have specific crop activities during this period. This calendar provides detailed, week-by-week guidance for farmers.
+
+CROPS IN FOCUS THIS MONTH:
+  • Wheat (Rabi)
+  • Mustard / Rapeseed
+  • Gram (Chana)
+  • Potato
+  • Cumin
+
+================================================================================
+1. SOIL PREPARATION
+================================================================================
+  • Summer ploughing should be completed by now if not already done; deep ploughing (20-25 cm) improves water infiltration
+  • For heavy black cotton soils, apply organic matter / FYM (Farm Yard Manure) 10-15 tonnes per hectare at least 2-3 weeks before sowing
+  • Level the field using a leveller to ensure uniform irrigation and prevent waterlogging
+  • In Saurashtra, apply gypsum 250 kg per hectare for sodic soil reclamation before sowing
+  • Conduct soil testing: pH should be 6.5-7.5 for most crops; apply lime if pH < 6.0
+  • Prepare raised beds (15-20 cm high) for vegetable crops to improve drainage during monsoon
+
+================================================================================
+2. SOWING / PLANTING DATES
+================================================================================
+  • NO sowing for main Kharif or Rabi field crops in January — this is mid-season for Rabi
+  • Late sowing of potato (second crop) possible in South Gujarat until 15th January with irrigation
+  • Summer vegetable nursery preparation (tomato, brinjal, chilli) can begin in last week of January in South Gujarat
+  • Green gram (moong) summer sowing nursery raised beds preparation in Saurashtra
+
+================================================================================
+3. IRRIGATION SCHEDULE
+================================================================================
+  • Wheat: critical irrigation at CRI (Crown Root Initiation) stage — 20-25 days after sowing; apply 50mm water
+  • Wheat: second irrigation at tillering stage (40-45 days); third at boot leaf/flag leaf stage (60-70 days)
+  • Mustard: one irrigation at flowering stage (50-60 days) if no rain; avoid excess water
+  • Gram: generally rainfed; one protective irrigation during pod filling if dry spell exceeds 15 days
+  • Potato: maintain soil moisture at 80% field capacity; irrigation every 7-10 days depending on soil type
+  • Cumin: light irrigation every 10-12 days; avoid waterlogging — cumin is highly sensitive to root rot
+
+================================================================================
+4. FERTILIZER TIMING & DOSES
+================================================================================
+  • Wheat: first top dressing of nitrogen (40-50 kg urea per hectare) at CRI stage (20-25 days)
+  • Wheat: second nitrogen top dressing (40 kg urea per hectare) at tillering (40-45 days)
+  • Mustard: apply 30 kg urea per hectare at flowering stage if crop looks pale
+  • Gram: if basal dose was insufficient, apply 20 kg DAP per hectare at early branching stage
+  • Potato: apply 50 kg urea per hectare at stolon formation (30 days); second dose at tuber initiation (45 days)
+  • Cumin: apply 20 kg urea per hectare at 30 days after sowing; second dose at 50 days if needed
+
+================================================================================
+5. PEST SCOUTING DATES
+================================================================================
+  • Wheat: monitor for aphids and yellow rust (Puccinia striiformis); yellow rust appears as yellow-orange streaks
+  • Wheat: if yellow rust appears, spray Propiconazole 1ml per litre immediately; alert agriculture department
+  • Mustard: watch for sawfly and aphids; spray Dimethoate 2ml per litre if aphids exceed 10 per plant
+  • Gram: pod borer (Helicoverpa armigera) monitoring; spray HaNPV or NSKE 5% if eggs found
+  • Potato: early blight (Alternaria solani) — spray Mancozeb 2.5g per litre at first sign of brown spots
+  • Cumin: wilt and blight complex — drench with Carbendazim 1g + Mancozeb 2.5g per litre if symptoms appear
+
+================================================================================
+6. HARVESTING WINDOWS
+================================================================================
+  • Early sown bajra (fodder) may be harvested for green fodder in South Gujarat
+  • Green gram (moong) sown in October-November reaches maturity in late January in South Gujarat
+  • Mustard: early varieties may be ready for harvest in last week of January in South Gujarat
+  • Pre-harvest desiccation of moong: spray 20% common salt solution 3 days before harvest to aid uniform drying
+
+================================================================================
+7. POST-HARVEST OPERATIONS
+================================================================================
+  • Clean and dry harvested produce immediately; moisture content should be reduced to safe levels (8-10% for grains, 10-12% for oilseeds)
+  • Use tarpaulins or cemented drying yards to avoid aflatoxin contamination in groundnut and cotton
+  • Store in properly ventilated godowns; use neem leaves or safe storage pesticides
+  • For cotton, ginning should be done within 15 days of picking to preserve fibre quality
+  • Grade produce before selling: separate A, B, and C grades for better market prices
+  • Maintain post-harvest records for traceability and insurance claims
+
+================================================================================
+8. WEATHER WATCH
+================================================================================
+  • January is the coldest month in Gujarat; minimum temperatures can drop to 5-10°C in North Gujarat and Kutch
+  • Frost risk in North Gujarat (Banaskantha, Patan, Mehsana) and Kutch — protect sensitive crops with light irrigation or smoke
+  • Day temperatures: 25-30°C; Night: 8-15°C; ideal for wheat, mustard, gram, and cumin
+  • Watch for unseasonal rain — January rain can cause lodging in mustard and fungal diseases in gram
+  • IMD Cold Wave warnings: if minimum temperature forecast is 4°C or below for 2+ days, activate frost protection
+
+================================================================================
+9. GOVERNMENT SCHEME DEADLINES
+================================================================================
+  • PM-KISAN installment verification: ensure Aadhaar seeding is complete before 15th of the month
+  • Soil Health Card scheme: collect updated cards from local Krushi Vigyan Kendra (KVK) or ATMA office
+  • PMFBY (Pradhan Mantri Fasal Bima Yojana) enrollment: last date for Kharif crops is usually 31st July; for Rabi crops, 15th December
+  • Gujarat State Farm Machinery Scheme: subsidy applications for tractor/power tiller due at district agriculture office
+  • Drip irrigation subsidy under GGRC (Gujarat Green Revolution Company): submit estimates before month-end
+  • Horticulture Mission for North East & Himalayan States (HMNEH) — nursery subsidy claims
+  • Contact your nearest VLE (Village Level Entrepreneur) for eNAM registration and online mandi selling
+
+================================================================================
+10. RELATED TOPICS & QUICK LINKS
+================================================================================
+  • Related calendar files: calendar_january.txt, spray_calendar_kharif.txt
+  • Advisories: weather_based_irrigation.txt, soil_testing_guide.txt, post_harvest_storage.txt
+  • Weather: imd_forecast_guide.txt, monsoon_onset_advisory.txt
+  • Helpline: Kisan Call Centre 1800-180-1551, Gujarat Agriculture Department 079-232-43746
+  • Online: https://ikhedut.gujarat.gov.in (Gujarat Ikhedut Portal for subsidies and schemes)
+
+================================================================================

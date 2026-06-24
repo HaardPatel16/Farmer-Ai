@@ -1,0 +1,73 @@
+COLD WAVE AND FROST PROTECTION FOR GUJARAT FARMERS
+====================================================
+
+OVERVIEW
+Gujarat experiences cold waves primarily from December to February, especially in 
+North Gujarat (Banaskantha, Patan, Mehsana) and Saurashtra. Night temperatures can 
+drop to 4-8°C, causing frost damage to vegetables, spices, and winter crops.
+
+CROPS MOST VULNERABLE TO FROST IN GUJARAT
+- Vegetables: tomato, brinjal, chilli, capsicum, potato
+- Spices: cumin (jeera), fennel (saunf), coriander
+- Fruits: papaya, banana, guava (young plants)
+- Flowers: marigold, chrysanthemum
+- Pulses: chickpea at flowering stage
+
+COLD WAVE WARNING SIGNS
+- IMD issues yellow/orange/red alerts for cold wave conditions
+- Temperature 4.5°C or more below normal = cold wave
+- Temperature below 10°C in plains = cold wave for crops
+- Clear skies + low wind + low humidity at night = frost risk
+
+PROTECTIVE MEASURES
+
+Before Cold Wave
+- Monitor IMD daily forecasts (mausam.imd.gov.in or Meghdoot app)
+- Avoid irrigation just before predicted cold night (wet soil holds more heat)
+- Apply potassium-rich fertiliser (SOP) 2 weeks before winter to harden plants
+- Do not apply nitrogen just before cold wave (soft growth more vulnerable)
+
+During Cold Wave
+1. Overhead Irrigation (Sprinkling)
+   - Light irrigation at night creates a thin ice layer that protects plant tissue
+   - Start sprinklers when temperature drops near 2°C
+   - Effective for cumin, coriander, vegetable nurseries
+
+2. Smoke/Dhuan Method
+   - Burn crop residue, dry leaves, or biomass on windward side of field
+   - Creates smoke canopy trapping ground heat
+   - Start 2-3 hours before sunrise (coldest period)
+   - Cost-effective for large fields
+
+3. Covering Small Plants
+   - Use dry grass, straw, or agro-net to cover nursery beds
+   - Polythene tunnels for high-value vegetables
+   - Remove covers after sunrise to prevent overheating
+
+4. Wind Barriers
+   - Erect temporary windbreaks using dry grass bundles or agro-shade nets
+   - Reduces wind chill effect on crops
+
+5. Mulching
+   - Apply 5-8 cm straw or sugarcane trash as mulch
+   - Insulates soil and root zone
+
+Post Frost Damage Management
+- Do not prune frost-damaged parts immediately; wait for new growth to assess damage
+- Apply 0.5% potassium nitrate spray to help recovery
+- Apply urea spray (2%) after recovery begins to stimulate new growth
+- Damaged cumin/coriander: re-sowing may be needed if >50% plants affected
+
+DISTRICT-WISE RISK ZONES IN GUJARAT
+- High Risk: Banaskantha, Patan, Mehsana, Surendranagar, Rajkot (Jan-Feb)
+- Medium Risk: Gandhinagar, Sabarkantha, Ahmedabad, Amreli
+- Low Risk: South Gujarat (Surat, Navsari, Valsad), coastal areas
+
+GOVERNMENT SUPPORT
+- Crop damage due to cold wave eligible under PM Fasal Bima Yojana
+- Report crop loss to Talati or local agriculture officer within 72 hours
+- Gujarat Kisan Sahay Yojana provides input subsidy for unseasonal damage
+
+CONTACT
+- IMD Ahmedabad: 079-27540534
+- Meghdoot App for daily agromet advisory (available on Android)

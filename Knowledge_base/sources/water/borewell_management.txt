@@ -1,0 +1,152 @@
+BOREWELL MANAGEMENT GUIDE FOR GUJARAT FARMERS
+
+1. INTRODUCTION
+Borewells are the backbone of Gujarat agriculture. Over 15 lakh borewells exist in the state, with Saurashtra alone having more than 6 lakh. However, poor borewell management has led to alarming groundwater depletion, increasing drilling costs, and declining yields. Proper borewell siting, drilling, pump selection, and maintenance can extend a borewell's life from 5 years to 20+ years, saving lakhs of rupees. This guide covers the complete lifecycle of borewell management for Gujarat's farmers.
+
+2. BOREWELL SITING AND GEOLOGICAL ASSESSMENT
+
+2.1 Understanding Gujarat's Aquifers
+- Saurashtra: Fractured basalt and limestone aquifers; water found at 60-200m; yields vary dramatically based on fracture zones
+- North Gujarat: Alluvial aquifers (sand layers) with groundwater at 40-100m; water quality issues (fluoride, salinity) common
+- Kutch: Hard rock and sandstone aquifers; deep drilling (150-300m) often needed; water scarcity is severe
+- South Gujarat: Shallow alluvial aquifers (20-50m); generally good yield and quality
+- Central Gujarat: Mixed alluvial and basalt; moderate depths (50-100m)
+
+2.2 Site Selection Methods
+Before drilling, use these methods to identify the best location:
+- Survey existing wells: Talk to neighbors about depth, yield, and water quality. Avoid areas where all wells have failed or have high TDS.
+- Use geophysical surveys: Electrical resistivity surveys (VES) can identify fracture zones and water-bearing layers. Cost: Rs. 3,000-8,000 per location. Many drilling contractors offer this service.
+- Government data: The Central Ground Water Board (CGWB) publishes groundwater prospect maps. Contact the Gujarat Water Resources Development Corporation (GWRDC) or the District Groundwater Office for aquifer maps.
+- Dowsing and traditional methods are NOT reliable; always combine with scientific methods.
+
+2.3 Spacing Rules
+- Minimum 200m from existing borewells in the same aquifer to avoid interference
+- Avoid drilling near septic tanks, soak pits, garbage dumps, or industrial areas (contamination risk)
+- Maintain 500m distance from landfill sites and chemical factories
+- Avoid areas within 100m of high-tension power lines (safety and interference)
+
+3. DRILLING GUIDELINES AND SPECIFICATIONS
+
+3.1 Drilling Methods
+- Rotary drilling with direct mud circulation: Standard for most of Gujarat; suitable for basalt, limestone, and alluvium
+- Down-the-hole (DTH) hammer drilling: Best for hard rock areas like Kutch and Saurashtra; faster penetration in basalt
+- Reverse circulation: Used for large-diameter wells; expensive but high yield
+
+3.2 Borewell Specifications for Gujarat
+- Diameter: 150-200mm (6-8 inches) for agriculture; 150mm is standard for submersible pumps
+- Casing: MS (mild steel) or PVC casing for the upper loose soil section; typically 20-40m of casing in alluvial areas, 10-20m in hard rock
+- Screen/Slotted pipe: Install in the water-bearing zone; slot size (1.0-1.5mm) should match aquifer grain size
+- Gravel pack: 10-20mm washed gravel around the screen in alluvial wells; not needed in hard rock borewells
+- Depth: Minimum 10m below the lowest expected water level; typically 80-150m in Saurashtra, 60-100m in North Gujarat, 150-300m in Kutch
+
+3.3 Drilling Cost Estimates (2024 rates, Gujarat)
+- Hard rock (Saurashtra, Kutch): Rs. 250-400 per meter
+- Alluvial (North, Central Gujarat): Rs. 150-250 per meter
+- Casing pipe: Rs. 400-600 per meter for MS, Rs. 300-500 per meter for PVC
+- Gravel pack: Rs. 5,000-10,000 depending on quantity
+- Total cost for a 100m borewell: Rs. 50,000-1,50,000 depending on geology and depth
+
+3.4 Drilling Contract Precautions
+- Get a written contract specifying depth, diameter, casing length, and cost per meter
+- Require a test yield measurement before payment (pump test for minimum 2 hours)
+- Ensure the contractor records the litholog (rock layers encountered) and provides a copy
+- Do not pay 100% advance; typical payment is 30% advance, 40% at casing installation, 30% after yield test
+
+4. PUMP SELECTION AND INSTALLATION
+
+4.1 Submersible Pump Selection
+- Calculate required discharge: For 1 hectare of drip-irrigated horticulture, 10,000 liters/hour is sufficient. For flood irrigation, 20,000-30,000 liters/hour may be needed.
+- Calculate total head: Static water level + drawdown during pumping + height to ground + pressure head + friction losses
+- Example: Static water level at 50m + drawdown 10m + ground level 5m + pressure (2 kg/cm2 = 20m) + friction 10m = 95m total head
+- Select a pump with BEP (Best Efficiency Point) near your operating point. Operating far from BEP wastes electricity and reduces pump life.
+- Brands popular in Gujarat: CRI, Kirloskar, Texmo, Shakti, Crompton, V-Guard
+
+4.2 Motor and Electrical Setup
+- Motor HP: 1 HP can deliver approximately 1,000-1,500 liters per hour at 100m head. A 5 HP pump is standard for most Gujarat farms.
+- Voltage: Gujarat has 3-phase agricultural supply in most areas; ensure the motor matches your supply (3-phase motors are more efficient)
+- Cable: Use submersible flat cable of adequate size; for 100m depth, 4 sqmm cable is minimum for 3 HP; 6 sqmm for 5 HP
+- Starter: Install a proper submersible starter panel with overload protection, single-phase preventer (for 3-phase), and ammeter
+- Earthing: Mandatory copper earthing (2 earth electrodes) to protect against electrical faults
+
+4.3 Pump Installation
+- Install the pump at least 5-10m above the bottom of the borewell to avoid pumping sediment
+- Use a reducer if the pump discharge diameter does not match the delivery pipe
+- Install a check valve (non-return valve) immediately above the pump to prevent backflow
+- Use HDPE or GI pipe for the delivery main; avoid PVC for the vertical column as it can break during installation/removal
+- Ensure the pump is properly centralized with centralizers to prevent motor rubbing against the casing
+
+5. SOLAR PUMP SYSTEMS
+
+5.1 Why Solar?
+Gujarat receives 300+ sunny days annually. Solar pumps eliminate electricity bills, diesel costs, and grid dependency. Under the PM-KUSUM scheme, farmers can get 60-70% subsidy on solar pumps.
+
+5.2 Sizing a Solar Pump System
+- A 3 HP solar pump requires approximately 3 kW of solar panels
+- A 5 HP solar pump requires approximately 5 kW of solar panels
+- Panel area: Each kW requires about 5-6 sqm of shadow-free area
+- Water output: A 3 HP solar pump at 80m head delivers approximately 12,000-15,000 liters per day (6-8 sun hours)
+
+5.3 PM-KUSUM Application Process (Gujarat)
+- Step 1: Apply online at the GEDA (Gujarat Energy Development Agency) portal or through the Gujarat Agricultural Department
+- Step 2: Submit land documents, 7/12 extract, and electricity bill (if existing connection)
+- Step 3: GEDA conducts a technical survey for shadow-free area and water requirement
+- Step 4: Pay beneficiary contribution (30% for general farmers, 10% for SC/ST/small farmers in some schemes)
+- Step 5: GEDA empanelled vendor installs the system
+- Step 6: System is commissioned and a 5-year warranty is provided
+
+5.4 Solar Pump Maintenance
+- Clean solar panels weekly with water to remove dust (dust reduces output by 20-30% in Gujarat)
+- Check inverter display for error codes; record daily generation and water output
+- Ensure the DC cable is UV-resistant and properly sealed
+- The submersible pump itself has the same maintenance needs as grid-powered pumps
+
+6. BOREWELL MAINTENANCE AND TROUBLESHOOTING
+
+6.1 Routine Maintenance (Monthly)
+- Check the electrical panel for loose connections, burnt contacts, or overheating
+- Record ampere draw; an increase of 10% or more indicates pump wear or blockages
+- Inspect the delivery pipe and joints for leaks
+- Check the water meter (if installed) for unusual flow changes
+- Listen for changes in pump sound; grinding or rattling indicates damage
+
+6.2 Annual Maintenance
+- Test the pump yield by pumping continuously for 4 hours and measuring drawdown
+- If yield has dropped by more than 20%, consider borewell cleaning (surging, jetting, or acid treatment)
+- Check the static water level using an electrical water level indicator
+- Inspect the control panel, capacitor, and starter contacts
+- Service the pump through an authorized service center every 2-3 years
+
+6.3 Common Problems and Solutions
+- Problem: Pump runs but no water. Causes: Dry borewell (water level below pump), broken delivery pipe, foot valve stuck. Solution: Lower the pump, repair the pipe, or clean the valve.
+- Problem: Reduced water output. Causes: Clogged screen, pump impeller wear, falling water table. Solution: Borewell cleaning, pump replacement, or deepen the borewell.
+- Problem: Pump overheating or frequent tripping. Causes: Low voltage, pump running dry, motor bearing failure. Solution: Install a voltage stabilizer, use a dry-run protection device, or replace bearings.
+- Problem: Sand in water. Causes: Broken screen, well collapse, or improper gravel pack. Solution: Camera inspection, screen repair, or well redevelopment.
+
+6.4 Borewell Rehabilitation
+- Surging: Use a surge block to agitate water and remove clogging material from the screen
+- High-pressure jetting: Pump water at high pressure into the well to break up silt and bacterial slime
+- Acid treatment: Use hydrochloric acid (inhibited) to dissolve carbonate encrustation (common in limestone aquifers of Saurashtra). Must be done by professionals with safety precautions.
+- Chlorination: Shock chlorinate (100 ppm chlorine) to remove bacterial biofilm clogging
+- Air-lifting: Use compressed air to lift water and sand out of the well, cleaning the screen
+
+7. WATER QUALITY TESTING FOR BOREWELLS
+Before using a new borewell for irrigation, test the water:
+- Electrical Conductivity (EC): Should be below 2.0 dS/m for most crops; above 4.0 dS/m is unsafe for most crops
+- SAR (Sodium Adsorption Ratio): Below 10 is safe; above 26 is problematic
+- Chloride: Below 350 mg/liter for most crops; above 700 mg/liter is toxic for sensitive crops
+- Fluoride: Above 1.5 mg/liter is unsafe for drinking but generally acceptable for irrigation
+- Arsenic: Some areas of North Gujarat have arsenic above 0.05 mg/liter; unsafe for irrigation of food crops
+- pH: 6.5-8.5 is ideal for irrigation
+
+8. LEGAL AND REGULATORY ASPECTS
+- All new borewells in Gujarat must be registered with the Gujarat Ground Water Authority (GWRA) in over-exploited areas
+- Registration requires payment of a fee and submission of drilling details
+- In notified areas, permission is required before drilling new borewells
+- Tampering with existing borewells to increase diameter is illegal
+- Farmers should check their area's notification status at the district groundwater office before drilling
+
+9. ECONOMIC ANALYSIS
+- A well-managed borewell with a 10 HP submersible pump can irrigate 4-5 hectares under flood irrigation or 8-10 hectares under drip irrigation
+- Annual operating cost (electricity + maintenance): Rs. 30,000-60,000 for a 5 HP pump
+- Solar pump payback period: 3-5 years compared to diesel pumping, 5-7 years compared to grid electricity (with subsidy)
+- Borewell rehabilitation costs Rs. 10,000-25,000 but can restore yield by 50-100%, delaying the need for a new borewell

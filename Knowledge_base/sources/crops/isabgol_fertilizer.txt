@@ -1,0 +1,2 @@
+=== ISABGOL NUTRIENT REQUIREMENTS ===
+Low nutrient feeder: Requires 30:25:0 kg/ha NPK. Excess nitrogen must be strictly avoided, as it prompts lodging of fragile seed heads and drops productivity.

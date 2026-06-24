@@ -1,0 +1,148 @@
+================================================================================
+SAURASHTRA RAINFALL & CLIMATE PROFILE — COMPLETE REGIONAL PROFILE
+================================================================================
+
+1. REGION OVERVIEW & LOCATION
+--------------------------------------------------------------------------------
+Saurashtra is the extensive peninsula region of Gujarat, bounded by the Gulf of
+Kutch to the north, the Arabian Sea to the west and south, and the Gulf of Khambhat
+to the south-east. It encompasses the districts of Rajkot, Amreli, Junagadh, Gir
+Somnath, Bhavnagar, Morbi, Jamnagar, Porbandar, Devbhoomi Dwarka, and Botad. The
+region is a physiographic and cultural entity with a distinct agricultural identity
+centred on groundnut and cotton. Rainfall is the single most important determinant
+of agricultural output in Saurashtra, as the majority of cultivated area is rainfed.
+
+2. CLIMATE & RAINFALL
+--------------------------------------------------------------------------------
+Rainfall Pattern: Saurashtra receives annual rainfall ranging from 550mm to 750mm,
+with significant spatial and temporal variation. The eastern districts (Bhavnagar,
+Junagadh) receive higher rainfall (650–750mm), while the western districts (Jamnagar,
+Devbhoomi Dwarka) receive lower rainfall (550–650mm). The monsoon arrives via the
+Arabian Sea branch of the south-west monsoon, typically between June 10 and June 25.
+
+Monsoon Distribution:
+  • June: 15–20% of annual rainfall (pre-monsoon showers and onset)
+  • July: 35–40% of annual rainfall (peak monsoon)
+  • August: 25–30% of annual rainfall (critical for groundnut pod development)
+  • September: 10–15% of annual rainfall (withdrawal phase, often erratic)
+
+The coefficient of variability is 30–40%, which is among the highest in Gujarat.
+This means that rainfall is highly unreliable, and farmers face significant
+production risk every year.
+
+Temperature: Summer (April–June) temperatures range from 38°C to 44°C, with coastal
+areas (Porbandar, Devbhoomi Dwarka) moderated by sea breezes. Winter (December–
+February) temperatures are 10°C to 28°C. The diurnal temperature range is large
+(12–15°C).
+
+Humidity: During monsoon, humidity ranges from 70% to 85%. Post-monsoon (October–
+November), humidity drops rapidly to 40–55%. The pre-monsoon period (May–June) is
+extremely dry, with humidity below 30%.
+
+Drought/Flood Risk: Drought is the dominant climatic risk. The India Meteorological
+Department (IMD) classifies Saurashtra as a "drought-prone" region. Farmers are
+advised to store rainwater and use micro-irrigation for water conservation. Cyclonic
+disturbances from the Arabian Sea can bring intense rainfall and storm surges in
+coastal districts (September–November).
+
+3. SOIL CHARACTERISTICS
+--------------------------------------------------------------------------------
+Rainfall variability interacts strongly with soil properties in Saurashtra:
+  • Medium Black Cotton Soils — High water-holding capacity (150–180mm/m) helps
+    buffer short dry spells but causes waterlogging in very wet years.
+  • Sandy Loams — Low water-holding capacity (60–80mm/m) makes crops highly vulnerable
+to even short dry spells. Quick drainage is an advantage in heavy rains.
+  • Shallow Black Soils — Limited rooting depth (30–50cm) means crops exhaust
+    available soil moisture rapidly.
+
+Soil moisture recharge during monsoon is critical for both kharif crop survival
+and any possibility of rabi cropping on residual moisture.
+
+4. MAJOR CROPS & CROP ROTATION
+--------------------------------------------------------------------------------
+Kharif crops are entirely dependent on monsoon rainfall:
+  • Groundnut — requires 500–600mm well-distributed rainfall. Most sensitive during
+    flowering and pegging (July–August) and pod-filling (August–September).
+  • Cotton — requires 600–700mm; more tolerant of dry spells than groundnut if
+    established well. Bt cotton is increasingly irrigated via check dams.
+  • Bajra — drought-escape crop; can survive on 350–450mm rainfall.
+  • Sesame and Castor — mixed crops on marginal lands.
+
+Rabi crops are extremely limited and depend on residual soil moisture plus one
+or two supplemental irrigations from check dams.
+
+5. WATER RESOURCES
+--------------------------------------------------------------------------------
+Saurashtra has no perennial rivers. Water resources are entirely dependent on:
+  • Rainwater harvesting — check dams, farm ponds, percolation tanks, and village
+    tanks. Over 100,000 water harvesting structures have been built in the past
+two decades.
+  • Groundwater — over-exploited in most districts. Water tables have declined by
+    2–5 metres since the 1990s.
+  • Sauni Yojana — the flagship Narmada water pipeline project that fills Saurashtra
+    dams with Narmada water, providing a new and transformative irrigation source.
+  • Lift irrigation — from seasonal rivers and check dams.
+
+IMD advisories for Saurashtra farmers strongly emphasise rainwater storage and
+micro-irrigation adoption as the primary drought-mitigation strategies.
+
+6. AGRICULTURAL PRACTICES
+--------------------------------------------------------------------------------
+Sowing Windows: Strictly rainfall-dependent. Groundnut sowing should be completed
+by July 20 for optimal yields. Delayed sowing beyond July 25 results in yield
+penalties of 15–25% due to shortened pod-filling duration. Cotton sowing window is
+wider (June 15 – July 10).
+
+Rainwater Management: Farmers are advised to:
+  • Construct farm ponds (minimum 20m x 20m x 3m) for water storage.
+  • Adopt drip irrigation for all irrigated crops — it reduces water use by 40–60%.
+  • Use mulching (organic or plastic) to reduce evaporation.
+  • Practice contour farming and graded bunding to capture runoff.
+  • Install check dams in seasonal streams.
+
+Micro-Irrigation: The Gujarat Green Revolution Company (GGRC) and PM-KISAN have
+driven massive adoption of drip and sprinkler systems. Over 60% of cotton area in
+Saurashtra is now under drip irrigation.
+
+7. COMMON CHALLENGES
+--------------------------------------------------------------------------------
+  • Rainfall Variability: The single biggest challenge. A 20% deviation from normal
+    rainfall can cause 30–40% yield loss in groundnut.
+  • Mid-Season Dry Spells: "Pauna" (July–August breaks) are common and devastating
+    for groundnut during pegging and pod-filling.
+  • Terminal Drought: Early withdrawal of monsoon (before September 15) damages
+    late-sown crops.
+  • Cyclonic Disturbances: September–November cyclones can cause lodging in cotton,
+    pod rot in groundnut, and storm surges in coastal areas.
+  • Groundwater Depletion: Over-extraction for irrigation has lowered water tables,
+    increasing pumping costs and causing quality deterioration in coastal areas.
+  • Soil Moisture Stress: Even in normal rainfall years, poor distribution can cause
+    moisture stress during critical crop growth stages.
+
+8. GOVERNMENT SCHEMES APPLICABLE
+--------------------------------------------------------------------------------
+  • PMKSY — micro-irrigation subsidies (55–90% for small and marginal farmers).
+  • Sauni Yojana — Narmada water to Saurashtra dams via pipeline network.
+  • Mukhya Mantri Sujalam Sufalam Jal Sanchay Yojana — water harvesting support.
+  • PMFBY — crop insurance for groundnut, cotton, and bajra.
+  • Soil Health Card Scheme — free soil testing and fertiliser recommendations.
+  • National Food Security Mission (NFSM) — oilseeds and pulses support.
+  • Gujarat State Disaster Management Authority — drought relief and contingency
+    planning.
+  • IMD Agromet Advisory Services — block-level weather forecasts and advisories.
+
+9. DISTRICTS INCLUDED IN THIS ZONE
+--------------------------------------------------------------------------------
+  • Rajkot (entire district)
+  • Amreli (entire district)
+  • Junagadh (entire district)
+  • Gir Somnath (entire district)
+  • Bhavnagar (entire district)
+  • Morbi (entire district)
+  • Jamnagar (entire district)
+  • Porbandar (entire district)
+  • Devbhoomi Dwarka (entire district)
+  • Botad (entire district)
+  • Surendranagar (partially — overlaps with Central Saurashtra)
+
+================================================================================

@@ -1,0 +1,108 @@
+DROUGHT MANAGEMENT STRATEGIES FOR GUJARAT FARMERS
+
+1. INTRODUCTION
+Drought is an inevitable reality in Gujarat's semi-arid climate. The state has experienced 18 major droughts since 1900, including the devastating droughts of 1987, 2000, 2016, and 2018. With climate change increasing rainfall variability, Gujarat farmers must adopt comprehensive drought management strategies that reduce risk, conserve water, and maintain livelihoods even in the worst years.
+
+2. DROUGHT MITIGATION STRATEGIES
+
+2.1 Water Conservation Infrastructure
+- Build farm ponds (minimum 1000 cubic meters per 2 hectares) to store every drop of monsoon rain
+- Construct check dams on farm drainage lines to delay runoff and increase percolation
+- Line irrigation channels with concrete or plastic to reduce conveyance losses (can save 30-40% of water)
+- Install micro-irrigation (drip/sprinkler) which uses 40-60% less water than flood irrigation
+- Mulch crops with straw or plastic to reduce evaporation by 30-50%
+
+2.2 Soil Moisture Conservation
+- Adopt conservation tillage: zero tillage or minimum tillage reduces evaporation and improves infiltration
+- Practice contour bunding and contour cultivation on sloping lands to prevent runoff
+- Apply farmyard manure and compost to improve water-holding capacity of Gujarat's sandy and black cotton soils
+- Use anti-transpirants like kaolin sprays during extreme heat waves
+- Maintain vegetative barriers (vetiver grass, lemon grass) along field boundaries to reduce wind speed and evaporation
+
+2.3 Groundwater Management During Drought
+- Rotate borewell use: do not pump the same borewell continuously; allow recovery periods
+- Reduce pump operating hours from 12 to 6-8 hours daily to prevent aquifer collapse and saltwater intrusion in coastal areas
+- Use water meters on borewells to enforce rationing and track usage
+- Connect multiple borewells to a single irrigation system so no single well is over-extracted
+- In severe drought years, switch to lower-water crops even if less profitable; preserving the aquifer ensures long-term survival
+
+3. CONTINGENCY CROPS FOR DROUGHT YEARS
+When the monsoon fails or is delayed, Gujarat farmers should switch from high-water crops to drought-tolerant alternatives.
+
+3.1 Kharif (Monsoon Season) Contingency Crops
+- Instead of cotton (which needs 800-1000mm): grow castor (requires 400-500mm), pearl millet (bajra, 300-400mm), or green gram (moong, 250-300mm)
+- If sowing is delayed beyond July 15: switch to short-duration pigeon pea (150 days), cowpea, or horse gram (kulthi)
+- If rainfall is below 50% normal: grow guar (cluster bean), which is both drought-tolerant and has industrial demand
+- In Saurashtra: replace groundnut with sesame or sunflower in drought years
+
+3.2 Rabi (Winter Season) Contingency Crops
+- If soil moisture is low after kharif: switch from wheat to barley or chickpea (gram), which require less water
+- If groundwater is depleted: avoid rabi irrigation entirely and grow rainfed mustard or linseed
+- In North Gujarat: safflower is highly drought-tolerant and suitable for rabi
+
+3.3 Fodder Crops During Drought
+- Grow sorghum (jowar) for fodder instead of maize; it tolerates drought better
+- Plant subabul (Leucaena) and stylo (Stylosanthes) as perennial fodder banks that survive dry years
+- Establish fodder banks of hybrid napier and guinea grass with drip irrigation using minimal water
+
+4. WATER RATIONING PROTOCOLS
+When water is scarce, strict rationing prevents total crop failure.
+
+4.1 Critical Growth Stage Watering
+- Cotton: Irrigate only at flowering and boll formation (avoid vegetative stage irrigation)
+- Groundnut: Critical stages are pegging and pod development; reduce irrigation at flowering if water is scarce
+- Wheat: Critical stages are crown root initiation, tillering, and grain filling; irrigation at CRI and grain filling is mandatory
+- Sugarcane: Prioritize irrigation during formative and grand growth phases
+
+4.2 Deficit Irrigation Strategy
+- Apply 60-70% of crop water requirement rather than 100%. Research at Anand Agricultural University shows that 70% irrigation of cotton gives 85% yield but uses 30% less water.
+- Use the "one-third rule": irrigate one-third of the root zone deeply rather than the entire root zone shallowly
+- Alternate furrow irrigation for row crops (cotton, groundnut, castor) reduces water use by 40% without significant yield loss
+
+5. LIVESTOCK MANAGEMENT DURING DROUGHT
+- Reduce herd size by selling non-productive and older animals before prices crash
+- Form fodder banks with dry fodder and concentrates during normal years; target 6 months of stock
+- Use drought-tolerant fodder: cactus (Opuntia), subabul, and stylo survive droughts
+- Provide extra drinking water points; livestock need 20-30% more water in hot dry conditions
+- Practice early weaning of calves to reduce the lactation burden on cows
+- Ensure mineral supplementation (especially calcium and phosphorus) when fodder quality is poor
+
+6. GOVERNMENT DROUGHT RELIEF PROGRAMS
+- NDRF (National Disaster Response Fund): Gujarat receives central assistance for drought relief
+- PM Fasal Bima Yojana: Insurance claims for yield losses due to drought; ensure you have enrolled and paid premiums
+- MGNREGA: Extra employment days during drought for landless laborers and small farmers
+- Gujarat State Drought Relief: Cattle camps, fodder depots, and water tanker services are activated by the Revenue Department
+- Revenue Deferral: Land revenue and electricity bill deferrals are often announced during severe droughts
+- Crop Compensation: Gujarat government pays compensation for drought-affected crops at rates announced by the Disaster Management Authority
+
+7. FINANCIAL PREPAREDNESS FOR DROUGHT
+- Maintain a "drought fund" equivalent to 3 months of family expenses
+- Diversify income sources: combine crop farming with livestock, dairy, or wage labor
+- Avoid taking new loans before the monsoon; wait until crop prospects are clear
+- Keep insurance current for all insured crops
+- Build social networks: Farmer Producer Organizations (FPOs) and cooperatives provide mutual support during droughts
+
+8. CLIMATE-SMART DROUGHT ADAPTATION
+- Use short-duration and drought-tolerant crop varieties released by Gujarat Agricultural Universities:
+  - Cotton: G. Cot. DH 7 (drought-tolerant), G Cot. 15
+  - Groundnut: GJG 9, GJG 22 (drought-tolerant varieties)
+  - Pearl millet: GHB 558, GHB 732 (short duration)
+- Adopt climate-resilient practices like raised bed planting and mulching
+- Use weather-based agro-advisories from the Agriculture Department and IMD to time planting and irrigation
+- Consider crop insurance indices (WBCIS - Weather Based Crop Insurance) that pay automatically based on rainfall deficit, not just yield loss
+
+9. PSYCHOLOGICAL AND SOCIAL SUPPORT
+Drought causes extreme stress, debt, and sometimes farmer distress. Gujarat farmers should:
+- Contact the Kisan Call Center (1800-180-1551) for expert advice and emotional support
+- Join Farmer Producer Organizations for collective bargaining and mutual aid
+- Access the Gujarat Agricultural University Krishi Vigyan Kendras (KVKs) for drought management training
+- Never delay seeking help from the Revenue Department or local sarpanch for relief measures
+
+10. LONG-TERM DROUGHT RESILIENCE
+The most drought-resilient farms in Gujarat (like those in Amreli and Bhavnagar) share these features:
+- Multiple water sources: farm pond + borewell + canal + check dam
+- Mixed farming: crops + livestock + trees (agroforestry)
+- Deep soils with high organic matter (5% or more) that hold moisture longer
+- Micro-irrigation on 100% of irrigated area
+- Diversified income sources including off-farm employment
+- Strong cooperative or FPO membership for collective storage and marketing

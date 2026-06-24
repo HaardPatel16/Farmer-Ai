@@ -1,0 +1,75 @@
+1. SCHEME NAME & FULL OFFICIAL NAME
+   Drip Irrigation Subsidy Scheme — Gujarat Green Revolution Company (GGRC) Scheme, also aligned with PMKSY-Per Drop More Crop (PDMC), Central and State combined scheme.
+
+2. WHAT IS IT
+   Drip irrigation is a water-efficient irrigation method that delivers water directly to the plant root zone through a network of tubes, emitters, and valves. In Gujarat, where water scarcity is a major challenge (especially in Saurashtra, Kutch, and North Gujarat), drip irrigation has become essential for sustainable agriculture. The Gujarat Green Revolution Company (GGRC) implements the drip irrigation subsidy scheme in Gujarat under the central PMKSY-PDMC scheme. Drip irrigation can save 30-50% of water compared to flood irrigation, increase crop yields by 20-30%, reduce fertilizer wastage by 40%, and control weed growth. The scheme subsidizes the installation cost of drip irrigation systems for horticultural crops, vegetables, and some field crops. In Gujarat, drip irrigation is mandatory for sugarcane cultivation in many areas and strongly encouraged for cotton, groundnut, castor, and horticultural crops.
+
+3. WHO IS ELIGIBLE
+   • All farmers in Gujarat with cultivable land
+   • General category farmers: 45% subsidy
+   • SC/ST farmers: 55% subsidy
+   • Small and marginal farmers (below 2 hectares): additional priority
+   • Farmers growing horticultural crops (mango, banana, pomegranate, citrus, vegetables) get priority
+   • Field crops (cotton, sugarcane, groundnut) are also eligible
+   • Farmers must have a water source (well, borewell, canal, or farm pond)
+   • The land must be clear of encumbrances
+   • Exclusions: Farmers who have already availed drip subsidy for the same plot; non-agricultural land
+
+4. BENEFITS PROVIDED
+   • 45% subsidy on drip irrigation system cost for general farmers
+   • 55% subsidy for SC/ST farmers and small/marginal farmers
+   • Maximum subsidy caps vary by crop and area (typically Rs 50,000-2 lakh per hectare)
+   • Additional 10-15% subsidy for integrated drip-fertilizer systems (fertigation)
+   • Water saving: 30-50% compared to flood irrigation
+   • Yield increase: 20-30% for most crops
+   • Fertilizer saving: 30-40% through fertigation
+   • Electricity saving: 30-40% due to reduced water pumping
+   • Weed reduction: 50-70% as water is applied only to crop rows
+   • Government-approved companies install the system with a 5-year warranty
+
+5. HOW TO APPLY (STEP-BY-STEP)
+   Step 1: Visit the nearest GGRC office or authorized drip irrigation company with your land records.
+   Step 2: The company/department will conduct a survey of your field to design the drip system.
+   Step 3: Get a cost estimate and design plan from the company.
+   Step 4: Apply online through the iKhedut portal (ikhedut.gujarat.gov.in) under the "Micro Irrigation" category.
+   Step 5: Upload documents: Aadhaar, 7/12 land extract, bank passbook, caste certificate (if applicable), and company quotation.
+   Step 6: The District Agriculture Office (DAO) verifies the application and conducts a field inspection.
+   Step 7: Upon approval, the subsidy is released directly to the company (DBT to vendor) or to your bank account.
+   Step 8: The company installs the drip system within the specified timeframe.
+   Step 9: After installation, a joint inspection by the company and agriculture department confirms quality.
+   Step 10: The warranty card is issued for 5 years.
+   Documents: Aadhaar, 7/12, bank passbook, caste certificate, water source proof, and company quotation.
+
+6. WHERE TO APPLY
+   • iKhedut portal: ikhedut.gujarat.gov.in (primary application channel)
+   • Gujarat Green Revolution Company (GGRC) district offices
+   • Authorized drip irrigation companies (empaneled list on GGRC website)
+   • Taluka Agriculture Office for initial consultation
+   • Common Service Centres (CSCs) for online application assistance
+   • GGRC website: ggrc.gujarat.gov.in
+
+7. GUJARAT-SPECIFIC DETAILS
+   Gujarat leads India in drip irrigation adoption with over 25 lakh hectares under drip/sprinkler. The Gujarat Green Revolution Company (GGRC) was established in 2005 specifically to promote micro-irrigation. GGRC has district offices in all 33 districts of Gujarat. Gujarat has achieved 70% drip irrigation coverage in horticulture, the highest in India. The state provides an additional 5% top-up subsidy over the central PMKSY scheme for certain crops. Gujarat farmers report average water savings of 40% and yield increases of 25-35% for cotton and groundnut. The state has banned flood irrigation for sugarcane in water-scarce districts. In Saurashtra, the "Sujalam Sufalam" scheme complements drip irrigation by recharging groundwater. Gujarat has also introduced subsidized solar-powered drip irrigation systems (Surya Shakti Kisan Yojana) combining two schemes.
+
+8. COMMON PROBLEMS & SOLUTIONS
+   • Application rejected: Common reasons include missing water source proof, non-empaneled company quotation, or duplicate application for the same plot. Solution: Ensure all documents are correct and use only GGRC-empaneled companies.
+   • Installation delay: If the company delays installation beyond the agreed timeframe, contact the GGRC district office with your approval letter.
+   • Clogging of emitters: Common in areas with hard water. Solution: Install a filter system; flush the system monthly; use acid treatment if recommended by the company.
+   • Subsidy not received: Check application status on iKhedut; if approved but subsidy pending, contact the DAO with your reference number.
+   • System damage: Covered under 5-year warranty; contact the installing company for free repair/replacement.
+   • Uneven water distribution: Usually due to improper slope or pressure. Contact the company for adjustment.
+
+9. RELATED SCHEMES
+   • PMKSY-PDMC (Per Drop More Crop) — central scheme for micro-irrigation
+   • Surya Shakti Kisan Yojana (SKY) — for solar-powered drip irrigation
+   • GGRC Sprinkler Irrigation Scheme — for field crops
+   • Farm Pond Subsidy — for water harvesting to support drip irrigation
+   • AIF — for long-term irrigation infrastructure loans
+
+10. CONTACT INFORMATION
+   • GGRC Head Office: 079-23251001, ggrc.gujarat.gov.in
+   • GGRC Toll-Free: 1800-180-1551
+   • iKhedut Portal: ikhedut.gujarat.gov.in
+   • Kisan Call Centre: 1800-180-1551
+   • District Agriculture Officer (DAO): Contact your district Collector Office
+   • Empaneled company list: Available on ggrc.gujarat.gov.in

@@ -1,0 +1,80 @@
+1. SCHEME NAME & FULL OFFICIAL NAME
+   APMC Market Locations and Contact Directory — Agricultural Produce Market Committee (APMC) / Krishi Utpann Bajar Samiti markets under Gujarat State Agricultural Marketing Board (GSAMB).
+
+2. WHAT IS IT
+   Gujarat has a regulated agricultural market system under the Gujarat Agricultural Produce Markets Act, 1964. APMC markets (mandis) are designated trading yards where farmers can sell their produce through licensed traders in a transparent, regulated environment. Gujarat has 17 principal APMCs and over 200 sub-markets and purchase centres across the state. These markets provide facilities for weighing, quality testing, auction/sale, and payment. The Gujarat State Agricultural Marketing Board (GSAMB) oversees market development, infrastructure improvement, and price dissemination. Key reforms in Gujarat allow farmers to sell directly to traders without going through commission agents, and the e-NAM integration allows online price discovery and payment. APMC markets are crucial for Gujarat farmers, especially for cash crops like cotton, groundnut, cumin, fennel, and castor.
+
+3. WHO IS ELIGIBLE
+   • Any farmer with agricultural produce to sell
+   • Farmers must have a valid APMC trading license or temporary pass (free for farmers)
+   • No landholding limit required
+   • All crops grown by the farmer are allowed for sale
+   • Farmers must bring produce during notified market hours (typically 10 AM to 4 PM)
+   • For e-NAM trading, farmers need Aadhaar-linked bank account and registration at the APMC
+
+4. BENEFITS PROVIDED
+   • Transparent price discovery through open auction system
+   • Electronic weighing reduces weight disputes
+   • Quality testing and grading facilities available
+   • Same-day or next-day payment directly to bank account (no cash handling for e-NAM sales)
+   • Price information available via SMS, Khedut app, and e-NAM portal
+   • No compulsory middleman — farmers can sell directly to traders
+   • Market fee is only 0.5% to 1% (varies by commodity)
+   • Market yards have basic amenities (drinking water, toilet, rest area, parking)
+
+5. HOW TO SELL AT APMC (STEP-BY-STEP)
+   Step 1: Harvest and sort your produce by grade/quality. Clean and dry to reduce moisture and foreign matter.
+   Step 2: Check live prices on Khedut app or e-NAM portal before travelling to the market.
+   Step 3: Transport produce to the nearest APMC market during notified hours.
+   Step 4: At the market gate, get a gate pass with your name, village, and crop details.
+   Step 5: Quality testing: APMC lab tests moisture, foreign matter, and grades your produce. You get a quality certificate.
+   Step 6: Lot is uploaded to e-NAM (if registered) or auctioned traditionally. You can accept or reject the highest bid.
+   Step 7: If accepted, payment is made directly to your registered bank account within 2 working days (e-NAM) or same day (traditional).
+   Documents needed: Aadhaar card, bank passbook, land record (for registration), vehicle registration (if transporting by own vehicle).
+
+6. WHERE TO APPLY / MAJOR APMC MARKETS IN GUJARAT
+   Principal APMCs by district:
+   • Ahmedabad — Jamalpur Sabzi Market (vegetables, 079-22160601), Naroda Grain Market (grains, 079-22810601)
+   • Amreli — Amreli APMC (groundnut, castor; 02792-222021)
+   • Anand — Anand APMC (tobacco, vegetables; 02692-261155); Petlad sub-APMC (vegetables)
+   • Banaskantha — Deesa APMC (potato, castor, cumin; 02744-220061); Dhanera (bajra)
+   • Bharuch — Bharuch APMC (paddy, vegetables; 02642-244251)
+   • Bhavnagar — Bhavnagar APMC (cotton, sesame; 0278-2430561)
+   • Gandhinagar — Sector-21 Wholesale Market (vegetables)
+   • Gondal (Rajkot) — Gondal APMC (groundnut, castor; 02825-220155) — one of Gujarat's most important oil seed markets
+   • Jamnagar — Jamnagar APMC (cotton, bajra; 0288-2557040)
+   • Junagadh — Junagadh APMC (groundnut, sesame; 0285-2624177)
+   • Kutch — Bhuj APMC (castor, cumin; 02832-220150)
+   • Mehsana — Mehsana APMC (vegetables, milk; 02762-252321)
+   • Navsari — Navsari APMC (sugarcane, vegetables; 02637-253251)
+   • Patan — Patan APMC (cotton, cumin; 02766-232090)
+   • Rajkot — Rajkot APMC (groundnut, cotton; 0281-2570581)
+   • Surat — Surat APMC (vegetables; 0261-2461921)
+   • Surendranagar — Wadhwan APMC (cotton; 02752-220061)
+   • Unjha (Mehsana) — 02767-253030 — world's largest cumin, fennel, coriander, isabgol market
+   • Vadodara — Vadodara APMC (vegetables, cotton; 0265-2360561)
+   • Valsad — Valsad APMC (paddy, banana; 02632-252444)
+
+7. GUJARAT-SPECIFIC DETAILS
+   Gujarat has 80+ mandis connected to e-NAM for online trading. All Gujarat APMCs are on enam.gov.in. The state has been a pioneer in APMC reforms, allowing direct farmer-to-buyer sales. Unjha APMC is the world's largest spice market, trading over Rs 5,000 crore annually. Gondal APMC is the largest groundnut market in Gujarat. Gujarat APMCs have modern infrastructure: electronic weighing, digital auction halls, and cold storage. The Gujarat government provides APMC modernization grants under RKVY. Khedut app provides live prices from all Gujarat APMCs daily.
+
+8. COMMON PROBLEMS & SOLUTIONS
+   • Low price at mandi: Check prices on Khedut app before travelling; consider storing and selling later if prices are depressed.
+   • Weight dispute: Insist on electronic weighing at the APMC yard; do not accept manual weighing.
+   • Payment delay: For e-NAM sales, payment must be within 2 days; if delayed, contact the APMC secretary with your lot number.
+   • Quality grading dispute: You can request a re-test from the APMC quality lab; the second test is usually final.
+   • Middleman pressure: You are legally allowed to sell directly to any licensed trader; report harassment to the APMC secretary or GSAMB.
+   • Market fee overcharge: Official market fee is 0.5-1%; if charged more, report to the district collector or GSAMB helpline.
+
+9. RELATED SCHEMES
+   • e-NAM (Electronic National Agriculture Market) — for online trading across India
+   • AIF (Agriculture Infrastructure Fund) — for APMC infrastructure development
+   • Warehousing Receipt Scheme — for storing produce in APMC warehouses
+   • Price Support Scheme (PSS) — for MSP procurement at APMCs
+
+10. CONTACT INFORMATION
+   • GSAMB (Gujarat State Agricultural Marketing Board): 079-23241201
+   • APMC Helpline: 1800-270-0224 (toll-free)
+   • e-NAM Portal: enam.gov.in
+   • Khedut App: Available on Google Play Store / Apple App Store
+   • District Marketing Officer: Contact through your district Collector Office

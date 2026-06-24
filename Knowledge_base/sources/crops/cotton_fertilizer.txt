@@ -1,0 +1,14 @@
+=== COTTON FERTILIZER AND NUTRIENT ARCHITECTURE ===
+Source: Anand Agricultural University (AAU) Dosing Directives
+
+1. ORGANIC BASE AMENDMENTS
+- Incorporate 10 to 12 metric tonnes of well-decomposed Farm Yard Manure (FYM) or 1.5 metric tonnes of premium castor cake per hectare during final harrowing to optimize soil organic carbon status and enhance CEC (Cation Exchange Capacity).
+
+2. INORGANIC NPK REGIMEN
+- Total Chemical Requirement: 240:0:0 kg NPK/ha for Irrigated Bt Hybrids; 80:0:0 kg NPK/ha for Rainfed crops. Phosphorus (P) and Potassium (K) are omitted unless soil testing indicates baseline deficits below 22 kg P2O5/ha and 130 kg K2O/ha.
+
+3. NITROGEN SPLIT SCHEDULE (IRRIGATED BT HYBRIDS)
+- Basal Dose: Omit nitrogen at sowing to prevent leaching, or apply a minimal starter dose of 20 kg N/ha only if soil is highly sandy loam.
+- First Top-Dressing (Thinning Stage - 30 DAS): Apply 1/3rd dose (80 kg N/ha) using side-dressing methods.
+- Second Top-Dressing (Peak Flowering Stage - 60 DAS): Apply 1/3rd dose (80 kg N/ha) deeply placed into furrows.
+- Third Top-Dressing (Boll Development Phase - 80 DAS): Apply the final 1/3rd dose (80 kg N/ha) under optimum soil moisture to maximize boll weight and lint ginning turn-out.

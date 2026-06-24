@@ -1,0 +1,121 @@
+================================================================================
+           GUJARAT FARMER KNOWLEDGE BASE
+           Agricultural Guide - File 319/407
+================================================================================
+
+TOPIC: PMFBY Detailed Guide
+GUJARATI NAME: PMFBY Vistarit Margdarshan
+CATEGORY: Climate
+GUIDE TYPE: Comprehensive Technical Manual
+REGION: Gujarat State - All Agro-Climatic Zones
+DOCUMENT DATE: June 23, 2026
+================================================================================
+
+1. INTRODUCTION
+Pradhan Mantri Fasal Bima Yojana (PMFBY) is India's flagship crop insurance scheme, providing comprehensive risk coverage to farmers at nominal premium rates.
+
+2. KEY FEATURES
+- Comprehensive risk coverage from sowing to post-harvest
+- Lowest premium rates globally
+- Use of technology (satellite, drones, mobile apps)
+- Timely claim settlement
+- Coverage for prevented sowing
+- Post-harvest losses covered
+- Localized calamity coverage
+
+3. PREMIUM RATES
+Farmer's Share:
+- Kharif crops: 2% of sum insured
+- Rabi crops: 1.5% of sum insured
+- Annual commercial/horticultural: 5%
+
+Government Subsidy:
+- Central + State government pays remaining premium
+- No upper limit on subsidy
+- Premium subsidy shared 50:50 (Center:State)
+
+4. COVERAGE LEVELS
+Sum Insured Options:
+- Compulsory component: Based on scale of finance
+- Add-on coverage: Up to 150% of average yield
+- Cover for post-harvest losses: Up to 14 days
+
+Yield-based Coverage:
+- Indemnity level: 70% (default), 80% or 90%
+- Threshold yield: Average of last 7 years x indemnity level
+- Loss calculation: (Threshold yield - Actual yield) / Threshold yield x Sum insured
+
+5. ENROLLMENT PROCESS
+Step 1: Visit bank at loan disbursement (compulsory for loanee)
+- Fill PMFBY proposal form
+- Submit land records
+- Pay premium
+
+Step 2: For non-loanee farmers
+- Visit CSC (Common Service Center)
+- Online enrollment through portal
+- Contact insurance company
+- Pay premium before deadline
+
+Deadlines:
+- Kharif: July 31
+- Rabi: December 31
+- Commercial crops: Varies by crop
+
+6. CLAIM PROCESS
+Step 1: Crop Cutting Experiments (CCE)
+- Conducted by state government
+- Random plot selection
+- Yield measurement
+- Technology-aided validation
+
+Step 2: Yield Data Processing
+- CCE data compilation
+- Yield comparison with threshold
+- Loss calculation
+
+Step 3: Claim Settlement
+- Direct Benefit Transfer (DBT) to bank account
+- Timeline: Within 2 months of harvest
+- Notification via SMS
+
+7. LOCALIZED CALAMITY CLAIMS
+Covered Calamities:
+- Hailstorm
+- Landslide
+- Cyclone
+- Unseasonal rains
+- Flood
+- Drought
+
+Process:
+- Report to agriculture office within 72 hours
+- Panchayat verification
+- Insurance company assessment
+- Individual claim settlement
+
+8. POST-HARVEST LOSSES
+Coverage:
+- Up to 14 days after harvest
+- Named perils only (cyclone, flood, hail)
+- Coverage for crop lying in field
+- Coverage during drying in cut and spread condition
+
+9. EXCLUSIONS
+- Losses due to war/nuclear risks
+- Malicious damage
+- Preventable risks
+- Losses covered under other insurance
+- Losses after harvesting (except specified)
+
+10. IMPORTANT CONTACTS
+- Insurance companies: Agriculture Insurance Company (AIC), Bajaj Allianz, HDFC Ergo
+- State nodal agency: Gujarat Agriculture Department
+- Grievance: District Agriculture Officer
+- Helpline: 1800-XXX-XXXX
+
+================================================================================
+                         END OF FILE 319
+              Topic: PMFBY Detailed Guide
+              COMPLETION: 319/407 files
+================================================================================

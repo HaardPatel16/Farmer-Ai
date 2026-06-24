@@ -1,0 +1,450 @@
+================================================================================
+           GUJARAT FARMER KNOWLEDGE BASE
+           Crop Cultivation Guide - File 062/407
+================================================================================
+
+CROP: Napier Grass - Napier/Hybrid Napier
+SCIENTIFIC NAME: See section below
+FAMILY: Various families
+GUIDE TYPE: Complete Cultivation Manual
+REGION: Gujarat State - All Agro-Climatic Zones
+DOCUMENT DATE: June 23, 2026
+================================================================================
+
+================================================================================
+                         CROP PROFILE
+================================================================================
+
+CROP NAME: Napier Grass
+LOCAL NAME (GUJARATI): Napier/Hybrid Napier
+CATEGORY: SPICE/FRUIT CROP
+CULTIVATION AREA IN GUJARAT: ~10,000 hectares
+MAJOR GROWING DISTRICTS: All districts, major in dairy areas
+AVERAGE YIELD: 1500-2000 q/ha/year (6-8 cuts)
+MAIN GROWING SEASON: Year-round planting (best: June-July)
+
+================================================================================
+1.0  INTRODUCTION & IMPORTANCE
+================================================================================
+
+Napier Grass (Napier/Hybrid Napier) is an important crop for Gujarat agriculture with 
+significant cultivation in multiple districts across the state.
+
+CULTIVATION STATISTICS:
++---------------------------------------------------------------+
+| Parameter            | Details                               |
++---------------------------------------------------------------+
+| Total Area           | ~10,000 hectares                     |
+| Major Districts      | All districts, major in dairy areas  |
+| Average Yield        | 1500-2000 q/ha/year (6-8 cuts)       |
+| Growing Season       | Year-round planting (best: June-July)|
++---------------------------------------------------------------+
+
+ECONOMIC IMPORTANCE:
+- Cultivated across multiple agro-climatic zones of Gujarat
+- Important source of income for small and marginal farmers
+- Contributes to Gujarat's agricultural GDP
+- Multiple uses: Green fodder (high yielding), silage, hay, gap filling, boundary plantation
+- Market demand: Both domestic and export
+
+================================================================================
+2.0  CLIMATE & TEMPERATURE REQUIREMENTS
+================================================================================
+
+OPTIMAL PARAMETERS:
++------------------------+------------------+------------------------+
+| Parameter              | Ideal Range      | Gujarat Suitability    |
++------------------------+------------------+------------------------+
+| Temperature            | 20-35C           | Good to Excellent      |
+| Rainfall               | 600-1500 mm      | Varies by zone         |
+| Relative Humidity      | 50-85%           | Manageable             |
+| Sunshine Hours         | 8-10 hours/day   | Excellent              |
+| Wind                   | Low-Moderate     | Windbreaks recommended |
+| Frost Sensitivity      | Low-High         | Depends on crop        |
++------------------------+------------------+------------------------+
+
+GUJARAT SEASONAL CALENDAR:
+- Kharif (Monsoon): June-July sowing, September-November harvest
+- Rabi (Winter): October-November sowing, February-April harvest  
+- Summer: February-March sowing, May-June harvest
+- Perennial: Year-round management with seasonal variations
+
+================================================================================
+GUJARAT AGRO-CLIMATIC ZONES - SUITABILITY FOR THIS CROP
+================================================================================
+
+Zone 1: SOUTH GUJARAT (Heavy Rainfall Zone)
+   Districts: Surat, Navsari, Valsad, Tapi, Narmada, Bharuch
+   Rainfall: 1200-2000mm | Soils: Deep Black/Alluvial
+   Temperature: 25-42C summer, 10-25C winter
+
+Zone 2: MIDDLE GUJARAT (Medium Rainfall Zone)
+   Districts: Ahmedabad, Anand, Kheda, Vadodara, Panchmahal, Dahod
+   Rainfall: 800-1000mm | Soils: Medium Black
+   Temperature: 28-44C summer, 8-22C winter
+
+Zone 3: NORTH GUJARAT (Low Rainfall Zone)
+   Districts: Mehsana, Patan, Banaskantha, Sabarkantha, Aravalli
+   Rainfall: 500-700mm | Soils: Loamy Sand
+   Temperature: 30-46C summer, 5-20C winter
+
+Zone 4: SAURASHTRA REGION
+   Districts: Rajkot, Junagadh, Amreli, Bhavnagar, Jamnagar, Porbandar
+   Rainfall: 400-700mm | Soils: Medium Black, Coastal Alluvial
+   Temperature: 28-42C summer, 8-24C winter
+
+Zone 5: KUTCH REGION
+   Districts: Kutch, Morbi, Devbhoomi Dwarka, Gir Somnath
+   Rainfall: 300-400mm | Soils: Sandy, Saline patches
+   Temperature: 30-45C summer, 8-25C winter
+
+================================================================================
+
+
+================================================================================
+3.0  SOIL REQUIREMENTS
+================================================================================
+
+IDEAL SOIL CHARACTERISTICS:
++------------------------+-------------------+----------------------+
+| Parameter              | Ideal Range       | Management Required  |
++------------------------+-------------------+----------------------+
+| Soil Type              | Well-drained Loam | Add organic matter   |
+| pH Level               | 6.0 - 8.0         | Lime if pH <6.0      |
+| Salinity (EC)          | <4 dS/m           | Leaching for saline  |
+| Drainage               | Good-Excellent    | Raised beds if poor  |
+| Organic Carbon         | >0.8%             | Regular FYM addition |
+| Depth                  | >60 cm            | Avoid shallow soils  |
++------------------------+-------------------+----------------------+
+
+SUITABLE SOILS IN GUJARAT:
+- Medium Black Cotton Soil (Regur) - Most common in Gujarat
+- Alluvial Loamy Soil - River valleys
+- Sandy Loam with good drainage - Coastal and Kutch
+- Red Loamy Soil - Eastern Gujarat hills
+
+LAND PREPARATION:
+1. Deep ploughing (25-30 cm depth)
+2. 2-3 harrowings for fine tilth
+3. Leveling with laser leveler
+4. Incorporate FYM during final ploughing
+5. Form ridges/furrows or beds as needed
+
+================================================================================
+4.0  IMPROVED VARIETIES
+================================================================================
+
+GAU/SAU RECOMMENDED VARIETIES:
+CO-3, CO-4, CO-5, BN-2, APBN-1, Gujarat Napier-1, DHN-6
+
+VARIETY SELECTION GUIDE:
+- Contact nearest KVK for zone-specific recommendations
+- Choose varieties based on:
+  * Local agro-climatic adaptation
+  * Disease resistance
+  * Market demand and preference
+  * Yield potential
+  * Duration matching growing season
+  * Soil and water availability
+
+SEED/PLANTING MATERIAL:
+- Source: Certified nurseries, GAU seed farms, KVKs, licensed dealers
+- Quality: Certified, disease-free, true-to-type
+- Treatment: Treat with recommended fungicide/insecticide before planting
+
+================================================================================
+5.0  SOWING/PLANTING
+================================================================================
+
+SPACING: 75cm x 50cm
+PLANTS PER HECTARE: 26,600
+
+PLANTING TIME BY ZONE:
+- South Gujarat: June-July (Kharif), October-November (Rabi)
+- Middle Gujarat: June-July, October-November
+- North Gujarat: June-July (with irrigation), October-November
+- Saurashtra: June-July (with monsoon), October-November
+- Kutch: July (with first good rain)
+
+PLANTING METHOD:
+1. Prepare field to fine tilth
+2. Sow/plant at recommended spacing and depth
+3. Apply basal fertilizer at planting
+4. Irrigate immediately after planting
+5. Ensure good soil-seed contact
+
+================================================================================
+6.0  NUTRIENT MANAGEMENT
+================================================================================
+
+RECOMMENDED FERTILIZER: FYM 20t/ha, NPK 150:60:60 kg/ha per year
+
+GENERAL GUIDELINES:
+- Apply full phosphorus and 1/3 nitrogen as basal
+- Top dress remaining nitrogen in 2-3 splits
+- Apply potash in splits as needed
+- Include micronutrients based on soil test/deficiency symptoms
+
+ORGANIC OPTIONS:
+- FYM: 5-25 tonnes/ha (crop dependent)
+- Vermicompost: 2-5 tonnes/ha
+- Neem cake: 200-500 kg/ha
+- Biofertilizers: Azotobacter, PSB, KSB, Rhizobium
+
+FOLIAR NUTRITION:
+- Pre-flowering: Micronutrient spray (Zn, B, Fe)
+- Flowering: Urea 2% + DAP 2%
+- Fruiting/Pod filling: Potassium sulfate 1%
+
+================================================================================
+7.0  IRRIGATION MANAGEMENT
+================================================================================
+
+METHOD: Drip irrigation recommended for water use efficiency
+
+CRITICAL IRRIGATION STAGES:
+1. Germination/Establishment (0-30 days)
+2. Vegetative growth (30-60 days)
+3. Flowering/Reproductive phase
+4. Fruit/Pod/Grain development
+5. Grain filling/Maturity
+
+SEASONAL SCHEDULE:
+- Summer: Every 5-7 days
+- Winter: Every 10-15 days
+- Monsoon: As needed based on rainfall
+
+WATER CONSERVATION:
+- Mulching: 5-10 cm organic mulch reduces evaporation by 40%
+- Drip irrigation: 40-60% water saving
+- Morning irrigation reduces evaporation losses
+
+================================================================================
+8.0  WEED MANAGEMENT
+================================================================================
+
+CRITICAL PERIOD: First 45-60 days after planting
+
+METHODS:
+- Pre-emergence herbicide: Pendimethalin 1.0 kg/ha
+- Post-emergence: Crop-specific herbicides as recommended
+- Hand weeding: At 20 and 45 days after sowing
+- Mechanical: Interculture with hoe/cultivator
+- Mulching: Organic mulch suppresses weed growth
+
+================================================================================
+9.0  PEST MANAGEMENT
+================================================================================
+
+MAJOR PESTS: Aphids, Stem borer, Armyworm, Termites
+
+INTEGRATED PEST MANAGEMENT (IPM):
+- Monitor with pheromone traps (5-10 per hectare)
+- Yellow/blue sticky traps for sucking pests
+- Biological control: Trichogramma, Chrysoperla, ladybird beetles
+- Need-based chemical application only
+- Follow economic threshold levels (ETL)
+- Use safe insecticides at recommended doses
+- Follow pre-harvest waiting periods
+
+COMMON INSECTICIDES (USE AS PER LABEL):
+- Imidacloprid: Sucking pests (aphids, jassids, whitefly)
+- Spinosad: Caterpillars (bollworm, fruit borer)
+- Chlorpyriphos: Soil pests (white grub, termites)
+- Always follow recommended doses and safety precautions
+
+================================================================================
+10.0  DISEASE MANAGEMENT
+================================================================================
+
+MAJOR DISEASES: Leaf spot, Rust, Smut, Leaf blight
+
+PREVENTIVE MEASURES:
+- Use certified, disease-free seed/planting material
+- Crop rotation (3-4 years with non-host crops)
+- Field sanitation - remove infected plant debris
+- Proper drainage - avoid waterlogging
+- Balanced nutrition - avoid excess nitrogen
+
+CURATIVE MEASURES:
+- Fungicides: Mancozeb, Carbendazim, Copper oxychloride
+- Bactericides: Streptocycline for bacterial diseases
+- Follow spray schedule based on disease forecasting
+- Apply preventive sprays before disease onset
+
+================================================================================
+11.0  HARVESTING & POST-HARVEST
+================================================================================
+
+HARVEST TIME: Year-round (first cut 75-90 days, then every 45-60 days)
+
+HARVEST INDICATORS:
+- Physiological maturity signs (color change, drying)
+- Days to maturity from sowing/planting
+- Moisture content reduction
+- Size and quality parameters
+
+HARVEST METHOD:
+- Use sharp tools (sickles, knives, secateurs)
+- Harvest during cool hours (morning/evening)
+- Handle carefully to avoid bruising and damage
+- Clean harvested produce before storage
+
+POST-HARVEST HANDLING:
+1. Sorting and grading by size/quality
+2. Cleaning to remove dirt and debris
+3. Proper packaging (CF boxes, gunny bags, crates)
+4. Storage in cool, ventilated, dry place
+5. Cold storage for perishable items
+
+VALUE ADDITION OPPORTUNITIES:
+- Primary processing: Cleaning, grading, drying
+- Secondary processing: Flour, oil, juice, pickles
+- Packaging: Branded retail packs
+- Direct marketing: Farmers markets, online
+
+================================================================================
+12.0  YIELD & ECONOMICS
+================================================================================
+
+EXPECTED YIELD: 1500-2000 q/ha/year (6-8 cuts)
+
+ECONOMICS (per hectare estimate):
++----------------------------------+---------------+
+| Item                             | Cost (Rs.)    |
++----------------------------------+---------------+
+| Land preparation                 | 5,000-10,000  |
+| Seed/Planting material           | 2,000-15,000  |
+| Fertilizers & manures            | 8,000-20,000  |
+| Irrigation                       | 5,000-15,000  |
+| Plant protection                 | 3,000-10,000  |
+| Weeding & labor                  | 5,000-12,000  |
+| Harvesting & post-harvest        | 3,000-10,000  |
+| Miscellaneous                    | 2,000-5,000   |
++----------------------------------+---------------+
+| Total Cost                       | 33,000-97,000 |
++----------------------------------+---------------+
+
+INCOME POTENTIAL:
+- Price range: Rs. 3-5/kg green
+- Gross income: Depends on yield and market price
+- Net profit: Varies by season and management
+
+================================================================================
+13.0  MARKETING
+================================================================================
+
+MARKETING CHANNELS:
+- APMC markets (local mandi) - primary channel
+- Direct to traders/wholesalers
+- Contract farming with processors
+- Cooperative marketing societies
+- Online platforms (e-NAM)
+- Direct to consumers (farmers markets)
+
+PRICE FACTORS:
+- Quality and grade of produce
+- Market demand and supply dynamics
+- Seasonal variation in availability
+- Distance to market and transport cost
+- Storage and processing facilities
+
+MARKET INFORMATION SOURCES:
+- agmarknet.nic.in - Daily market prices
+- APMC secretary office - Local price trends
+- KVKs - Market intelligence and guidance
+- Local newspapers and radio
+- Mobile apps for farmers
+
+================================================================================
+14.0  GOVERNMENT SCHEMES & SUPPORT
+================================================================================
+
+CENTRAL GOVERNMENT SCHEMES:
++------------------------------------------------------------------+
+| Scheme               | Benefit                        | Contact  |
++------------------------------------------------------------------+
+| PM-KISAN             | Rs. 6,000/year (3 installments)|pmkisan. |
+|                      | Direct bank transfer           |gov.in    |
++------------------------------------------------------------------+
+| PMFBY                | Crop insurance, subsidized     |Agricultur|
+| (Crop Insurance)     | premium (2-5% for farmers)     |e Office  |
++------------------------------------------------------------------+
+| MIDH                 | 50-75% subsidy on plantation,  |District  |
+| (Horticulture)       | drip irrigation, equipment     |Horticultu|
+|                      |                                |re Officer|
++------------------------------------------------------------------+
+| RKVY                 | Project-based funding for      |State Agri|
+|                      | agriculture development        |Dept      |
++------------------------------------------------------------------+
+| Soil Health Card     | Free soil testing and          |Village   |
+|                      | fertilizer recommendations     |Level     |
++------------------------------------------------------------------+
+
+GUJARAT STATE SCHEMES:
+- Horticulture Development Scheme: 50% subsidy on planting material
+- Mukhyamantri Horticulture Yojana: Additional 10% for SC/ST farmers
+- Sardar Patel Krishi Yojana: Interest-free loans up to Rs. 1 lakh
+- Agro-Industry Gujarat: 25-40% subsidy for processing units
+- GVK (Gujarat Vikas Yojana): Agricultural development projects
+
+APPLICATION PROCESS:
+1. Visit nearest KVK or Agriculture Office
+2. Submit application with required documents:
+   - Land records (7/12 extract)
+   - Aadhaar card
+   - Bank account details
+   - Caste certificate (if applicable)
+3. Follow up with implementing agency
+4. Track application status online where available
+
+================================================================================
+15.0  IMPORTANT CONTACTS & RESOURCES
+================================================================================
+
+EMERGENCY SUPPORT:
++--------------------------------+------------------+
+| Service                        | Contact          |
++--------------------------------+------------------+
+| Kisan Call Center (24/7)       | 1800-180-1551    |
+| PM-KISAN Helpline              | 011-2338-1994    |
+| Agriculture Dept, Gujarat      | 079-2325-2224    |
+| State Horticulture Mission       | 079-232-50871    |
++--------------------------------+------------------+
+
+AGRICULTURAL UNIVERSITIES:
++--------------------------------+------------------+----------------------------+
+| University                     | Phone            | Location                   |
++--------------------------------+------------------+----------------------------+
+| Junagadh Agricultural Univ     | 0285-2672071     | Junagadh                   |
+| Anand Agricultural Univ        | 02692-261100     | Anand                      |
+| Navsari Agricultural Univ      | 02637-282751     | Navsari                    |
+| SDAU (Dantiwada)               | 02742-278622     | Palanpur                   |
++--------------------------------+------------------+----------------------------+
+
+DISTRICT LEVEL SUPPORT:
+- District Agriculture Officer (DAO)
+- District Horticulture Officer (DHO)
+- Krishi Vigyan Kendra (KVK) - Every district
+- ATMA (Agricultural Technology Management Agency)
+- PACS (Primary Agricultural Credit Society)
+
+================================================================================
+                         REFERENCES & RESOURCES
+================================================================================
+
+1. Package of Practices - Junagadh Agricultural University (JAU)
+2. Package of Practices - Anand Agricultural University (AAU)
+3. Package of Practices - Navsari Agricultural University (NAU)
+4. Package of Practices - Sardarkrushinagar Dantiwada Agricultural Univ (SDAU)
+5. Gujarat State Horticulture Mission Publications
+6. Department of Agriculture, Government of Gujarat
+7. ICAR - Indian Council of Agricultural Research Publications
+8. National Horticulture Board (NHB) Guidelines
+9. Directorate of Plant Protection, Quarantine & Storage
+10. State Agricultural Marketing Board
+
+================================================================================
+                         END OF FILE 062
+              Crop: Napier Grass - Napier/Hybrid Napier
+================================================================================

@@ -1,0 +1,123 @@
+================================================================================
+           GUJARAT FARMER KNOWLEDGE BASE
+           Agricultural Guide - File 101/407
+================================================================================
+
+TOPIC: Soil Health Management
+GUJARATI NAME: Mati Swasthya
+CATEGORY: Soil Science
+GUIDE TYPE: Comprehensive Technical Manual
+REGION: Gujarat State - All Agro-Climatic Zones
+DOCUMENT DATE: June 23, 2026
+================================================================================
+
+1. INTRODUCTION
+Soil health is the foundation of sustainable agriculture in Gujarat. With 196 lakh hectares under cultivation, maintaining soil health is critical for food security and farmer income.
+
+2. SOIL HEALTH COMPONENTS
+Physical Health:
+- Soil structure and aggregation
+- Water infiltration and retention
+- Root penetration ease
+- Compaction status
+
+Chemical Health:
+- pH balance (6.0-7.5 optimal)
+- Nutrient availability (N, P, K, micronutrients)
+- Cation exchange capacity
+- Salinity levels (EC < 4 dS/m)
+
+Biological Health:
+- Microbial diversity and activity
+- Earthworm population (>5/spade full = healthy)
+- Organic matter content (>0.8% desirable)
+- Mycorrhizal associations
+
+3. SOIL HEALTH INDICATORS FOR GUJARAT FARMS
+Visual Indicators:
+- Dark brown color (high organic matter)
+- Crumbly structure (good aggregation)
+- Earthworm presence
+- Rapid water infiltration
+- Uniform crop growth
+
+Laboratory Indicators:
+- pH, EC, OC, N, P, K, S, micronutrients
+- Microbial biomass carbon
+- Soil respiration rate
+- Enzyme activities
+
+4. MAJOR SOIL TYPES AND HEALTH ISSUES
+Black Cotton Soils (45% area):
+- Strengths: High fertility, water retention
+- Issues: Cracking, hardening, erosion
+- Management: Organic matter addition, mulching
+
+Alluvial Soils (25% area):
+- Strengths: Deep, fertile, well-drained
+- Issues: Waterlogging in low areas
+- Management: Drainage, raised beds
+
+Sandy Soils (15% area):
+- Strengths: Quick warming, easy tillage
+- Issues: Low water holding, nutrient leaching
+- Management: Organic matter, frequent irrigation
+
+Saline-Alkali Soils (10% area):
+- Strengths: Can be reclaimed
+- Issues: High pH, poor structure
+- Management: Gypsum, leaching, tolerant crops
+
+5. SOIL HEALTH IMPROVEMENT PRACTICES
+Immediate (1 season):
+- Soil testing
+- Balanced fertilization
+- Mulching
+- Green manuring
+
+Short-term (1-3 years):
+- Compost application (5-10 t/ha/year)
+- Vermicompost integration
+- Biofertilizer use
+- Crop rotation with legumes
+
+Long-term (3+ years):
+- Organic carbon buildup
+- Reduced tillage adoption
+- Agroforestry integration
+- Comprehensive nutrient management
+
+6. SOIL HEALTH CARD SCHEME IN GUJARAT
+Coverage:
+- Free testing for all farmers
+- 12 parameters analyzed
+- Testing every 2 years
+- Fertilizer recommendations provided
+
+How to Avail:
+- Contact District Agriculture Office
+- Submit soil sample (500g)
+- Register at soilhealth.dac.gov.in
+- Receive card with recommendations
+
+7. SUCCESS STORIES
+Case 1: Banaskantha Wheat Farmer
+- Problem: Declining yields
+- Intervention: Soil testing + balanced fertilization
+- Result: 25% yield increase, Rs. 8,000/acre additional income
+
+Case 2: Amreli Organic Transition
+- Problem: Soil degradation
+- Intervention: 3-year organic conversion
+- Result: Organic carbon 0.4% to 0.9%
+
+8. KEY CONTACTS
+- District Agriculture Officer
+- Soil Testing Laboratory
+- KVK (Krishi Vigyan Kendra)
+- Gujarat Agricultural Universities
+
+================================================================================
+                         END OF FILE 101
+              Topic: Soil Health Management
+================================================================================

@@ -1,0 +1,12 @@
+=== GROUNDNUT IRRIGATION SCHEDULING AND WATER METRICS ===
+Target Zones: Summer Cultivation Belts of Saurashtra
+
+1. CRITICAL MOISTURE PHASES
+Groundnut is highly sensitive to water stress during specific intervals:
+- Flowering Phase (20-25 Days Post Emergence)
+- Pegging Phase (40-45 Days Post Emergence) -> Maximum Water Requirement.
+- Pod Development Phase (70-80 Days Post Emergence)
+
+2. IRRIGATION INTERVALLING USING MICRO-SPRINKLERS
+- System Setup: Overhead micro-sprinklers arranged in a 6m x 6m or 9m x 9m grid layout.
+- Interval Schedule: Apply water at 8-10 day intervals during March and accelerate to 6-7 day intervals during April/May when evapotranspiration rates spike. Avoid heavy flooding during peg entry to keep the topsoil loose.

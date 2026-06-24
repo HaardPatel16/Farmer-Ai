@@ -1,0 +1,14 @@
+=== INSECT PEST MANAGEMENT PROTOCOLS FOR COTTON ===
+Target Cultivar: Bt Cotton Hybrids (BG-II)
+Primary Vectors: Pink Bollworm (Pectinophora gossypiella) and Sucking Pest Complex
+
+1. PINK BOLLWORM (INTEGRATED MANAGEMENT CRITERIA)
+- Local Context: The major economic pest across Saurashtra and Central Gujarat, driven by extended cropping cycles stretching into February/March.
+- Pheromone Monitoring: Install traps equipped with Gossyplure at a density of 5 traps per acre at 45 DAS. Economic Threshold Level (ETL) is 8 adult moths per trap per day for 3 consecutive days, or 10% damage in green bolls (rosette flowers).
+- Chemical Intervention (Post-ETL):
+  * Early Boll Phase: Spray Profenophos 50% EC @ 20 ml or Chlorpyrifos 20% EC @ 25 ml per 10 liters of water.
+  * Peak Infestation Phase: Deploy Spinetoram 11.7% SC @ 8.5 ml or Emamectin Benzoate 5% SG @ 5 grams per 10 liters of water.
+
+2. SUCKING PEST COMPLEX (APHIDS, JASSIDS, THRIPS, WHITEFLY)
+- Action Windows: Active from July through October. Thrips cause extensive leaf curling in Saurashtra; Whiteflies proliferate under dry, high-temperature spells.
+- Chemical Countermeasures: Spray Flonicamid 50% WG @ 4 grams or Afidopyropen 50 g/L DC @ 20 ml per 10 liters of water. Alternately, rotate with Dinotefuran 20% SG @ 6 grams.

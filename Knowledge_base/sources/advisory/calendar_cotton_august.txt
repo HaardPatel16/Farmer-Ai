@@ -1,0 +1,99 @@
+================================================================================
+COTTON CROP CALENDAR — GUJARAT — AUGUST
+================================================================================
+
+CROP: Cotton
+MONTH: August
+PRIMARY REGION: Saurashtra, North Gujarat, South Gujarat
+DOCUMENT TYPE: Month-wise Activity Calendar
+
+================================================================================
+1. SOIL PREPARATION FOR AUGUST
+================================================================================
+  • If waterlogging occurred in July, apply gypsum 250 kg per hectare to reclaim sodic patches
+  • In waterlogged fields, aerate soil by shallow cultivation between rows
+  • Maintain drainage channels; August floods are common and can cause sudden wilt
+  • Avoid deep tillage — cotton roots are shallow and easily damaged at this stage
+  • If soil is compacted, light inter-culture with hand hoe improves aeration
+
+================================================================================
+2. SOWING / PLANTING DATES
+================================================================================
+  • NO sowing in August — too late for profitable cotton crop in Gujarat
+  • Focus on crop management: weeding, pest scouting, and fertilizer application
+  • If gaps are severe (>20% missing plants), consider intercropping with short-duration moong
+  • Remove waterlogged and dead plants; do NOT replant at this stage
+
+================================================================================
+3. IRRIGATION SCHEDULE
+================================================================================
+  • Generally rainfed; if dry spell exceeds 10 days during boll formation, provide 25mm irrigation
+  • Critical water requirement at flowering and boll formation — do not allow moisture stress
+  • In irrigated tracts, schedule irrigation every 7-10 days during boll formation
+  • Avoid waterlogging — August floods cause root rot and sudden wilt
+  • Remove excess water within 24 hours of flooding; apply Copper oxychloride drench to surrounding healthy plants
+
+================================================================================
+4. FERTILIZER TIMING & DOSES
+================================================================================
+  • Second nitrogen top dressing (50 kg urea per hectare) at boll formation stage (60-65 days)
+  • If crop is vigorous and dark green, reduce nitrogen to 30 kg urea per hectare
+  • If boll shedding is high, spray 2% urea + 0.5% potassium sulphate at flowering
+  • No fertilizer application during heavy rain — nutrients will leach; wait for rain to stop
+  • Plan for final nitrogen management in September (reduce/stop after boll opening)
+
+================================================================================
+5. PEST SCOUTING DATES
+================================================================================
+  • Pink bollworm (Pectinophora gossypiella): pheromone trap catches peak in August
+  • If trap catch exceeds 8 moths per trap per week for 3 consecutive weeks, spray Emamectin benzoate 0.4g/litre
+  • American bollworm (Helicoverpa armigera): scout for larvae and eggs on leaves and squares
+  • Spray Bt (Bacillus thuringiensis) 1g/litre for early instar larvae; HaNPV at dusk for larva control
+  • Mirid bug (Harpedona marginella): causes leaf crumpling; spray acetamiprid if secondary pest emergence observed
+  • Alternaria and Cercospora leaf spot: spray Mancozeb 2.5g per litre as preventive after rain periods
+  • Whitefly: if resurgence observed, spray Buprofezin 1.5ml/litre; avoid repeated use of same chemical group
+  • Weekly scouting: minimum 2 times per week in August for bollworms, aphids, and disease
+
+================================================================================
+6. HARVESTING WINDOWS
+================================================================================
+  • NO harvest in August — cotton is in peak flowering and boll formation stage
+  • Remove and destroy fallen flowers and bolls to reduce pink bollworm habitat
+  • Continue recording pest counts and weather data for advisory updates
+
+================================================================================
+7. POST-HARVEST OPERATIONS
+================================================================================
+  • NO post-harvest operations in August
+  • Prepare pickers and harvesting bags for September-October first picking
+  • Arrange transport to ginning mill or market yard
+  • Clean and repair storage godowns; fumigate to prevent pest infestation
+
+================================================================================
+8. WEATHER WATCH
+================================================================================
+  • August is the wettest month in Gujarat: 300-450mm average rainfall
+  • Waterlogging and flood risk remains high; prioritize drainage over irrigation
+  • Humidity 75-95%; ideal for fungal diseases — increase scouting to twice per week
+  • Day temperatures 28-32°C; nights 24-26°C; warm and humid
+  • IMD warnings: heavy rainfall alerts (100mm+ in 24 hours) and flood warnings for coastal districts
+
+================================================================================
+9. GOVERNMENT SCHEME DEADLINES
+================================================================================
+  • PMFBY: if crop damage from waterlogging or pest, notify within 72 hours and file claim
+  • Crop damage survey: contact local agriculture officer ( taluka development officer) for assessment
+  • Bt cotton seed subsidy: no new claims in August; focus on crop protection
+  • Kisan Credit Card: avail credit for pesticide and labour costs
+  • Contact KVK for pest identification and spray recommendations
+
+================================================================================
+10. RELATED TOPICS & QUICK LINKS
+================================================================================
+  • Related: calendar_cotton_june.txt, calendar_cotton_july.txt, calendar_cotton_october.txt
+  • Advisories: spray_safety.txt, pest_bulletin_kharif_2025.txt, waterlogging_management.txt
+  • Weather: imd_forecast_guide.txt, monsoon_onset_advisory.txt
+  • Helpline: Kisan Call Centre 1800-180-1551, Gujarat Cotton Association 079-2657-5141
+  • Online: https://ikhedut.gujarat.gov.in, https://www.cicr.org.in (CICR)
+
+================================================================================

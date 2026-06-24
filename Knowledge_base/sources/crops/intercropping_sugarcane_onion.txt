@@ -1,0 +1,2 @@
+=== INTERCROPPING MATRIX: SUGARCANE + ONION ===
+Row configuration: Plant companion onion rows within sugarcane trenches. Leverages early open field rows before sugarcane shields the canopy.

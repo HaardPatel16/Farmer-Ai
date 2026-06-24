@@ -1,0 +1,98 @@
+================================================================================
+BAJRA (PEARL MILLET) CROP CALENDAR — GUJARAT — AUGUST
+================================================================================
+
+CROP: Bajra (Pearl Millet)
+MONTH: August
+PRIMARY REGION: Saurashtra, Kutch, North Gujarat
+DOCUMENT TYPE: Month-wise Activity Calendar
+
+================================================================================
+1. SOIL PREPARATION FOR AUGUST
+================================================================================
+  • Light hoeing between rows improves aeration and controls late-emerging weeds
+  • Do NOT deep cultivate — roots are established and shallow cultivation is sufficient
+  • In waterlogged fields, open drainage channels and aerate soil by shallow inter-culture
+  • Maintain soil pH at 6.0-7.5; apply lime if pH < 5.5
+  • Bajra tolerates poor soils but responds to good drainage and aeration
+
+================================================================================
+2. SOWING / PLANTING DATES
+================================================================================
+  • NO sowing in August — too late for profitable bajra crop in Gujarat
+  • Focus on crop management: weed control, pest scouting, and fertilizer application
+  • If gaps are severe, no replanting is recommended at this stage
+  • Remove waterlogged and dead plants; maintain healthy plant population
+
+================================================================================
+3. IRRIGATION SCHEDULE
+================================================================================
+  • Generally rainfed; one irrigation at heading stage (50-60 days) if dry spell exceeds 15 days
+  • Critical irrigation at grain filling stage (60-75 days) if no rain for 10+ days
+  • In North Gujarat, check-basin irrigation can be used for bajra at heading stage
+  • Ensure drainage after heavy rain — prolonged flooding causes root rot and lodging
+  • Remove excess water within 24 hours of flooding
+
+================================================================================
+4. FERTILIZER TIMING & DOSES
+================================================================================
+  • Second nitrogen top dressing (30-40 kg urea per hectare) at tillering stage (35-45 days)
+  • If first top dressing was missed, apply 50 kg urea per hectare at 40-45 days (compensatory dose)
+  • No potash needed for bajra in most Gujarat soils
+  • If crop shows yellowing, foliar spray of 2% urea at heading stage
+  • No fertilizer application during heavy rain — nutrients will leach; wait for rain to stop
+
+================================================================================
+5. PEST SCOUTING DATES
+================================================================================
+  • Stem borer: monitor for dead heart at 20-30 days; if missed earlier, check now and apply Carbofuran 3G if >5%
+  • Downy mildew (green ear): if pale green streaks appear, rogue out and destroy affected plants immediately
+  • Ergot (Claviceps fusiformis): at heading stage, watch for black sticky honeydew; spray Mancozeb 2.5g/litre immediately
+  • At heading stage, watch for ergot hard sclerotia replacing grains — these are toxic; do NOT keep seed from affected fields
+  • Aphids: if colonies exceed 10 per plant, spray Imidacloprid 0.5ml per litre
+  • Rust (Puccinia penniseti): if orange pustules appear on leaves, spray Propiconazole 1ml per litre
+
+================================================================================
+6. HARVESTING WINDOWS
+================================================================================
+  • Early bajra (sown in May) may be ready for harvest in South Gujarat by month-end
+  • Main Kharif bajra (sown in June-July) is at tillering to heading stage (40-70 days)
+  • Continue monitoring crop growth and pest populations
+  • Record keeping: document heading date for harvest planning (75-90 days after sowing)
+
+================================================================================
+7. POST-HARVEST OPERATIONS
+================================================================================
+  • NO post-harvest operations for main Kharif bajra in August
+  • Early bajra: if harvested, cut and stack for field drying; thresh when moisture is 15-18%
+  • Prepare storage facilities and threshing equipment for September-October harvest
+  • Contact fodder traders or grain market for price information
+
+================================================================================
+8. WEATHER WATCH
+================================================================================
+  • August is the wettest month in Gujarat: 300-450mm average rainfall
+  • Waterlogging and flood risk remains high; prioritize drainage over irrigation
+  • Humidity 75-95%; favourable for fungal diseases — increase scouting to twice per week
+  • Day temperatures 28-32°C; nights 24-26°C; warm and humid
+  • IMD warnings: heavy rainfall alerts (100mm+ in 24 hours) and flood warnings
+
+================================================================================
+9. GOVERNMENT SCHEME DEADLINES
+================================================================================
+  • PMFBY: if crop damage from waterlogging or pest, notify within 72 hours and file claim
+  • Crop damage survey: contact local agriculture officer for assessment
+  • Kisan Credit Card: avail credit for pesticide and labour costs
+  • Fodder development scheme: contact district animal husbandry department
+  • Contact KVK for pest identification and spray recommendations
+
+================================================================================
+10. RELATED TOPICS & QUICK LINKS
+================================================================================
+  • Related: calendar_bajra_july.txt, calendar_july.txt, calendar_august.txt
+  • Advisories: spray_safety.txt, pest_bulletin_kharif_2025.txt, waterlogging_management.txt
+  • Weather: imd_forecast_guide.txt, monsoon_onset_advisory.txt
+  • Helpline: Kisan Call Centre 1800-180-1551, Gujarat Agriculture Department 079-232-43746
+  • Online: https://ikhedut.gujarat.gov.in, https://www.aicrpmpr.res.in
+
+================================================================================

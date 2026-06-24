@@ -1,0 +1,16 @@
+# Secrets — never commit these
+.env
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# Editor/OS junk
+.vscode/
+.DS_Store
+
+# ML model weights — too large for GitHub
+# Download separately and place in ML model/
+ML model/*.pth

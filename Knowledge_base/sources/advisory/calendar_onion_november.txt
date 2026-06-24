@@ -1,0 +1,102 @@
+================================================================================
+ONION CROP CALENDAR — GUJARAT — NOVEMBER
+================================================================================
+
+CROP: Onion
+MONTH: November
+PRIMARY REGION: North Gujarat, Saurashtra
+DOCUMENT TYPE: Month-wise Activity Calendar
+
+================================================================================
+1. SOIL PREPARATION FOR NOVEMBER
+================================================================================
+  • Well-drained loamy soils with pH 6.0-7.0 ideal for onion
+  • Apply FYM 15-20 tonnes per hectare 2-3 weeks before sowing
+  • Prepare raised beds (15-20 cm high) for nursery to improve drainage
+  • In main field, apply basal dose DAP 100 kg + potash 50 kg per hectare at transplanting
+  • Ensure excellent drainage — onion is sensitive to waterlogging and purple blotch
+
+================================================================================
+2. SOWING / PLANTING DATES
+================================================================================
+  • Rabi onion nursery sowing in first fortnight of November for transplanting in January
+  • Raise beds 15cm high, mix FYM 10kg per sq metre; sow seeds in 5cm spaced rows
+  • Cover with thin soil layer; water with rose can daily
+  • Treat seeds with Captan 3g per litre drench to prevent damping off before sowing
+  • Seed rate for nursery: 8-10 kg per hectare (main field area)
+  • Use certified varieties: Gujarat Onion-1, GO-2, N-53 for Rabi season
+
+================================================================================
+3. IRRIGATION SCHEDULE
+================================================================================
+  • Nursery: water with rose can daily; maintain moist but not waterlogged soil
+  • Main field (after transplanting in January): first irrigation immediately after transplanting
+  • Then irrigate every 7-10 days; onion needs consistent moisture for bulb development
+  • Critical irrigation at bulb initiation and bulb development stages; do NOT allow moisture stress
+  • Reduce irrigation 2 weeks before harvest to harden bulbs and improve storage life
+  • Drip irrigation is highly recommended for onion; use 4-6 litre/hour emitters
+
+================================================================================
+4. FERTILIZER TIMING & DOSES
+================================================================================
+  • Nursery: apply 2 kg DAP per 100 sq metres at 15 days after sowing
+  • Main field (at transplanting): basal dose DAP 100 kg + potash 50 kg per hectare
+  • First top dressing (50 kg urea per hectare) at 30 days after transplanting
+  • Second top dressing (50 kg urea per hectare) at bulb initiation stage (60 days after transplanting)
+  • Third top dressing (30 kg urea per hectare) at bulb development stage (80 days after transplanting)
+  • Micronutrients: foliar spray of 0.5% zinc sulphate + 0.2% boron at bulb initiation for better bulb size
+
+================================================================================
+5. PEST SCOUTING DATES
+================================================================================
+  • Thrips: if damage exceeds 5% leaf area, spray Fipronil 1.5ml per litre or Spinosad 0.3ml per litre
+  • Purple blotch (Alternaria porri): if purple lesions appear on leaves, spray Mancozeb 2.5g + Carbendazim 1g per litre
+  • Stemphylium leaf blight: if brown spots with concentric rings appear, spray Mancozeb 2.5g per litre
+  • Nursery damping off: treat soil with Captan 3g per litre before sowing; ensure good drainage
+  • Onion fly: if maggots found in bulbs, drench with Chlorpyriphos 2ml per litre
+  • Aphids: if colonies exceed 10 per plant, spray Imidacloprid 0.5ml per litre
+
+================================================================================
+6. HARVESTING WINDOWS
+================================================================================
+  • NO harvest in November — onion is in nursery stage
+  • Continue monitoring nursery health and seedling growth
+  • Record keeping: document nursery sowing date for transplanting planning (January)
+  • Prepare main field for transplanting: plough, level, and apply basal fertilizer
+
+================================================================================
+7. POST-HARVEST OPERATIONS
+================================================================================
+  • NO post-harvest operations in November
+  • Prepare storage facilities and drying yards for April-May harvest
+  • Contact onion traders or market yards for price information and procurement schedules
+  • Onion is a high-value crop; maintain quality standards for export and domestic markets
+
+================================================================================
+8. WEATHER WATCH
+================================================================================
+  • Day temperatures: 28-32°C; nights 12-16°C; pleasant weather ideal for onion nursery germination
+  • November dew is heavy — favours fungal diseases in nursery; increase scouting frequency
+  • First western disturbances may bring light rain to North Gujarat; cover nursery with polythene if heavy rain predicted
+  • Cold wave risk in North Gujarat by month-end; protect nursery with light mulch if frost occurs
+  • IMD forecast: monitor for western disturbance predictions and cold wave warnings
+
+================================================================================
+9. GOVERNMENT SCHEME DEADLINES
+================================================================================
+  • PMFBY enrollment: complete by 15th December for Rabi onion; visit PACS or bank branch
+  • Onion seed subsidy: purchase certified seeds from authorized dealers with bill and Aadhaar
+  • Soil Health Card: collect updated card from KVK or ATMA office before fertilizer application
+  • Kisan Credit Card (KCC): renew or apply for fresh credit before sowing season
+  • PM-KISAN: verify installment eligibility and Aadhaar seeding status
+
+================================================================================
+10. RELATED TOPICS & QUICK LINKS
+================================================================================
+  • Related: calendar_november.txt, calendar_december.txt, calendar_onion_november.txt
+  • Advisories: post_harvest_veg_storage.txt, spray_safety.txt, soil_testing_guide.txt
+  • Weather: imd_forecast_guide.txt, cold_wave_frost_protection.txt
+  • Helpline: Kisan Call Centre 1800-180-1551, Gujarat Horticulture Department 079-232-58191
+  • Online: https://ikhedut.gujarat.gov.in, https://www.nhb.gov.in (National Horticulture Board)
+
+================================================================================

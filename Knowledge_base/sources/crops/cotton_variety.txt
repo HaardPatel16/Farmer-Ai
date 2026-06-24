@@ -1,0 +1,13 @@
+=== GENETIC PROFILE AND VARIETAL INDEX OF GUJARAT COTTON ===
+Database Classification: Junagadh Agricultural University & Navsari Agricultural University
+
+1. G.COT HYBRID 6 / 8 / 10 (Non-Bt Indigenous Long Staple)
+- Adaptability: Thrives in South Gujarat and parts of the Central Vadodara plains.
+- Fibre Attributes: Staple length 28-30mm, spinning capability 40s count. Strong resistance to dry root rot and sucking pests. Highly stable under rainfed conditions.
+
+2. V-797 / G.COT 21 (Herbaceum Vagad Type)
+- Local Context: The historical specialty of the Viramgam, Arnej, and Bhal tracts.
+- Morphology: Closed-boll type. Bolls do not open at maturity; instead, the entire boll is harvested (local term: 'Kala'). Extremely drought-tolerant, surviving on residual black-soil moisture with zero irrigation.
+
+3. COMMERCIAL BG-II HYBRIDS
+- Approved Profiles: Cultivars derived from MRC-7351, RCH-2, and ATM-2 lineages adapted to the specific day-length and soil thermal units of the Saurashtra peninsula.

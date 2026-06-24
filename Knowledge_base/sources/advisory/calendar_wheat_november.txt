@@ -1,0 +1,102 @@
+================================================================================
+WHEAT CROP CALENDAR — GUJARAT — NOVEMBER
+================================================================================
+
+CROP: Wheat
+MONTH: November
+PRIMARY REGION: North Gujarat, Saurashtra, Kutch
+DOCUMENT TYPE: Month-wise Activity Calendar
+
+================================================================================
+1. SOIL PREPARATION FOR NOVEMBER
+================================================================================
+  • Prepare field immediately after Kharif crop harvest; one ploughing followed by harrowing and levelling
+  • Apply FYM 10-15 tonnes per hectare 2-3 weeks before sowing
+  • In Saurashtra black cotton soils, apply gypsum 250 kg per hectare for soil structure improvement
+  • Soil pH should be 6.5-7.5; apply lime if pH < 6.0 (common in North Gujarat)
+  • Ensure good drainage — wheat is sensitive to waterlogging; prepare drainage channels
+  • Soil testing: apply phosphorus and potash based on soil test results; Gujarat soils are often deficient in phosphorus
+
+================================================================================
+2. SOWING / PLANTING DATES
+================================================================================
+  • Ideal sowing window: 10-25 November in North Gujarat; 15-20 November in Saurashtra; 10-20 November in Kutch
+  • Seed rate: 100-125 kg per hectare for normal sowing; 125-150 kg for late sowing (after 25 November)
+  • Spacing: 15-20 cm between rows; 5-7 cm between plants
+  • Sow at 4-5 cm depth; deeper sowing in light soils, shallow in heavy soils
+  • Treat seeds with Carbendazim 2g + Streptocycline 1g per kg OR Thiram 3g per kg to prevent seed rot and termite
+  • Use certified varieties: GW-273, GW-322, Lok-1, HD-2967 for Gujarat conditions
+
+================================================================================
+3. IRRIGATION SCHEDULE
+================================================================================
+  • First irrigation at CRI (Crown Root Initiation) stage — 20-25 days after sowing; apply 50mm water
+  • This is the most critical irrigation for wheat; do NOT miss it
+  • Second irrigation at tillering stage (40-45 days); third at boot leaf/flag leaf stage (60-70 days)
+  • Fourth irrigation at grain filling stage (80-90 days); fifth at dough stage (100-105 days) if needed
+  • In North Gujarat, check-basin or flood irrigation is common; in Saurashtra, some farmers use sprinkler
+  • Avoid irrigation during cold wave/frost events; irrigate during daytime in winter
+
+================================================================================
+4. FERTILIZER TIMING & DOSES
+================================================================================
+  • Basal dose at sowing: DAP 100 kg + potash 30 kg per hectare
+  • First nitrogen top dressing (40-50 kg urea per hectare) at CRI stage (20-25 days after sowing)
+  • Second nitrogen top dressing (40 kg urea per hectare) at tillering (40-45 days)
+  • Third nitrogen top dressing (30 kg urea per hectare) at boot leaf stage (60-70 days) if needed
+  • Total nitrogen: 120-150 kg per hectare depending on variety and soil fertility
+  • Micronutrients: apply zinc sulphate 25 kg per hectare as basal if soil is deficient (common in Gujarat)
+
+================================================================================
+5. PEST SCOUTING DATES
+================================================================================
+  • Termite: treat seed with Chlorpyriphos 2ml per kg before sowing; if termite damage observed, drench with Chlorpyriphos
+  • Yellow rust (Puccinia striiformis): monitor from December; scout every 7-10 days in North Gujarat
+  • Aphids: if colonies exceed 10 per tiller, spray Dimethoate 2ml per litre
+  • Pink stem borer (Sesamia inferens): if dead heart observed, remove and destroy affected plants; apply Carbofuran 3G if >5%
+  • Flag smut (Urocystis tritici): if black streaks appear on leaves, spray Carbendazim 1g per litre
+  • Karnal bunt (Tilletia indica): if partially infected grains observed, apply Tebuconazole 1ml per litre at boot stage
+
+================================================================================
+6. HARVESTING WINDOWS
+================================================================================
+  • NO harvest in November — wheat is just germinated or in very early growth stage
+  • Continue monitoring germination and seedling establishment
+  • Record keeping: document sowing date and variety for harvest planning (March-April)
+
+================================================================================
+7. POST-HARVEST OPERATIONS
+================================================================================
+  • NO post-harvest operations in November
+  • Prepare storage facilities and threshing equipment for March-April harvest
+  • Contact grain market or FCI procurement centre for price information
+  • Arrange for combine harvester or labour in advance for March-April peak season
+
+================================================================================
+8. WEATHER WATCH
+================================================================================
+  • Day temperatures: 28-32°C; nights 12-16°C; pleasant weather ideal for wheat germination
+  • November dew is heavy — favours fungal diseases; increase scouting frequency
+  • First western disturbances may bring light rain to North Gujarat; beneficial for wheat establishment
+  • Cold wave risk in North Gujarat and Kutch by month-end; minimum temperatures may drop to 8-10°C
+  • IMD forecast: monitor for western disturbance predictions and cold wave warnings for frost protection
+
+================================================================================
+9. GOVERNMENT SCHEME DEADLINES
+================================================================================
+  • PMFBY enrollment: complete by 15th December for Rabi wheat; visit PACS or bank branch
+  • Wheat seed subsidy: purchase certified seeds from authorized dealers with bill and Aadhaar
+  • Soil Health Card: collect updated card from KVK or ATMA office before fertilizer application
+  • Kisan Credit Card (KCC): renew or apply for fresh credit before sowing season
+  • PM-KISAN: verify installment eligibility and Aadhaar seeding status
+
+================================================================================
+10. RELATED TOPICS & QUICK LINKS
+================================================================================
+  • Related: calendar_wheat_december.txt, calendar_wheat_january.txt, calendar_wheat_march.txt
+  • Advisories: cold_wave_frost_protection.txt, spray_safety.txt, soil_testing_guide.txt
+  • Weather: imd_forecast_guide.txt, imd_seasonal_forecast_guide.txt
+  • Helpline: Kisan Call Centre 1800-180-1551, Gujarat Agriculture Department 079-232-43746
+  • Online: https://ikhedut.gujarat.gov.in, https://www.dwr.res.in (Directorate of Wheat Research)
+
+================================================================================

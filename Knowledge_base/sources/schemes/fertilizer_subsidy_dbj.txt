@@ -1,0 +1,71 @@
+1. SCHEME NAME & FULL OFFICIAL NAME
+   Fertilizer Subsidy Direct Benefit Transfer (DBT) Scheme — Under the Department of Fertilizers, Ministry of Chemicals and Fertilizers, Government of India. Implemented in Gujarat through the Gujarat State Fertilizer and Chemicals (GSFC) and authorized dealer network.
+
+2. WHAT IS IT
+   The Fertilizer Subsidy DBT scheme ensures that fertilizer subsidies reach genuine farmers directly through an Aadhaar-linked Point of Sale (POS) system. Under this system, all fertilizer sales are tracked through a government-mandated POS machine at every authorized dealer. When a farmer purchases fertilizer, the dealer scans the farmer's Aadhaar-linked fingerprint on the POS machine, recording the purchase against the farmer's ID. This prevents diversion of subsidized fertilizer to non-agricultural uses (industries, black market) and ensures that only farmers benefit from the subsidy. The farmer does not receive the subsidy directly in cash; instead, the farmer pays the subsidized price at the point of purchase, and the government pays the difference (subsidy) directly to the fertilizer manufacturer. This is why it's called a "subsidy transfer" rather than a "cash transfer." The system has significantly reduced black-market fertilizer sales in Gujarat and ensured that farmers get genuine, quality-certified products.
+
+3. WHO IS ELIGIBLE
+   • All farmers with Aadhaar card and bank account
+   • Farmers must purchase from authorized POS-linked dealers only
+   • No landholding limit; all categories eligible
+   • Farmers must bring Aadhaar card for every purchase
+   • There is a quantity limit per purchase based on landholding (varies by crop season)
+   • Exclusions: Non-farmers; farmers buying from unauthorized dealers; farmers without Aadhaar
+
+4. BENEFITS PROVIDED
+   • Urea at subsidized price: Rs 266.50 per 45kg bag (market price would be Rs 900+)
+   • DAP (Di-Ammonium Phosphate): Rs 1,350 per 50kg bag
+   • MOP (Muriate of Potash): Rs 1,700 per 50kg bag
+   • NPK compound fertilizers at government-fixed subsidized rates
+   • Nano Urea (liquid): Rs 240 per 500ml bottle (equivalent to one 45kg urea bag)
+   • Quality assurance: Only government-approved manufacturers can supply to POS-linked dealers
+   • Prevention of black-market sales and adulteration
+   • Tracking of purchase history helps farmers plan fertilizer use
+   • Subsidy amount: The government pays Rs 600-700+ per urea bag as subsidy to manufacturers
+
+5. HOW TO PURCHASE (STEP-BY-STEP)
+   Step 1: Identify the nearest authorized fertilizer dealer with a POS machine. Look for the "POS-Enabled Dealer" sign.
+   Step 2: Carry your original Aadhaar card and a copy.
+   Step 3: At the dealer, select the fertilizer type and quantity needed.
+   Step 4: The dealer will enter your Aadhaar number into the POS machine.
+   Step 5: Place your finger on the POS biometric scanner for authentication.
+   Step 6: If biometric authentication succeeds, the sale is recorded in the government database.
+   Step 7: Pay the subsidized price (cash or UPI/bank transfer).
+   Step 8: Collect the bill/receipt with your Aadhaar number, purchase details, and dealer ID.
+   Step 9: The government subsidy is transferred to the fertilizer company (not to the farmer directly).
+   Important: Always collect the bill; without a bill, you cannot claim quality issues or report overpricing.
+   Documents: Aadhaar card (original), and optionally bank passbook for UPI payment.
+
+6. WHERE TO PURCHASE
+   • Authorized fertilizer dealers with POS machines (Gujarat has 10,000+ POS-enabled dealers)
+   • Gujarat State Fertilizer and Chemicals (GSFC) retail outlets
+   • Gujarat State Seeds Corporation (GSSC) centers
+   • Cooperative societies and PACS (Primary Agricultural Credit Societies)
+   • Khadi and Village Industries Commission (KVIC) outlets in some areas
+   • GSFC website: gsfc.com for dealer locator
+
+7. GUJARAT-SPECIFIC DETAILS
+   Gujarat has 10,000+ POS-enabled fertilizer dealers, covering almost every village. The Gujarat government has integrated the POS system with the iKhedut portal, allowing farmers to check their purchase history online. Gujarat has strict penalties for dealers overcharging — farmers can report overpricing to the district agriculture officer. The state has promoted nano urea heavily, with over 50 lakh bottles sold in Gujarat since launch. GSFC (Gujarat State Fertilizer and Chemicals) is a major manufacturer and supplier in the state. Gujarat has a high rate of Aadhaar seeding among farmers (95%+), making DBT implementation smooth. The state has launched a "Fertilizer Monitoring Cell" to track dealer sales and prevent hoarding. Gujarat farmers purchase an average of 3-5 bags of urea per hectare per season.
+
+8. COMMON PROBLEMS & SOLUTIONS
+   • Biometric authentication fails: Common with elderly farmers or worn fingerprints. Solution: Try multiple fingers; if all fail, the dealer can use OTP authentication sent to your registered mobile number.
+   • Dealer overcharging: The POS machine shows the fixed government price; if the dealer charges more, note the dealer ID from the bill and report to the district agriculture officer at 1800-180-1551 or the Fertilizer Monitoring Cell.
+   • Purchase limit reached: The system limits purchases per season to prevent hoarding. If you need more, contact the taluka agriculture officer with your crop details and land records for a limit increase.
+   • Unauthorized dealer selling cheap fertilizer: Do not buy from unauthorized dealers — the product may be adulterated or smuggled, and you lose the subsidy. Always buy from POS-enabled dealers.
+   • Nano urea not available: Ask the dealer to order from GSFC; if unavailable, contact the district agriculture officer for alternative supply.
+   • Bill not given: Insist on a bill; without it, the sale is not recorded and you have no proof of purchase.
+
+9. RELATED SCHEMES
+   • PM PRANAM Scheme — for reducing chemical fertilizer use and promoting organic alternatives
+   • Soil Health Card Scheme — for soil-test-based fertilizer recommendations
+   • Neem Coated Urea Scheme — for improved nitrogen use efficiency
+   • Organic Farming Scheme (PKVY) — for farmers shifting to organic inputs
+   • Nano Urea Promotion — for liquid urea as a substitute
+
+10. CONTACT INFORMATION
+   • Fertilizer Control Room: 1800-180-1551 (Kisan Call Centre)
+   • GSFC Customer Care: 079-26577101
+   • Gujarat Fertilizer Monitoring Cell: Contact District Agriculture Officer
+   • Department of Fertilizers, GOI: fertilizers.gov.in
+   • Dealer Locator: Available on GSFC website and Khedut app
+   • Report overpricing: District Agriculture Officer or 1800-180-1551

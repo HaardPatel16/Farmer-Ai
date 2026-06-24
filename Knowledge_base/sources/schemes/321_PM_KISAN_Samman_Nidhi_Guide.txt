@@ -1,0 +1,112 @@
+================================================================================
+           GUJARAT FARMER KNOWLEDGE BASE
+           Agricultural Guide - File 321/407
+================================================================================
+
+TOPIC: PM KISAN Samman Nidhi
+GUJARATI NAME: PM KISAN Samman Nidhi
+CATEGORY: Government Scheme
+GUIDE TYPE: Comprehensive Technical Manual
+REGION: Gujarat State - All Agro-Climatic Zones
+DOCUMENT DATE: June 23, 2026
+================================================================================
+
+1. INTRODUCTION
+Pradhan Mantri Kisan Samman Nidhi (PM-KISAN) provides income support of Rs. 6,000 per year to all farmer families across India, paid in three installments.
+
+2. ELIGIBILITY CRITERIA
+Inclusions:
+- Small and marginal farmers
+- All landholding farmers
+- Families with cultivable land
+- Farmers in both urban and rural areas
+
+Exclusions:
+- Institutional landholders
+- Farmer families with high income (MPs, MLAs, etc.)
+- Retired pensioners above Rs. 10,000/month
+- Professionals (doctors, engineers, CAs)
+- Income tax payers
+
+3. BENEFIT STRUCTURE
+Annual Amount: Rs. 6,000 per family
+Installments: Rs. 2,000 every 4 months
+Timeline:
+- 1st installment: April-July
+- 2nd installment: August-November
+- 3rd installment: December-March
+
+Mode: Direct Benefit Transfer (DBT) to bank account
+
+4. REGISTRATION PROCESS
+Online Method:
+Step 1: Visit pmkisan.gov.in
+Step 2: Click "New Farmer Registration"
+Step 3: Enter Aadhaar number
+Step 4: Fill personal details
+Step 5: Enter land details
+Step 6: Upload documents
+Step 7: Submit and note reference number
+
+Offline Method:
+- Visit nearest CSC (Common Service Center)
+- Contact Village Level Entrepreneur (VLE)
+- Visit Agriculture Department office
+- Through designated bank branches
+
+Required Documents:
+- Aadhaar card
+- Land records (7/12 or equivalent)
+- Bank passbook (linked to Aadhaar)
+- Mobile number
+- Passport size photo
+
+5. EKYC REQUIREMENT
+Mandatory for all beneficiaries:
+- Biometric authentication
+- OTP-based verification
+- Face authentication
+- Can be done at CSC, bank, or online
+
+6. STATUS CHECK
+Methods:
+- Online: pmkisan.gov.in (Beneficiary Status)
+- SMS: PMKISAN <Aadhaar> to 51969
+- Mobile app: PM-KISAN app
+- Helpline: 155261 / 011-24300606
+
+Common Status:
+- FTO Generated: Ready for payment
+- PFMS Confirmed: Payment processed
+- Status Active: Eligible for next installment
+- Rejected: Correct errors and reapply
+
+7. COMMON ISSUES AND SOLUTIONS
+Problem: Account not credited
+Solution: Check DBT status, ensure Aadhaar-bank linking
+
+Problem: Land record mismatch
+Solution: Update records at Revenue Department
+
+Problem: Exclusion category
+Solution: Check exclusion list, appeal if incorrect
+
+Problem: Name mismatch
+Solution: Correct Aadhaar or land records
+
+8. IMPORTANT DATES
+Registration: Open throughout the year
+Installment releases: As per government schedule
+EKYC deadline: Updated on portal regularly
+
+9. IMPORTANT CONTACTS
+- Website: pmkisan.gov.in
+- Helpline: 155261
+- Email: pmkisan-ias@gov.in
+- State nodal officer: Gujarat Agriculture Department
+
+================================================================================
+                         END OF FILE 321
+              Topic: PM KISAN Samman Nidhi
+              COMPLETION: 321/407 files
+================================================================================

@@ -1,0 +1,231 @@
+================================================================================
+CALCAREOUS SOIL — COMPLETE SOIL PROFILE
+================================================================================
+
+1. SOIL TYPE NAME & CLASSIFICATION
+--------------------------------------------------------------------------------
+Calcareous soils are soils with a high content of calcium carbonate (CaCO3), typically
+exceeding 5% by weight in the surface layer and often much higher in the subsoil. In the
+WRB classification, they are often classified as Calcisols or as Calcic subunits of other
+soil types (Calcaric Cambisols, Calcaric Fluvisols). In Gujarat, calcareous soils are
+not a distinct soil order but rather a chemical modification that occurs in arid and semi-arid
+regions where evaporation exceeds precipitation, leading to the accumulation of calcium
+carbonate (kankar) in the soil profile. These soils are often associated with desert and
+semi-desert environments, parent materials rich in lime, and irrigation-induced secondary
+salinisation.
+
+2. PHYSICAL PROPERTIES
+--------------------------------------------------------------------------------
+Texture: Variable — sandy loam to clay loam. The texture depends on the parent material
+and degree of weathering. Many calcareous soils in Gujarat are sandy loams due to aeolian
+(wind-blown) deposition mixed with lime-rich alluvium.
+
+Structure: Weak to moderate structure. High calcium carbonate can cement soil particles,
+creating a weakly cemented, brittle structure that breaks down easily under tillage. Kankar
+nodules (calcium carbonate concretions) of varying sizes are common, especially in the
+subsoil.
+
+Colour: Light grey to whitish-grey due to calcium carbonate coating on soil particles. In
+areas with high organic matter, the colour may be greyish-brown. The presence of kankar
+nodules gives a spotted or mottled appearance.
+
+Depth: Variable — shallow to deep. Some areas have hard caliche layers (petrocalcic horizons)
+at 30–60 cm depth, which restrict root penetration and water movement.
+
+Drainage: Generally well-drained to excessively drained, especially in sandy calcareous
+soils. However, the presence of kankar layers can create perched water tables and localised
+waterlogging.
+
+Water-Holding Capacity: Low to moderate (80–140 mm/metre). Sandy calcareous soils have low
+water retention, while clay loam calcareous soils have moderate retention. The high calcium
+carbonate content can reduce the water-holding capacity by cementing soil particles.
+
+3. CHEMICAL PROPERTIES
+--------------------------------------------------------------------------------
+pH Range: 8.2 to 8.8, typically moderately alkaline to strongly alkaline. The high pH is
+directly caused by the excess calcium carbonate, which buffers the soil at high pH values.
+Some areas may have pH > 9.0 if sodium carbonate is also present (saline-alkaline soils).
+
+Organic Matter: Very low to low (0.2–0.5%). The arid climate, high pH, and rapid
+mineralisation prevent organic matter accumulation. Low organic matter further reduces
+nutrient availability and soil structure.
+
+NPK Status:
+  • Nitrogen: Very low (100–180 kg/ha available N). Low organic matter and high pH reduce
+    N availability and increase ammonia volatilisation from applied urea.
+  • Phosphorus: Low to moderate (10–20 kg/ha available P). At high pH, phosphorus reacts
+    with calcium to form insoluble calcium phosphates (apatite), making it unavailable to
+    plants. This is the primary phosphorus fixation mechanism in calcareous soils.
+  • Potassium: Moderate to high (200–300 kg/ha available K). Potassium availability is less
+    affected by calcium carbonate than N and P.
+
+Micronutrients: The most critical constraint. High pH and calcium carbonate cause severe
+deficiencies of:
+  • Iron (Fe) — Interveinal chlorosis (yellowing between veins) in young leaves, especially
+    in citrus, groundnut, and sorghum. This is the most visible micronutrient deficiency.
+  • Zinc (Zn) — Stunted growth, rosette leaves in citrus and mango, poor tillering in wheat.
+  • Manganese (Mn) — Grey speck in oats and barley, interveinal chlorosis in beans.
+  • Boron (B) — Heart rot in sugarbeet, cracked stems in celery, poor fruit set in citrus.
+  • Copper (Cu) — Dieback in citrus, poor grain filling in wheat.
+
+Cation Exchange Capacity (CEC): Moderate (15–25 cmol/kg), depending on clay content. The
+high calcium saturation (often > 70% of exchange sites) displaces other cations, reducing
+micronutrient availability.
+
+Calcium Carbonate (CaCO3): 5% to 30% by weight in the surface soil, and often higher in the
+subsoil. Kankar nodules (2mm to 10cm diameter) are common.
+
+4. WHERE FOUND IN GUJARAT
+--------------------------------------------------------------------------------
+Calcareous soils are found in the arid and semi-arid regions of Gujarat:
+  • North Gujarat: Banaskantha, Patan, and Mehsana districts — extensive areas of sandy
+    calcareous soils derived from alluvium and wind-blown deposits.
+  • Kutch: Northern and western Kutch — calcareous desert soils with high kankar content.
+  • Saurashtra: Parts of Jamnagar, Devbhoomi Dwarka, and Porbandar — coastal calcareous
+    soils formed from marine deposits and limestone weathering.
+  • Middle Gujarat: Limited patches in Ahmedabad and Gandhinagar where groundwater is high
+    in calcium bicarbonate.
+
+Extent: Approximately 10–12% of Gujarat's total geographical area. The largest contiguous
+area is in North Gujarat (Banaskantha-Patan-Mehsana belt).
+
+5. SUITABILITY FOR CROPS
+--------------------------------------------------------------------------------
+Best Crops (Adapted to Calcareous Conditions):
+  • Bajra (Pearl Millet) — Highly tolerant of alkaline pH and low nutrient availability.
+    GHB-538, GHB-732 perform well. Yields: 15–25 quintals/ha.
+  • Castor — Excellent adaptation to calcareous soils. Deep roots access subsoil moisture.
+    GCH-4, GCH-7. Yields: 15–25 quintals/ha.
+  • Cumin — The most important spice crop on calcareous soils in Gujarat. GC-1, GC-2, GC-4.
+    High-value crop with good market demand. Yields: 6–10 quintals/ha.
+  • Fennel — Gujarat Fennel-1, GF-12. Tolerates high pH and responds well to micronutrient
+    supplementation.
+  • Fenugreek (Methi) — Leafy and seed varieties for local and export markets.
+  • Mustard — Rai-5, GM-1. Tolerates alkaline conditions.
+  • Wheat — With heavy micronutrient management. GW-273, GW-322. Yields: 3.0–4.5 tonnes/ha.
+
+Moderately Suitable:
+  • Cotton — With zinc and iron supplementation. Not ideal but grown in North Gujarat.
+  • Groundnut — With foliar iron and zinc sprays. Better on sandy calcareous soils than
+    on clayey calcareous soils.
+  • Barley — Tolerates higher pH than wheat. Good for saline-calcareous areas.
+  • Sorghum — With micronutrient management.
+
+Unsuitable Crops:
+  • Acid-loving crops: Tea, coffee, rubber, pineapple, blueberry (not grown in Gujarat
+    anyway, but indicative).
+  • Citrus (orange, lemon, kinnow) — severe iron and zinc chlorosis on calcareous soils
+    unless heavily managed with chelates.
+  • Potato — scab disease (Streptomyces scabies) is worse in high-pH soils; iron deficiency
+    causes quality issues.
+  • Rice — High pH reduces nutrient availability; poor drainage in heavy calcareous soils
+    causes problems.
+
+Yield Potential: Moderate to high with intensive management. The limiting factor is almost
+always micronutrient availability, not soil depth or water. With proper micronutrient
+management, cumin and fennel yields in North Gujarat match the best in the country.
+
+6. MANAGEMENT PRACTICES
+--------------------------------------------------------------------------------
+Fertiliser Recommendations:
+  • Nitrogen: 100–150 kg N/ha for cereals; 150–200 kg N/ha for cotton. Use ammonium
+    sulphate or calcium ammonium nitrate (CAN) rather than straight urea to reduce
+    ammonia volatilisation. Split applications are essential. Apply urea during cooler
+    hours and incorporate into soil immediately.
+  • Phosphorus: 50–80 kg P2O5/ha. Use water-soluble forms (DAP, SSP). Band placement
+    near the seed is more effective than broadcasting due to high P fixation. Apply at
+    sowing time.
+  • Potassium: 30–50 kg K2O/ha. Most calcareous soils in Gujarat have adequate K.
+  • Zinc: 25–30 kg zinc sulphate/ha at sowing. This is non-negotiable for most crops.
+    Apply ZnSO4 in the seed furrow or broadcast and incorporate before sowing. Foliar
+    spray of 0.5% ZnSO4 + 0.25% lime during vegetative growth for standing crops.
+  • Iron: 25 kg ferrous sulphate/ha soil application OR foliar spray of 0.5% FeSO4
+    (2–3 sprays at 15-day intervals) for crops showing chlorosis. For severe cases,
+    use iron chelates (Fe-EDTA) at 1 kg/ha foliar.
+  • Manganese: 15 kg manganese sulphate/ha soil application or 0.3% foliar spray.
+  • Boron: 10 kg borax/ha for sensitive crops (cotton, groundnut, vegetables).
+  • Sulphur: 20–30 kg S/ha for oilseeds and legumes. Gypsum (calcium sulphate) can
+    supply both Ca and S but is only needed if soil Ca is low (rare in calcareous soils).
+
+Irrigation: Drip irrigation is highly recommended for all crops to conserve water and
+reduce nutrient leaching. Sandy calcareous soils require frequent, light irrigations.
+Sprinkler irrigation is suitable for cereals and fodder. Flood irrigation should be
+avoided on sandy calcareous soils as it wastes water and causes deep nutrient leaching.
+
+Tillage: Light tillage is sufficient. Avoid deep ploughing which brings kankar nodules
+to the surface and damages soil structure. Use rotavators or cultivators for seedbed
+preparation.
+
+Special Practices: Raised bed cultivation for vegetables and cumin to improve drainage
+and aeration. Mulching with straw or plastic to reduce evaporation and soil temperature
+in summer. Acidifying fertilisers (ammonium sulphate, ammonium phosphate) are preferred
+over neutral/alkaline fertilisers.
+
+7. PROBLEMS & REMEDIES
+--------------------------------------------------------------------------------
+  • Iron and Zinc Deficiency: The most visible and economically damaging problem.
+    Remedy: Prophylactic soil application of ZnSO4 and FeSO4; foliar sprays of chelated
+    micronutrients; use of micronutrient-enriched fertilisers (Zn-enriched DAP). For
+    orchards, trunk injection of iron chelates.
+  • Phosphorus Fixation: High CaCO3 fixes P into unavailable forms. Remedy: Band placement
+    of P fertiliser near the root zone; use of water-soluble P sources; application of
+    organic matter (FYM) to reduce P fixation; use of PSB biofertiliser.
+  • Ammonia Volatilisation: High pH causes rapid loss of N from surface-applied urea.
+    Remedy: Deep placement of urea (7–10 cm depth); use of coated/slow-release urea;
+    application during cooler hours; use of nitrification inhibitors.
+  • Hardpan/Kankar Layers: Impede root growth and water movement. Remedy: Deep chiselling
+    or subsoiling to break kankar layers; grow deep-rooted crops (castor, alfalfa) as
+    biological drills; use explosives in extreme cases (rare, for orchards).
+  • Soil Compaction: Low organic matter makes soil prone to compaction. Remedy: Add organic
+    matter; avoid traffic on wet soil; use minimum tillage; maintain soil cover with
+    residues or cover crops.
+  • Salinity: In poorly drained calcareous areas, evaporation can cause salt accumulation.
+    Remedy: Improve drainage; leach with excess irrigation; apply gypsum if sodium is high.
+
+8. SOIL TESTING INTERPRETATION for this soil type
+--------------------------------------------------------------------------------
+When interpreting soil test results for calcareous soils:
+
+  • pH: Optimal is 7.0–7.5. If pH > 8.5, expect severe micronutrient deficiencies.
+    Apply sulphur or ammonium sulphate to lower pH marginally (difficult to change
+    significantly in calcareous soils). Focus on micronutrient management.
+  • ECe: If > 4 dS/m, salinity is a concern. Leach with excess irrigation and improve
+    drainage.
+  • Organic Matter: Target > 0.6%. If below 0.4%, apply FYM 15–20 tonnes/ha.
+  • Nitrogen: If available N < 150 kg/ha, increase N application and use slow-release
+    forms. Include legumes in rotation.
+  • Phosphorus: If available P < 12 kg/ha, apply 80–100 kg P2O5/ha in bands. Use DAP
+    or SSP, not rock phosphate.
+  • Zinc: Critical level 0.5 ppm. Apply 25–30 kg ZnSO4/ha prophylactically every year.
+  • Iron: DTPA-extractable Fe < 4.5 ppm indicates deficiency. Apply FeSO4 or use foliar
+    Fe-EDTA sprays.
+  • Calcium Carbonate: If CaCO3 > 15%, expect micronutrient problems. Increase foliar
+    micronutrient applications.
+
+9. ORGANIC MATTER IMPROVEMENT STRATEGIES
+--------------------------------------------------------------------------------
+  • Farm Yard Manure (FYM): Apply 15–20 tonnes/ha annually. This is the single most
+    important amendment for calcareous soils. Organic matter improves soil structure,
+    reduces bulk density, increases water-holding capacity, and chelates micronutrients
+    making them more available.
+  • Green Manuring: Incorporate dhaincha, sunhemp, or cluster bean before cereals or
+    cotton. Green manure adds biomass and nitrogen while improving soil physical properties.
+  • Compost and Vermicompost: 3–5 tonnes/ha for intensive cropping. Vermicompost is rich
+    in humic acids which chelate micronutrients and improve availability in high-pH soils.
+  • Crop Residue Management: Do not burn crop residues. Incorporate wheat straw, bajra
+    stover, and cotton stalks into the soil. Residue retention also reduces soil temperature
+    and evaporation in summer.
+  • Biofertilisers: PSB (Phosphate Solubilising Bacteria), Azotobacter, and VAM improve
+    nutrient availability in the high-pH, low-organic-matter environment. VAM is particularly
+    beneficial for phosphorus and micronutrient uptake.
+  • Alley Cropping: Plant nitrogen-fixing trees (Leucaena, Gliricidia, Acacia) on field
+    boundaries to provide green leaf manure, shade, and wind protection. Leaf litter from
+    these trees adds organic matter and nutrients.
+  • Cover Cropping: Use cowpea, moth bean, or horse gram during fallow periods to cover
+    the soil, add biomass, and fix nitrogen.
+  • Organic Farming: Transition to organic farming is feasible for cumin, fennel, and bajra
+    in North Gujarat where water is available. The challenge is managing micronutrient
+    supply without synthetic chelates. Rock phosphate + PSB + VAM + organic matter can
+    maintain P levels. Foliar sprays of compost tea and vermiwash can supply micronutrients.
+
+================================================================================

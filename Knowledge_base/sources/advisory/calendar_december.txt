@@ -1,0 +1,115 @@
+================================================================================
+GUJARAT FARMING CALENDAR — DECEMBER (કારતક / માગશર (Kartak / Magshar))
+================================================================================
+
+OVERVIEW:
+December is a critical month for Gujarat agriculture. The state's diverse agro-climatic zones — Saurashtra, North Gujarat, South Gujarat, and Kutch — each have specific crop activities during this period. This calendar provides detailed, week-by-week guidance for farmers.
+
+CROPS IN FOCUS THIS MONTH:
+  • Wheat (tillering)
+  • Mustard (flowering)
+  • Gram (branching)
+  • Cumin (vegetative)
+  • Potato (tuberization)
+  • Cold season
+
+================================================================================
+1. SOIL PREPARATION
+================================================================================
+  • Summer ploughing should be completed by now if not already done; deep ploughing (20-25 cm) improves water infiltration
+  • For heavy black cotton soils, apply organic matter / FYM (Farm Yard Manure) 10-15 tonnes per hectare at least 2-3 weeks before sowing
+  • Level the field using a leveller to ensure uniform irrigation and prevent waterlogging
+  • In Saurashtra, apply gypsum 250 kg per hectare for sodic soil reclamation before sowing
+  • Conduct soil testing: pH should be 6.5-7.5 for most crops; apply lime if pH < 6.0
+  • Prepare raised beds (15-20 cm high) for vegetable crops to improve drainage during monsoon
+
+================================================================================
+2. SOWING / PLANTING DATES
+================================================================================
+  • NO main field sowing in December — too late for Rabi crops; yield potential significantly reduced
+  • Fodder crops (oats, berseem) can be sown for winter green fodder in North Gujarat and Saurashtra
+  • Vegetable nursery (cabbage, cauliflower, knol-khol) for late winter crop in South Gujarat
+  • Lucerne (alfalfa) sowing for multi-cut fodder in Saurashtra with irrigation
+  • Focus shifts to crop management, pest scouting, and harvest preparation
+
+================================================================================
+3. IRRIGATION SCHEDULE
+================================================================================
+  • Wheat: second irrigation at tillering stage (40-45 days after sowing); apply 50-60mm water
+  • Wheat: third irrigation at boot leaf/flag leaf stage (60-70 days) — critical for grain number
+  • Mustard: one irrigation at flowering stage (50-60 days) if no rain; avoid excess water
+  • Gram: generally rainfed; one protective irrigation during pod filling if dry spell exceeds 15 days
+  • Cumin: light irrigation every 10-12 days; maintain soil moisture but avoid waterlogging
+  • Potato: irrigation every 7-10 days; maintain 80% field capacity; reduce 2 weeks before harvest
+
+================================================================================
+4. FERTILIZER TIMING & DOSES
+================================================================================
+  • Wheat: second nitrogen top dressing (40 kg urea per hectare) at tillering (40-45 days)
+  • Wheat: foliar spray of 2% urea at boot leaf stage if crop appears nitrogen-deficient
+  • Mustard: apply 30 kg urea per hectare at flowering stage if crop looks pale
+  • Gram: apply 20 kg DAP per hectare at early branching stage if basal dose was insufficient
+  • Cumin: apply 20 kg urea per hectare at 30 days after sowing; second dose at 50 days if needed
+  • Potato: apply 50 kg urea per hectare at stolon formation (30 days); second dose at tuber initiation (45 days)
+
+================================================================================
+5. PEST SCOUTING DATES
+================================================================================
+  • Wheat: yellow rust (Puccinia striiformis) — peak risk month in North Gujarat; scout every 5-7 days
+  • Wheat: if yellow rust appears, spray Propiconazole 1ml per litre immediately; alert agriculture department
+  • Wheat: aphids — if colonies exceed 10 per tiller, spray Dimethoate 2ml per litre
+  • Mustard: aphids and painted bug — spray Imidacloprid 0.5ml per litre if aphids exceed 5 per terminal shoot
+  • Gram: pod borer (Helicoverpa) — begin monitoring at flowering; spray NSKE 5% or HaNPV if eggs found
+  • Cumin: wilt and blight complex — drench with Carbendazim 1g + Mancozeb 2.5g per litre if wilting observed
+  • Potato: early blight (Alternaria solani) — spray Mancozeb 2.5g per litre at first sign of brown spots
+
+================================================================================
+6. HARVESTING WINDOWS
+================================================================================
+  • Cotton: final picking of very late-sown crop; complete by mid-December
+  • Groundnut: post-harvest processing; grading, storage, and marketing
+  • Paddy: post-harvest processing; milling and storage
+  • Bajra: post-harvest processing; threshing and storage
+  • Moong: post-harvest processing; storage in safe containers
+  • Sugarcane: harvest continues in South Gujarat; crush within 24 hours of cutting for better recovery
+
+================================================================================
+7. POST-HARVEST OPERATIONS
+================================================================================
+  • Clean and dry harvested produce immediately; moisture content should be reduced to safe levels (8-10% for grains, 10-12% for oilseeds)
+  • Use tarpaulins or cemented drying yards to avoid aflatoxin contamination in groundnut and cotton
+  • Store in properly ventilated godowns; use neem leaves or safe storage pesticides
+  • For cotton, ginning should be done within 15 days of picking to preserve fibre quality
+  • Grade produce before selling: separate A, B, and C grades for better market prices
+  • Maintain post-harvest records for traceability and insurance claims
+
+================================================================================
+8. WEATHER WATCH
+================================================================================
+  • December is the second coldest month in Gujarat; minimum temperatures 5-10°C in North Gujarat and Kutch
+  • Frost risk in North Gujarat (Banaskantha, Patan, Mehsana) and Kutch — protect sensitive crops
+  • Day temperatures: 25-30°C; nights 8-14°C; ideal for wheat, mustard, gram, and cumin growth
+  • Western disturbances may bring light rain and cloud cover to North Gujarat; beneficial for Rabi crops
+  • IMD Cold Wave warnings: if minimum temperature forecast is 4°C or below for 2+ days, activate frost protection measures
+
+================================================================================
+9. GOVERNMENT SCHEME DEADLINES
+================================================================================
+  • PM-KISAN installment verification: ensure Aadhaar seeding is complete before 15th of the month
+  • Soil Health Card scheme: collect updated cards from local Krushi Vigyan Kendra (KVK) or ATMA office
+  • PMFBY (Pradhan Mantri Fasal Bima Yojana) enrollment: last date for Kharif crops is usually 31st July; for Rabi crops, 15th December
+  • Gujarat State Farm Machinery Scheme: subsidy applications for tractor/power tiller due at district agriculture office
+  • Drip irrigation subsidy under GGRC (Gujarat Green Revolution Company): submit estimates before month-end
+  • Horticulture Mission for North East & Himalayan States (HMNEH) — nursery subsidy claims
+  • Contact your nearest VLE (Village Level Entrepreneur) for eNAM registration and online mandi selling
+
+================================================================================
+10. RELATED TOPICS & QUICK LINKS
+================================================================================
+  • Related calendar files: calendar_december.txt, spray_calendar_kharif.txt
+  • Advisories: weather_based_irrigation.txt, soil_testing_guide.txt, post_harvest_storage.txt
+  • Weather: imd_forecast_guide.txt, monsoon_onset_advisory.txt
+  • Helpline: Kisan Call Centre 1800-180-1551, Gujarat Agriculture Department 079-232-43746
+  • Online: https://ikhedut.gujarat.gov.in (Gujarat Ikhedut Portal for subsidies and schemes)
+
+================================================================================

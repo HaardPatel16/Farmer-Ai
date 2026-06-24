@@ -1,0 +1,194 @@
+================================================================================
+ALLUVIAL SOIL — COMPLETE SOIL PROFILE
+================================================================================
+
+1. SOIL TYPE NAME & CLASSIFICATION
+--------------------------------------------------------------------------------
+Alluvial soils (Fluvisols and parts of Cambisols in WRB classification) are the most
+fertile and agriculturally important soils in Gujarat. They are formed by the deposition
+of sediments carried by rivers over thousands of years. These soils are young, immature
+soils that have not undergone extensive weathering or profile development. They are
+characterised by distinct horizontal stratification (layering) and excellent fertility
+due to regular replenishment by fresh silt during river floods. In Gujarat, alluvial
+soils are classified as Inceptisols and Entisols in the USDA Soil Taxonomy system.
+
+2. PHYSICAL PROPERTIES
+--------------------------------------------------------------------------------
+Texture: Sandy loam to clay loam, depending on the distance from the river source and
+the velocity of deposition. Near river banks, soils are coarser (sandy loam); further
+away, they are finer (silty clay loam). The textural variability within a single field
+is common.
+
+Structure: Weak to moderate granular or sub-angular blocky structure. The stratified
+nature creates distinct horizons that can affect root penetration and water movement.
+
+Colour: Light grey to brownish-grey, often with visible mottling due to alternating
+oxidation and reduction conditions. Darker colours indicate higher organic matter
+content in older alluvial deposits.
+
+Depth: Very deep to extremely deep (1.5 to 3+ metres), with no significant hardpan
+or restrictive layer. This makes alluvial soils ideal for deep-rooted crops like
+sugarcane and banana.
+
+Drainage: Generally well-drained, but low-lying areas can suffer from poor drainage
+and waterlogging during monsoon. Percolation rates are moderate to high (15–30 mm/hour).
+
+Water-Holding Capacity: Moderate to high (120–180 mm/metre), depending on texture.
+Clay loam alluvials have higher water retention than sandy loam alluvials.
+
+3. CHEMICAL PROPERTIES
+--------------------------------------------------------------------------------
+pH Range: 7.0 to 8.0, typically neutral to slightly alkaline. This is ideal for most
+crops. Some areas near the coast may have pH up to 8.2 due to saline influence.
+
+Organic Matter: Moderate (0.6–1.2%), higher than most Gujarat soils due to good vegetation
+cover and regular deposition of fresh organic material. However, intensive cultivation
+can deplete organic matter rapidly.
+
+NPK Status:
+  • Nitrogen: Low to moderate (150–250 kg/ha). Regular additions of organic matter
+    and fertilisers are needed.
+  • Phosphorus: Moderate to high in young alluvials; low to moderate in older, leached
+    deposits. Available phosphorus ranges from 15–35 kg/ha.
+  • Potassium: High due to the presence of K-bearing minerals (feldspars, micas) in
+    river sediments. Available K often exceeds 250 kg/ha.
+
+Micronutrients: Generally adequate, but zinc deficiency (Zn < 0.6 ppm) can occur in
+high-pH areas. Iron, manganese, and copper are usually sufficient. Boron deficiency
+may occur in intensively cropped vegetable areas.
+
+Cation Exchange Capacity (CEC): Moderate (15–25 cmol/kg), reflecting the mixed mineralogy
+of the alluvium. This provides good nutrient retention.
+
+Salinity: Generally low (ECe < 2 dS/m) except in coastal and poorly drained areas where
+it can rise to 4–8 dS/m.
+
+4. WHERE FOUND IN GUJARAT
+--------------------------------------------------------------------------------
+Alluvial soils are found extensively along the major river valleys of Gujarat:
+  • South Gujarat: Tapi river belt (Surat, Tapi districts), Narmada river valley
+    (Bharuch, Narmada), Mahi river delta (Kheda, Anand).
+  • Middle Gujarat: Sabarmati river valley (Ahmedabad, Gandhinagar), Mahi river
+    (Kheda, Anand, Panchmahal).
+  • North Gujarat: Banas and Saraswati river valleys (Sabarkantha, Banaskantha —
+    limited alluvial patches).
+  • Saurashtra: Limited alluvial deposits along seasonal rivers (Bhadar, Shetrunji)
+    in Bhavnagar and Amreli.
+
+Extent: Approximately 15–18% of Gujarat's total geographical area. The most productive
+alluvial belts are the Tapi-Narmada deltaic region and the Mahi-Sabarmati river valleys.
+
+5. SUITABILITY FOR CROPS
+--------------------------------------------------------------------------------
+Best Crops (Highly Suitable):
+  • Sugarcane — THE premier crop for alluvial soils. The deep, fertile, well-drained
+    soil with high potassium and good water retention supports sustained sugarcane
+    growth for multiple ratoons. Yields: 80–120 tonnes/ha.
+  • Banana — Tissue-culture banana thrives in alluvial soils due to depth and fertility.
+    Yields: 40–60 tonnes/ha.
+  • Paddy (Rice) — Excellent for both kharif and rabi paddy under irrigation. Alluvial
+    clay loams are ideal for paddy due to high water-holding capacity.
+  • Vegetables — Tomato, brinjal, chilli, okra, cucurbits, and leafy vegetables. The
+    high fertility and good drainage allow intensive year-round vegetable cultivation.
+  • Wheat — Rabi wheat performs very well on alluvial soils with irrigation. Yields:
+    4.5–6.5 tonnes/ha.
+  • Cotton — Bt cotton on alluvial clay loams in Bharuch and Surat.
+
+Moderately Suitable:
+  • Groundnut — Good yields on sandy loam alluvials, but not as high as on black soils.
+  • Maize — Suitable for kharif and rabi maize.
+  • Turmeric and Ginger — on well-drained raised beds.
+
+Unsuitable Crops:
+  • Deep-rooted plantation crops (cashew, rubber) may face waterlogging in poorly
+    drained alluvial pockets.
+  • Cumin and fennel (which require well-drained sandy soils) are less suitable on
+    heavy clay alluvials.
+
+Yield Potential: Very high. Alluvial soils are among the highest-yielding soils in
+Gujarat when properly irrigated and managed. Response to fertiliser and irrigation
+is excellent.
+
+6. MANAGEMENT PRACTICES
+--------------------------------------------------------------------------------
+Fertiliser Recommendations:
+  • Nitrogen: 120–180 kg N/ha for cereals; 200–300 kg N/ha for sugarcane (split into
+    4–5 applications).
+  • Phosphorus: 40–60 kg P2O5/ha for most crops. Use DAP or SSP based on soil test.
+  • Potassium: 30–50 kg K2O/ha for most crops. Higher K (60–80 kg/ha) for sugarcane
+    and banana. Note: Young alluvials may need less K due to high native K.
+  • Zinc: 25 kg zinc sulphate/ha if soil Zn < 0.6 ppm. Foliar spray (0.5% ZnSO4) during
+    critical growth stages.
+  • Boron: 10 kg borax/ha for vegetable and sugarcane areas showing deficiency.
+
+Irrigation: Alluvial soils respond exceptionally well to irrigation. Recommended methods:
+  • Flood irrigation for paddy and sugarcane (traditional but water-intensive).
+  • Drip irrigation for banana, vegetables, and cotton (water-efficient, 40–60% savings).
+  • Sprinkler irrigation for wheat and groundnut.
+  • Subsurface drip irrigation is being tested for sugarcane in Surat and Bharuch.
+
+Tillage: Light to medium tillage is sufficient. Avoid excessive ploughing which can
+destroy the natural granular structure. Laser land levelling is highly recommended for
+precision irrigation and water distribution.
+
+Special Practices: Green manuring with dhaincha or sunhemp before paddy transplanting;
+mulching with crop residues for vegetables to conserve moisture and suppress weeds;
+raised bed cultivation for vegetables to prevent waterlogging in monsoon.
+
+7. PROBLEMS & REMEDIES
+--------------------------------------------------------------------------------
+  • Waterlogging: Low-lying alluvial areas can suffer from waterlogging during heavy
+    monsoon. Remedy: Construct open drainage channels; install subsurface drainage (mole
+    drains or perforated pipes); practice raised bed cultivation for vegetables; avoid
+    continuous paddy flooding in the same field year after year.
+  • Salinity Build-up: Poor drainage in canal command areas can lead to secondary
+    salinisation. Remedy: Leach salts with extra irrigation; apply gypsum 2–5 tonnes/ha
+    if soil pH > 8.5; improve drainage; avoid over-irrigation.
+  • Soil Erosion: Riverbank erosion during floods can damage fields. Remedy: Plant
+    vetiver grass and bamboo along riverbanks; construct earthen bunds; avoid cultivating
+    right up to the river edge.
+  • Nutrient Imbalance: Intensive cropping can deplete nitrogen and zinc. Remedy:
+    Regular soil testing; balanced fertilisation; organic matter addition; crop rotation
+    with legumes.
+  • Flooding: Flash floods can deposit coarse sand and gravel on fields. Remedy: Remove
+    coarse deposits; level the field; add organic matter to restore fertility; plant
+    cover crops to stabilise the soil.
+
+8. SOIL TESTING INTERPRETATION for this soil type
+--------------------------------------------------------------------------------
+When interpreting soil test results for alluvial soils, consider the following:
+
+  • pH: Optimal range 7.0–7.5. If pH > 8.0, check for salinity (ECe) and apply gypsum
+    if needed. If pH < 6.5, apply lime (rare in Gujarat alluvials).
+  • Organic Matter: Target > 1.0%. If below 0.8%, apply FYM 10–15 tonnes/ha or green
+    manure.
+  • Nitrogen: If available N < 200 kg/ha, apply higher N doses or include legumes in
+    rotation.
+  • Phosphorus: If available P < 15 kg/ha, apply 60–80 kg P2O5/ha initially, then
+    maintain with 40–50 kg/ha.
+  • Potassium: If available K > 250 kg/ha, reduce K fertiliser or skip for one season.
+    If K < 150 kg/ha, apply 60–80 kg K2O/ha.
+  • Zinc: Critical level 0.6 ppm. Apply 25 kg zinc sulphate/ha if deficient. Foliar
+    spray of 0.5% ZnSO4 + 0.25% lime during peak vegetative stage for quick correction.
+  • Iron: Deficiency is rare but can occur in high-pH areas. Foliar spray of 0.5% ferrous
+    sulphate if symptoms appear (interveinal chlorosis in young leaves).
+
+9. ORGANIC MATTER IMPROVEMENT STRATEGIES
+--------------------------------------------------------------------------------
+  • Farm Yard Manure (FYM): Apply 10–15 tonnes/ha annually. This is the single most
+    effective amendment for alluvial soils, improving structure, water retention, and
+    nutrient availability.
+  • Green Manuring: Incorporate dhaincha (Sesbania aculeata) or sunhemp (Crotalaria
+    juncea) before paddy or sugarcane. Green manure adds 80–120 kg N/ha equivalent.
+  • Compost: Use vermicompost (3–5 tonnes/ha) or urban compost for vegetable fields.
+  • Crop Residue Management: Incorporate wheat straw, sugarcane trash, and paddy straw
+    into the soil rather than burning. This adds organic matter and prevents air pollution.
+  • Biofertilisers: Use Azotobacter, Rhizobium, and PSB (Phosphate Solubilising Bacteria)
+    to enhance nutrient cycling and reduce chemical fertiliser dependence.
+  • Cover Cropping: Plant cowpea, cluster bean, or horse gram during fallow periods to
+    protect soil and add biomass.
+  • Organic Farming: The Tapi-Narmada belt has scope for organic vegetable and sugarcane
+    farming due to good initial fertility and water availability. Transition period is
+    3 years for organic certification.
+
+================================================================================

@@ -1,0 +1,182 @@
+================================================================================
+           GUJARAT FARMER KNOWLEDGE BASE
+           Agricultural Guide - File 130/407
+================================================================================
+
+TOPIC: Drip Irrigation System
+GUJARATI NAME: Boon Sinchai Pranali
+CATEGORY: Water Management
+GUIDE TYPE: Comprehensive Technical Manual
+REGION: Gujarat State - All Agro-Climatic Zones
+DOCUMENT DATE: June 23, 2026
+================================================================================
+
+1. INTRODUCTION
+Drip irrigation is the most efficient water delivery method, saving 40-60% water while increasing yields by 20-40%. Gujarat has over 15 lakh hectares under micro-irrigation.
+
+2. COMPONENTS OF DRIP SYSTEM
+Water Source:
+- Well, borewell, canal, farm pond
+- Water quality testing essential
+- Filtration requirement based on source
+
+Pump and Head Unit:
+- Pump: Centrifugal/submersible
+- Filtration: Screen/sand/media filters
+- Fertilizer tank: Venturi/injection system
+- Control valves: Air release, non-return, pressure relief
+
+Mainline and Sub-main:
+- PVC/HDPE pipes
+- Diameter: 63-110 mm mainline, 32-75 mm sub-main
+- Pressure rating: 4-6 kg/cm2
+
+Laterals:
+- 12-20 mm diameter
+- Laid along crop rows
+- Dripper spacing: matches plant spacing
+
+Drippers:
+- Types: Online, inline, pressure-compensating
+- Discharge: 2, 4, 8 LPH
+- Selection based on crop and soil
+
+3. SYSTEM DESIGN STEPS
+Step 1: Survey
+- Field dimensions and shape
+- Crop type and spacing
+- Water source and quality
+- Topography
+
+Step 2: Water Requirement Calculation
+- Peak crop water demand (mm/day)
+- Operating hours per day
+- System capacity calculation
+
+Step 3: Hydraulic Design
+- Pipe sizing
+- Pressure requirements
+- Flow rate calculations
+- Head loss calculations
+
+Step 4: Component Selection
+- Filter type and size
+- Dripper type and spacing
+- Pipe diameters
+- Fittings and accessories
+
+4. INSTALLATION GUIDE
+Pre-installation:
+- Mark layout on field
+- Excavate trenches for mainline
+- Install pump house
+- Connect electrical supply
+
+Installation Sequence:
+1. Lay and join mainline
+2. Install filter station
+3. Lay sub-mains with control valves
+4. Install laterals with drippers
+5. Flush system thoroughly
+6. Pressure test all lines
+7. Calibrate dripper discharge
+
+5. COST ESTIMATES
+Small farm (<1 ha): Rs. 75,000-1,25,000/ha
+Medium farm (1-5 ha): Rs. 60,000-90,000/ha
+Large farm (>5 ha): Rs. 45,000-70,000/ha
+
+Subsidy Available:
+- PMKSY: 55% for small farmers, 45% for others
+- Gujarat state: Additional 10% for SC/ST
+- Total subsidy: Up to 65% for eligible farmers
+
+6. OPERATION AND MAINTENANCE
+Daily:
+- Check filter pressure differential
+- Flush filters if needed
+- Check system pressure
+- Monitor for leaks
+
+Weekly:
+- Flush lateral ends (2-3 minutes)
+- Check dripper flow uniformity
+- Clean fertilizer tank
+- Inspect for physical damage
+
+Monthly:
+- Acid flush for clogging prevention
+- Check pump performance
+- Inspect pipe joints
+- Calibrate system
+
+Seasonal (Pre-season):
+- Complete system flush
+- Replace damaged components
+- Service pump and filters
+- Pressure test
+
+7. FERTIGATION
+Benefits:
+- 25-30% fertilizer saving
+- Uniform application
+- Spoon-feeding possible
+- Labor saving
+
+Compatible Fertilizers:
+- Urea (completely soluble)
+- DAP (di-ammonium phosphate)
+- Potassium nitrate
+- Water-soluble NPK grades
+- Micronutrient chelates
+
+Application Schedule:
+- Divide total dose into 8-10 applications
+- Apply during irrigation middle phase
+- Flush with plain water after fertigation
+- Avoid mixing incompatible fertilizers
+
+8. TROUBLESHOOTING
+Clogging:
+- Physical: Screen filter maintenance
+- Chemical: Acid flushing (HCl/citric acid)
+- Biological: Chlorination (10 ppm)
+
+Uneven Watering:
+- Check pressure at lateral ends
+- Clean clogged drippers
+- Ensure level field
+
+Leakages:
+- Repair with couplers
+- Replace damaged sections
+- Secure connections
+
+9. CROP-SPECIFIC RECOMMENDATIONS
+Vegetables:
+- Dripper spacing: 20-30 cm
+- Discharge: 2-4 LPH
+- Scheduling: Daily
+
+Orchards:
+- 2-4 drippers per tree
+- Discharge: 4-8 LPH
+- Scheduling: Alternate days
+
+Field Crops:
+- Inline laterals
+- Dripper spacing: 30-60 cm
+- Discharge: 2-4 LPH
+
+10. BENEFITS IN GUJARAT CONTEXT
+Water Saving: 40-60% compared to flood irrigation
+Yield Increase: 20-40% due to optimal moisture
+Quality Improvement: Uniform fruit size, better color
+Weed Reduction: Water only to crop root zone
+Labor Saving: Reduced irrigation labor by 70%
+Energy Saving: Less water pumping needed
+
+================================================================================
+                         END OF FILE 130
+              Topic: Drip Irrigation System
+================================================================================

@@ -1,0 +1,102 @@
+================================================================================
+WHEAT CROP CALENDAR — GUJARAT — MARCH
+================================================================================
+
+CROP: Wheat
+MONTH: March
+PRIMARY REGION: North Gujarat, Saurashtra, Kutch
+DOCUMENT TYPE: Month-wise Activity Calendar
+
+================================================================================
+1. SOIL PREPARATION FOR MARCH
+================================================================================
+  • Light hoeing between rows NOT recommended at this stage — roots are deep and plants are tall
+  • If lodging occurs due to wind or rain, prop up plants with stakes or support if possible
+  • In waterlogged fields, provide drainage immediately to prevent root rot and lodging
+  • Maintain soil pH at 6.5-7.5; apply lime if pH < 6.0
+  • Ensure good drainage — waterlogging at grain filling stage causes grain discolouration and quality loss
+
+================================================================================
+2. SOWING / PLANTING DATES
+================================================================================
+  • NO sowing in March — too late for Rabi wheat and too early for summer wheat
+  • Focus on harvest preparation and management of standing crop
+  • If gaps are severe, no replanting is recommended at this stage
+  • Remove weeds and lodged plants; maintain healthy plant population
+
+================================================================================
+3. IRRIGATION SCHEDULE
+================================================================================
+  • Fourth irrigation at grain filling stage (80-90 days after sowing); apply 50mm water
+  • Fifth irrigation at dough stage (100-105 days) if needed; do NOT irrigate after milk stage
+  • Stop all irrigation 10-15 days before harvest to allow field to dry for combine operation
+  • In North Gujarat, check-basin or flood irrigation is common
+  • Avoid irrigation during hot dry winds (loo); irrigate in evening if possible
+
+================================================================================
+4. FERTILIZER TIMING & DOSES
+================================================================================
+  • NO nitrogen application after boot leaf stage — excess nitrogen causes lodging and delays maturity
+  • Foliar spray of 2% urea + 0.5% potassium sulphate at grain filling for better grain weight and quality
+  • If crop shows severe deficiency, apply 20 kg urea per hectare at grain filling stage only
+  • No potash top dressing needed if basal potash was applied
+  • Plan for harvest and post-harvest management; record fertilizer usage for documentation
+
+================================================================================
+5. PEST SCOUTING DATES
+================================================================================
+  • Black rust (Puccinia graminis): if black pustules appear on leaves and stems, spray Propiconazole 1ml per litre
+  • Termite: check field margins for termite damage; apply Chlorpyriphos 2ml per litre if found
+  • Aphids: if colonies exceed 10 per tiller, spray Dimethoate 2ml per litre (observe PHI before harvest)
+  • Karnal bunt (Tilletia indica): if partially infected grains observed, remove and destroy infected heads
+  • Flag smut: if black streaks appear on flag leaf, remove and destroy affected plants
+  • Do NOT spray chemicals close to harvest; observe pre-harvest intervals (PHI) for all chemicals
+
+================================================================================
+6. HARVESTING WINDOWS
+================================================================================
+  • Main harvest begins in Saurashtra (early varieties) by mid-March and extends to North Gujarat by month-end
+  • Harvest when grain moisture is 18-20% (dough stage); use combine harvester or manual sickle cutting
+  • If using combine, ensure field is dry and firm to prevent machine damage and soil compaction
+  • Stack cut wheat in field for 3-5 days for field drying; thresh when moisture is 15-16%
+  • Dry threshed grain to 12% moisture before storage; use cemented drying yards or mechanical dryers
+  • Store in clean, dry, ventilated godowns; use safe storage pesticides or neem leaves
+
+================================================================================
+7. POST-HARVEST OPERATIONS
+================================================================================
+  • Dry grain to 12% moisture before storage; moisture above 14% causes fungal growth and aflatoxin
+  • Clean grain by winnowing and grading; separate broken, shrivelled, and damaged grains
+  • Store in gunny bags or metal bins; place on pallets (not directly on floor) to prevent moisture absorption
+  • Fumigate storage area with aluminium phosphide if insect infestation is suspected
+  • Maintain records of quantity, grade, and sale price for PMFBY and income documentation
+  • Sell through eNAM or registered mandi for transparent pricing; contact FCI for MSP procurement
+
+================================================================================
+8. WEATHER WATCH
+================================================================================
+  • Day temperatures rise sharply to 35-40°C; nights 18-22°C; summer begins in Gujarat
+  • Hot dry winds (loo) may begin in second fortnight — can cause grain shrivelling; harvest early if predicted
+  • Unseasonal rain in March is rare but can damage mature wheat; keep harvest equipment ready
+  • Humidity drops significantly — good for harvest but increases irrigation demand for summer crops
+  • IMD Heat Wave warnings: if day temperature forecast exceeds 40°C for 3+ days, activate heat protection measures
+
+================================================================================
+9. GOVERNMENT SCHEME DEADLINES
+================================================================================
+  • PMFBY: if crop damage occurred, file claim with required documentation (photos, FIR, survey report)
+  • Wheat MSP procurement: contact FCI or state procurement centre for MSP operations (usually April-May)
+  • PM-KISAN: verify installment eligibility and Aadhaar seeding status
+  • Kisan Credit Card: repay crop loan or renew for next season
+  • Gujarat State Foodgrain Scheme: contact district supply office for market information
+
+================================================================================
+10. RELATED TOPICS & QUICK LINKS
+================================================================================
+  • Related: calendar_wheat_november.txt, calendar_wheat_december.txt, calendar_wheat_january.txt
+  • Advisories: post_harvest_storage.txt, spray_safety.txt, heat_wave_advisory.txt
+  • Weather: imd_forecast_guide.txt, imd_seasonal_forecast_guide.txt
+  • Helpline: Kisan Call Centre 1800-180-1551, Gujarat Agriculture Department 079-232-43746
+  • Online: https://ikhedut.gujarat.gov.in, https://www.dwr.res.in, https://www.fci.gov.in (FCI)
+
+================================================================================

@@ -1,0 +1,2 @@
+=== INTERCROPPING MATRIX: MAIZE + TUR ===
+Row configuration: 2:1 layout. Fast-growing maize provides quick grain/fodder, while deep-rooted pigeonpea (Tur) thrives on residual moisture after the maize harvest.

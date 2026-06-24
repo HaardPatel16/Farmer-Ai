@@ -1,0 +1,154 @@
+================================================================================
+FARMER SAHAYAK - AHMEDABAD DISTRICT AGRO-CLIMATIC PROFILE
+================================================================================
+
+1. DISTRICT OVERVIEW
+--------------------
+Ahmedabad is the largest and most populous district in Gujarat, located in the
+north-central part of the state. The district covers approximately 8,100 sq km
+with a population of over 7 million. It serves as the economic and industrial
+hub of Gujarat, with the city of Ahmedabad being the state's former capital.
+Agriculturally, the district is significant for its peri-urban farming belt
+that supplies fresh produce to one of India's largest urban markets. The
+district has 11 talukas: Ahmedabad City, Bavla, Daskroi, Detroj-Rampura,
+Dhandhuka, Dholka, Mandal, Sanand, Viramgam, Barwala, and Dholera.
+
+2. AGRO-CLIMATIC ZONE
+---------------------
+Ahmedabad falls in the Middle Gujarat Agro-Climatic Zone. The climate is
+semi-arid to sub-humid tropical. The district receives moderate annual rainfall
+of 700-800 mm, with the southwest monsoon arriving in late June and retreating
+by mid-September. About 80% of rainfall occurs during July-August. The mean
+maximum temperature ranges from 28°C in January to 42°C in May, while minimum
+temperatures range from 10°C in winter to 28°C in summer. Relative humidity
+varies from 25% in summer (March-May) to 80% during the monsoon.
+
+3. SOIL TYPES
+-------------
+The dominant soil types are:
+• Medium black soil (Vertisols) in central and eastern talukas
+• Sandy loam (Goradu) in western talukas like Dholka and Dhandhuka
+• Alluvial soils along the Sabarmati river belt
+• Saline-alkali patches in low-lying areas near the Gulf of Khambhat
+
+Soil texture ranges from clayey to loamy. Soil pH is generally neutral to
+slightly alkaline (7.2-8.5). Fertility status is moderate to high in
+irrigated areas but declining in rainfed tracts due to continuous cotton
+and cereal cropping. Some areas show zinc and sulphur deficiency.
+
+4. WATER RESOURCES
+------------------
+Annual rainfall: 700-800 mm (moderately reliable)
+Irrigation sources:
+• Narmada main canal and branch canals serve Sanand, Bavla, Dholka talukas
+• Sabarmati river system provides limited surface water
+• Tubewell irrigation is extensive; borewell depths range 80-200 metres
+• Peri-urban areas have good groundwater recharge from the Sabarmati basin
+
+Water issues: The Dhandhuka and Viramgam belts face groundwater depletion.
+The Little Rann border areas have saline groundwater. The Narmada canal
+has improved irrigation security in the southern talukas significantly.
+
+5. MAJOR CROPS
+--------------
+KHARIF (June-October):
+• Cotton (Gossypium hirsutum) - 80,000+ ha, varieties: G Cot-13, G Cot-21
+• Bajra (Pearl millet) - 60,000 ha, hybrids: GHB-558, GHB-732
+• Paddy (Rice) - 30,000 ha in irrigated pockets, varieties: GR-11, GR-12
+• Castor - 25,000 ha, hybrid: GCH-7, GCH-9
+• Groundnut - 40,000 ha, varieties: GG-20, GG-22
+
+RABI (November-March):
+• Wheat - 90,000 ha, varieties: GW-366, GW-496, Lok-1
+• Mustard - 15,000 ha
+• Gram (Chickpea) - limited area
+• Cumin - 10,000 ha in irrigated pockets
+
+SUMMER (March-May):
+• Vegetables - 25,000 ha (peri-urban)
+• Fodder crops (Jowar, Maize) - dairy-linked
+
+Productivity: Wheat yields 4.5-5.5 tonnes/ha under irrigation; cotton
+yields 2.5-3.5 quintals/ha lint; groundnut 15-20 quintals/ha pods.
+
+6. HORTICULTURE
+---------------
+Peri-urban horticulture is a major economic driver:
+• Vegetables: Tomato, brinjal, okra, chilli, onion, garlic, potato
+• Fruits: Mango (Kesar, Alphonso), banana, papaya, guava
+• Flowers: Rose, marigold, chrysanthemum near urban markets
+• The Sanand-Bavla belt has large-scale floriculture and vegetable farms
+supplying the Ahmedabad city market and exports via the airport.
+
+7. LIVESTOCK
+------------
+Ahmedabad has a significant dairy sector driven by the peri-urban demand:
+• Cattle: Indigenous (Gir) and crossbred populations
+• Buffalo: Mehsani and Surti breeds, important for milk production
+• Poultry: Commercial broiler farms in Sanand and Dholka talukas
+• Fodder availability: Good in irrigated tracts; peri-urban farmers grow
+  hybrid Napier, Jowar, and Lucerne (alfalfa) for dairy feed.
+• The district has numerous dairy cooperatives and private milk processors.
+
+8. CROP CALENDAR
+----------------
+Month          | Major Activities
+---------------|-----------------------------------------------
+June           | Cotton sowing, Bajra sowing, Paddy nursery
+July           | Cotton/bajra sowing continues, Castor sowing
+August         | Groundnut sowing, Paddy transplanting
+September      | Monsoon crop maintenance, weeding, top-dressing
+October        | Early Bajra harvest, Cotton pickings begin
+November       | Cotton picking, Rabi wheat sowing begins
+December       | Wheat sowing, Mustard/Cumin sowing
+January        | Wheat irrigation, Mustard/Cumin maintenance
+February       | Potato harvest, Cumin harvest begins
+March          | Wheat harvest (mid-late), Rabi gram harvest
+April          | Summer vegetable sowing, Fodder sowing
+May            | Summer vegetables, Wheat threshing
+
+9. COMMON PESTS & DISEASES
+--------------------------
+• Cotton: Pink bollworm (Pectinophora gossypiella), Aphids, Whitefly
+  (transmits CLCuV), Spodoptera (Tobacco caterpillar)
+• Groundnut: Leaf spot (Tikka disease), Tobacco caterpillar, Jassids
+• Wheat: Rust (Brown/Yellow), Karnal bunt, Aphids
+• Castor: Semi-looper (Achaea janata), Capsule borer
+• Vegetables: Fruit borer, Whitefly, Aphids, Downy mildew
+
+10. KEY CHALLENGES
+------------------
+• Urbanization pressure: Farm land conversion to industrial/residential use
+• Groundwater depletion in Viramgam and Dhandhuka talukas
+• Soil salinity near the Gulf of Khambhat border areas
+• Labour shortage during peak sowing/harvesting seasons
+• Industrial pollution affecting peri-urban agriculture near Ahmedabad city
+• Declining soil organic matter in intensive vegetable-growing areas
+
+11. GOVERNMENT SUPPORT
+----------------------
+• KVK (Krishi Vigyan Kendra): KVK Ahmedabad, located near Gujarat
+  Agricultural University coordination
+• ATMA (Agricultural Technology Management Agency): Active in all talukas
+• Soil Testing Labs: District-level soil testing laboratory at Ahmedabad
+• APMCs: Ahmedabad APMC (main), Dholka, Sanand, Viramgam sub-yards
+• Cold Storages: Multiple cold storage units in Sanand and Ahmedabad city
+  for potatoes and vegetables
+• Narmada Canal Command: Provides reliable irrigation in southern talukas
+
+12. FARMER ADVISORIES
+---------------------
+• Peri-urban farmers should focus on high-value vegetables and flowers for
+  better returns; direct marketing to city markets or through APMC e-trading
+• Adopt drip irrigation for cotton and vegetables to save water and increase
+  yields by 20-30%
+• In saline-alkali patches, apply gypsum @ 2 tonnes/ha and grow salt-tolerant
+  crops like barley or sorghum initially
+• Use summer ploughing and deep tillage to break hard pans in black soils
+• Rotate cotton with wheat or chickpea to reduce soil-borne diseases and
+  improve soil health
+• Maintain soil test-based fertilization; address zinc deficiency with
+  ZnSO4 @ 25 kg/ha in zinc-deficient soils
+• For dairy farmers, grow Azolla as a supplementary cattle feed to reduce
+  feed costs by 15-20%
+================================================================================

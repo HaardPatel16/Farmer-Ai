@@ -1,0 +1,2509 @@
+/* ── CSS Variables ── */
+:root {
+  --primary: #2563EB;
+  --primary-light: #60A5FA;
+  --primary-pale: #DBEAFE;
+  --wheat: #C8932A;
+  --wheat-light: #F0C674;
+  --wheat-dark: #8A6310;
+  --wheat-pale: #FBF1D9;
+  --leaf: #16A34A;
+  --leaf-light: #6EE7A0;
+  --leaf-dark: #15803D;
+  --leaf-pale: #DCFCE7;
+  --bg: #F8FAFC;
+  --bg-card: #FFFFFF;
+  --bg-glass: rgba(255, 255, 255, 0.72);
+  --text: #1F2937;
+  --text-muted: #6B7280;
+  --text-inverse: #FFFFFF;
+  --border: rgba(37, 99, 235, 0.12);
+  --shadow-sm: 0 1px 4px rgba(37, 99, 235, 0.08);
+  --shadow-md: 0 4px 20px rgba(37, 99, 235, 0.12);
+  --shadow-lg: 0 8px 40px rgba(37, 99, 235, 0.16);
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --transition: 0.22s ease;
+  --header-h: 64px;
+}
+
+[data-theme="dark"] {
+  --primary: #60A5FA;
+  --primary-light: #93C5FD;
+  --primary-pale: rgba(96, 165, 250, 0.15);
+  --wheat: #E0B158;
+  --wheat-light: #F0C674;
+  --wheat-dark: #F0C674;
+  --wheat-pale: rgba(224, 177, 88, 0.16);
+  --leaf: #4ADE80;
+  --leaf-light: #86EFAC;
+  --leaf-dark: #4ADE80;
+  --leaf-pale: rgba(74, 222, 128, 0.16);
+  --bg: #0C1220;
+  --bg-card: #131D30;
+  --bg-glass: rgba(19, 29, 48, 0.82);
+  --text: #E5EAF2;
+  --text-muted: #8B97AD;
+  --text-inverse: #0C1220;
+  --border: rgba(96, 165, 250, 0.14);
+  --shadow-sm: 0 1px 4px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* ── Bold chat theme (Gujarat crop palette) ──
+   Self-contained variable set, scoped only to .chat-screen and the nav
+   rail while it's in "on chat" mode — the home screen and modals never
+   see these and keep using the variables above untouched. Has its own
+   light/dark pair, independent of (but still controlled by) the same
+   dark-mode toggle. */
+.chat-screen,
+.nav-rail.rail-on-chat {
+  --chat-bg: #F6F1E7;
+  --chat-bg-deep: #ECE3D1;
+  --chat-surface: #FFFEFB;
+  --chat-text: #23291F;
+  --chat-text-muted: #767D6C;
+  --chat-orange: #B8703E;
+  --chat-orange-pale: #EFDDC8;
+  --chat-gold: #A9892E;
+  --chat-gold-pale: #ECE2C2;
+  --chat-red: #9C5A3C;
+  --chat-red-pale: #EEDCD0;
+  --chat-green: #2C4A35;
+  --chat-green-light: #4B6E4F;
+  --chat-border: rgba(35, 41, 31, 0.10);
+  --chat-shadow: 0 4px 24px rgba(35, 41, 31, 0.06);
+  --chat-shadow-lg: 0 16px 48px rgba(35, 41, 31, 0.12);
+}
+
+/* Sidebar is a sibling of .chat-screen, not a descendant — CSS custom
+   properties only cascade down the DOM tree, so without repeating this
+   selector for .nav-rail.rail-on-chat here, the sidebar would silently
+   fall back to the root :root/[data-theme="dark"] blue palette in dark
+   mode while the chat area used this olive-green one, producing a
+   mismatched blue+green sidebar/chat split. */
+[data-theme="dark"] .chat-screen,
+[data-theme="dark"] .nav-rail.rail-on-chat {
+  --chat-bg: #14180F;
+  --chat-bg-deep: #0D100A;
+  --chat-surface: #1E241A;
+  --chat-text: #ECE8DC;
+  --chat-text-muted: #98A08C;
+  --chat-orange: #D49A6A;
+  --chat-orange-pale: rgba(212, 154, 106, 0.16);
+  --chat-gold: #D4B85E;
+  --chat-gold-pale: rgba(212, 184, 94, 0.14);
+  --chat-red: #C68468;
+  --chat-red-pale: rgba(198, 132, 104, 0.16);
+  --chat-green: #9FBF9A;
+  --chat-green-light: #7FA67E;
+  --chat-border: rgba(236, 232, 220, 0.08);
+  --chat-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+  --chat-shadow-lg: 0 16px 56px rgba(0, 0, 0, 0.55);
+}
+
+/* ── Reset ── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  transition: background var(--transition), color var(--transition);
+}
+
+/* ── Background gradient ── */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 50% at 20% -10%, rgba(37, 99, 235, 0.10) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 40% at 90% 110%, rgba(96, 165, 250, 0.08) 0%, transparent 55%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── Floating nav rail (replaces header) ── */
+.nav-rail {
+  position: fixed;
+  top: 18px;
+  left: 18px;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  transition: gap var(--transition);
+}
+
+.rail-btn {
+  height: 42px;
+  min-width: 42px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg-glass);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  color: var(--text);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0 12px;
+  box-shadow: var(--shadow-sm);
+  transition: background var(--transition), border-color var(--transition), transform 0.12s ease, box-shadow var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.rail-btn-label {
+  white-space: nowrap;
+}
+
+.rail-btn:hover {
+  border-color: var(--primary);
+  background: var(--primary-pale);
+  transform: translateX(2px);
+  box-shadow: var(--shadow-md);
+}
+
+.new-chat-btn,
+.home-back-btn {
+  display: none;
+  /* shown only inside chat screen, toggled via JS */
+}
+
+.sidebar-panel {
+  display: none;
+  /* shown only inside chat screen, toggled via JS (see rail-on-chat below) */
+}
+
+/* Sidebar tagline — only shown once the rail has become the full chat
+   sidebar (.rail-on-chat); the chat screen's own header already carries
+   the "Farmer AI" wordmark, so this is a short line of context instead
+   of a second logo. */
+.sidebar-tagline {
+  display: none;
+}
+
+.nav-rail.rail-on-chat .sidebar-tagline {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--chat-text-muted, var(--text-muted));
+  padding: 2px 4px 0;
+  flex-shrink: 0;
+}
+
+/* Bold theme for the rail once we're on the chat screen — becomes a true
+   full-height sidebar instead of a floating rail. Layout: tagline,
+   a divider, settings + home, a prominent New Chat button, then
+   History filling the remaining height. */
+.nav-rail.rail-on-chat {
+  top: 0;
+  left: 0;
+  height: 100dvh;
+  width: 276px;
+  min-width: 276px;
+  padding: 22px 18px 18px;
+  background: var(--chat-surface, var(--bg-glass));
+  border-right: 1.5px solid var(--chat-border, var(--border));
+  box-shadow: var(--chat-shadow, var(--shadow-sm));
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  align-items: stretch;
+  gap: 18px;
+}
+
+.nav-rail.rail-on-chat::after {
+  content: '';
+  display: block;
+  height: 1px;
+  margin: -5px 4px 0;
+  background: var(--chat-border, var(--border));
+  order: 1;
+}
+
+.nav-rail.rail-on-chat .nav-rail-top-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  order: 2;
+}
+
+.nav-rail.rail-on-chat .settings-wrap {
+  display: block;
+  margin-bottom: 0;
+  flex-shrink: 0;
+}
+
+.nav-rail.rail-on-chat .rail-btn {
+  border-color: var(--chat-border, var(--border));
+  background: transparent;
+  color: var(--chat-text, var(--text));
+  box-shadow: none;
+}
+
+.nav-rail.rail-on-chat .rail-btn:hover {
+  border-color: var(--chat-green-light, var(--primary));
+  background: var(--chat-gold-pale, var(--primary-pale));
+  color: var(--chat-green, var(--primary));
+}
+
+.nav-rail.rail-on-chat .settings-btn.active {
+  border-color: var(--chat-green-light, var(--primary));
+  background: var(--chat-gold-pale, var(--primary-pale));
+  color: var(--chat-green, var(--primary));
+}
+
+/* Home fills the rest of the top row beside Settings, instead of being
+   sized to just its own label. */
+.nav-rail.rail-on-chat .home-back-btn {
+  display: flex;
+  flex: 1;
+  width: auto;
+  height: 42px;
+  flex-direction: row;
+  justify-content: center;
+  gap: 7px;
+  padding: 0 14px;
+  font-size: 0.82rem;
+}
+
+.nav-rail.rail-on-chat .sidebar-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  flex: 1;
+  min-height: 0;
+  order: 3;
+}
+
+/* New Chat reads as the primary action in the sidebar — solid accent
+   fill with a soft inner highlight, rather than an outlined button
+   like the rest of the rail. */
+.nav-rail.rail-on-chat .sidebar-panel .new-chat-btn {
+  display: flex;
+  width: 100%;
+  height: 48px;
+  flex-direction: row;
+  justify-content: center;
+  gap: 9px;
+  padding: 0 14px;
+  font-size: 0.89rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  flex-shrink: 0;
+  background: linear-gradient(155deg, var(--chat-green-light), var(--chat-green) 65%);
+  border-color: transparent;
+  color: var(--chat-bg);
+  box-shadow: 0 6px 16px -4px rgba(0, 0, 0, 0.28);
+}
+
+.nav-rail.rail-on-chat .sidebar-panel .new-chat-btn:hover {
+  filter: brightness(1.08);
+  color: var(--chat-bg);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px -4px rgba(0, 0, 0, 0.32);
+}
+
+/* ── Diagnose Disease flash card ──
+   Styled to match the warm "Gujarat crop palette" used everywhere else
+   in the chat sidebar (chat-gold/chat-green earthy tones, chat-surface
+   card backgrounds) instead of the previous generic bright-green panel,
+   which read as a disconnected, off-the-shelf widget against the rest
+   of the cream-toned theme. */
+.diagnose-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex-shrink: 0;
+  padding: 16px 16px 18px;
+  border-radius: var(--radius-md, 16px);
+  background: linear-gradient(160deg, var(--chat-gold-pale, rgba(169, 137, 46, 0.14)), var(--chat-surface) 75%);
+  border: 1px solid var(--chat-border, rgba(46, 125, 79, 0.2));
+  box-shadow: var(--chat-shadow, none);
+  margin-bottom: 6px;
+}
+
+.diagnose-card-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.diagnose-card-icon {
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  line-height: 1;
+  border-radius: 50%;
+  background: linear-gradient(150deg, var(--chat-green-light, #4b6e4f), var(--chat-green, #2c4a35) 70%);
+  box-shadow: 0 3px 10px -2px rgba(0, 0, 0, 0.3);
+}
+
+.diagnose-card-title {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--chat-text, #23291f);
+  letter-spacing: 0.01em;
+}
+
+.diagnose-card-desc {
+  font-size: 0.74rem;
+  line-height: 1.45;
+  color: var(--chat-text-muted, var(--text-muted));
+  margin: 0;
+}
+
+/* ── Leaf scanning animation ── */
+.diagnose-scan-stage {
+  position: relative;
+  height: 138px;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(155deg, var(--chat-bg-deep, #ece3d1), var(--chat-surface, #fffefb) 80%);
+  border: 1px solid var(--chat-border, rgba(46, 125, 79, 0.18));
+}
+
+.diagnose-scan-preview {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+.diagnose-scan-stage.has-image .diagnose-scan-preview {
+  opacity: 1;
+}
+
+.diagnose-scan-stage.has-image .diagnose-scan-grid {
+  opacity: 0;
+}
+
+.diagnose-scan-stage.has-image .diagnose-scan-leaf {
+  opacity: 0;
+}
+
+/* No grid overlay or sweeping beam — a static leaf with a faint, slow
+   breathing fade reads as calm/idle rather than an attention-grabbing
+   "scanning" effect. */
+.diagnose-scan-grid {
+  display: none;
+}
+
+.diagnose-scan-leaf {
+  position: relative;
+  z-index: 1;
+  color: var(--chat-green, #2c4a35);
+  opacity: 0.55;
+  animation: diagnose-leaf-breathe 4.5s ease-in-out infinite;
+  transition: opacity var(--transition);
+}
+
+@keyframes diagnose-leaf-breathe {
+
+  0%,
+  100% {
+    opacity: 0.4;
+  }
+
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.diagnose-scan-line {
+  display: none;
+}
+
+@keyframes diagnose-scan-sweep {
+
+  0% {
+    top: 10%;
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    top: 88%;
+    opacity: 0;
+  }
+}
+
+.diagnose-card-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.diagnose-card-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  height: 38px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  background: rgba(44, 74, 53, 0.07);
+  color: var(--chat-green, #2c4a35);
+  font-size: 0.76rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background var(--transition), border-color var(--transition), color var(--transition), transform 0.12s ease, box-shadow var(--transition);
+}
+
+.diagnose-card-btn#diagnoseUploadBtn {
+  background: linear-gradient(155deg, var(--chat-green-light, #4b6e4f), var(--chat-green, #2c4a35) 65%);
+  color: var(--chat-bg, #fff);
+  box-shadow: 0 4px 12px -3px rgba(0, 0, 0, 0.28);
+}
+
+.diagnose-card-btn:hover {
+  border-color: var(--chat-green-light, #4b6e4f);
+  background: var(--chat-gold-pale, rgba(169, 137, 46, 0.16));
+  transform: translateY(-1px);
+}
+
+.diagnose-card-btn#diagnoseUploadBtn:hover {
+  filter: brightness(1.08);
+  border-color: transparent;
+  background: linear-gradient(155deg, var(--chat-green-light, #4b6e4f), var(--chat-green, #2c4a35) 65%);
+  color: var(--chat-bg, #fff);
+}
+
+.sidebar-history-header {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--chat-text-muted, var(--text-muted));
+  padding: 0 6px;
+  flex-shrink: 0;
+}
+
+.sidebar-history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  overflow-y: auto;
+  flex: 1;
+  min-height: 0;
+  margin: 0 -6px;
+  padding: 0 6px;
+}
+
+.sidebar-history-list::-webkit-scrollbar {
+  width: 4px;
+}
+
+.sidebar-history-list::-webkit-scrollbar-thumb {
+  background: var(--chat-border, var(--border));
+  border-radius: 4px;
+}
+
+.sidebar-history-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 10px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: background var(--transition), border-color var(--transition);
+}
+
+.sidebar-history-item:hover {
+  background: var(--chat-gold-pale, var(--primary-pale));
+}
+
+.sidebar-history-item.active-session {
+  background: var(--chat-gold-pale, var(--primary-pale));
+  border-color: var(--chat-green-light, var(--primary));
+}
+
+.sidebar-history-item-text {
+  flex: 1;
+  min-width: 0;
+  font-size: 0.82rem;
+  color: var(--chat-text, var(--text));
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sidebar-history-item-delete {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  border: none;
+  background: transparent;
+  color: var(--chat-text-muted, var(--text-muted));
+  cursor: pointer;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: background var(--transition), color var(--transition), opacity var(--transition);
+}
+
+.sidebar-history-item:hover .sidebar-history-item-delete {
+  opacity: 1;
+}
+
+.sidebar-history-item-delete:hover {
+  background: var(--chat-red-pale, var(--primary-pale));
+  color: var(--chat-red, var(--primary));
+}
+
+.sidebar-history-empty {
+  font-size: 0.82rem;
+  color: var(--chat-text-muted, var(--text-muted));
+  padding: 10px 6px;
+  line-height: 1.5;
+}
+
+/* ── Settings dropdown ── */
+.settings-wrap {
+  position: relative;
+}
+
+.settings-btn.active {
+  border-color: var(--primary);
+  background: var(--primary-pale);
+  color: var(--primary);
+}
+
+.settings-panel {
+  position: absolute;
+  top: 0;
+  left: calc(100% + 10px);
+  width: 230px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-6px) scale(0.97);
+  transform-origin: top left;
+  transition: opacity 0.16s ease, transform 0.16s ease, visibility 0.16s;
+  z-index: 120;
+}
+
+.settings-panel.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0) scale(1);
+}
+
+.settings-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 10px;
+  border-radius: var(--radius-sm);
+}
+
+.settings-row-label {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Toggle switch */
+.switch {
+  width: 42px;
+  height: 24px;
+  border-radius: 999px;
+  background: var(--border);
+  border: none;
+  cursor: pointer;
+  position: relative;
+  padding: 0;
+  flex-shrink: 0;
+  transition: background var(--transition);
+}
+
+.switch[aria-checked="true"] {
+  background: var(--primary);
+}
+
+.switch-knob {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease;
+}
+
+.switch[aria-checked="true"] .switch-knob {
+  transform: translateX(18px);
+}
+
+/* Segmented language control */
+.segmented {
+  display: flex;
+  border: 1.5px solid var(--border);
+  border-radius: 999px;
+  padding: 2px;
+  gap: 2px;
+  flex-shrink: 0;
+}
+
+.segmented-option {
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 0.74rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.segmented-option.active {
+  background: var(--primary);
+  color: var(--text-inverse);
+}
+
+/* ── Home screen ── */
+.home-screen {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  min-height: 100dvh;
+  padding: calc(var(--header-h) - 12px) 20px 24px;
+  position: relative;
+  z-index: 1;
+}
+
+.home-screen.hidden {
+  display: none;
+}
+
+.home-inner {
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.home-wordmark {
+  font-size: clamp(1.9rem, 5vw, 2.8rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 6px;
+  line-height: 1.1;
+}
+
+.home-wordmark-text {
+  background: linear-gradient(90deg, var(--primary), var(--leaf), var(--wheat), var(--primary));
+  background-size: 300% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: homeWordmarkSweep 7s linear infinite;
+}
+
+.home-wordmark-wheat {
+  display: inline-block;
+  padding: 0 0.08em;
+}
+
+@keyframes homeWordmarkSweep {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 300% 50%;
+  }
+}
+
+.home-title {
+  font-size: clamp(1.35rem, 3.2vw, 1.9rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  margin-bottom: 22px;
+}
+
+.home-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "weather market"
+    "chat    chat";
+  gap: 20px;
+  align-items: start;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.home-card-weather,
+.home-card-market {
+  padding: 24px 26px;
+  gap: 6px;
+}
+
+.home-card-weather .home-card-icon,
+.home-card-market .home-card-icon {
+  font-size: 2.1rem;
+}
+
+.home-card-weather .home-card-top,
+.home-card-market .home-card-top {
+  margin-bottom: 6px;
+}
+
+.home-card-weather .home-card-title,
+.home-card-market .home-card-title {
+  font-size: 1.2rem;
+}
+
+.home-card-weather .home-card-desc,
+.home-card-market .home-card-desc {
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.home-card-weather .home-card-cta,
+.home-card-market .home-card-cta {
+  font-size: 0.86rem;
+  margin-top: 8px;
+}
+
+.home-card-weather {
+  grid-area: weather;
+}
+
+.home-card-market {
+  grid-area: market;
+}
+
+.home-card-chat {
+  grid-area: chat;
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 36px 40px;
+  background: linear-gradient(120deg, var(--wheat-pale), var(--bg-card) 35%, var(--bg-card) 65%, var(--wheat-pale));
+  background-size: 250% 250%;
+  animation: chatCardGradient 9s ease infinite;
+  border: 1.5px solid transparent;
+  background-clip: padding-box;
+  position: relative;
+}
+
+.home-card-chat::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-lg);
+  padding: 1.5px;
+  background: linear-gradient(120deg, var(--wheat), var(--leaf), var(--primary), var(--wheat));
+  background-size: 300% 300%;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: chatCardBorderSweep 6s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes chatCardGradient {
+
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes chatCardBorderSweep {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 300% 50%;
+  }
+}
+
+.home-card-chat .home-card-icon {
+  font-size: 2.8rem;
+}
+
+.home-card-chat .home-card-top {
+  margin-bottom: 10px;
+}
+
+.home-card-chat .home-card-title {
+  font-size: 1.5rem;
+}
+
+.home-card-chat .home-card-desc {
+  font-size: 1rem;
+}
+
+.home-card-chat {
+  cursor: default;
+}
+
+.home-ask-row {
+  display: flex;
+  gap: 12px;
+  margin-top: 22px;
+  position: relative;
+  z-index: 1;
+}
+
+.home-ask-input {
+  flex: 1;
+  height: 56px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--bg-card);
+  color: var(--text);
+  font-size: 1rem;
+  padding: 0 20px;
+  outline: none;
+  font-family: inherit;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.home-ask-input::placeholder {
+  color: var(--text-muted);
+}
+
+.home-ask-input:focus {
+  border-color: var(--wheat);
+  box-shadow: 0 0 0 3px var(--wheat-pale);
+}
+
+.home-ask-send {
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
+  border-radius: var(--radius-md);
+  border: none;
+  background: linear-gradient(135deg, var(--wheat), var(--leaf));
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.12s ease, box-shadow var(--transition), opacity var(--transition);
+  box-shadow: 0 4px 16px rgba(200, 147, 42, 0.3);
+}
+
+.home-ask-send:hover {
+  transform: translateY(-1px) scale(1.03);
+}
+
+.home-ask-send:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.home-card {
+  position: relative;
+  background: var(--bg-card);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 28px 24px;
+  text-align: left;
+  cursor: pointer;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: transform 0.2s ease, box-shadow var(--transition), border-color var(--transition);
+  box-shadow: var(--shadow-sm);
+  font-family: inherit;
+}
+
+.home-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary);
+}
+
+.home-card-glow {
+  position: absolute;
+  top: -40%;
+  right: -30%;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  filter: blur(10px);
+  opacity: 0.5;
+  pointer-events: none;
+  transition: opacity var(--transition);
+}
+
+.home-card-chat .home-card-glow {
+  background: radial-gradient(circle, var(--wheat-light), transparent 70%);
+}
+
+.home-card-weather .home-card-glow {
+  background: radial-gradient(circle, var(--primary-light), transparent 70%);
+}
+
+.home-card-market .home-card-glow {
+  background: radial-gradient(circle, var(--leaf-light), transparent 70%);
+}
+
+.home-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.home-card-icon {
+  font-size: 2.4rem;
+  line-height: 1;
+}
+
+.home-card-live-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.74rem;
+  font-weight: 700;
+  padding: 5px 10px 5px 8px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.home-card-chat .home-card-live-badge {
+  background: var(--wheat-pale);
+  color: var(--wheat-dark);
+}
+
+.home-card-weather .home-card-live-badge {
+  background: var(--primary-pale);
+  color: var(--primary);
+}
+
+.home-card-market .home-card-live-badge {
+  background: var(--leaf-pale);
+  color: var(--leaf-dark);
+}
+
+.home-card-live-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  flex-shrink: 0;
+  animation: pulseDot 1.4s ease-in-out infinite;
+}
+
+@keyframes pulseDot {
+
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: scale(0.85);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+.home-card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text);
+  position: relative;
+  z-index: 1;
+}
+
+.home-card-desc {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  flex: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.home-card-cta {
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-top: 8px;
+  position: relative;
+  z-index: 1;
+}
+
+.home-card-chat .home-card-cta {
+  color: var(--wheat-dark);
+}
+
+.home-card-weather .home-card-cta {
+  color: var(--primary);
+}
+
+.home-card-market .home-card-cta {
+  color: var(--leaf-dark);
+}
+
+@media (max-width: 560px) {
+  .home-cards {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "weather"
+      "market"
+      "chat";
+  }
+
+  .home-card-chat {
+    max-width: 100%;
+  }
+
+  .home-screen {
+    padding: calc(var(--header-h) + 16px) 16px 32px;
+  }
+
+  .nav-rail {
+    top: 12px;
+    left: 12px;
+  }
+
+  .rail-btn {
+    height: 38px;
+    min-width: 38px;
+    padding: 0 10px;
+    font-size: 0.78rem;
+  }
+
+  .rail-btn-label {
+    display: none;
+  }
+
+  .settings-panel {
+    left: calc(100% + 8px);
+    width: 200px;
+  }
+
+  .nav-rail.rail-on-chat {
+    width: 220px;
+    min-width: 220px;
+    padding: 16px 12px;
+  }
+
+  .nav-rail.rail-on-chat .home-back-btn {
+    padding: 0 10px;
+    height: 38px;
+  }
+
+  .chat-screen.visible {
+    margin-left: 220px;
+    width: calc(100% - 220px);
+  }
+
+  .chat-screen.visible .input-area {
+    left: 220px;
+  }
+}
+
+/* ── Chat screen (bold Gujarat-crop theme) ──
+   .chat-screen itself spans the full remaining width next to the
+   sidebar (not the whole viewport) and centers its content *within
+   that remaining space* — align-items:center on the column plus a
+   max-width on each direct child, rather than centering the whole
+   screen (which would skew everything toward the sidebar). */
+.chat-screen {
+  flex: 1;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: calc(var(--header-h) + 20px) 28px 0;
+  position: relative;
+  z-index: 1;
+  background: var(--chat-bg);
+  min-height: 100dvh;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.chat-screen>.chat-wordmark,
+.chat-screen>.chat-window,
+.chat-screen>.typing-indicator {
+  width: 100%;
+  max-width: 900px;
+}
+
+.chat-screen.visible {
+  display: flex;
+  margin-left: 276px;
+  width: calc(100% - 276px);
+}
+
+/* Subtle two-tone field gradient behind the whole chat screen */
+.chat-screen::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(circle at 8% 0%, var(--chat-gold-pale) 0%, transparent 45%),
+    radial-gradient(circle at 100% 100%, var(--chat-orange-pale) 0%, transparent 50%),
+    var(--chat-bg);
+  pointer-events: none;
+}
+
+/* Header bar at the top of the thread — left-aligned brand + a live
+   status badge, with a hairline border to read as a real header rather
+   than a floating centered logo. */
+.chat-wordmark {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 4px 2px 20px;
+  margin-bottom: 8px;
+  border-bottom: 1.5px solid var(--chat-border);
+  flex-shrink: 0;
+}
+
+.chat-wordmark-left {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.chat-wordmark-icon {
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.chat-wordmark-text {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 1.3rem;
+  letter-spacing: -0.01em;
+  color: var(--chat-green);
+}
+
+.chat-wordmark-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--chat-green);
+  background: var(--chat-gold-pale);
+  padding: 5px 12px 5px 9px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.chat-wordmark-badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--chat-green-light);
+  flex-shrink: 0;
+  animation: pulseDot 1.4s ease-in-out infinite;
+}
+
+/* ── Chat Window ── */
+.chat-window {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px 0 132px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  scroll-behavior: smooth;
+}
+
+.chat-window::-webkit-scrollbar {
+  width: 4px;
+}
+
+.chat-window::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.chat-window::-webkit-scrollbar-thumb {
+  background: var(--chat-border);
+  border-radius: 4px;
+}
+
+/* ── Messages ── */
+.message {
+  display: flex;
+  gap: 11px;
+  align-items: flex-end;
+  animation: msgIn 0.34s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes msgIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.user-message {
+  flex-direction: row-reverse;
+}
+
+.avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--chat-surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+  border: 1.5px solid var(--chat-border);
+  box-shadow: var(--chat-shadow);
+}
+
+.ai-message .avatar {
+  background: var(--chat-gold-pale);
+  border-color: var(--chat-gold);
+}
+
+.user-message .avatar {
+  background: var(--chat-green);
+  border-color: var(--chat-green);
+  font-size: 0.78rem;
+  color: var(--chat-bg);
+  font-weight: 700;
+}
+
+.bubble {
+  max-width: min(75%, 660px);
+  padding: 14px 18px;
+  border-radius: 16px;
+  background: var(--chat-surface);
+  border: 1.5px solid var(--chat-border);
+  box-shadow: var(--chat-shadow);
+  font-size: 0.95rem;
+  line-height: 1.62;
+  color: var(--chat-text);
+  transition: background var(--transition);
+}
+
+.user-message .bubble {
+  background: var(--chat-green);
+  color: var(--chat-bg);
+  border-color: var(--chat-green);
+  border-radius: 16px 16px 4px 16px;
+}
+
+.ai-message .bubble {
+  border-radius: 16px 16px 16px 4px;
+  border-left: 3px solid var(--chat-gold);
+  padding-left: 16px;
+}
+
+.timestamp {
+  display: block;
+  font-size: 0.7rem;
+  color: var(--chat-text-muted);
+  margin-top: 6px;
+  letter-spacing: 0.01em;
+}
+
+.user-message .timestamp {
+  color: rgba(246, 241, 231, 0.7);
+}
+
+/* Source badge */
+.source-badge {
+  display: inline-block;
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 3px 9px;
+  border-radius: 20px;
+  margin-bottom: 8px;
+  background: var(--chat-gold-pale);
+  color: var(--chat-gold);
+}
+
+/* AI response text — formatted by formatAiText() in app.js. Each "span"
+   it produces becomes its own block-level line here, so numbered points
+   and bold labels from Groq render as a readable list instead of one
+   run-on paragraph with literal ** characters. */
+.ai-text {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ai-text span {
+  display: block;
+}
+
+.ai-text .ai-point {
+  padding-left: 2px;
+}
+
+.ai-text .ai-heading {
+  margin-top: 4px;
+  color: var(--chat-green);
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: 0.96rem;
+}
+
+.ai-text .ai-heading:first-child {
+  margin-top: 0;
+}
+
+.ai-text strong {
+  color: var(--chat-text);
+  font-weight: 700;
+}
+
+/* ── Feedback buttons ── */
+.feedback-row {
+  display: flex;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.feedback-btn {
+  border: 1.5px solid var(--chat-border);
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--chat-text-muted);
+  font-size: 0.78rem;
+  padding: 4px 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: all var(--transition);
+}
+
+.feedback-btn:hover {
+  border-color: var(--chat-green-light);
+  color: var(--chat-green);
+  background: var(--chat-gold-pale);
+}
+
+.feedback-btn.active-like {
+  background: var(--chat-gold-pale);
+  border-color: var(--chat-green-light);
+  color: var(--chat-green);
+}
+
+.feedback-btn.active-dislike {
+  background: var(--chat-red-pale);
+  border-color: var(--chat-red);
+  color: var(--chat-red);
+}
+
+.feedback-btn:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+/* ── Typing indicator ── */
+.typing-indicator {
+  display: none;
+  align-items: flex-end;
+  gap: 10px;
+  padding: 0 0 12px;
+  animation: msgIn 0.2s ease both;
+}
+
+.typing-indicator.visible {
+  display: flex;
+}
+
+.typing-bubble {
+  background: var(--chat-surface);
+  border: 1.5px solid var(--chat-border);
+  border-radius: 16px 16px 16px 4px;
+  padding: 14px 18px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  box-shadow: var(--chat-shadow);
+}
+
+.typing-bubble span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--chat-green-light);
+  animation: bounce 1.2s infinite ease-in-out;
+}
+
+.typing-bubble span:nth-child(2) {
+  animation-delay: 0.18s;
+  background: var(--chat-gold);
+}
+
+.typing-bubble span:nth-child(3) {
+  animation-delay: 0.36s;
+  background: var(--chat-green);
+}
+
+@keyframes bounce {
+
+  0%,
+  60%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.5;
+  }
+
+  30% {
+    transform: translateY(-6px);
+    opacity: 1;
+  }
+}
+
+/* ── Input area ──
+   Fixed positioning escapes .chat-screen's box, so on the chat screen
+   we explicitly offset its left edge past the sidebar — otherwise its
+   centered inner content would center against the full viewport width
+   instead of the space actually visible next to the sidebar. */
+.input-area {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 14px 16px 22px;
+  background: linear-gradient(to top, var(--chat-bg) 60%, transparent);
+  z-index: 100;
+  transition: background var(--transition), left var(--transition);
+}
+
+.chat-screen.visible .input-area {
+  left: 276px;
+}
+
+.input-area>* {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.input-wrapper {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  background: var(--chat-surface);
+  border: 1.5px solid var(--chat-border);
+  border-radius: 20px;
+  padding: 6px 6px 6px 8px;
+  box-shadow: var(--chat-shadow-lg);
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.input-wrapper:has(.chat-input:focus) {
+  border-color: var(--chat-green-light);
+}
+
+.chat-input {
+  flex: 1;
+  height: 44px;
+  border: none;
+  border-radius: 14px;
+  background: transparent;
+  color: var(--chat-text);
+  font-size: 0.95rem;
+  padding: 0 10px;
+  outline: none;
+  transition: background var(--transition);
+  font-family: inherit;
+}
+
+.chat-input::placeholder {
+  color: var(--chat-text-muted);
+}
+
+.chat-input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.send-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  background: var(--chat-green);
+  border: none;
+  color: var(--chat-bg);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.12s ease, opacity var(--transition), box-shadow var(--transition), background var(--transition);
+}
+
+.send-btn:hover:not(:disabled) {
+  transform: translateY(-1px) scale(1.03);
+  background: var(--chat-green-light);
+}
+
+.send-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.input-hint {
+  font-size: 0.7rem;
+  color: var(--chat-text-muted);
+  text-align: center;
+  margin-top: 10px;
+  letter-spacing: 0.02em;
+}
+
+.chat-image {
+  max-width: 260px;
+  max-height: 260px;
+  border-radius: 12px;
+  display: block;
+  object-fit: cover;
+}
+
+/* ── Input icon buttons (file / camera) ── */
+.input-icon-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 11px;
+  background: transparent;
+  border: none;
+  color: var(--chat-text-muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background var(--transition), color var(--transition), transform 0.12s ease;
+}
+
+.input-icon-btn:hover {
+  color: var(--chat-green);
+  background: var(--chat-gold-pale);
+  transform: translateY(-1px);
+}
+
+/* ── Modal ── */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(4px);
+  z-index: 200;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: fadeIn 0.18s ease both;
+}
+
+.modal-overlay.open {
+  display: flex;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.modal {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 28px 24px 24px;
+  width: 100%;
+  max-width: 360px;
+  box-shadow: var(--shadow-lg);
+  animation: slideUp 0.22s ease both;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.modal-options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.modal-option {
+  padding: 11px 16px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--text);
+  font-size: 0.9rem;
+  text-align: left;
+  cursor: pointer;
+  transition: all var(--transition);
+  font-family: inherit;
+}
+
+.modal-option:hover {
+  border-color: var(--primary);
+  background: var(--primary-pale);
+  color: var(--primary);
+}
+
+.modal-cancel {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  cursor: pointer;
+  transition: color var(--transition);
+  font-family: inherit;
+}
+
+.modal-cancel:hover {
+  color: var(--text);
+}
+
+/* ── Responsive ── */
+@media (max-width: 480px) {
+  .logo-text {
+    font-size: 1rem;
+  }
+
+  .bubble {
+    max-width: 82%;
+    font-size: 0.9rem;
+  }
+
+  .chat-input {
+    font-size: 0.9rem;
+  }
+}
+
+/* ── Weather Dashboard ── */
+.weather-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  z-index: 250;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: fadeIn 0.18s ease both;
+}
+
+.weather-overlay.open {
+  display: flex;
+}
+
+.weather-modal {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  width: 100%;
+  max-width: 1100px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-lg);
+  animation: slideUp 0.22s ease both;
+  overflow: hidden;
+}
+
+.weather-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 18px 24px;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-card);
+  flex-shrink: 0;
+}
+
+.weather-modal-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.weather-modal-header-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.weather-refresh-note {
+  font-size: 0.74rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.weather-close-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1.5px solid var(--border);
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition);
+  flex-shrink: 0;
+}
+
+.weather-close-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  background: var(--primary-pale);
+}
+
+/* Search + stats bar */
+.weather-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 24px;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-card);
+  flex-shrink: 0;
+}
+
+.weather-search {
+  flex: 1;
+  height: 38px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg);
+  color: var(--text);
+  font-size: 0.88rem;
+  padding: 0 14px 0 36px;
+  outline: none;
+  font-family: inherit;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.weather-search:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.10);
+}
+
+.weather-search::placeholder {
+  color: var(--text-muted);
+}
+
+.weather-search-wrap {
+  position: relative;
+  flex: 1;
+  max-width: 320px;
+}
+
+.weather-search-icon {
+  position: absolute;
+  left: 11px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  pointer-events: none;
+}
+
+.weather-district-count {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+.weather-grid {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px 24px 28px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 14px;
+  align-content: start;
+}
+
+.weather-grid::-webkit-scrollbar {
+  width: 4px;
+}
+
+.weather-grid::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.weather-grid::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+
+.weather-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.16s ease, box-shadow var(--transition);
+  animation: msgIn 0.24s ease both;
+}
+
+.weather-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.weather-card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.weather-card-district {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text);
+  text-transform: capitalize;
+  line-height: 1.3;
+}
+
+.weather-card-icon {
+  font-size: 1.8rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.weather-card-temp {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.weather-card-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.weather-stat-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.weather-stat-row span:last-child {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.weather-card.weather-card-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 150px;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  grid-column: 1 / -1;
+}
+
+.weather-card.weather-card-error {
+  color: var(--text-muted);
+  font-size: 0.84rem;
+  text-align: center;
+  padding: 28px 12px;
+  grid-column: 1 / -1;
+}
+
+.weather-no-results {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  padding: 40px 0;
+}
+
+/* Loading skeleton shimmer */
+.weather-card-skeleton {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  overflow: hidden;
+}
+
+.skeleton-line {
+  background: linear-gradient(90deg, var(--border) 25%, rgba(255, 255, 255, 0.1) 50%, var(--border) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s infinite;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .weather-modal {
+    max-height: 92vh;
+    border-radius: var(--radius-md);
+  }
+
+  .weather-modal-header {
+    padding: 14px 16px;
+  }
+
+  .weather-modal-title {
+    font-size: 1rem;
+  }
+
+  .weather-toolbar {
+    padding: 10px 16px;
+  }
+
+  .weather-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    padding: 14px 16px 20px;
+    gap: 10px;
+  }
+
+  .weather-refresh-note {
+    display: none;
+  }
+
+  .weather-search-wrap {
+    max-width: 100%;
+  }
+}
+
+/* ── Market Prices Modal ── */
+.market-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  z-index: 250;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: fadeIn 0.18s ease both;
+}
+
+.market-overlay.open {
+  display: flex;
+}
+
+.market-modal {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  width: 100%;
+  max-width: 1100px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-lg);
+  animation: slideUp 0.22s ease both;
+  overflow: hidden;
+}
+
+.market-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 18px 24px;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-card);
+  flex-shrink: 0;
+  flex-wrap: wrap;
+}
+
+.market-modal-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text);
+  flex-shrink: 0;
+}
+
+.market-modal-header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-left: auto;
+}
+
+.market-refresh-note {
+  font-size: 0.74rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.market-close-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1.5px solid var(--border);
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition);
+  flex-shrink: 0;
+}
+
+.market-close-btn:hover {
+  border-color: var(--leaf);
+  color: var(--leaf-dark);
+  background: var(--leaf-pale);
+}
+
+/* Category pills */
+.market-category-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-card);
+  flex-shrink: 0;
+}
+
+.market-category-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1.5px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  font-size: 0.86rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition);
+  font-family: inherit;
+  white-space: nowrap;
+}
+
+.market-category-pill:hover {
+  border-color: var(--leaf);
+  color: var(--leaf-dark);
+}
+
+.market-category-pill.active {
+  background: var(--leaf);
+  border-color: var(--leaf);
+  color: var(--text-inverse);
+}
+
+.market-category-pill-icon {
+  font-size: 0.95rem;
+  line-height: 1;
+}
+
+/* Search box + record count row, directly below the category pills */
+.market-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 24px;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-card);
+  flex-shrink: 0;
+}
+
+.market-search {
+  height: 36px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg);
+  color: var(--text);
+  font-size: 0.86rem;
+  padding: 0 12px 0 34px;
+  outline: none;
+  font-family: inherit;
+  transition: border-color var(--transition), box-shadow var(--transition), width var(--transition);
+  width: 190px;
+}
+
+.market-search:focus {
+  border-color: var(--leaf);
+  box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.10);
+  width: 230px;
+}
+
+.market-search::placeholder {
+  color: var(--text-muted);
+}
+
+.market-search-wrap {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.market-search-icon {
+  position: absolute;
+  left: 11px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  pointer-events: none;
+}
+
+.market-record-count {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+/* Table */
+.market-table-wrap {
+  flex: 1;
+  overflow: auto;
+  padding: 0 24px 28px;
+}
+
+.market-table-wrap::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+.market-table-wrap::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.market-table-wrap::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+
+.market-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.84rem;
+  table-layout: fixed;
+}
+
+.market-table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: var(--bg-card);
+  text-align: left;
+  font-weight: 700;
+  color: var(--text-muted);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  padding: 14px 12px 10px;
+  border-bottom: 1.5px solid var(--border);
+  box-shadow: 0 1px 0 var(--border);
+  white-space: nowrap;
+}
+
+.market-table tbody td {
+  padding: 12px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+  white-space: normal;
+  overflow-wrap: break-word;
+  vertical-align: top;
+}
+
+/* Commodity/variety names can run long (e.g. "Sesamum(Sesame,Gingelly,Til)")
+   — give them a bit more room to wrap instead of squeezing every column
+   to the same width and forcing horizontal scroll. */
+.market-table th:nth-child(1),
+.market-table td:nth-child(1) {
+  width: 17%;
+}
+
+.market-table th:nth-child(2),
+.market-table td:nth-child(2) {
+  width: 12%;
+}
+
+.market-table th:nth-child(3),
+.market-table td:nth-child(3) {
+  width: 14%;
+}
+
+.market-table th:nth-child(4),
+.market-table td:nth-child(4) {
+  width: 12%;
+}
+
+.market-table th:nth-child(5),
+.market-table td:nth-child(5) {
+  width: 9%;
+}
+
+.market-table th:nth-child(6),
+.market-table td:nth-child(6) {
+  width: 10%;
+  white-space: nowrap;
+}
+
+.market-table th:nth-child(7),
+.market-table th:nth-child(8),
+.market-table th:nth-child(9),
+.market-table td:nth-child(7),
+.market-table td:nth-child(8),
+.market-table td:nth-child(9) {
+  width: 8.67%;
+  white-space: nowrap;
+}
+
+.market-table tbody tr {
+  animation: msgIn 0.2s ease both;
+  transition: background var(--transition);
+}
+
+.market-table tbody tr:hover {
+  background: var(--leaf-pale);
+}
+
+.market-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.market-commodity-cell {
+  font-weight: 700;
+  color: var(--text);
+}
+
+.market-price-cell {
+  font-weight: 700;
+  color: var(--leaf-dark);
+  font-variant-numeric: tabular-nums;
+}
+
+.market-modal-price-cell {
+  font-weight: 800;
+  color: var(--leaf);
+  font-variant-numeric: tabular-nums;
+}
+
+
+.market-table-empty,
+.market-table-error,
+.market-table-loading {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  padding: 48px 12px;
+}
+
+.market-table-empty {
+  max-width: 420px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+.market-no-results {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  padding: 40px 0;
+}
+
+/* Loading skeleton rows */
+.market-skeleton-row td {
+  padding: 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+@media (max-width: 640px) {
+  .market-modal {
+    max-height: 92vh;
+    border-radius: var(--radius-md);
+  }
+
+  .market-modal-header {
+    padding: 14px 16px;
+  }
+
+  .market-modal-title {
+    font-size: 1rem;
+  }
+
+  .market-modal-header-right {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .market-category-row {
+    padding: 12px 16px;
+    gap: 8px;
+  }
+
+  .market-category-pill {
+    padding: 7px 13px;
+    font-size: 0.8rem;
+  }
+
+  .market-table-wrap {
+    padding: 0 16px 20px;
+  }
+
+  .market-refresh-note {
+    display: none;
+  }
+
+  .market-search-wrap {
+    max-width: 100%;
+    flex: 1;
+  }
+
+  .market-search {
+    width: 100%;
+  }
+
+  .market-search:focus {
+    width: 100%;
+  }
+
+  .market-table {
+    font-size: 0.78rem;
+    table-layout: auto;
+    min-width: 640px;
+  }
+
+  .market-table th:nth-child(1),
+  .market-table td:nth-child(1),
+  .market-table th:nth-child(2),
+  .market-table td:nth-child(2),
+  .market-table th:nth-child(3),
+  .market-table td:nth-child(3),
+  .market-table th:nth-child(4),
+  .market-table td:nth-child(4),
+  .market-table th:nth-child(5),
+  .market-table td:nth-child(5) {
+    width: auto;
+    white-space: nowrap;
+  }
+
+  .market-table thead th,
+  .market-table tbody td {
+    padding: 10px 8px;
+  }
+}

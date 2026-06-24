@@ -1,0 +1,193 @@
+================================================================================
+           GUJARAT FARMER KNOWLEDGE BASE
+           Agricultural Guide - File 276/407
+================================================================================
+
+TOPIC: Freshwater Fish Farming
+GUJARATI NAME: Taji Pani Machhli Palan
+CATEGORY: Fisheries
+GUIDE TYPE: Comprehensive Technical Manual
+REGION: Gujarat State - All Agro-Climatic Zones
+DOCUMENT DATE: June 23, 2026
+================================================================================
+
+1. INTRODUCTION
+Fish farming (aquaculture) is a growing sector in Gujarat. With 160 km coastline and numerous inland water bodies, Gujarat has significant potential for fish production.
+
+2. FISH SPECIES FOR GUJARAT
+Indian Major Carps (IMC):
+- Catla (Catla catla): Surface feeder, fast growth
+- Rohu (Labeo rohita): Column feeder, popular
+- Mrigal (Cirrhinus mrigala): Bottom feeder
+
+Exotic Carps:
+- Silver carp: Phytoplankton feeder
+- Grass carp: Vegetation feeder
+- Common carp: Omnivorous, hardy
+
+Other Species:
+- Tilapia (Oreochromis niloticus): Hardy, fast breeding
+- Pangasius (Pangasianodon hypophthalmus): Air-breathing
+- Singh/Magur (Clarias batrachus): Air-breathing, high value
+
+3. POND CONSTRUCTION
+Site Selection:
+- Water availability year-round
+- Soil with good water holding (clay/loam)
+- Gentle slope for drainage
+- Away from flood-prone areas
+- Road access for transport
+- Electricity for aeration
+
+Pond Design:
+- Size: 0.5-2.0 hectares (ideal)
+- Depth: 1.5-2.5 m (deeper in center)
+- Shape: Rectangular (3:2 ratio)
+- Dykes: 1.5-2 m wide at top
+- Inlet/outlet: Properly designed
+- Overflow pipe: Emergency drainage
+
+Construction Steps:
+1. Clear site of vegetation
+2. Mark boundaries
+3. Excavate to desired depth
+4. Build dykes with excavated soil
+5. Install inlet/outlet pipes
+6. Compact dykes
+7. Lime and fertilize
+8. Fill with water
+9. Check for leaks
+10. Stock fish
+
+4. POND PREPARATION
+Pre-stocking:
+- Drain and dry for 2-4 weeks
+- Remove unwanted fish (mahua oil cake: 2500 kg/ha)
+- Lime application: 500-1000 kg/ha (pH correction)
+- Fertilize: Organic (cow dung 5000 kg/ha) + Inorganic (urea 50 kg, SSP 50 kg)
+- Wait 7-10 days for plankton development
+
+5. STOCKING DENSITY
+Composite Culture (recommended):
+- Catla: 30% (surface)
+- Rohu: 30% (column)
+- Mrigal: 20% (bottom)
+- Grass carp/Silver carp: 20%
+- Total: 8000-10,000 fingerlings/ha
+
+Mono Culture:
+- Tilapia: 20,000-30,000/ha
+- Pangasius: 30,000-50,000/ha
+- Singh: 50,000-80,000/ha
+
+Fingerling Size: 8-10 cm (50-100 g)
+Stocking Time: Morning/evening (cool hours)
+
+6. FEEDING MANAGEMENT
+Natural Food:
+- Plankton (phytoplankton, zooplankton)
+- Benthos (bottom organisms)
+- Aquatic insects
+- Enhanced through fertilization
+
+Supplementary Feed:
+- Rice bran: 40%
+- Groundnut cake: 30%
+- Wheat bran: 20%
+- Fish meal: 5%
+- Mineral-vitamin mix: 5%
+
+Feeding Rate:
+- 5% body weight initially
+- Reduce to 2-3% as fish grow
+- Feed twice daily (morning and evening)
+- Use feeding tray to monitor consumption
+
+7. WATER QUALITY MANAGEMENT
+Parameters:
+- Dissolved oxygen: >5 ppm
+- pH: 7.0-8.5
+- Temperature: 25-32C
+- Transparency: 30-40 cm
+- Ammonia: <0.5 ppm
+- Nitrite: <0.1 ppm
+
+Management:
+- Aeration: Paddle wheel (4-6 hours/day)
+- Water exchange: 10-20% monthly
+- Lime: Monthly application (100-200 kg/ha)
+- Fertilization: Monthly (maintain plankton)
+- Avoid overfeeding (causes pollution)
+
+8. HARVESTING
+Signs of Maturity:
+- Catla/Rohu: 1-1.5 kg (8-10 months)
+- Mrigal: 0.8-1.0 kg (10-12 months)
+- Tilapia: 250-500 g (5-6 months)
+- Pangasius: 1-2 kg (8-10 months)
+
+Harvesting Methods:
+- Drag net (seine net)
+- Gill net
+- Cast net
+- Complete draining
+
+Post-harvest:
+- Keep alive in water till sale
+- Icing for transport
+- Clean and grade
+- Record weights
+
+9. DISEASE MANAGEMENT
+Preventive Measures:
+- Quality seed from certified hatcheries
+- Pond disinfection
+- Balanced feeding
+- Water quality maintenance
+- Quarantine new stock
+- Avoid overcrowding
+
+Common Diseases:
+- Bacterial: Aeromonas, Pseudomonas
+- Fungal: Saprolegniasis
+- Parasitic: Argulus (fish lice), Lernea (anchor worm)
+- Viral: WSSV (in shrimp)
+
+Treatment:
+- Salt bath: 2-3% for 5-10 minutes
+- Lime: 100-200 kg/ha
+- Potassium permanganate: 2-4 ppm
+- Antibiotics (under veterinary guidance)
+
+10. ECONOMICS
+Investment (1 hectare pond):
+- Pond construction: Rs. 2-5 lakhs
+- Fingerlings: Rs. 30,000-50,000
+- Feed: Rs. 1,00,000-1,50,000
+- Labor: Rs. 50,000-75,000
+- Miscellaneous: Rs. 30,000-50,000
+
+Production (1 hectare):
+- Fish yield: 4-6 tonnes/ha/year
+- Price: Rs. 100-200/kg
+- Gross income: Rs. 4-12 lakhs
+- Net profit: Rs. 1.5-4 lakhs/ha/year
+
+11. GOVERNMENT SCHEMES
+- Blue Revolution scheme
+- MGNREGA for pond construction
+- Subsidy on fish seed and feed
+- Training programs
+- Market support
+
+12. IMPORTANT CONTACTS
+- Gujarat Fisheries Department
+- CIFRI (Central Inland Fisheries Research Institute)
+- MPEDA (Marine Products Export Development Authority)
+- State Fisheries Cooperative
+- District Fisheries Officers
+
+================================================================================
+                         END OF FILE 276
+              Topic: Freshwater Fish Farming
+================================================================================

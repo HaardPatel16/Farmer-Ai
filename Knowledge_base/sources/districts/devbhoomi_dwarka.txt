@@ -1,0 +1,165 @@
+================================================================================
+FARMER SAHAYAK - DEVBHOOMI DWARKA DISTRICT AGRO-CLIMATIC PROFILE
+================================================================================
+
+1. DISTRICT OVERVIEW
+--------------------
+Devbhoomi Dwarka is a coastal district in the western part of Gujarat, carved
+out of Jamnagar district in 2013. It is located on the Arabian Sea coast and
+is famous for the Dwarka temple, one of the Char Dham pilgrimage sites. The
+district covers approximately 5,400 sq km with a population of about 750,000.
+It comprises 4 talukas: Dwarka, Khambhalia, Kalyanpur, and Bhanvad. The district
+is predominantly rural with agriculture and fishing as the main livelihoods.
+The coastal location influences the climate and agriculture significantly.
+
+2. AGRO-CLIMATIC ZONE
+---------------------
+Devbhoomi Dwarka falls in the North Saurashtra Coastal Agro-Climatic Zone. The
+climate is tropical semi-arid with maritime influence. The district receives low
+annual rainfall of 500-600 mm, with the monsoon concentrated in July and August.
+The average maximum temperature ranges from 28°C in January to 40°C in May, while
+minimum temperatures range from 10°C in winter to 26°C in summer. Relative humidity
+is high (75-85%) during the monsoon and moderate (50-60%) in winter due to
+maritime influence. The coastal climate moderates extreme temperatures compared
+to inland Saurashtra. The district is prone to cyclonic storms from the Arabian Sea.
+
+3. SOIL TYPES
+-------------
+The dominant soil types are:
+• Coastal sandy soils covering 50% of the district near the coast
+• Medium black soil (Vertisols) in inland talukas (Khambhalia, Bhanvad)
+• Saline-alkali soils in low-lying coastal areas and near the Rann of Kutch
+• Alluvial soils along seasonal rivers and streams
+
+Soil texture is predominantly sandy near the coast and clayey to clay-loam inland.
+Soil pH ranges from 7.5 to 9.0, with coastal areas being more alkaline. Fertility
+status is low in sandy coastal soils but moderate in inland black soils. Organic
+carbon content is low (0.2-0.4%) in sandy areas. Coastal soils require gypsum
+and organic amendments for sustainable cultivation.
+
+4. WATER RESOURCES
+------------------
+Annual rainfall: 500-600 mm (low, erratic, drought-prone)
+Irrigation sources:
+• Borewells and tubewells: Primary source; depths 100-250 metres
+• Check dams and farm ponds: Limited construction on seasonal streams
+• Village ponds for supplementary irrigation
+• Narmada water: Saurashtra Branch Canal reaches some parts of the district
+• Bhadar and Ozat rivers: Seasonal rivers providing limited water
+
+Water issues: Groundwater is the main source but faces depletion and salinity.
+Coastal areas have saline groundwater due to sea water ingress. Inland areas have
+better groundwater but face over-extraction. The Narmada canal has improved
+irrigation in some areas but coverage is limited. Water scarcity is a major
+constraint for agriculture.
+
+5. MAJOR CROPS
+--------------
+KHARIF (June-October):
+• Groundnut - 70,000 ha, varieties: GG-20, GG-22, GG-7, TMV-2
+• Cotton - 40,000 ha, varieties: G Cot-13, G Cot-21, Bt hybrids
+• Bajra (Pearl millet) - 30,000 ha, varieties: GHB-558, GHB-732
+• Onion - 15,000 ha, varieties: Bhima Shakti, N-53
+• Castor - 10,000 ha, varieties: GCH-7, GCH-9
+
+RABI (November-March):
+• Wheat - 30,000 ha, varieties: GW-366, GW-496, Lok-1
+• Gram (Chickpea) - 15,000 ha, varieties: GG-5, GG-7
+• Cumin - 10,000 ha, varieties: GC-1, GC-4
+• Mustard - 8,000 ha, varieties: GJM-2, GJM-3
+• Onion - 10,000 ha (Rabi onion)
+
+SUMMER (March-May):
+• Vegetables: Tomato, Brinjal, Okra, Chilli in irrigated pockets
+• Fodder: Hybrid Napier, Jowar for dairy
+
+Productivity: Groundnut 12-18 quintals/ha pods; Cotton 2.5-3.5 quintals/ha lint;
+Wheat 4.0-5.0 tonnes/ha (irrigated); Onion 200-300 quintals/ha; Cumin 4-6 quintals/ha.
+
+6. HORTICULTURE
+---------------
+• Onion: Important cash crop for local and distant markets
+• Coconut: Coastal areas have coconut plantations
+• Vegetables: Tomato, brinjal, okra, chilli in irrigated areas
+• Fruits: Mango (Kesar), Guava in small orchards
+• Fodder crops: Hybrid Napier, Jowar, Lucerne for dairy cattle
+
+7. LIVESTOCK
+------------
+• Cattle: Indigenous breeds (Gir, local) and crossbred cattle
+• Buffalo: Surti and Mehsani breeds; dairy is important
+• Poultry: Backyard poultry and small commercial farms
+• Sheep and Goats: Significant population; rearing is common in drought-prone areas
+• Fishing: Important coastal livelihood alongside agriculture
+• Fodder availability: Moderate in irrigated areas; rainfed areas depend on crop
+  residues. Fodder shortage is acute in summer and drought years.
+
+8. CROP CALENDAR
+----------------
+Month          | Major Activities
+---------------|-----------------------------------------------
+June           | Groundnut sowing, Cotton sowing, Bajra sowing
+July           | Groundnut/cotton sowing continues, Onion nursery (Kharif)
+August         | Onion transplanting, Castor sowing
+September      | Monsoon crop maintenance, Weeding, Top-dressing
+October        | Groundnut harvest, Bajra harvest, Onion harvest (Kharif)
+November       | Cotton pickings, Wheat sowing, Onion sowing (Rabi)
+December       | Rabi sowing continues, Gram/Cumin sowing
+January        | Wheat irrigation, Onion maintenance
+February       | Cumin/Mustard harvest, Onion harvesting begins
+March          | Wheat harvest, Onion harvest, Summer vegetables
+April-May      | Summer vegetables, Fodder sowing, Land preparation
+
+9. COMMON PESTS & DISEASES
+--------------------------
+• Groundnut: Late leaf spot (Tikka), Early leaf spot, Tobacco caterpillar,
+  Jassids, Thrips (PBNV vector)
+• Cotton: Pink bollworm, Spotted bollworm, Aphids, Whitefly
+• Onion: Thrips, Purple blotch (Alternaria porri), Stemphylium leaf blight
+• Bajra: Downy mildew (Green ear), Ergot, Smut, Shoot fly
+• Wheat: Rust, Karnal bunt, Aphids
+• Castor: Semi-looper (Achaea janata), Capsule borer
+
+10. KEY CHALLENGES
+------------------
+• Coastal salinity ingress affecting groundwater and soils
+• Drought and erratic rainfall affecting crop establishment
+• Groundwater depletion in inland areas
+• Limited irrigation infrastructure
+• Cyclone risk from Arabian Sea affecting coastal agriculture
+• Declining soil fertility in intensively cultivated areas
+• Labour shortage during peak sowing and harvesting seasons
+• Limited market infrastructure and cold storage facilities
+• Soil salinity in low-lying areas near the coast and Rann
+
+11. GOVERNMENT SUPPORT
+----------------------
+• KVK: Krishi Vigyan Kendra, Devbhoomi Dwarka or Jamnagar KVK serving the area
+• ATMA: Active extension programmes in all talukas
+• Soil Testing Labs: Mobile soil testing vans; district lab at Jamnagar
+• APMCs: Dwarka, Khambhalia, Kalyanpur, Bhanvad
+• Check Dam Schemes: Government has built check dams under Sujalam Sufalam
+• Narmada Canal: Saurashtra Branch Canal expanding coverage
+• Coastal Salinity Management: Schemes for gypsum application and salt-tolerant
+  crop promotion
+• Fisheries Department: Support for fishing communities alongside agriculture
+
+12. FARMER ADVISORIES
+---------------------
+• In coastal saline areas, apply gypsum @ 2-3 tonnes/ha and grow salt-tolerant
+  crops like barley, cumin, date palm, or coconut initially
+• Adopt drip irrigation for cotton and onion to save water and increase yields
+• Practice crop rotation (groundnut-cotton-bajra) to reduce soil-borne diseases
+  and improve soil health
+• Use seed treatment with thiram + carbendazim for groundnut and cotton to
+  prevent seedling diseases
+• Install pheromone traps for pink bollworm monitoring from day 30 after cotton
+  sowing; spray only at economic threshold
+• Grow fodder crops (hybrid Napier, Jowar) on 10-15% of land for dairy support
+• Apply gypsum @ 500 kg/ha in groundnut at flowering for pod development
+• Practice summer ploughing (May) to expose soil-borne pests and pathogens to
+  solar heat
+• Construct farm ponds and check dams for rainwater harvesting and groundwater
+  recharge
+• Use soil test-based fertilizers; address zinc deficiency with ZnSO4 @ 25 kg/ha
+================================================================================

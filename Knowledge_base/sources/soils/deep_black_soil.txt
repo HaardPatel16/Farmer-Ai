@@ -1,0 +1,306 @@
+================================================================================
+DEEP BLACK SOIL (DEEP VERTISOL) — COMPLETE SOIL PROFILE
+================================================================================
+
+1. SOIL TYPE NAME & CLASSIFICATION
+--------------------------------------------------------------------------------
+Deep black soils, known as deep Vertisols, are the most agriculturally productive and
+physically distinctive soils in Gujarat. They are classified as Vertisols (USDA Soil Taxonomy)
+due to their high clay content, deep cracks, and strong shrink-swell behaviour. These soils
+are formed from the weathering of basaltic rocks (Deccan Traps) and are distinguished from
+medium and shallow black soils by their exceptional depth (1–2 metres or more), very high clay
+content (50–60%), and pronounced vertic properties. In Gujarat, they are the soils of the
+"black gold" belt — the most intensively cultivated and highest-yielding areas in the state.
+
+2. PHYSICAL PROPERTIES
+--------------------------------------------------------------------------------
+Texture: Clay to heavy clay. Clay content typically ranges from 50% to 60%, with the
+smectite (montmorillonite) clay mineral group dominating. This gives the soil its extreme
+shrink-swell capacity.
+
+Structure: Prismatic to angular blocky structure in the subsoil; self-mulching granular
+structure at the surface due to natural sloughing into cracks. When wet, the soil is
+extremely sticky and plastic; when dry, it hardens into massive, concrete-like clods that
+are difficult to work.
+
+Colour: Deep black to very dark grey. The colour is due to the presence of iron-manganese
+oxides, titanium, and finely dispersed organic matter-clay complexes. The darkness is more
+intense than in medium or shallow black soils due to greater clay and organic matter content.
+
+Depth: Very deep, 1 to 2+ metres. Unlike shallow black soils that restrict root growth,
+deep black soils allow unrestricted root penetration. This depth is their defining advantage,
+providing a large reservoir of water and nutrients.
+
+Drainage: Poor to moderate. The high clay content creates very slow percolation (2–8 mm/hour).
+During monsoon, waterlogging is common in flat areas and depressions. However, the deep cracks
+provide some internal drainage during the initial stages of the wet season.
+
+Water-Holding Capacity: Very high (200–280 mm/metre). This is among the highest of any soil
+type in Gujarat. The soil can sustain crops through 3–4 week dry spells without irrigation,
+making it valuable in regions with erratic rainfall.
+
+Cracking: The most dramatic physical feature. During the dry season, deep black soils form
+wide cracks (5–15 cm wide, 60–100+ cm deep). These cracks:
+  • Provide natural aeration to depth
+  • Allow roots to penetrate deeply
+  • Cause self-mulching (surface soil falls into cracks, creating natural tillage)
+  • Damage farm equipment, buildings, and roads
+  • Expose subsoil, causing vertical mixing over time
+
+Bulk Density: 1.1–1.4 g/cm³ when moist; increases when dry due to shrinkage and compaction.
+
+3. CHEMICAL PROPERTIES
+--------------------------------------------------------------------------------
+pH Range: 7.5 to 8.5, slightly to moderately alkaline. The high pH is due to calcium
+ carbonate (kankar) and the presence of exchangeable sodium in some areas.
+
+Organic Matter: Low to moderate (0.5–1.0%). Despite the dark colour, the high temperature and
+mineralisation rate in Gujarat limit organic matter accumulation. The dark colour is primarily
+due to mineral-humus complexes and iron oxides rather than high organic carbon content.
+
+NPK Status:
+  • Nitrogen: Low (150–220 kg/ha available N). The high clay content immobilises nitrogen,
+    and rapid mineralisation in Gujarat's hot climate depletes organic N reserves.
+  • Phosphorus: Low to moderate (12–25 kg/ha available P). High calcium content fixes
+    phosphorus into insoluble calcium phosphates, reducing availability to plants.
+  • Potassium: High to very high (280–450 kg/ha available K). The parent basaltic rocks are
+    rich in potassium-bearing minerals. Deep black soils typically do NOT need potassium
+    fertilisation unless intensively cropped for many decades.
+
+Micronutrients: Zinc deficiency is the most widespread problem, affecting over 60% of fields.
+Iron deficiency (lime-induced chlorosis) occurs in high-pH areas. Boron deficiency is common
+in cotton and groundnut. Manganese toxicity can occur in waterlogged conditions. Copper and
+molybdenum are generally adequate.
+
+Cation Exchange Capacity (CEC): Very high (35–55 cmol/kg), reflecting the enormous surface area
+of smectite clay minerals. This gives the soil exceptional nutrient retention capacity, but
+also means that nutrients can be tightly bound and less available.
+
+Calcium Carbonate (CaCO3): Present as kankar nodules, especially in deeper layers. Ranges from
+5% to 15% by weight. High CaCO3 exacerbates micronutrient deficiencies, particularly zinc and
+iron.
+
+Base Saturation: Very high (>90%), dominated by calcium and magnesium. This is natural for
+vertisols and generally favourable for agriculture, but the high pH can limit micronutrient
+availability.
+
+4. WHERE FOUND IN GUJARAT
+--------------------------------------------------------------------------------
+Deep black soils are concentrated in the most fertile regions of Gujarat:
+  • South Gujarat: Bharuch (entire district), Narmada (entire district), parts of Surat
+    (along Tapi river), and parts of Vadodara (eastern talukas). This is the "black gold"
+belt of Gujarat.
+  • Central Gujarat: Parts of Vadodara district (Karjan, Sinor, Dabhoi talukas), and limited
+    areas in Anand and Kheda.
+  • Saurashtra: Very limited — only in small pockets of Bhavnagar and Amreli where basaltic
+    parent material is deep.
+
+Extent: Approximately 8–10% of Gujarat's total geographical area. Despite their smaller
+extent compared to medium black soils, deep black soils contribute disproportionately to
+Gujarat's agricultural output because of their high productivity.
+
+5. SUITABILITY FOR CROPS
+--------------------------------------------------------------------------------
+Best Crops (Highly Suitable):
+  • Cotton — THE premier crop for deep black soils. Gujarat produces some of India's finest
+    long-staple cotton from these soils. The deep rooting zone, high water-holding capacity,
+    and excellent nutrient retention support sustained cotton growth. Yields: 3.0–5.0 quintals/ha
+    (lint) under good management.
+  • Sugarcane — Outstanding performance due to deep rooting and high moisture availability.
+    The Tapi belt (Bharuch, Surat) is Gujarat's largest sugarcane area. Yields: 100–130 tonnes/ha.
+  • Soybean — Expanding rapidly on deep black soils in Bharuch and Narmada. The crop benefits
+    from nitrogen fixation and the soil's moisture reserve. Yields: 20–30 quintals/ha.
+  • Wheat — Excellent rabi crop with irrigation. Yields: 5.0–7.0 tonnes/ha, among the highest
+    in Gujarat.
+  • Sorghum (Jowar) — Both kharif and rabi sorghum perform very well. Yields: 30–40 quintals/ha.
+  • Banana — Tissue-culture banana plantations thrive on deep black soils with drip irrigation
+    in Bharuch and Narmada. Yields: 50–70 tonnes/ha.
+  • Chickpea (Gram) — Good rabi pulse on residual moisture. Yields: 18–25 quintals/ha.
+  • Pigeon Pea (Tur) — Long-duration varieties on deep soils. Yields: 15–20 quintals/ha.
+
+Moderately Suitable:
+  • Paddy (Rice) — Suitable but requires careful water management to prevent waterlogging.
+    Direct-seeded rice is preferred over transplanting to avoid anaerobic conditions.
+  • Groundnut — Good yields but soil crusting after rain can impede pod development. Yields:
+    18–25 quintals/ha.
+  • Maize — Kharif and rabi maize are suitable but require good drainage.
+
+Unsuitable Crops:
+  • Root crops (potato, carrot, garlic, onion) — Poor drainage and heavy clay texture cause
+    misshapen roots, rotting, and poor quality. The soil sticks to tubers and is difficult to
+    wash off.
+  • Cumin and fennel — Require well-drained sandy soils; heavy black soils cause waterlogging
+    and fungal diseases (wilt, root rot).
+  • Pineapple, cashew, and rubber — Require well-drained, acidic soils; deep black soils are
+    too alkaline and poorly drained for these crops.
+
+Yield Potential: Very high to exceptional. Deep black soils in Bharuch and Narmada are among
+the highest-yielding cotton and sugarcane areas in India. With proper irrigation and nutrient
+management, these soils can support sustained high productivity for decades.
+
+6. MANAGEMENT PRACTICES
+--------------------------------------------------------------------------------
+Fertiliser Recommendations:
+  • Nitrogen: 120–180 kg N/ha for cereals; 180–250 kg N/ha for cotton; 250–350 kg N/ha for
+    sugarcane (split into 5–6 applications). Split applications are essential because the
+    high clay content can cause temporary immobilisation, and the cracks can cause deep
+    leaching during early monsoon.
+  • Phosphorus: 60–90 kg P2O5/ha. Use water-soluble forms (DAP, SSP) rather than rock phosphate.
+    Band placement near the seed row is more effective than broadcasting due to high P fixation
+    by calcium. Apply at sowing time.
+  • Potassium: 0–40 kg K2O/ha for most crops. Test soil before applying K — most deep black
+    soils have high native K (>300 kg/ha). Excess K can cause magnesium deficiency (interveinal
+    chlorosis in older leaves).
+  • Zinc: 30 kg zinc sulphate/ha at sowing is critical for all crops. Zinc deficiency is the
+    number one nutritional disorder in deep black soils. Foliar spray of 0.5% ZnSO4 + 0.25%
+    lime during vegetative stage (2–3 sprays at 15-day intervals) for quick correction.
+  • Iron: Foliar spray of 0.5% ferrous sulphate for lime-induced chlorosis in high-pH areas.
+    Use iron chelates (Fe-EDTA) for severe cases or for fruit crops.
+  • Boron: 10–15 kg borax/ha for cotton, groundnut, and sugarcane. Boron deficiency causes
+    hollow stem in sugarcane and poor boll development in cotton.
+  • Sulphur: 30–40 kg S/ha for oilseeds (groundnut, soybean, castor) and cotton. Sulphur
+    deficiency is increasingly common in intensively cropped deep black soils.
+  • Magnesium: If interveinal chlorosis appears in older leaves despite adequate K, apply
+    20–30 kg MgO/ha as magnesium sulphate.
+
+Irrigation: Water management is critical — too much causes waterlogging; too little causes
+moisture stress in the surface layers:
+  • Drip irrigation is the recommended method for cotton, sugarcane, banana, and vegetables.
+    It prevents waterlogging, saves 40–60% water, and allows precise fertigation (fertiliser
+    + irrigation together).
+  • Sprinkler irrigation for wheat and fodder crops.
+  • Flood irrigation should be AVOIDED on deep black soils — it causes surface waterlogging,
+    root rot, and nutrient leaching through cracks. If flood irrigation must be used (e.g.,
+    for paddy), ensure levelled fields and controlled water depth.
+  • Irrigation scheduling: Due to the very high water-holding capacity, irrigate less frequently
+    but with adequate depth (60–80 mm per irrigation for cotton; 100–120 mm for sugarcane).
+    Light, frequent irrigations waste water and cause surface saturation.
+
+Tillage: Timing and method are crucial:
+  • NEVER till when the soil is very wet (sticky plastic state) — this destroys the natural
+    structure and creates massive clods that persist for the entire season. These clods
+    reduce seed-soil contact and emergence.
+  • Till at the optimum moisture content — when the soil is moist but not sticky, typically
+    2–3 days after heavy rain or irrigation. The soil should crumble when squeezed, not
+    form a ribbon.
+  • Deep tillage (chisel ploughing) to 40–50 cm depth every 3–4 years breaks subsoil hardpans
+    and improves internal drainage. This is especially important for sugarcane and cotton.
+  • Use wide-bottom ploughs or blade harrows rather than disc ploughs to avoid smearing and
+    compaction of the sticky clay.
+  • Laser land levelling is highly recommended for precision irrigation and to prevent ponding
+    in low spots. Even a 5–10 cm elevation difference can cause waterlogging in deep black soils.
+
+Special Practices:
+  • Broad Bed and Furrow (BBF) System: THE most important soil management innovation for deep
+    black soils. Raised beds (80–100 cm wide, 20–25 cm high) with furrows in between improve
+    drainage, aeration, and root development. BBF is essential for cotton, groundnut, and
+    soybean on deep black soils.
+  • Ridge and Furrow: For sugarcane, plant on ridges to prevent waterlogging and facilitate
+    irrigation.
+  • Mulching: Apply crop residue mulch (sugarcane trash, cotton stalks) to reduce evaporation,
+    moderate soil temperature, and prevent surface cracking.
+  • Green Manuring: Incorporate dhaincha or sunhemp before sugarcane or cotton to add organic
+    matter and nitrogen.
+
+7. PROBLEMS & REMEDIES
+--------------------------------------------------------------------------------
+  • Waterlogging: The most common and economically damaging problem during monsoon. Deep black
+    soils absorb water slowly, and flat areas become waterlogged. Remedy: BBF system; open
+    drainage channels; subsurface drainage with mole drains or perforated pipes; laser land
+    levelling; grow rice in severely waterlogged areas; avoid flood irrigation.
+  • Salinity/Alkalinity: In poorly drained areas, capillary rise brings salts to the surface,
+    creating saline patches. Remedy: Improve drainage; apply gypsum 2–5 tonnes/ha if pH > 8.5;
+    leach with excess irrigation; grow salt-tolerant crops during reclamation.
+  • Soil Compaction: The heavy clay soil compacts easily under traffic, especially when wet.
+    Compaction reduces root penetration and water infiltration. Remedy: Restrict field traffic
+    to dry periods; use minimum/zero tillage for wheat after paddy; maintain soil organic matter;
+    deep chiselling every 3–4 years; use controlled traffic farming (CTF) where possible.
+  • Cracking and Structural Damage: Deep cracks (10–15 cm wide, 60–100 cm deep) damage building
+    foundations, roads, pipelines, and tree roots. Remedy: Maintain soil moisture during dry
+    periods (irrigation if possible); mulching reduces crack severity; design infrastructure
+    to accommodate soil movement (flexible joints in pipelines, reinforced foundations).
+  • Nutrient Deficiencies: Zinc deficiency is universal. Iron chlorosis in high-pH areas.
+    Boron deficiency in cotton and sugarcane. Remedy: Regular soil testing every 2–3 years;
+    prophylactic zinc application; foliar micronutrient sprays; balanced fertilisation based
+    on soil test.
+  • Erosion: Sheet erosion during intense monsoon rains on sloping fields. Remedy: Contour
+    bunding; graded bunding; vegetative barriers (vetiver grass); mulching; maintain ground
+    cover.
+  • Hardpan Formation: Repeated shallow tillage at the same depth (15–20 cm) creates a plough
+    pan that restricts root penetration and water movement. Remedy: Deep chiselling or subsoiling
+    to 40–50 cm; use of deep-rooted crops (alfalfa, sorghum, pigeon pea) as biological drills.
+  • Low Organic Matter: Despite the dark colour, organic matter is low (0.5–1.0%). Remedy:
+    Regular FYM application; green manuring; crop residue incorporation; composting; reduced
+    tillage to preserve organic matter.
+
+8. SOIL TESTING INTERPRETATION for this soil type
+--------------------------------------------------------------------------------
+When interpreting soil test results for deep black soils:
+
+  • pH: Optimal range 7.0–7.5. If pH > 8.5, check for sodicity (ESP) and apply gypsum if
+    ESP > 15. High pH indicates potential micronutrient problems.
+  • ECe (Electrical Conductivity): If > 4 dS/m, salinity is a concern. Install drainage and
+    leach before sowing sensitive crops.
+  • Organic Matter: Target > 1.0%. If below 0.6%, apply FYM 20 tonnes/ha and include legumes
+    in rotation. Low organic matter is the primary cause of poor structure and low microbial
+    activity.
+  • Nitrogen: If available N < 180 kg/ha, apply higher N doses (180–220 kg N/ha) or grow green
+    manure before the main crop. Include legumes (soybean, pigeon pea, green gram) in rotation.
+  • Phosphorus: If available P < 15 kg/ha, apply 80–100 kg P2O5/ha. Use water-soluble P
+    fertilisers (DAP, SSP). Band placement is more effective than broadcasting.
+  • Potassium: If available K > 300 kg/ha, skip K fertiliser for 2–3 seasons and retest. If
+    K < 200 kg/ha, apply 40–60 kg K2O/ha. Note: After decades of intensive cropping, some
+    deep black soils in Bharuch are showing K depletion.
+  • Zinc: Critical level 0.6 ppm (DTPA-extractable). Apply 25–30 kg ZnSO4/ha prophylactically
+    every year. Foliar Zn spray for standing crops showing deficiency (stunted growth, rosette
+    leaves, interveinal chlorosis).
+  • Iron: DTPA-Fe < 4.5 ppm indicates deficiency. Apply FeSO4 or use foliar Fe-EDTA sprays.
+    Interveinal chlorosis in young leaves is the diagnostic symptom.
+  • Boron: Hot-water soluble B < 0.5 ppm indicates deficiency. Apply 10–15 kg borax/ha for
+    cotton and sugarcane.
+  • Sulphur: If available S < 10 ppm, apply 30–40 kg S/ha as gypsum or ammonium sulphate.
+  • Calcium Carbonate: If CaCO3 > 15%, expect micronutrient problems. Increase foliar
+    micronutrient applications and use chelated forms.
+
+9. ORGANIC MATTER IMPROVEMENT STRATEGIES
+--------------------------------------------------------------------------------
+  • Farm Yard Manure (FYM): Apply 20–25 tonnes/ha annually. This is the single most important
+    amendment for deep black soils. Organic matter improves structure, reduces cracking
+    intensity, enhances water infiltration, and increases nutrient availability. FYM also
+    provides a slow-release source of nutrients that complements chemical fertilisers.
+  • Green Manuring: Incorporate dhaincha (Sesbania aculeata, 60–90 days), sunhemp (Crotalaria
+    juncea, 45–60 days), or cluster bean (Guar) before cotton, sugarcane, or soybean. Green
+    manure adds 100–150 kg N/ha equivalent, improves soil structure, and increases microbial
+    activity. In the Tapi belt, dhaincha is the preferred green manure before sugarcane.
+  • Crop Residue Management: Do NOT burn cotton, sugarcane, or wheat residues. Incorporate them
+    into the soil or compost them before application. Cotton stalks can be used for mushroom
+    cultivation (oyster mushrooms) before being returned to the field as spent compost. Sugarcane
+    trash can be used as surface mulch or composted. Wheat straw incorporation improves soil
+    tilth and organic matter.
+  • Compost and Vermicompost: 5–8 tonnes/ha for intensive cropping. Vermicompost is particularly
+    effective in improving the granular structure of black soils and providing available
+    micronutrients in chelated form. Vermiwash (liquid extract from vermicompost) can be used
+    as a foliar spray and soil drench.
+  • Biofertilisers: Azotobacter, Azospirillum, PSB (Phosphate Solubilising Bacteria), and VAM
+    (Vesicular Arbuscular Mycorrhiza) improve nutrient availability in the high clay matrix.
+    VAM is especially beneficial for phosphorus and micronutrient uptake in high P-fixing
+    deep black soils. Use rhizobium inoculants for soybean, pigeon pea, and chickpea.
+  • Alley Cropping: Plant nitrogen-fixing trees (Leucaena leucocephala, Gliricidia sepium,
+    Subabul — Leucaena leucocephala) on field boundaries to provide green leaf manure, firewood,
+    and erosion control. Leaf litter from these trees adds 2–5 tonnes of organic matter per
+    hectare per year (considering the boundary area). These trees are common in Bharuch and
+    Narmada districts.
+  • Cover Cropping: Use cowpea, moth bean, or horse gram during fallow periods to cover the
+    soil, add biomass, fix nitrogen, and prevent moisture loss. In the Tapi belt, cowpea is
+    grown as a cover crop during the summer months.
+  • Reduced Tillage: Practice zero-till or minimum-till wheat after paddy or cotton to preserve
+    soil organic matter, reduce fuel costs, and maintain soil structure. Zero-till wheat is
+    expanding rapidly in Bharuch and Narmada on deep black soils.
+  • Organic Farming: Transition to organic farming is feasible for cotton, sugarcane, and wheat
+    in areas with good water availability. The challenge is managing micronutrient (especially
+    zinc and boron) supply without synthetic chelates. Rock phosphate + PSB + VAM + organic
+    matter can maintain P levels. Foliar sprays of compost tea and vermiwash can supply
+    micronutrients. The 3-year transition period may see 15–25% yield penalties, but premium
+    prices for organic cotton and sugar can offset this.
+
+================================================================================

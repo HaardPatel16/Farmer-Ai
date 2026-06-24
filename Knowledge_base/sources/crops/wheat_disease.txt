@@ -1,0 +1,9 @@
+=== WHEAT PATHOLOGY CONTROL MATRIX ===
+Target Pathogens: Brown/Black Rust and Loose Smut
+
+1. LOOSE SMUT (Ustilago nuda tritici)
+- Symptoms: Plant heads turn into a black, powdery mass of fungal spores instead of grains.
+- Management: Mandatory systemic seed treatment with Carboxin 75% WP @ 2.5 grams/kg seed. Rogue out infected ears carefully inside a plastic bag to prevent spore drift across the field.
+
+2. RUST DISEASES (Puccinia recondita)
+- Control: Spray Propiconazole 25% EC @ 10 ml in 10 liters of water upon initial spotting of orange-brown pustules on leaves.

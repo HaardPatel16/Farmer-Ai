@@ -1,0 +1,135 @@
+================================================================================
+           GUJARAT FARMER KNOWLEDGE BASE
+           Agricultural Guide - File 104/407
+================================================================================
+
+TOPIC: Composting Techniques
+GUJARATI NAME: Khad Banavani Rit
+CATEGORY: Soil Science
+GUIDE TYPE: Comprehensive Technical Manual
+REGION: Gujarat State - All Agro-Climatic Zones
+DOCUMENT DATE: June 23, 2026
+================================================================================
+
+1. INTRODUCTION
+Composting is the biological decomposition of organic materials into stable, humus-like product. It is essential for sustainable farming in Gujarat.
+
+2. TYPES OF COMPOSTING
+Farmyard Manure (FYM):
+- Materials: Cattle dung, urine, litter, feed refuse
+- Method: Pit or heap method
+- Duration: 4-6 months
+- Quantity: 10-20 t/ha application
+
+Village Compost:
+- Materials: Crop residues, weeds, household waste
+- Method: Heap composting
+- Duration: 3-4 months
+- Turnover: Monthly turning
+
+Urban Compost:
+- Materials: City garbage, market waste
+- Processing: Mechanical + biological
+- Quality standards: Heavy metal limits
+
+3. COMPOSTING PROCESS
+Phase 1: Mesophilic (5-10 days)
+- Temperature: 20-40C
+- Microbes: Bacteria, fungi
+- Activity: Rapid decomposition
+
+Phase 2: Thermophilic (10-20 days)
+- Temperature: 40-65C
+- Pathogen kill, weed seed destruction
+- Turn for aeration
+
+Phase 3: Cooling and Maturation (15-30 days)
+- Temperature returns to ambient
+- Humus formation
+- Earthworm colonization
+
+Phase 4: Curing (15-30 days)
+- Stabilization
+- Ready for use
+
+4. COMPOSTING METHODS
+Pit Method:
+- Size: 3m x 2m x 1m
+- Layering: Alternate dry and wet materials
+- Turn at 15, 30, 45 days
+- Ready in 60-90 days
+
+Heap Method:
+- Size: 3m wide x 1.5m high, length as needed
+- Aeration: Turn weekly in first month
+- Water: Maintain 50-60% moisture
+- Ready in 60-90 days
+
+NADEP Composting:
+- Brick tank with holes
+- Layering: Biomass + soil + water
+- Duration: 90-120 days
+- Quality: Fine, odorless compost
+
+Bokashi Composting:
+- Fermentation method
+- Effective microorganisms (EM)
+- Pre-digestion before composting
+- Suitable for kitchen waste
+
+5. C:N RATIO MANAGEMENT
+Ideal C:N ratio: 25-30:1
+High carbon materials (C:N > 60): Straw, sawdust, wood chips
+Low carbon materials (C:N < 20): Fresh manure, legumes, food waste
+Balancing: Mix high and low C:N materials
+
+6. COMPOST QUALITY PARAMETERS
+Physical:
+- Dark brown to black color
+- Crumbly texture
+- Earthy smell (no ammonia)
+- Free of pathogens and weed seeds
+
+Chemical:
+- pH: 6.5-7.5
+- EC: <4 dS/m
+- C:N ratio: <20:1
+- Moisture: 40-50%
+
+7. APPLICATION IN GUJARAT CONDITIONS
+Kharif crops: Apply 2-3 weeks before sowing
+Rabi crops: Apply at land preparation
+Perennial crops: Apply in basins during monsoon
+Dose: 5-20 t/ha depending on crop
+
+8. BENEFITS
+- Improves soil structure
+- Enhances water holding capacity
+- Supplies slow-release nutrients
+- Promotes microbial activity
+- Reduces chemical fertilizer need
+- Waste recycling
+
+9. TROUBLESHOOTING
+Problem: Bad odor
+Cause: Too wet or compacted
+Solution: Turn pile, add dry material
+
+Problem: Not heating
+Cause: Insufficient nitrogen or water
+Solution: Add green material or water
+
+Problem: Attracts pests
+Cause: Food waste exposed
+Solution: Bury food scraps, cover with soil
+
+10. ECONOMICS
+Cost of production: Rs. 2-5/kg
+Value to farmer: Rs. 8-15/kg (fertilizer replacement)
+Transportation: Use locally available materials
+Labor: Family labor for small quantities
+
+================================================================================
+                         END OF FILE 104
+              Topic: Composting Techniques
+================================================================================

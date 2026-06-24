@@ -1,0 +1,205 @@
+================================================================================
+           GUJARAT FARMER KNOWLEDGE BASE
+           Agricultural Guide - File 251/407
+================================================================================
+
+TOPIC: Broiler Farm Management
+GUJARATI NAME: Broiler Farm Prabandhan
+CATEGORY: Poultry Farming
+GUIDE TYPE: Comprehensive Technical Manual
+REGION: Gujarat State - All Agro-Climatic Zones
+DOCUMENT DATE: June 23, 2026
+================================================================================
+
+1. INTRODUCTION
+Broiler farming in Gujarat has grown rapidly due to increasing demand for chicken meat. Gujarat produces over 1000 million broilers annually.
+
+2. BREED SELECTION
+Commercial Broiler Strains:
+- Cobb 400/500/700
+- Ross 308/AP95
+- Hubbard Classic/Premium
+- Arbor Acres Plus
+
+Selection Criteria:
+- Fast growth (2 kg in 35-40 days)
+- Feed conversion ratio <1.7
+- Low mortality (<5%)
+- Good meat yield
+- Disease resistance
+
+3. HOUSING REQUIREMENTS
+Orientation: East-West length for minimal heat
+Dimensions:
+- Width: 30-40 feet (9-12 m)
+- Length: As per capacity
+- Height: 12-14 feet (3.5-4 m) at center
+- Overhang: 3-4 feet (1 m)
+
+Flooring:
+- Concrete preferred
+- 6 inch deep litter
+- Litter material: Paddy husk, wood shavings
+
+Space Requirements:
+- 0.8-1.0 sq ft/bird (summer)
+- 0.7-0.8 sq ft/bird (winter)
+- 1000 birds need 800-1000 sq ft
+
+Environmental Control:
+- Temperature: 33C day 1, reduce 2-3C weekly
+- Humidity: 60-70%
+- Ventilation: 1 cfm/bird
+- Lighting: 23 hours first week, then 20 hours
+
+4. CHICK PROCUREMENT
+Source: Reputed hatcheries
+Quality Checks:
+- Active, alert chicks
+- Dry, fluffy feathers
+- Clean navels
+- Uniform size
+- Good hatchery hygiene record
+
+Transportation:
+- Ventilated vehicles
+- Travel time < 8 hours
+- Temperature: 28-30C
+- Unload immediately on arrival
+
+5. BROODING MANAGEMENT
+Types:
+- Spot brooding: 250-500 chicks per hover
+- Whole house brooding: For larger farms
+
+Brooder Specifications:
+- Hover: 1 hover per 500 chicks
+- Height: 18-24 inches adjustable
+- Temperature: 95F (35C) first week
+- Reduce: 5F (2-3C) per week
+- Fuel: LPG/electric/kerosene
+
+Brooding Preparation:
+- Clean and disinfect house
+- Litter: 3-4 inch deep
+- Brooder guard: 3 feet from hover
+- Feeders/waterers: 1 per 50 chicks
+- Paper: First 3 days for feeding
+- Temperature check: 24 hours before
+
+6. FEEDING PROGRAM
+Pre-starter (0-7 days):
+- Crumbs/mini-pellets
+- 23% protein, 3000 kcal ME
+- Feed on paper first 3 days
+
+Starter (8-21 days):
+- Crumbs/mash
+- 22% protein, 3100 kcal ME
+
+Finisher (22-35+ days):
+- Pellets/mash
+- 20% protein, 3200 kcal ME
+
+Feed Calculation:
+- 0-2 weeks: 500 g/bird
+- 3-4 weeks: 1500 g/bird
+- 5-6 weeks: 3000 g/bird
+- Total: 3.5-4 kg/bird to market
+
+Water Management:
+- Clean, cool water always
+- 1.5-2 x feed intake
+- 1000 birds: 80-100 liters/day
+- Sanitize water lines weekly
+
+7. VACCINATION SCHEDULE
+Day 1: Marek's (at hatchery)
+Day 4-5: Newcastle (NDV) - eye drop
+Day 7-10: IBD (Gumboro) - eye drop
+Day 14-16: NDV booster - drinking water
+Day 18-21: IBD booster - drinking water
+Day 24-28: NDV + IB - drinking water
+Optional: Coccidiosis vaccine at day 1
+
+8. BIOSECURITY
+External:
+- Fencing around farm
+- Footbath at entrance
+- Vehicle spray
+- Visitor log
+- No other poultry within 1 km
+
+Internal:
+- All-in all-out system
+- Downtime: 10-14 days between batches
+- Rodent control
+- Wild bird proofing
+- Equipment disinfection
+- Staff hygiene protocols
+
+9. DAILY MANAGEMENT CHECKLIST
+Morning:
+- Check temperature and humidity
+- Remove dead birds
+- Check feed and water
+- Observe bird behavior
+- Record mortality
+
+Afternoon:
+- Adjust ventilation
+- Check water quality
+- Walk through house
+- Record temperature
+
+Evening:
+- Ensure adequate feed
+- Check water availability
+- Secure house
+- Final mortality check
+
+10. PERFORMANCE TARGETS
+- Body weight: 2.0-2.2 kg at 35 days
+- FCR: 1.65-1.75
+- Mortality: <5%
+- European Efficiency Factor (EEF): >300
+
+11. ECONOMICS
+Investment (1000 birds):
+- Shed: Rs. 3-5 lakhs (permanent)
+- Equipment: Rs. 50,000-80,000
+- Chicks: Rs. 40,000-50,000
+- Feed: Rs. 2,00,000-2,50,000
+- Total working: Rs. 3,00,000-3,50,000
+
+Returns (1000 birds):
+- Live birds sold: 950 x 2 kg x Rs. 80/kg = Rs. 1,52,000
+- Litter manure: Rs. 10,000
+- Gross: Rs. 1,62,000
+
+Note: Broiler economics fluctuates. Integrated companies provide chicks, feed, medicine and buy back birds.
+
+12. MARKETING
+Channels:
+- Live bird markets
+- Processing plants
+- Integrated companies (contract)
+- Direct to retailers
+- Online platforms
+
+Pricing:
+- Farm gate: Rs. 70-100/kg live weight
+- Retail: Rs. 150-250/kg dressed
+- Weekly fluctuation based on supply
+
+13. IMPORTANT CONTACTS
+- Gujarat Poultry Farmers Association
+- Venky's, Suguna, Skylark (integrators)
+- Veterinary colleges
+- Feed manufacturers
+- KVK poultry units
+
+================================================================================
+                         END OF FILE 251
+              Topic: Broiler Farm Management
+================================================================================

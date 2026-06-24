@@ -1,0 +1,80 @@
+RAINWATER HARVESTING TECHNIQUES FOR GUJARAT FARMERS
+
+1. INTRODUCTION
+Gujarat is a water-stressed state with average annual rainfall of 800-1200 mm in most districts, but with high variability. Over 60% of the agricultural land depends on monsoon rains. Rainwater harvesting is essential for groundwater recharge, drought mitigation, and farm-level water security. Gujarat has invested heavily in Sujalam Sufalam Jal Abhiyan and check dam construction, making rainwater harvesting a central policy focus.
+
+2. FARM PONDS (Khet Talavadi)
+Farm ponds are small excavated tanks (0.1 to 0.5 hectares) that store monsoon runoff for irrigation during dry spells. They are the most cost-effective rainwater harvesting solution for individual farms in Gujarat.
+
+Design guidelines for Gujarat:
+- Size: 20m x 20m x 3m depth (approximately 12 lakh liters) for a 5-hectare farm
+- Location: At the lowest point of the farm to collect natural runoff
+- Side slopes: 1:1 to 2:1 for stability in black cotton soil regions
+- Lining: HDPE geomembrane or compacted clay in high-permeability soils
+- Inlet: Silt trap with a stone-pitched channel to reduce sedimentation
+- Overflow: Stone masonry overflow weir with proper outlet pipe
+
+Subsidies: Under PMKSY (Watershed Development Component), farmers can get 50% subsidy up to Rs. 1.5 lakh for farm pond construction. Gujarat State also offers additional assistance under Sujalam Sufalam Yojana.
+
+Maintenance tips: Desilt every 3-4 years, repair liner punctures immediately, and prevent aquatic weed growth by allowing fish culture (grass carp). Clean silt trap before every monsoon.
+
+3. CHECK DAMS (Nala Bunds)
+Check dams are small masonry or concrete structures built across seasonal streams (nallas) to slow runoff and promote groundwater recharge. Gujarat has over 1.5 lakh check dams, the highest in India.
+
+Construction specifications:
+- Height: 1-2 meters above the stream bed
+- Width: Should span the full channel width
+- Foundation: 0.5m below the bed in rocky strata, 1.0m in alluvial
+- Weir: Ogee-shaped for overflow efficiency
+- Wing walls: Minimum 2m on both sides
+- Materials: Stone masonry in Saurashtra, gabions in hilly regions, and concrete in Kutch
+
+Benefits for Gujarat farmers:
+- Raises groundwater level by 3-8 meters within 1 km downstream
+- Extends irrigation season by 1-2 months
+- Reduces flash flood damage to downstream fields
+- Creates local water pools for livestock
+
+State program: The Gujarat Sardar Patel Sahakari Narmada Canal Irrigation Scheme supports check dam construction through the Soil and Water Conservation Department. Community-built check dams also receive 80% government subsidy.
+
+4. PERCOLATION TANKS (Recharge Tanks)
+Percolation tanks are medium-sized reservoirs (2-20 hectares) built on permeable strata that allow water to slowly infiltrate into the groundwater table. Unlike farm ponds, their primary purpose is aquifer recharge rather than direct irrigation.
+
+Best locations in Gujarat:
+- Saurashtra region: Limestone and basalt aquifers respond well to percolation
+- North Gujarat: Aravalli foothills with fractured rock aquifers
+- Kutch: Hard rock terrain where percolation tanks act as artificial recharge structures
+
+Design criteria:
+- Embankment height: 2-4 meters
+- Catchment-to-tank area ratio: 10:1 to 20:1 depending on rainfall
+- Inlet arrangement: Cutoff trench with core wall to prevent piping failure
+- Outflow: Silt chamber with recharge shafts or injection bores
+- Expected recharge: 50-70% of impounded volume in 6 months
+
+5. ROOFTOP RAINWATER HARVESTING
+For farmers with large farmhouse or shed roofs, rooftop harvesting is an excellent supplementary water source. Gujarat receives concentrated rainfall in July-September, making roof catchment highly productive.
+
+System components:
+- Catchment: Tin, tile, or concrete roof (minimum 50 sqm recommended)
+- Gutter and downpipe: PVC or aluminum, sized for peak rainfall intensity
+- First flush: Diverter for first 5-10 mm of rain to remove dust and bird droppings
+- Filter: Sand-carbon filter for potable use, or simple mesh for irrigation
+- Storage: Underground RCC tank or ferro-cement tank (ferro-cement is cheaper in Gujarat)
+
+Cost: A 10,000 liter system for a 100 sqm roof costs Rs. 35,000-50,000 including tank and piping. Subsidy available under Jal Jeevan Mission for drinking water storage.
+
+6. SUCCESS STORIES FROM GUJARAT
+The Raj-Samadhiyala village in Rajkot district is a model for rainwater harvesting. Through 32 check dams and 150 farm ponds, the village has transformed from drought-prone to water-sufficient, achieving 100% irrigation coverage. The Aga Khan Foundation's Gujarat program demonstrated that combining farm ponds with drip irrigation doubled the net income of cotton farmers in Kutch.
+
+7. GOVERNMENT SCHEMES AND SUBSIDIES
+- PMKSY (Watershed Component): 50-60% subsidy for farm ponds, check dams, and percolation tanks
+- Sujalam Sufalam Jal Sanchay Abhiyan: Community-driven rainwater harvesting infrastructure
+- MGNREGA: Labor component for water harvesting structures
+- Gujarat State Water Policy: Mandates rainwater harvesting in all new farmhouses above 500 sqm
+
+8. CALCULATING RAINWATER POTENTIAL
+Annual rainwater volume = Roof/farm area (sqm) x Annual rainfall (mm) x Runoff coefficient
+For Gujarat: Runoff coefficient = 0.6-0.8 for rooftops, 0.15-0.3 for farm land
+
+Example: A 2-hectare farm in Rajkot (avg rainfall 600mm) can capture approximately 600mm x 20,000 sqm x 0.20 = 2,400 cubic meters (24 lakh liters) of runoff if harvesting structures are properly installed.

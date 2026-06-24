@@ -1,0 +1,99 @@
+================================================================================
+BAJRA (PEARL MILLET) CROP CALENDAR — GUJARAT — JULY
+================================================================================
+
+CROP: Bajra (Pearl Millet)
+MONTH: July
+PRIMARY REGION: Saurashtra, Kutch, North Gujarat
+DOCUMENT TYPE: Month-wise Activity Calendar
+
+================================================================================
+1. SOIL PREPARATION FOR JULY
+================================================================================
+  • Summer ploughing should be completed by June; if not, do immediately with one ploughing
+  • Apply FYM 5-10 tonnes per hectare before sowing (bajra requires less organic matter than cotton)
+  • Level the field for uniform moisture; bajra tolerates poor soils but responds to good preparation
+  • Soil pH should be 6.0-7.5; apply lime if pH < 5.5
+  • Bajra is drought-tolerant and grows well in light sandy loam soils of Saurashtra and Kutch
+
+================================================================================
+2. SOWING / PLANTING DATES
+================================================================================
+  • Sow after first good monsoon rain (50-75mm) in Saurashtra, Kutch, and North Gujarat
+  • Ideal sowing window: 15-30 July in Saurashtra; 20-30 July in North Gujarat; 15-25 July in Kutch
+  • Seed rate: 3-4 kg per hectare for hybrid varieties; 4-5 kg for local varieties
+  • Spacing: 45-60 cm between rows; 15-20 cm between plants
+  • Sow 2-3 seeds per hill; thin to one plant per hill at 15-20 days
+  • First weeding critical within first 25 days as bajra is a poor competitor against weeds early on
+
+================================================================================
+3. IRRIGATION SCHEDULE
+================================================================================
+  • Generally rainfed; one protective irrigation if dry spell exceeds 15 days after sowing
+  • First irrigation at 15-20 days if no rain for 15+ days during seedling stage
+  • Critical irrigation at tillering (35-45 days) and heading (50-60 days) stages
+  • In North Gujarat, some farmers use check-basin irrigation for bajra
+  • Ensure drainage after heavy rain — bajra is somewhat tolerant of waterlogging but prolonged flooding damages roots
+
+================================================================================
+4. FERTILIZER TIMING & DOSES
+================================================================================
+  • Basal dose at sowing: DAP 40 kg + urea 20 kg per hectare
+  • First nitrogen top dressing (40 kg urea per hectare) at 25-30 days after sowing
+  • Second nitrogen top dressing (30-40 kg urea per hectare) at tillering stage (35-45 days)
+  • No potash needed for bajra in most Gujarat soils
+  • Micronutrients: apply zinc sulphate 25 kg per hectare as basal if soil is deficient (common in Kutch)
+
+================================================================================
+5. PEST SCOUTING DATES
+================================================================================
+  • Stem borer (Coniesta ignefusalis): monitor for dead heart (dead central shoot that pulls out easily and smells sour)
+  • Apply Carbofuran 3G granules 20 kg per hectare in leaf whorl if >5% plants show dead heart
+  • Downy mildew (green ear): if pale green streaks and stunted green ear appear, rogue out and destroy affected plants
+  • Ergot (Claviceps fusiformis): honeydew stage — black sticky fluid on ears at flowering; spray Mancozeb 2.5g/litre
+  • Aphids: if colonies exceed 10 per plant, spray Imidacloprid 0.5ml per litre
+  • Termite: apply Chlorpyriphos 2ml per litre drench along rows if termite mounds observed
+
+================================================================================
+6. HARVESTING WINDOWS
+================================================================================
+  • NO harvest in July — bajra is in seedling to early vegetative stage (20-40 days)
+  • Continue monitoring crop growth and pest populations
+  • Record keeping: document sowing date and variety for harvest planning (75-90 days after sowing)
+
+================================================================================
+7. POST-HARVEST OPERATIONS
+================================================================================
+  • NO post-harvest operations in July
+  • Prepare harvesting equipment (sickle, thresher) and storage space for later months
+  • Arrange for labour during peak harvest season (September-October)
+  • Contact fodder traders or grain market for September-October price information
+
+================================================================================
+8. WEATHER WATCH
+================================================================================
+  • Peak monsoon month: heavy rainfall in Saurashtra; 250-350mm average in July
+  • Waterlogging risk; check drainage channels after every rain event
+  • Humidity 70-90%; favourable for fungal diseases — increase scouting frequency
+  • Day temperatures 28-32°C; nights 24-26°C; warm and humid
+  • IMD warnings: watch for heavy rainfall alerts and flood warnings
+
+================================================================================
+9. GOVERNMENT SCHEME DEADLINES
+================================================================================
+  • PMFBY enrollment: complete by 31st July for Kharif bajra
+  • Bajra seed subsidy: purchase certified seeds from authorized dealers with bill
+  • Kisan Credit Card (KCC): renew or apply for fresh credit before sowing season
+  • Fodder development scheme: contact district animal husbandry department for fodder subsidy
+  • Contact KVK for improved varieties and cultivation techniques
+
+================================================================================
+10. RELATED TOPICS & QUICK LINKS
+================================================================================
+  • Related: calendar_bajra_august.txt, calendar_july.txt, calendar_august.txt
+  • Advisories: spray_safety.txt, pest_bulletin_kharif_2025.txt, monsoon_onset_advisory.txt
+  • Weather: imd_forecast_guide.txt, weather_based_irrigation.txt
+  • Helpline: Kisan Call Centre 1800-180-1551, Gujarat Agriculture Department 079-232-43746
+  • Online: https://ikhedut.gujarat.gov.in, https://www.aicrpmpr.res.in (AICRP on Pearl Millet)
+
+================================================================================

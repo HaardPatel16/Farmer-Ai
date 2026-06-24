@@ -1,0 +1,10 @@
+=== CUMIN IRRIGATION SCHEDULING (LIGHT TOUCH SYSTEM) ===
+Target Ecosystem: Arid and Semi-Arid Sandy Loams of North Gujarat
+
+1. CALIBRATED WATER DELIVERY FLUSHES
+Cumin requires 4 to 5 light irrigations in total. Never flood the fields, as excess water triggers immediate fungal infections:
+- First Irrigation: Immediately after sowing to trigger germination (very light, controlled flow).
+- Second Irrigation: 8-10 days post-sowing to reinforce seedling emergence through the soil crust.
+- Third Irrigation: 30-35 days post-sowing (vegetative branching phase).
+- Fourth Irrigation: 50-55 days post-sowing (flowering stage).
+- Fifth Irrigation: 70-75 days post-sowing (seed-filling stage). Completely halt all water applications past day 80 to ensure seed drying.

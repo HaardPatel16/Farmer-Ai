@@ -1,0 +1,75 @@
+1. SCHEME NAME & FULL OFFICIAL NAME
+   Godown/Warehouse Construction Subsidy — Under Rashtriya Krishi Vikas Yojana (RKVY) and Central Warehousing Scheme, implemented by NABARD and the Ministry of Agriculture & Farmers Welfare, with Gujarat state participation.
+
+2. WHAT IS IT
+   The godown and warehouse construction subsidy scheme provides financial assistance to farmers, FPOs, cooperatives, and Self-Help Groups (SHGs) for building farm-level storage facilities. In Gujarat, farmers often face a dilemma after harvest: sell immediately when prices are low, or store and wait for better prices. Most farmers lack proper storage facilities, leading to post-harvest losses (15-25% for grains, 30-40% for fruits and vegetables) and distress selling. This scheme addresses this gap by subsidizing the construction of rural godowns, warehouses, and cold storage units. The subsidy ranges from 25% to 33% of the construction cost, depending on the category of the beneficiary and the location. The scheme aims to reduce post-harvest losses, improve farmer incomes through better price realization, and enhance food security by ensuring adequate grain storage at the farm level. In Gujarat, this scheme is particularly important for potato farmers (Banaskantha), onion farmers (Bhavnagar), cotton farmers (Saurashtra), and grain farmers (North Gujarat).
+
+3. WHO IS ELIGIBLE
+   • Individual farmers (general category): 25% subsidy
+   • SC/ST farmers, small and marginal farmers, and women farmers: 33% subsidy
+   • Farmer Producer Organizations (FPOs) and cooperatives: 25-33% subsidy
+   • Self-Help Groups (SHGs) and Joint Liability Groups (JLGs)
+   • Must own the land where the godown is to be constructed (or have a 10-year lease)
+   • Capacity: Minimum 50 MT (metric tonnes) for individual farmers; 100 MT for FPOs/cooperatives
+   • Maximum capacity: 1,000 MT for individual farmers; 5,000 MT for FPOs
+   • Must have a business plan for utilizing the godown
+   • Exclusions: Farmers who have already availed a similar subsidy for the same land
+
+4. BENEFITS PROVIDED
+   • 25-33% subsidy on construction cost of godown/warehouse
+   • Maximum subsidy: Rs 3 lakh for individual farmers (50-100 MT capacity)
+   • Maximum subsidy: Rs 15-25 lakh for FPOs/cooperatives (100-500 MT capacity)
+   • Construction cost includes: foundation, walls, roof, ventilation, flooring, and basic amenities
+   • Additional support for PACS (Primary Agricultural Credit Societies) under NABARD's Warehousing Scheme
+   • Loan facility under AIF for the remaining cost at 3% interest subvention
+   • Technical assistance for design and construction from NABARD/State Agriculture Department
+   • Post-construction, farmers can use the Warehouse Receipt Financing Scheme to get loans against stored produce
+   • Reduces post-harvest losses by 50-70% through proper storage
+   • Allows farmers to store produce for 3-6 months and sell when prices are higher
+
+5. HOW TO APPLY (STEP-BY-STEP)
+   Step 1: Identify a suitable site on your farm or leased land. Ensure the site is accessible by road for transport.
+   Step 2: Prepare a site plan and estimate construction cost. Get quotations from 2-3 contractors.
+   Step 3: Visit the District Agriculture Office (DAO) or NABARD office for the application form and guidelines.
+   Step 4: Fill out the application with your details, proposed capacity, site details, and cost estimate.
+   Step 5: Submit the application with: Aadhaar, 7/12 land extract (or lease agreement), bank passbook, caste certificate (if applicable), contractor quotations, and site photos.
+   Step 6: The DAO/NABARD conducts a field inspection to verify the site and feasibility.
+   Step 7: Upon approval, a sanction letter is issued with the subsidy amount.
+   Step 8: Start construction as per the approved design. The agriculture department may conduct mid-construction inspections.
+   Step 9: After completion, submit the completion certificate with photographs and contractor bills.
+   Step 10: The subsidy is released to your bank account via DBT after final verification.
+   Documents: Aadhaar, 7/12, bank passbook, caste certificate, contractor quotations, site plan, and photos.
+
+6. WHERE TO APPLY
+   • District Agriculture Office (DAO) — primary application point
+   • NABARD district office — for PACS and cooperative godowns
+   • iKhedut portal: ikhedut.gujarat.gov.in — for some components
+   • Taluka Agriculture Office — for preliminary guidance
+   • Gujarat State Warehousing Corporation — for large-scale warehouses
+   • SFAC — for FPO-specific warehouse grants
+
+7. GUJARAT-SPECIFIC DETAILS
+   Gujarat has constructed over 10,000 farm-level godowns under this scheme in the last decade. Banaskantha district has the highest number of potato godowns (cold storage) in Gujarat. Saurashtra region (Rajkot, Bhavnagar, Amreli) has seen significant cotton warehouse construction. The Gujarat government has identified "storage clusters" where multiple farmers can build godowns together. Gujarat has integrated the Warehouse Receipt Financing Scheme with this subsidy, allowing farmers to get loans against stored produce. The state provides an additional 5% top-up subsidy for godowns in tribal areas (Dang, Chhota Udaipur, Narmada). Gujarat farmers report price increases of 15-30% by storing produce for 2-4 months. The state has also promoted "scientific storage" practices through KVK training programs.
+
+8. COMMON PROBLEMS & SOLUTIONS
+   • Application rejected: Common reasons include inadequate site size, missing land documents, or cost estimate too high/low. Solution: Follow the NABARD/DAO design guidelines and get approved contractor quotations.
+   • Construction cost exceeds estimate: Keep a 10-15% buffer in your estimate. If costs escalate, fund the difference through personal savings or AIF loans.
+   • Subsidy delay: Subsidies are typically released in 2 installments (50% after mid-construction, 50% after completion). Follow up with the DAO if delays exceed 2 months.
+   • Poor construction quality: Use only approved contractors; NABARD provides a list of empaneled contractors. Insist on quality materials and supervision.
+   • No access to warehouse receipt financing: After construction, register your godown with the Gujarat State Warehousing Corporation for warehouse receipt issuance.
+   • Pest infestation in stored produce: Use proper storage practices — moisture control, fumigation, and regular inspection. Attend KVK training on scientific storage.
+
+9. RELATED SCHEMES
+   • Agriculture Infrastructure Fund (AIF) — for loans to cover remaining construction cost
+   • Warehouse Receipt Financing Scheme — for loans against stored produce
+   • RKVY — for additional infrastructure grants
+   • FPO Scheme — for FPOs building collective storage
+   • APMC Modernization — for market-yard storage facilities
+
+10. CONTACT INFORMATION
+   • NABARD Toll-Free: 1800-103-4567
+   • Gujarat Agriculture Department: 079-23251001
+   • District Agriculture Officer (DAO): Contact your district Collector Office
+   • Gujarat State Warehousing Corporation: 079-23241001
+   • Kisan Call Centre: 1800-180-1551
+   • NABARD Gujarat: 079-26577362

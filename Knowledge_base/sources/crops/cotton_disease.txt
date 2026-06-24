@@ -1,0 +1,10 @@
+=== COTTON PATHOLOGY AND DISEASE AMELIORATION ===
+Target Pathogens: Alternaria Leaf Spot, Bacterial Leaf Blight, and Para-Wilt
+
+1. ALTERNARIA LEAF SPOT (Alternaria macrospora)
+- Symptoms: Small, irregular, brown spots on lower leaves, progressing upwards. Causes severe defoliation during high-humidity phases in August.
+- Control Measures: Spray Mancozeb 75% WP @ 25 grams or Copper Oxychloride 50% WP @ 30 grams combined with Streptomycin Sulphate @ 1 gram per 10 liters of water. Repeat at 12-day intervals if atmospheric humidity remains >85%.
+
+2. PARA-WILT (PHYSIOLOGICAL WILTING)
+- Environmental Triggers: Sudden wilting of healthy plants within 24-48 hours following heavy downpours or sudden heavy irrigation after a prolonged dry spell. Common in heavy black clay soils.
+- Remedial Action: Drench root zones immediately using a solution of Cobalt Chloride @ 10 ppm (10 mg per liter of water) or a mixture of Urea (1%) + Potassium Chloride (1%) to restore vascular turgidity.

@@ -1,0 +1,81 @@
+1. SCHEME NAME & FULL OFFICIAL NAME
+   Surya Shakti Kisan Yojana (SKY) / Gujarat Solar Pump Scheme — Gujarat State Scheme implemented by Gujarat Energy Development Agency (GEDA) and Gujarat Urja Vikas Nigam Limited (GUVNL), with central PM-KUSUM scheme alignment.
+
+2. WHAT IS IT
+   The Surya Shakti Kisan Yojana (SKY) is a Gujarat government initiative to provide subsidized solar-powered irrigation pumps to farmers, replacing diesel pumps and unreliable grid-connected electric pumps. Under this scheme, farmers receive a combined subsidy of 60% from the state and central governments, a 30% low-interest loan, and pay only 10% of the total pump cost from their own pocket. This drastically reduces the financial burden on farmers while providing a sustainable, reliable, and cost-free source of irrigation power. The scheme also allows farmers to sell surplus solar power back to the grid through a net-metering arrangement, generating additional income. In Gujarat, where grid electricity for agriculture is often limited to 6-8 hours per day (and sometimes only at night), solar pumps provide daytime irrigation, which is critical for crop health. The scheme is especially beneficial for farmers in Saurashtra, Kutch, and North Gujarat, where power shortages are severe and diesel pump costs are high (Rs 15-20 per unit equivalent).
+
+3. WHO IS ELIGIBLE
+   • All farmers in Gujarat with cultivable land and a water source (well, borewell, farm pond)
+   • Farmers must have a valid electricity connection or be willing to install a new connection
+   • Farmers must have a bank account for DBT subsidy and loan repayment
+   • All categories: general, SC, ST, OBC, women farmers
+   • Priority given to farmers in areas with poor electricity supply (below 8 hours/day)
+   • Farmers must have 7/12 land extract in their name or valid tenancy agreement
+   • No landholding limit, but pump capacity is matched to landholding and water source
+   • Exclusions: Farmers who have already received a solar pump subsidy; farmers without water source
+
+4. BENEFITS PROVIDED
+   • 60% combined subsidy (state + central) on solar pump cost
+   • 30% loan at low interest (3-4% per annum) from banks/cooperative societies
+   • Farmer pays only 10% of the total cost
+   • Surplus solar power can be sold back to the grid (net metering) for additional income
+   • Free daytime irrigation power (no electricity bills after installation)
+   • Reduced diesel costs: Farmers save Rs 20,000-50,000 per year on diesel
+   • Pump capacities: 3 HP, 5 HP, 7.5 HP, and 10 HP (matched to farmer's need)
+   • 5-year warranty on solar panels and pump
+   • Annual maintenance contract available
+   • Environmentally friendly: Reduces carbon emissions by 2-4 tonnes per pump per year
+
+5. HOW TO APPLY (STEP-BY-STEP)
+   Step 1: Check your eligibility and decide on pump capacity (consult the taluka agriculture officer or GEDA office).
+   Step 2: Obtain a 7/12 land extract and water source proof (borewell/well certificate from panchayat or irrigation department).
+   Step 3: Apply online through the iKhedut portal (ikhedut.gujarat.gov.in) under the "Solar Pump" category.
+   Step 4: Alternatively, apply through the GEDA website (geda.gujarat.gov.in) or visit the GEDA district office.
+   Step 5: Fill out the application form with your details, land details, water source details, and proposed pump capacity.
+   Step 6: Upload documents: Aadhaar, 7/12, bank passbook, caste certificate (if applicable), electricity bill (if existing), and water source proof.
+   Step 7: Submit the application before the scheme window closes (typically open from April to June for the financial year).
+   Step 8: GEDA conducts a field inspection to verify land, water source, and electricity infrastructure.
+   Step 9: Upon approval, you will receive a sanction letter with the subsidy and loan details.
+   Step 10: Approach the designated bank (usually the district cooperative bank) for the 30% loan.
+   Step 11: Pay your 10% contribution to the bank or GEDA.
+   Step 12: GEDA assigns an empaneled vendor for installation. The solar pump is installed within 60-90 days.
+   Step 13: After installation, a joint inspection by GEDA and the electricity department is conducted.
+   Step 14: The subsidy is released directly to the vendor (DBT). The net metering agreement is signed for grid connection.
+   Documents: Aadhaar, 7/12, bank passbook, caste certificate, water source proof, electricity bill, and 2 passport photos.
+
+6. WHERE TO APPLY
+   • iKhedut portal: ikhedut.gujarat.gov.in
+   • GEDA website: geda.gujarat.gov.in
+   • GEDA district offices (all 33 districts of Gujarat)
+   • District Cooperative Banks for the 30% loan
+   • Taluka Agriculture Office for preliminary guidance
+   • Common Service Centres (CSCs) for online application help
+   • Gujarat Urja Vikas Nigam Limited (GUVNL) offices for net metering
+
+7. GUJARAT-SPECIFIC DETAILS
+   Gujarat has installed over 2 lakh solar pumps under SKY, making it one of the leading states in solar irrigation. The Gujarat government has set a target of 5 lakh solar pumps by 2027. SKY is integrated with the Kisan Suryodaya Yojana, which provides daytime electricity for irrigation. Saurashtra and Kutch have the highest solar pump adoption due to severe power shortages. Gujarat has a special "Solar Village" program where entire villages are converted to solar irrigation. The state has 300+ sunny days per year, making solar pumps highly efficient. Gujarat farmers report diesel savings of Rs 25,000-40,000 per year after switching to solar. The net metering policy in Gujarat allows farmers to earn Rs 2-4 per unit for surplus power sold to the grid. Gujarat has empaneled 50+ solar pump vendors to ensure competitive pricing and quality installation. The state provides a 5-year warranty and annual maintenance support through GEDA.
+
+8. COMMON PROBLEMS & SOLUTIONS
+   • Application rejected: Common reasons include no water source proof, existing solar pump, or land record mismatch. Solution: Ensure all documents are correct and get water source certificate from the gram panchayat or irrigation department.
+   • Subsidy delay: GEDA releases subsidies in batches. Check your application status on the iKhedut portal or contact the GEDA district office.
+   • Loan not approved: Approach the district cooperative bank first; if rejected, try NABARD or other banks under AIF.
+   • Installation delay: If the vendor delays beyond 90 days, contact GEDA with your sanction letter. GEDA can assign a different vendor.
+   • Pump not working: Contact the vendor for warranty repair (5-year warranty). If the vendor is unresponsive, escalate to GEDA.
+   • Net metering not activated: Contact GUVNL with your installation completion certificate. The net meter is installed within 30 days of application.
+   • Surplus power not being purchased: Ensure your net metering agreement is active and the meter is functioning. Contact GUVNL if payments are delayed.
+
+9. RELATED SCHEMES
+   • PM-KUSUM (Pradhan Mantri Kisan Urja Suraksha evam Utthaan Mahabhiyan) — Central scheme for solar pumps
+   • Kisan Suryodaya Yojana — for daytime electricity supply
+   • GGRC Drip Irrigation Scheme — for combining solar pumps with drip irrigation
+   • AIF (Agriculture Infrastructure Fund) — for additional solar infrastructure loans
+   • Farm Pond Subsidy — for water harvesting to support solar irrigation
+
+10. CONTACT INFORMATION
+   • GEDA Toll-Free: 1800-233-4444
+   • GEDA Website: geda.gujarat.gov.in
+   • iKhedut Portal: ikhedut.gujarat.gov.in
+   • GUVNL Net Metering: 079-23243001
+   • Kisan Call Centre: 1800-180-1551
+   • District Cooperative Bank: Contact your district's cooperative bank branch
+   • GEDA District Office: Available in all 33 districts of Gujarat

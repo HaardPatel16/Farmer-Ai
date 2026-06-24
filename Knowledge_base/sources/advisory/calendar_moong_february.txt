@@ -1,0 +1,103 @@
+================================================================================
+MOONG (GREEN GRAM) CROP CALENDAR — GUJARAT — FEBRUARY
+================================================================================
+
+CROP: Moong (Green Gram)
+MONTH: February
+PRIMARY REGION: South Gujarat, Saurashtra
+DOCUMENT TYPE: Month-wise Activity Calendar
+
+================================================================================
+1. SOIL PREPARATION FOR FEBRUARY
+================================================================================
+  • Light to medium loamy soils ideal for moong; avoid waterlogged soils
+  • Apply FYM 5-10 tonnes per hectare before sowing
+  • Soil pH should be 6.5-7.5; apply lime if pH < 6.0
+  • Ensure good drainage — moong is sensitive to waterlogging; prepare drainage channels
+  • In Saurashtra, some farmers use raised beds for summer moong to improve drainage
+
+================================================================================
+2. SOWING / PLANTING DATES
+================================================================================
+  • Summer moong sowing in South Gujarat and Saurashtra until mid-February with assured irrigation
+  • Seed rate: 15-20 kg per hectare for normal sowing; 20-25 kg for late sowing
+  • Spacing: 30 cm between rows; 10 cm between plants
+  • Sow at 3-4 cm depth; treat seeds with Carbendazim 2g + Rhizobium culture 1 packet per 10 kg seed
+  • Use certified varieties: Gujarat Moong-1, GM-2, GM-3 for high yield and disease resistance
+  • Intercropping: moong can be intercropped with cotton, groundnut, or sorghum in Kharif
+
+================================================================================
+3. IRRIGATION SCHEDULE
+================================================================================
+  • First irrigation immediately after sowing if soil is dry
+  • Then irrigate every 10-12 days through the season; moong needs light but regular moisture
+  • Critical irrigation at flowering and pod filling stages; do NOT allow moisture stress at these stages
+  • Avoid over-irrigation — waterlogging causes root rot and yellowing
+  • In South Gujarat, drip irrigation is ideal for moong; use 2-4 litre/hour emitters
+
+================================================================================
+4. FERTILIZER TIMING & DOSES
+================================================================================
+  • Basal dose at sowing: DAP 20 kg per hectare (moong fixes its own nitrogen — no urea needed)
+  • If soil is deficient in phosphorus, apply 40 kg DAP per hectare as basal
+  • No nitrogen top dressing — moong is a legume and fixes atmospheric nitrogen through root nodules
+  • Micronutrients: apply zinc sulphate 25 kg per hectare as basal if soil is deficient
+  • If crop shows yellowing, it may be due to waterlogging or disease, not nitrogen deficiency
+
+================================================================================
+5. PEST SCOUTING DATES
+================================================================================
+  • Yellow mosaic virus (YMV): if leaves show yellow mosaic pattern, rogue out and destroy affected plants; control whitefly vector
+  • Whitefly: use yellow sticky traps; spray Buprofezin 1.5ml per litre if threshold crossed
+  • Aphids: if colonies exceed 10 per plant, spray Imidacloprid 0.5ml per litre
+  • Pod borer (Helicoverpa armigera): if larvae found in pods, spray Bacillus thuringiensis (Bt) 1g per litre or Indoxacarb 0.5ml/litre
+  • Root rot: if waterlogging occurs, drench with Carbendazim 1g + Metalaxyl 2.5g per litre
+  • Monitor every 7-10 days; early pest detection is critical for moong
+
+================================================================================
+6. HARVESTING WINDOWS
+================================================================================
+  • Summer moong (sown in January-February) reaches maturity in late April-May in South Gujarat
+  • Harvest when 80% pods turn black; do not delay — shattering losses increase after maturity
+  • Cut with sickle or use combine harvester; thresh and clean same day
+  • Dry grain to 8% moisture before storage; store in clean, dry, ventilated godowns
+  • Moong is a high-value pulse; maintain quality for better market price
+
+================================================================================
+7. POST-HARVEST OPERATIONS
+================================================================================
+  • Dry grain to 8% moisture before storage; moisture above 10% causes fungal growth and bruchid infestation
+  • Clean grain by winnowing and grading; separate broken and damaged grains
+  • Store in gunny bags or metal bins; place on pallets (not directly on floor)
+  • Fumigate storage area with aluminium phosphide if bruchid (pulse beetle) infestation is suspected
+  • Maintain records of quantity, grade, and sale price for PMFBY and income documentation
+  • Sell through eNAM or registered mandi for transparent pricing; contact dal mills for bulk procurement
+
+================================================================================
+8. WEATHER WATCH
+================================================================================
+  • Day temperatures rise to 28-35°C; nights 12-18°C; transition from winter to pre-summer
+  • This temperature range is ideal for moong growth and nitrogen fixation
+  • Unseasonal rain in February can cause root rot and fungal diseases; ensure drainage
+  • Dew formation increases — favours fungal diseases; plan preventive sprays accordingly
+  • Wind speeds increase in Saurashtra — can cause lodging in tall varieties; provide support if needed
+
+================================================================================
+9. GOVERNMENT SCHEME DEADLINES
+================================================================================
+  • PMFBY enrollment: complete by 15th December for Rabi moong or 31st July for Kharif moong
+  • Moong seed subsidy: purchase certified seeds from authorized dealers with bill and Aadhaar
+  • Soil Health Card: collect updated card from KVK or ATMA office before fertilizer application
+  • Kisan Credit Card (KCC): renew or apply for fresh credit before sowing season
+  • PM-KISAN: verify installment eligibility and Aadhaar seeding status
+
+================================================================================
+10. RELATED TOPICS & QUICK LINKS
+================================================================================
+  • Related: calendar_february.txt, calendar_march.txt, calendar_april.txt
+  • Advisories: spray_safety.txt, soil_testing_guide.txt, post_harvest_storage.txt
+  • Weather: imd_forecast_guide.txt, heat_wave_advisory.txt
+  • Helpline: Kisan Call Centre 1800-180-1551, Gujarat Agriculture Department 079-232-43746
+  • Online: https://ikhedut.gujarat.gov.in, https://www.daprf.gov.in (Directorate of Pulses Research)
+
+================================================================================

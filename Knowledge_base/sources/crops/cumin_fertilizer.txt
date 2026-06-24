@@ -1,0 +1,9 @@
+=== CUMIN FERTILIZER AND NUTRIENT PARAMETERS ===
+Source: SDAU, Jagudan Guidelines
+
+1. BASE SOIL CONDITIONING
+- Incorporate 10-15 tonnes of farmyard manure (FYM) or 1.0 metric tonne of mustard/castor cake per hectare during initial land preparation to establish a stable micronutrient base.
+
+2. CHEMICAL NPK APPLICATION
+- Quantitative Requirement: 30:30:0 kg NPK per hectare.
+- Split Sequence: Apply the entire quantity of Phosphorus (30 kg P2O5/ha) as a basal application before broadcasting seeds. Split Nitrogen into two equal doses of 15 kg/ha each: the first as a basal application, and the second top-dressed 30-35 days post-sowing, immediately before the third irrigation.

@@ -1,0 +1,143 @@
+================================================================================
+MIDDLE GUJARAT AGRO-CLIMATIC ZONE — COMPLETE REGIONAL PROFILE
+================================================================================
+
+1. REGION OVERVIEW & LOCATION
+--------------------------------------------------------------------------------
+Middle Gujarat is the agricultural heartland and industrial corridor of Gujarat.
+It encompasses the districts of Ahmedabad, Vadodara, Anand, Kheda, Gandhinagar,
+and Panchmahal. The zone lies between the Sabarmati, Mahi, and Narmada river basins,
+benefiting from fertile alluvial and medium black soils. This is one of the most
+prosperous and diversified agricultural zones in the state, with strong linkages
+to dairy cooperatives (Amul, Dudh Sagar), tobacco processing, and cash crop
+production. The terrain is predominantly flat to gently undulating, with some
+hilly areas in Panchmahal.
+
+2. CLIMATE & RAINFALL
+--------------------------------------------------------------------------------
+Rainfall Pattern: The zone receives moderate to good rainfall ranging from 750mm to
+900mm annually. The monsoon arrives by June 15–20 and withdraws by late September.
+Rainfall distribution is relatively more reliable than in Saurashtra, though
+occasional dry spells in July–August can stress crops.
+
+Temperature: Summer temperatures (April–June) range from 38°C to 44°C. Winter is mild
+(10°C to 28°C). The zone experiences occasional cold waves in January, with minimum
+temperatures dropping to 6–8°C in Ahmedabad and Gandhinagar.
+
+Humidity: Moderate humidity (45–65%) during summer, rising to 70–85% during monsoon.
+Post-monsoon humidity supports rabi crop establishment.
+
+Drought/Flood Risk: Moderate drought risk in rainfed areas; however, the extensive
+canal network mitigates drought impact significantly. Localized flooding occurs in
+low-lying areas of Anand, Kheda, and Vadodara along riverbanks during heavy monsoon
+years. Waterlogging in black cotton soil areas is a concern in wet years.
+
+3. SOIL CHARACTERISTICS
+--------------------------------------------------------------------------------
+Two dominant soil types characterize Middle Gujarat:
+  • Goradu Soils (Alluvial loams) — Found in Ahmedabad, Gandhinagar, Kheda, and
+    Anand. These are deep, well-drained, sandy loam to clay loam soils with good
+    fertility. pH 7.5–8.0. High response to irrigation and fertiliser.
+  • Medium Black Soils (Vertisols) — Found in Vadodara, Panchmahal, and parts of
+    Anand. Clay content 35–45%, high water-holding capacity, but prone to
+    waterlogging and cracking. pH 7.8–8.5. Low in organic matter (0.4–0.7%).
+
+General fertility: Moderate to high in available potassium, moderate in phosphorus,
+low in organic matter and zinc. Soil testing is widely practiced in this zone.
+
+4. MAJOR CROPS & CROP ROTATION
+--------------------------------------------------------------------------------
+Kharif Crops:
+  • Tobacco — Anand and Kheda are the tobacco belt of Gujarat; Virginia and
+    Natu varieties. Sowing: June–July.
+  • Cotton — Bt cotton hybrids on medium black soils in Vadodara and Panchmahal.
+  • Paddy (Rice) — HYV varieties like GR-11, Jaya, and Pusa-44 in irrigated areas
+    of Anand, Kheda, and Vadodara.
+  • Bajra — GHB-538 on lighter soils in Ahmedabad and Gandhinagar.
+  • Castor and Sesame — mixed crops in Vadodara.
+
+Rabi Crops:
+  • Wheat — GW-273, GW-322, Lok-1 are major varieties; extensive cultivation in
+    Ahmedabad, Gandhinagar, and Anand under irrigation.
+  • Gram (Chickpea) — GG-1, GG-2 on medium black soils.
+  • Cumin — high-value crop in Anand and Kheda.
+  • Mustard — GM-1, Rai-5 in non-irrigated areas.
+
+Year-Round / Cash Crops:
+  • Dairy Fodder — bajra-neem, sorghum, and hybrid napier for the cooperative dairy
+    sector. This is the Amul hinterland.
+  • Vegetables — tomato, brinjal, chilli, and okra for Ahmedabad and Vadodara urban markets.
+  • Banana — Bharuch border areas (part of this zone influence).
+
+Recommended Rotations:
+  • Tobacco – Wheat – Green Gram (3-crop system with irrigation)
+  • Cotton – Wheat (on medium black soils)
+  • Paddy – Wheat (double cropping with canal irrigation)
+  • Bajra – Mustard (rainfed rotation)
+
+5. WATER RESOURCES
+--------------------------------------------------------------------------------
+Middle Gujarat has the best irrigation infrastructure in the state:
+  • Narmada Canal System — Sardar Sarovar canal commands large parts of Ahmedabad,
+    Gandhinagar, Kheda, Anand, and Vadodara. Branch canals like Dora, Mahi, and
+    Fatehpur canals distribute water.
+  • Mahi River System — Direct irrigation and canal network in Kheda and Anand.
+  • Sabarmati River — Ahmedabad and Gandhinagar depend on Sabarmati and groundwater.
+  • Groundwater — Generally good quality and moderate depth (10–25m) in most of
+the zone, though declining in Ahmedabad and Gandhinagar urban fringes.
+  • Tanks and Reservoirs — Wanakbori, Meshwo, and other medium dams provide
+    supplemental irrigation.
+
+6. AGRICULTURAL PRACTICES
+--------------------------------------------------------------------------------
+Sowing Windows: Kharif sowing begins June 15–July 10. Rabi sowing (wheat, gram)
+October–November. Tobacco is transplanted in July–August. Paddy is transplanted
+July–August.
+
+Irrigation Methods: Canal irrigation is dominant. Drip and sprinkler irrigation
+are rapidly expanding for tobacco, cotton, and vegetables. Flood irrigation is still
+common for paddy and wheat but being discouraged.
+
+Intercropping: Cotton + Green gram (1:1), Tobacco + Onion, and Castor + Groundnut
+are practiced. Relay cropping of wheat into standing cotton is experimented with.
+
+Special Practices: Tobacco requires precise fertiliser scheduling (heavy NPK with
+micronutrients), topping and desuckering. Green manure (dhaincha) is commonly
+incorporated before paddy transplanting. Zero-till wheat after paddy is expanding
+in Kheda and Anand to save water and fuel.
+
+7. COMMON CHALLENGES
+--------------------------------------------------------------------------------
+  • Pests: Bollworm complex in cotton (despite Bt), tobacco caterpillar, aphids
+    in mustard, brown plant hopper in paddy.
+  • Diseases: Wilt in cotton and pigeon pea, blast in paddy, leaf curl in chilli,
+    black shank in tobacco.
+  • Weather: Untimely rains during tobacco curing (October–November) cause quality
+    loss. Hailstorms in March damage wheat and mustard.
+  • Soil: Waterlogging in black cotton soils during wet years; zinc deficiency in
+    alluvial soils; declining organic matter due to intensive cropping.
+  • Water: Canal water distribution inequalities; groundwater depletion in Ahmedabad
+    urban fringe; industrial water competition.
+
+8. GOVERNMENT SCHEMES APPLICABLE
+--------------------------------------------------------------------------------
+  • Sardar Sarovar Canal Command Area Development — canal lining, water distribution.
+  • PMKSY — micro-irrigation for tobacco, cotton, and vegetables.
+  • Soil Health Card Scheme — extensive coverage in this zone.
+  • National Food Security Mission (NFSM) — wheat and pulses.
+  • National Horticulture Mission — banana, mango, and vegetable cultivation.
+  • Gujarat Cooperative Milk Marketing Federation (GCMMF / Amul) — dairy support
+    and fodder development.
+  • PMFBY — crop insurance for tobacco, cotton, paddy, and wheat.
+  • Agricultural Export Zone (AEZ) — tobacco and cumin export support.
+
+9. DISTRICTS INCLUDED IN THIS ZONE
+--------------------------------------------------------------------------------
+  • Ahmedabad (entire district)
+  • Vadodara (entire district)
+  • Anand (entire district)
+  • Kheda (entire district)
+  • Gandhinagar (entire district)
+  • Panchmahal (entire district, though hilly eastern parts overlap with Tribal Belt)
+
+================================================================================

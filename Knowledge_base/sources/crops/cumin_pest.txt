@@ -1,0 +1,7 @@
+=== CUMIN INSECT PEST CONTROL PROTOCOLS ===
+Target Vectors: Aphids (Myzus persicae) and Thrips
+
+1. APHID MANAGEMENT (THE PRIMARY SAP-SUCKER)
+- Infestation Window: Late January to February, coinciding with the flowering phase. Aphids suck sap from tender green parts, secreting sticky honeydew that fosters sooty mold development.
+- Economic Threshold Level: 20-25 aphids per plant crown.
+- Chemical Interventions: Spray Thiamethoxam 25% WG @ 3 grams or Acetamiprid 20% SP @ 4 grams per 10 liters of water. Alternatively, deploy Flonicamid 50% WG @ 4 grams/10L if pressure is high.

@@ -1,0 +1,99 @@
+================================================================================
+WHEAT CROP CALENDAR — GUJARAT — DECEMBER
+================================================================================
+
+CROP: Wheat
+MONTH: December
+PRIMARY REGION: North Gujarat, Saurashtra, Kutch
+DOCUMENT TYPE: Month-wise Activity Calendar
+
+================================================================================
+1. SOIL PREPARATION FOR DECEMBER
+================================================================================
+  • If sowing was delayed to early December, complete soil preparation immediately
+  • In waterlogged fields, open drainage channels and aerate soil by shallow cultivation
+  • Apply FYM 10-15 tonnes per hectare if not applied before sowing
+  • Maintain soil pH at 6.5-7.5; apply lime if pH < 6.0
+  • Ensure good drainage — wheat is sensitive to waterlogging; check drainage channels
+
+================================================================================
+2. SOWING / PLANTING DATES
+================================================================================
+  • Late sowing possible until 10-15 December in South Gujarat; yield declines after 15 December
+  • If sowing after 15 December, increase seed rate to 125-150 kg per hectare and use short-duration varieties
+  • For normal sowing (November), crop is in germination/early vegetative stage
+  • Gap filling NOT recommended for wheat; if germination is poor, consider re-sowing in small patches only
+  • Focus on irrigation and pest management for established crop
+
+================================================================================
+3. IRRIGATION SCHEDULE
+================================================================================
+  • First irrigation at CRI stage (20-25 days after sowing) — apply 50mm water; this is THE MOST CRITICAL irrigation
+  • Second irrigation at tillering stage (40-45 days); apply 50-60mm water
+  • In North Gujarat, check-basin or flood irrigation is common
+  • Avoid irrigation during cold wave/frost events; irrigate during daytime in winter
+  • If frost is predicted, light irrigation in evening can provide some protection (latent heat release)
+
+================================================================================
+4. FERTILIZER TIMING & DOSES
+================================================================================
+  • First nitrogen top dressing (40-50 kg urea per hectare) at CRI stage (20-25 days after sowing)
+  • If crop was sown late (December), increase first nitrogen dose to 50 kg urea per hectare
+  • Second nitrogen top dressing (40 kg urea per hectare) at tillering (40-45 days)
+  • Foliar spray of 2% urea + 0.5% zinc sulphate at CRI stage if crop shows deficiency symptoms
+  • No potash top dressing needed if basal potash was applied
+  • Plan for third nitrogen top dressing in January at boot leaf stage
+
+================================================================================
+5. PEST SCOUTING DATES
+================================================================================
+  • Yellow rust (Puccinia striiformis): peak risk month in North Gujarat; scout every 5-7 days
+  • If yellow rust appears (yellow-orange streaks on leaves), spray Propiconazole 1ml per litre immediately
+  • Alert agriculture department if yellow rust is detected — it is a quarantine disease in Gujarat
+  • Aphids: if colonies exceed 10 per tiller, spray Dimethoate 2ml per litre
+  • Termite: if damage observed, drench with Chlorpyriphos 2ml per litre along affected rows
+  • Pink stem borer: if dead heart observed, remove and destroy affected plants; apply Carbofuran 3G if >5%
+
+================================================================================
+6. HARVESTING WINDOWS
+================================================================================
+  • NO harvest in December — wheat is in early vegetative stage (CRI to tillering)
+  • Continue monitoring crop growth and pest populations
+  • Record keeping: document CRI and tillering dates for harvest planning (March-April)
+
+================================================================================
+7. POST-HARVEST OPERATIONS
+================================================================================
+  • NO post-harvest operations in December
+  • Prepare storage facilities and threshing equipment for March-April harvest
+  • Contact grain market or FCI procurement centre for price information
+  • Arrange for combine harvester or labour in advance for March-April peak season
+
+================================================================================
+8. WEATHER WATCH
+================================================================================
+  • December is the second coldest month in Gujarat; minimum temperatures 5-10°C in North Gujarat and Kutch
+  • Frost risk in North Gujarat (Banaskantha, Patan, Mehsana) and Kutch — protect wheat with light irrigation or smoke
+  • Day temperatures: 25-30°C; nights 8-14°C; ideal for wheat growth
+  • Western disturbances may bring light rain and cloud cover to North Gujarat; beneficial for Rabi crops
+  • IMD Cold Wave warnings: if minimum temperature forecast is 4°C or below for 2+ days, activate frost protection measures
+
+================================================================================
+9. GOVERNMENT SCHEME DEADLINES
+================================================================================
+  • PMFBY enrollment: complete by 15th December for Rabi wheat; do NOT delay
+  • Wheat seed subsidy: claim through authorized dealer with GST bill and Aadhaar
+  • Soil Health Card: collect updated card from KVK or ATMA office
+  • Kisan Credit Card: avail fresh credit for fertilizer and irrigation costs
+  • PM-KISAN: verify installment eligibility and Aadhaar seeding status
+
+================================================================================
+10. RELATED TOPICS & QUICK LINKS
+================================================================================
+  • Related: calendar_wheat_november.txt, calendar_wheat_january.txt, calendar_wheat_march.txt
+  • Advisories: cold_wave_frost_protection.txt, spray_safety.txt, soil_testing_guide.txt
+  • Weather: imd_forecast_guide.txt, imd_seasonal_forecast_guide.txt
+  • Helpline: Kisan Call Centre 1800-180-1551, Gujarat Agriculture Department 079-232-43746
+  • Online: https://ikhedut.gujarat.gov.in, https://www.dwr.res.in
+
+================================================================================

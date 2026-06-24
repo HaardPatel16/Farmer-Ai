@@ -1,0 +1,61 @@
+1. SCHEME NAME & FULL OFFICIAL NAME
+   Agriculture Infrastructure Fund (AIF) — Central Sector Scheme launched by Government of India in 2020 under Aatmanirbhar Bharat Abhiyan, managed by NABARD and Department of Agriculture & Farmers Welfare.
+
+2. WHAT IS IT
+   AIF provides medium-long term loans (up to Rs 2 crore) at subsidized interest rates (3% interest subvention) for building post-harvest agricultural infrastructure. It was created to reduce post-harvest losses (currently 15-25% in India), improve farmer incomes, and connect farms to markets. The fund supports projects like cold storage, warehouse/godown construction, primary processing units, sorting/grading facilities, collection centers, and farm-gate infrastructure. The interest subvention means the effective interest rate for farmers is reduced by 3 percentage points from the bank’s normal rate. The repayment period is up to 7 years with a moratorium period of up to 2 years. Credit guarantee is available through NABARD for loans without collateral. AIF is specifically designed for projects that directly benefit farmers and reduce wastage of perishable commodities like fruits, vegetables, and milk.
+
+3. WHO IS ELIGIBLE
+   • Individual farmers (must own land or have lease agreement)
+   • Farmer Producer Organizations (FPOs) / Farmer Producer Companies (FPCs)
+   • Primary Agricultural Credit Societies (PACS) / Cooperatives
+   • Agri-entrepreneurs and startups
+   • Self-help Groups (SHGs) and Joint Liability Groups (JLGs)
+   • APMC Market Committees
+   • No income limit but project must be economically viable
+   • Exclusions: Projects not directly linked to agriculture or not benefiting farmers
+
+4. BENEFITS PROVIDED
+   • Interest subvention of 3% per annum on loans from scheduled banks
+   • Loan amount: up to Rs 2 crore per project (can be higher for larger FPOs)
+   • Repayment period: up to 7 years
+   • Moratorium period: up to 2 years (varies by bank and project type)
+   • Credit guarantee up to Rs 2 crore under NABARD’s CGFMU
+   • Maximum 2% front-end fee may be charged by banks; no government fees
+   • The interest subvention is credited quarterly to the bank
+
+5. HOW TO APPLY (STEP-BY-STEP)
+   Step 1: Prepare a detailed project report (DPR) with estimated cost, revenue projections, and technical details. You can hire a consultant or use DPR templates from NABARD.
+   Step 2: Approach any scheduled commercial bank (SBI, BOB, PNB, DCB, etc.) or cooperative bank with your DPR.
+   Step 3: Bank evaluates the project for viability and sanction.
+   Step 4: Bank submits loan details to NABARD for interest subvention approval.
+   Step 5: Upon approval, loan is disbursed and the 3% interest subvention begins.
+   Documents required: Land ownership/lease documents, Aadhaar, PAN, project report, 2 years of financial statements (if existing business), bank statement, photographs of proposed site, cost quotations from vendors.
+
+6. WHERE TO APPLY
+   • Any Scheduled Commercial Bank (SBI, Bank of Baroda, Union Bank, etc.)
+   • Regional Rural Banks (RRBs) in your district
+   • Cooperative Banks and PACS
+   • NABARD offices for guidance on DPR preparation
+   • Online portal: aifindia.nabard.org (for information and project registration)
+
+7. GUJARAT-SPECIFIC DETAILS
+   Gujarat has over 15,000+ FPOs and cooperatives eligible for AIF. Key infrastructure gaps addressed in Gujarat: cold storage for potato (Banaskantha), onion (Bhavnagar), and cumin (Unjha). The Gujarat government has identified 100+ priority clusters for AIF-funded projects. Banaskantha district alone has seen 50+ AIF-funded cold storage projects. Farmers in Gujarat can combine AIF with NABARD’s Warehouse Receipt Financing Scheme.
+
+8. COMMON PROBLEMS & SOLUTIONS
+   • Project rejected: DPR not detailed enough — hire a NABARD-accredited consultant for Rs 5,000-15,000.
+   • Land not in farmer’s name: get a 10-year lease registered at the sub-registrar office.
+   • Bank says no collateral: use the CGFMU credit guarantee up to Rs 2 crore.
+   • Delay in subvention: follow up with bank’s agricultural branch and NABARD regional office.
+   • Confusion about project cost: cost includes land, building, machinery, and 3 months working capital.
+
+9. RELATED SCHEMES
+   • Warehouse/Godown Construction Subsidy (RKVY)
+   • Custom Hiring Centre (SMAM)
+   • FPO Scheme (Central Government)
+   • PM FME (Formalization of Micro Food Enterprises) for processing units
+
+10. CONTACT INFORMATION
+   • NABARD Toll-Free: 1800-103-4567
+   • AIF portal: aifindia.nabard.org
+   • Gujarat NABARD Regional Office: Ahmedabad — 079-26577362
+   • Email: aifcell@nabard.org

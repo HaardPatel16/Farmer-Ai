@@ -1,0 +1,14 @@
+=== IRRIGATED WHEAT CRITICAL WATER MANAGEMENT ===
+Source: JAU / AAU Research Data
+
+1. WATER REQUIREMENT (CRITICAL CROWN ROOT WINDOW)
+Irrigated wheat needs 5 to 6 flushes based on critical physiological phases:
+- Crown Root Initiation (CRI Phase - 21 Days Post Sowing) -> Absolute Most Critical Irrigation. Failure to water here causes a 30%+ reduction in root branching.
+- Tillering Initiation Phase (40-45 Days)
+- Jointing Phase (60-65 Days)
+- Flowering Phase (80-85 Days)
+- Milking Stage (95-100 Days)
+- Dough Stage (110-115 Days).
+
+2. WATER DEPTH MAINTENANCE
+- Maintain a uniform irrigation depth of 5-6 cm per flush. Avoid flooding during the dough stage to prevent lodging caused by heavy winds.

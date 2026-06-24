@@ -1,0 +1,12 @@
+=== GROUNDNUT (SINGDANA) CULTIVATION SCHEMATICS FOR SAURASHTRA ===
+Source: Directorate of Groundnut Research (DGR) & Junagadh Agricultural University (JAU)
+Primary Belt: Rajkot, Junagadh, Amreli, Bhavnagar, Jamnagar, Devbhumi Dwarka
+
+1. SOWING PHENOLOGY
+- Kharif Crop Window: June 15 to July 5 (Monsoon onset). Sowing early minimizes early-stage aphid vector infestations.
+- Summer Irrigated Crop Window: January 25 to February 15. Prevalent in tracts with Narmada canal access. Must be completed before ambient temperatures drop below 15°C to avoid delayed germination cycles.
+
+2. SEED METRICS AND FIELD GEOMETRY
+- Bunch Type (Upright Cultivars): 100 to 120 kg of healthy kernels per hectare. Row spacing: 30 cm x 10 cm or 45 cm x 10 cm.
+- Spreading / Semi-Spreading Type: 80 to 100 kg kernels/ha. Row spacing: 60 cm x 10 cm or 90 cm x 10 cm.
+- Mandatory Seed Dressing: Treat kernels with Carboxin 37.5% + Thiram 37.5% (Vitavax Power) @ 2.5 grams/kg seed, followed by inoculation with Rhizobium culture and Phosphate Solubilizing Bacteria (PSB) @ 250 grams per 10 kg seed.

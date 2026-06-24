@@ -1,0 +1,103 @@
+================================================================================
+CHILLI CROP CALENDAR — GUJARAT — OCTOBER
+================================================================================
+
+CROP: Chilli
+MONTH: October
+PRIMARY REGION: South Gujarat, Saurashtra
+DOCUMENT TYPE: Month-wise Activity Calendar
+
+================================================================================
+1. SOIL PREPARATION FOR OCTOBER
+================================================================================
+  • Well-drained loamy soils with pH 6.0-7.0 ideal for chilli
+  • Apply FYM 15-20 tonnes per hectare 2-3 weeks before transplanting
+  • Prepare raised beds (15-20 cm high) for nursery; mix FYM 10kg per square metre
+  • In main field, apply basal dose DAP 100 kg + potash 50 kg per hectare at transplanting
+  • Ensure excellent drainage — chilli is sensitive to waterlogging and Phytophthora root rot
+
+================================================================================
+2. SOWING / PLANTING DATES
+================================================================================
+  • Rabi chilli nursery should be sown in mid-September to mid-October for transplanting in November-December
+  • Raise beds 15cm high, mix FYM 10kg per sq metre; sow seeds in 5cm spaced rows
+  • Cover with thin soil layer; water with rose can daily
+  • Treat nursery beds with Captan 3g per litre drench to prevent damping off before sowing
+  • For Kharif chilli (already transplanted in July-August), October is fruit development stage
+  • Transplant 40-45 day old seedlings in well-prepared main field at 60cm x 45cm spacing
+
+================================================================================
+3. IRRIGATION SCHEDULE
+================================================================================
+  • Kharif chilli: generally rainfed; one irrigation if dry spell exceeds 10 days during fruit development
+  • Rabi nursery: water with rose can daily; maintain moist but not waterlogged soil
+  • Rabi transplanted chilli: first irrigation immediately after transplanting; then every 7-10 days
+  • Critical irrigation at flowering and fruit setting stages; do NOT allow moisture stress
+  • Drip irrigation is highly recommended for chilli; use 4-6 litre/hour emitters
+
+================================================================================
+4. FERTILIZER TIMING & DOSES
+================================================================================
+  • Kharif chilli: apply final top dressing potassium sulphate 50kg per hectare to improve colour and drying quality
+  • Rabi nursery: apply 2 kg DAP per 100 sq metres at 15 days after sowing
+  • Rabi transplanted chilli: first top dressing (50 kg urea + 25 kg potash per hectare) at 30 days after transplanting
+  • Second top dressing (50 kg urea per hectare) at flowering stage (60 days after transplanting)
+  • Micronutrients: foliar spray of 0.5% zinc sulphate + 0.2% boron at flowering for better fruit set
+
+================================================================================
+5. PEST SCOUTING DATES
+================================================================================
+  • Kharif chilli: thrips damage (leaf curl, silvering) — spray Fipronil 1.5ml per litre if 5+ thrips per flower
+  • Fruit borer (Helicoverpa armigera): if larvae found in fruits, spray Bacillus thuringiensis (Bt) 1g per litre or Indoxacarb 0.5ml/litre
+  • Anthracnose (Colletotrichum): if sunken lesions appear on fruits, spray Carbendazim 1g + Mancozeb 2.5g per litre
+  • Nursery damping off: treat soil with Captan 3g per litre before sowing; ensure good drainage
+  • Whitefly: use yellow sticky traps; spray Buprofezin 1.5ml per litre if threshold crossed
+  • Aphids: if colonies exceed 10 per plant, spray Imidacloprid 0.5ml per litre
+
+================================================================================
+6. HARVESTING WINDOWS
+================================================================================
+  • Kharif chilli: harvest ripe red fruits in batches every 15-20 days — delayed harvest invites fruit borer and anthracnose
+  • Start spreading harvested ripe chilli on clean floor for sun drying — thin layer, turn daily
+  • Target 8-10% moisture for safe storage; do NOT store at moisture above 12%
+  • Rabi nursery: no harvest; focus on healthy seedling production for November-December transplanting
+  • Grade dried chilli by colour, size, and moisture before marketing; red bright colour fetches premium price
+
+================================================================================
+7. POST-HARVEST OPERATIONS
+================================================================================
+  • Dry harvested chilli immediately to 8-10% moisture; spread in thin layer on clean cemented yard or drying floor
+  • Turn chilli every 2-3 hours for uniform drying; cover with tarpaulin if rain threatens
+  • Store in clean, dry, ventilated godowns; use gunny bags or plastic crates
+  • Fumigate storage area with aluminium phosphide if insect infestation is suspected
+  • Maintain records of quantity, grade, and sale price for PMFBY and income documentation
+  • Contact spice traders or eNAM for transparent pricing; cumin-chilli belt in North Gujarat has dedicated markets
+
+================================================================================
+8. WEATHER WATCH
+================================================================================
+  • Post-monsoon clear skies; day temperatures 32-36°C; nights 18-22°C; ideal for chilli drying
+  • Northeast monsoon (retreating monsoon) may bring scattered rain to South Gujarat; cover drying chilli with tarpaulin
+  • Humidity drops to 50-70%; favourable for chilli drying and storage preparation
+  • Unseasonal rain in October can damage drying chilli and reduce quality; monitor forecasts
+  • First cold wave signals in North Gujarat by month-end; Rabi nursery may need protection if frost occurs
+
+================================================================================
+9. GOVERNMENT SCHEME DEADLINES
+================================================================================
+  • PMFBY enrollment: complete by 15th December for Rabi chilli; visit PACS or bank branch
+  • Chilli seed subsidy: purchase certified seeds from authorized dealers with bill and Aadhaar
+  • Soil Health Card: collect updated card from KVK or ATMA office before fertilizer application
+  • Kisan Credit Card (KCC): renew or apply for fresh credit before sowing season
+  • PM-KISAN: verify installment eligibility and Aadhaar seeding status
+
+================================================================================
+10. RELATED TOPICS & QUICK LINKS
+================================================================================
+  • Related: calendar_october.txt, calendar_november.txt, calendar_chilli_october.txt
+  • Advisories: post_harvest_veg_storage.txt, spray_safety.txt, soil_testing_guide.txt
+  • Weather: imd_forecast_guide.txt, monsoon_withdrawal_advisory.txt
+  • Helpline: Kisan Call Centre 1800-180-1551, Gujarat Spices Board 079-232-48901
+  • Online: https://ikhedut.gujarat.gov.in, https://www.indianspices.com (Spices Board)
+
+================================================================================

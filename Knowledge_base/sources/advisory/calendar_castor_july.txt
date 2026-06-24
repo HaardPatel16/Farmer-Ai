@@ -1,0 +1,93 @@
+================================================================================
+CASTOR CROP CALENDAR — GUJARAT — JULY
+================================================================================
+
+CROP: Castor
+MONTH: July
+PRIMARY REGION: Saurashtra, North Gujarat
+DOCUMENT TYPE: Month-wise Activity Calendar
+
+================================================================================
+1. SOIL PREPARATION FOR JULY
+================================================================================
+  • Light soils (sandy loam) ideal for castor; deep ploughing 20-25 cm before monsoon
+  • Apply FYM 5-10 tonnes per hectare before sowing
+  • Maintain soil pH 6.0-7.5; castor tolerates poor soils but responds to good drainage
+  • Ensure drainage — castor is sensitive to waterlogging; prepare ridges in heavy soils
+
+================================================================================
+2. SOWING / PLANTING DATES
+================================================================================
+  • Sow with monsoon rains in Saurashtra and North Gujarat rainfed tracts
+  • Seed rate: 5-6 kg per hectare for hybrid varieties (e.g., GCH-4, GCH-7); 8-10 kg for non-hybrid
+  • Spacing: 120cm x 60cm for hybrids; 90cm x 45cm for non-hybrids
+  • Wider spacing than most kharif crops due to large plant canopy
+  • Treat seeds with Carbendazim 2g per kg to prevent seedling diseases
+
+================================================================================
+3. IRRIGATION SCHEDULE
+================================================================================
+  • Generally rainfed; one irrigation at 30-40 days if dry spell occurs during vegetative growth
+  • Second irrigation at 50-60 days during flowering if no rain
+  • In irrigated tracts, drip irrigation with 4 litre/hour emitters can be used
+  • Ensure drainage after heavy rain — waterlogging causes root rot and sudden wilt
+
+================================================================================
+4. FERTILIZER TIMING & DOSES
+================================================================================
+  • Basal dose at sowing: DAP 100 kg + potash 30 kg per hectare
+  • First nitrogen top dressing (40 kg urea per hectare) at 30 days after sowing
+  • Second nitrogen top dressing (40 kg urea per hectare) at 60 days after sowing
+  • Micronutrients: apply zinc sulphate 25 kg per hectare as basal if soil is deficient
+
+================================================================================
+5. PEST SCOUTING DATES
+================================================================================
+  • Castor shoot and capsule borer (Conogethes punctiferalis): monitor for webbed shoots; remove and destroy infested shoots
+  • Castor semilooper (Achaea janata): if larvae exceed 5 per plant, spray Bacillus thuringiensis (Bt) 1g per litre
+  • Jassids: if damage exceeds 5% leaf area, spray Imidacloprid 0.5ml per litre
+  • Whitefly: use yellow sticky traps; spray Buprofezin 1.5ml per litre if threshold crossed
+  • Root rot: if waterlogging occurs, drench with Copper oxychloride 2.5g per litre + Metalaxyl 2.5g per litre
+
+================================================================================
+6. HARVESTING WINDOWS
+================================================================================
+  • NO harvest in July — castor is in vegetative stage (20-40 days)
+  • Continue monitoring crop growth and pest populations
+  • Record keeping: document sowing date and variety for harvest planning (October-November)
+
+================================================================================
+7. POST-HARVEST OPERATIONS
+================================================================================
+  • NO post-harvest operations in July
+  • Prepare storage facilities and threshing equipment for October-November harvest
+  • Contact oil mills or market yards for price information and procurement schedules
+
+================================================================================
+8. WEATHER WATCH
+================================================================================
+  • Peak monsoon month: heavy rainfall in Saurashtra; 250-350mm average in July
+  • Waterlogging risk; check drainage channels after every rain event
+  • Humidity 70-90%; favourable for fungal diseases — increase scouting frequency
+  • Day temperatures 28-32°C; nights 24-26°C; warm and humid
+  • IMD warnings: watch for heavy rainfall alerts and flood warnings
+
+================================================================================
+9. GOVERNMENT SCHEME DEADLINES
+================================================================================
+  • PMFBY enrollment: complete by 31st July for Kharif castor
+  • Castor seed subsidy: purchase certified seeds from authorized dealers with bill
+  • Kisan Credit Card (KCC): renew or apply for fresh credit before sowing season
+  • Gujarat State Oilseeds Mission: contact district agriculture office for technical support and subsidies
+  • Contact KVK for improved varieties and cultivation techniques
+
+================================================================================
+10. RELATED TOPICS & QUICK LINKS
+================================================================================
+  • Related: calendar_july.txt, calendar_august.txt, calendar_october.txt
+  • Advisories: spray_safety.txt, soil_testing_guide.txt, post_harvest_storage.txt
+  • Weather: imd_forecast_guide.txt, monsoon_onset_advisory.txt
+  • Helpline: Kisan Call Centre 1800-180-1551, Gujarat Agriculture Department 079-232-43746
+  • Online: https://ikhedut.gujarat.gov.in, https://www.dgr.gov.in
+
+================================================================================

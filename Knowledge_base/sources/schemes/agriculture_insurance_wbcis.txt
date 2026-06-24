@@ -1,0 +1,59 @@
+1. SCHEME NAME & FULL OFFICIAL NAME
+   Weather Based Crop Insurance Scheme (WBCIS) — Central Sector Scheme implemented by Government of India with state government participation. Operated by Agriculture Insurance Company of India (AIC) and other empaneled insurers.
+
+2. WHAT IS IT
+   WBCIS is an index-based crop insurance scheme that pays compensation based on weather triggers rather than actual crop loss assessment. Unlike PMFBY which requires crop cutting experiments and field inspections, WBCIS uses data from India Meteorological Department (IMD) automatic weather stations to trigger payouts when specific weather parameters (rainfall, temperature, humidity, wind speed) exceed or fall below predefined thresholds. This makes claim settlement faster (within 30-45 days of trigger event) and removes the need for individual field inspections. The scheme was designed to address the delays and disputes common in traditional crop insurance. Weather triggers are set at the start of the season based on historical weather data and actuarial analysis. If the actual weather deviates significantly from the trigger, compensation is paid automatically.
+
+3. WHO IS ELIGIBLE
+   • All farmers growing notified crops in notified areas (talukas/districts)
+   • Farmers with crop loans (compulsory enrollment for loanee farmers)
+   • Non-loanee farmers (voluntary enrollment through CSC or ikhedut portal)
+   • Sharecroppers and tenant farmers with valid documentation
+   • Farmers must have bank account linked to Aadhaar for DBT payment
+   • Exclusions: Farmers growing crops not in the notified list; farmers without bank accounts; farmers who fail to enroll before the cutoff date
+
+4. BENEFITS PROVIDED
+   • Automatic payout within 30-45 days of weather trigger — no need to file individual claims
+   • Premium: 1.5% of sum insured for Rabi crops, 2% for Kharif crops, 5% for horticultural crops
+   • Remaining premium (up to full actuarial rate) paid by Central and State governments in equal shares
+   • Sum insured based on cost of cultivation (varies by crop and district)
+   • Coverage for deficit rainfall, excess rainfall, temperature extremes, frost, heat waves, and high wind speed
+   • Payment directly to Aadhaar-linked bank account via DBT
+
+5. HOW TO APPLY (STEP-BY-STEP)
+   Step 1 (Loanee farmers): Enrollment is automatic when taking crop loan — bank deducts premium and enrolls you.
+   Step 2 (Non-loanee farmers): Visit nearest CSC (Common Service Centre) or ikhedut.gujarat.gov.in portal before the enrollment deadline (typically 15-30 days before sowing).
+   Step 3: Submit application with Aadhaar, bank passbook, land records (7/12), and crop declaration.
+   Step 4: Pay premium (1.5-2% for most crops) at the bank or CSC.
+   Step 5: Receive enrollment receipt with reference number.
+   Step 6: If weather trigger occurs, no claim filing needed — automatic payout within 45 days.
+   Documents: Aadhaar, bank passbook, 7/12 land extract, 2 passport photos, crop declaration form.
+
+6. WHERE TO APPLY
+   • Bank branches where you take crop loan (compulsory for loanee farmers)
+   • Common Service Centres (CSCs) in every taluka
+   • ikhedut.gujarat.gov.in online portal
+   • District agriculture offices for non-loanee enrollment guidance
+   • AIC (Agriculture Insurance Company) offices in Gujarat
+
+7. GUJARAT-SPECIFIC DETAILS
+   Gujarat has one of the highest WBCIS enrollments in India due to weather volatility. WBCIS covers 14 crops in Gujarat: groundnut, cotton, bajra, castor, cumin, fennel, wheat, mustard, potato, sesamum, moong, urad, tur, and gram. IMD has automatic weather stations in every taluka of Gujarat (total 250+ stations) for accurate weather data. Coastal districts (Bhavnagar, Jamnagar, Junagadh) have triggers for cyclone wind speed. North Gujarat (Banaskantha, Patan, Mehsana) has triggers for frost and temperature extremes. Kutch district has triggers for drought and excess rainfall. Gujarat has moved some crops to WBCIS from PMFBY to reduce claim settlement delays. Enrollment typically opens in May for Kharif and October for Rabi.
+
+8. COMMON PROBLEMS & SOLUTIONS
+   • Payout not received: Check if the weather trigger was actually breached at your taluka’s IMD station — data is public on imd.gov.in. If trigger was breached but no payout, contact AIC helpline with your reference number.
+   • Wrong taluka weather station assigned: The scheme assigns the nearest IMD station; if your farm is far from the station, weather may not match — this is a known limitation of index-based insurance.
+   • Premium deducted but no enrollment confirmation: Contact your bank branch with the deduction receipt.
+   • Crop not in notified list: Check the latest notified crop list at aicofindia.com or district agriculture office before planting.
+   • Delayed payout: WBCIS mandates 45 days; if exceeded, escalate to the Grievance Redressal Officer at the district collectorate.
+
+9. RELATED SCHEMES
+   • PMFBY (Pradhan Mantri Fasal Bima Yojana) — for actual crop loss coverage
+   • Mukhyamantri Kisan Sahay Yojana (Gujarat) — for unseasonal rain and drought compensation
+   • Crop Loan Interest Subvention — for subsidized crop loans linked to insurance
+
+10. CONTACT INFORMATION
+   • AIC Toll-Free: 1800-233-2244
+   • WBCIS Gujarat Helpline: 1800-180-1551 (Kisan Call Centre)
+   • AIC website: aicofindia.com
+   • IMD Gujarat: imdahmedabad.gov.in
+   • District Agriculture Officer: Contact through Collector Office in your district

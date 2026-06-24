@@ -1,0 +1,128 @@
+================================================================================
+COASTAL SAURASHTRA AGRO-CLIMATIC ZONE — COMPLETE REGIONAL PROFILE
+================================================================================
+
+1. REGION OVERVIEW & LOCATION
+--------------------------------------------------------------------------------
+Coastal Saurashtra forms the maritime agro-climatic belt along the Arabian Sea
+coast of Gujarat. It includes the districts of Porbandar, Devbhoomi Dwarka,
+Jamnagar, Gir Somnath, and the coastal talukas of Junagadh and Amreli. The zone
+is characterised by flat to gently rolling coastal plains, sandy loam soils near
+the shore, and increasing clay content inland. This region is a major contributor
+to Gujarat's groundnut economy and serves as an important fisheries-agriculture
+interface. Coastal wind patterns, sea breeze, and monsoon depressions from the
+Arabian Sea create a unique microclimate distinct from inland Saurashtra.
+
+2. CLIMATE & RAINFALL
+--------------------------------------------------------------------------------
+Rainfall Pattern: Annual rainfall ranges from 600mm to 800mm, with the monsoon
+arriving slightly earlier (mid-June) due to proximity to the sea. The zone is
+prone to erratic rainfall distribution, with some years receiving heavy downpours
+from cyclonic depressions.
+
+Temperature: Moderated by sea breezes. Summer temperatures range from 34°C to 40°C,
+significantly lower than inland Saurashtra. Winter temperatures are pleasant, from
+12°C to 28°C. Coastal areas rarely experience frost.
+
+Humidity: High humidity prevails during monsoon (75–90%) and post-monsoon months,
+which increases disease pressure in groundnut and cotton. Sea spray contributes to
+salt deposition on crops in areas within 2km of the shoreline.
+
+Drought/Flood Risk: Moderate drought risk, but the greater threat is salinity
+ingression in groundwater due to tidal influence and over-extraction. Cyclonic
+disturbances can cause storm surges and flooding in low-lying coastal areas,
+especially in Porbandar and Devbhoomi Dwarka.
+
+3. SOIL CHARACTERISTICS
+--------------------------------------------------------------------------------
+Soil types transition from coastal sandy loams to medium black cotton soils inland.
+Coastal soils (within 10–15km of shoreline) are often saline-sodic due to seawater
+ingress. The pH ranges from 7.8 to 8.8 near the coast, improving to 7.5–8.0 inland.
+Organic matter is generally low (0.3–0.5%). Coastal soils are well-drained but have
+poor water and nutrient retention. Inland soils retain more moisture and support
+heavier crops. Gypsum application is commonly needed within 15km of the coast.
+
+4. MAJOR CROPS & CROP ROTATION
+--------------------------------------------------------------------------------
+Kharif Crops:
+  • Groundnut — the dominant crop; GJG-9, GJG-22, and GJG-32 varieties are
+    popular. Sowing: June 15 to July 10. Coastal sandy loams are ideal for
+    pod development.
+  • Cotton — BG-II hybrids on medium black soils inland; salinity-tolerant
+    varieties recommended near coast.
+  • Onion — kharif onion is a major cash crop in Jamnagar and Porbandar;
+    varieties like Agrifound Dark Red and Baswant-780 are grown.
+  • Bajra — marginal areas and sandy soils.
+  • Sesame and Castor — mixed cropping on marginal lands.
+
+Rabi Crops:
+  • Cumin — high-value spice crop in Jamnagar and Porbandar districts.
+  • Wheat — limited areas with irrigation.
+  • Gram (Chickpea) — on residual moisture.
+
+Recommended Rotations:
+  • Groundnut – Cumin (highly profitable in irrigated areas)
+  • Cotton – Gram
+  • Onion – Fallow (if no irrigation)
+  • Groundnut + Onion (intercropping on wider rows)
+
+5. WATER RESOURCES
+--------------------------------------------------------------------------------
+Groundwater is the primary source, but coastal aquifers suffer from salinity
+ingression. In Jamnagar, Porbandar, and Devbhoomi Dwarka, groundwater within 10km
+of the coast is often brackish (EC > 3 dS/m). The Narmada canal system does not
+reach this zone; instead, local water harvesting (check dams, percolation tanks)
+and the Sauni Yojana (filling local dams with Narmada water via pipelines) are
+critical. Farm ponds and roof rainwater harvesting are increasingly adopted.
+
+6. AGRICULTURAL PRACTICES
+--------------------------------------------------------------------------------
+Sowing Windows: Kharif sowing begins with pre-monsoon showers (June 10–25).
+Groundnut is sown early to utilise full monsoon. Cotton sowing extends to July 10.
+Rabi cumin is sown in October–November after groundnut harvest.
+
+Irrigation Methods: Drip irrigation is essential for cotton, cumin, and onion.
+Sprinkler systems are used for groundnut protection irrigation. Wind-resistant
+sprinkler designs are preferred due to strong coastal winds.
+
+Intercropping: Groundnut + Castor (6:2) and Cotton + Onion are practiced. Multi-
+tier cropping with coconut (in homesteads) is traditional in coastal villages.
+
+Special Practices: Gypsum application (2–5 tonnes/ha) for salinity reclamation;
+salinity-tolerant seed varieties; raised bed cultivation for onion to prevent
+waterlogging.
+
+7. COMMON CHALLENGES
+--------------------------------------------------------------------------------
+  • Salinity: Groundwater salinity ingress within 10–15km of coast; soil
+    salinity in low-lying areas.
+  • Pests: White grub in groundnut, spodoptera and jassids in cotton, thrips
+    in onion.
+  • Diseases: Tikka leaf spot and rust in groundnut; fusarium wilt in cotton
+    and onion; downy mildew in pearl millet.
+  • Weather: Cyclonic storms and storm surges (June–September); strong sea winds
+    causing lodging in tall crops; erratic monsoon breaks.
+  • Soil: Coastal sand dunes shifting; poor nutrient retention in sandy soils.
+
+8. GOVERNMENT SCHEMES APPLICABLE
+--------------------------------------------------------------------------------
+  • Sauni Yojana (Saurashtra Narmada Avartan Irrigation) — Narmada water to
+    Saurashtra dams via pipelines and canals.
+  • PMKSY — micro-irrigation subsidies for drip and sprinkler.
+  • MGNREGA — check dams, farm ponds, and coastal shelterbelt plantations.
+  • Soil Health Card Scheme — especially for saline soil management.
+  • National Mission for Sustainable Agriculture (NMSA) — drought-proofing and
+    land reclamation.
+  • PMFBY — crop insurance for groundnut and cotton.
+  • Gujarat State Horticulture Mission — support for coconut and mango orchards.
+
+9. DISTRICTS INCLUDED IN THIS ZONE
+--------------------------------------------------------------------------------
+  • Porbandar (entire district)
+  • Devbhoomi Dwarka (entire district)
+  • Jamnagar (entire district)
+  • Gir Somnath (entire district)
+  • Junagadh (coastal talukas: Visavadar, Keshod, Mangrol, Malia, etc.)
+  • Amreli (coastal talukas: Rajula, Jafrabad, etc.)
+
+================================================================================

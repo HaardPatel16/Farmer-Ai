@@ -1,0 +1,102 @@
+================================================================================
+COTTON CROP CALENDAR — GUJARAT — OCTOBER
+================================================================================
+
+CROP: Cotton
+MONTH: October
+PRIMARY REGION: Saurashtra, North Gujarat, South Gujarat
+DOCUMENT TYPE: Month-wise Activity Calendar
+
+================================================================================
+1. SOIL PREPARATION FOR OCTOBER
+================================================================================
+  • NO soil preparation in October for cotton — crop is in harvest stage
+  • For fields where cotton harvest is complete, begin summer ploughing for next Kharif
+  • Deep ploughing (20-25 cm) after harvest improves soil structure and exposes pupae to sunlight
+  • Apply FYM 10-15 tonnes per hectare for fields being prepared for next season
+  • Collect and destroy cotton stalks after final picking to reduce pink bollworm overwintering
+
+================================================================================
+2. SOWING / PLANTING DATES
+================================================================================
+  • NO sowing in October for cotton — too late for Kharif and too early for summer cotton
+  • If planning summer cotton (irrigated), prepare nurseries in February-March
+  • For next Kharif, plan seed procurement and treat seeds with fungicide before sowing in June
+  • Focus on harvest and post-harvest management of standing crop
+
+================================================================================
+3. IRRIGATION SCHEDULE
+================================================================================
+  • NO irrigation in October for cotton — allow field to dry for picking
+  • Excess moisture at boll opening delays maturity and causes boll rot
+  • If unseasonal rain occurs, provide drainage immediately to prevent boll staining
+  • For fields where harvest is complete, irrigate only if planning Rabi intercrop or fodder
+  • In South Gujarat, some farmers take Rabi gram or wheat as intercrop after cotton
+
+================================================================================
+4. FERTILIZER TIMING & DOSES
+================================================================================
+  • NO fertilizer application after boll opening — excess nitrogen delays maturity and reduces fibre quality
+  • If crop shows severe deficiency, foliar spray of 2% urea can be applied early in October (before boll opening)
+  • For next season, plan soil testing and balanced fertilizer application
+  • In Rabi intercrop fields, apply basal dose for Rabi crop at sowing
+  • Record fertilizer usage for PM-KISAN and soil health card documentation
+
+================================================================================
+5. PEST SCOUTING DATES
+================================================================================
+  • Pink bollworm: late season infestations damage open bolls; remove and destroy infested bolls
+  • Avoid spraying close to harvest; observe pre-harvest intervals (PHI) for all chemicals
+  • Aphid and whitefly: if heavy infestation, use safe chemicals with short PHI (e.g., acetamiprid)
+  • Boll rot: if humid conditions persist, remove affected bolls and improve field aeration
+  • After final picking, collect and burn or bury cotton stalks to destroy overwintering pink bollworm larvae
+  • Monitor for storage pests (pink bollworm, red cotton bug) in ginned cotton and seeds
+
+================================================================================
+6. HARVESTING WINDOWS
+================================================================================
+  • First picking begins in early-sown crop (May-June sown); pick every 15-20 days
+  • Pick only fully open bolls (white fluffed cotton); avoid green and immature bolls
+  • Pick in dry conditions; avoid picking during rain or heavy dew to prevent moisture damage
+  • Store picked cotton in dry, ventilated area; do not heap wet cotton — causes heating and quality loss
+  • Grade cotton before selling: separate good quality (long staple, clean) from stained/damaged cotton
+  • Second and third pickings continue through November-December for late-sown crop
+
+================================================================================
+7. POST-HARVEST OPERATIONS
+================================================================================
+  • Dry picked cotton to 8-10% moisture before storing or transporting to ginning mill
+  • Use clean gunnies or plastic-lined bags for storage; avoid direct contact with ground
+  • Transport to ginning mill within 7-10 days of picking to preserve fibre quality
+  • Ginning should be done within 15 days of picking; delayed ginning reduces fibre length and strength
+  • Store ginned cotton (lint) in cool, dry godowns with proper ventilation
+  • Maintain records of quantity, grade, and sale price for PMFBY and income documentation
+
+================================================================================
+8. WEATHER WATCH
+================================================================================
+  • Post-monsoon clear skies; day temperatures 32-36°C; nights 18-22°C; ideal for harvest and drying
+  • Northeast monsoon (retreating monsoon) may bring scattered rain to South Gujarat; monitor forecasts
+  • Humidity drops to 50-70%; favourable for cotton drying and storage
+  • Unseasonal rain in October can stain cotton and reduce market price; cover stored cotton with tarpaulin
+  • First cold wave signals in North Gujarat by month-end; does not affect cotton harvest significantly
+
+================================================================================
+9. GOVERNMENT SCHEME DEADLINES
+================================================================================
+  • PMFBY: if crop damage occurred, file claim with required documentation (photos, FIR, survey report)
+  • Cotton price support: sell through eNAM or registered mandi for transparent pricing
+  • Gujarat State Cotton Mission: contact for market information and price stabilization support
+  • PM-KISAN: verify 4th installment eligibility and Aadhaar seeding status
+  • Kisan Credit Card: repay crop loan or renew for next season
+
+================================================================================
+10. RELATED TOPICS & QUICK LINKS
+================================================================================
+  • Related: calendar_cotton_june.txt, calendar_cotton_july.txt, calendar_cotton_august.txt
+  • Advisories: post_harvest_storage.txt, spray_safety.txt, pest_bulletin_2025.txt
+  • Weather: imd_forecast_guide.txt, monsoon_withdrawal_advisory.txt
+  • Helpline: Kisan Call Centre 1800-180-1551, Gujarat Cotton Association 079-2657-5141
+  • Online: https://ikhedut.gujarat.gov.in, https://www.cotcorp.gov.in (Cotton Corporation of India)
+
+================================================================================

@@ -1,0 +1,78 @@
+1. SCHEME NAME & FULL OFFICIAL NAME
+   iKhedut Portal — Integrated Online Portal for Agriculture Schemes, Government of Gujarat, Department of Agriculture, Farmers Welfare & Co-operation.
+
+2. WHAT IS IT
+   The iKhedut Portal (ikhedut.gujarat.gov.in) is the single-window online platform for all agriculture-related schemes and subsidies in Gujarat. It was launched to eliminate the need for farmers to visit multiple offices for different schemes, reduce paperwork and corruption, and ensure transparent and timely delivery of benefits through Direct Benefit Transfer (DBT). The portal covers central government schemes (like PM-KISAN, PMFBY, SMAM), state government schemes (like GGRC micro-irrigation, MKSY, Gujarat tractor subsidy), and district-level schemes. Farmers can register once on the portal and apply for multiple schemes without re-submitting documents. The portal provides real-time application tracking, scheme notifications, and direct bank account transfers. It is available in Gujarati and English and can be accessed from smartphones, computers, and Common Service Centres (CSCs). Over 55 lakh Gujarat farmers are registered on iKhedut, making it one of the most successful agriculture portals in India.
+
+3. WHO IS ELIGIBLE
+   • All farmers with land records in Gujarat
+   • Farmers must have Aadhaar card and Aadhaar-linked bank account
+   • Farmers must have a valid mobile number for OTP verification
+   • All categories: general, SC, ST, OBC, women farmers, small and marginal farmers
+   • FPOs, cooperatives, and SHGs can also register
+   • No income limit for registration
+   • Exclusions: Farmers without Aadhaar or bank account; farmers without land records in Gujarat
+
+4. BENEFITS PROVIDED
+   • Single registration for all Gujarat agriculture schemes
+   • Online application for 50+ schemes including: tractor subsidy, drip irrigation, solar pump, custom hiring centre, seed subsidy, fertilizer subsidy, farm pond, and many more
+   • Real-time application tracking with status updates (Applied → Verified → Approved → Fund Disbursed)
+   • Direct Benefit Transfer (DBT) to Aadhaar-linked bank account — no middlemen
+   • SMS and email alerts for scheme announcements, application deadlines, and payment status
+   • Document upload facility — no need to carry physical copies to offices repeatedly
+   • Transparent beneficiary list — anyone can check who received benefits in their village
+   • Grievance redressal system for delayed payments or rejected applications
+   • Mobile-friendly interface for smartphone users
+   • CSC support for farmers without internet access or digital literacy
+
+5. HOW TO REGISTER AND APPLY (STEP-BY-STEP)
+   Step 1: Visit ikhedut.gujarat.gov.in on your smartphone or computer, or go to the nearest CSC.
+   Step 2: Click "New Farmer Registration" and select your district and taluka.
+   Step 3: Enter your Aadhaar number and mobile number. You will receive an OTP.
+   Step 4: Enter the OTP to verify your mobile number.
+   Step 5: Fill in your personal details: name, address, caste category, and bank details.
+   Step 6: Upload documents: Aadhaar card (front and back), 7/12 land extract, bank passbook first page, and caste certificate (if applicable).
+   Step 7: Submit the registration. You will receive a Farmer Registration Number (FRN).
+   Step 8: To apply for a scheme, log in with your FRN and password/OTP.
+   Step 9: Select the scheme from the list of active schemes. Check the scheme window dates — schemes open and close at specific times.
+   Step 10: Fill out the scheme-specific application form and upload any additional documents required.
+   Step 11: Submit the application. Note down the application reference number.
+   Step 12: Track your application status on the portal using the reference number.
+   Step 13: After approval, the subsidy is transferred directly to your bank account via DBT.
+   Documents for registration: Aadhaar, 7/12, bank passbook, caste certificate, mobile phone.
+
+6. WHERE TO APPLY
+   • iKhedut Portal: ikhedut.gujarat.gov.in (primary online channel)
+   • Common Service Centres (CSCs) in every village/taluka — for farmers without internet or smartphones
+   • District Agriculture Office (DAO) — for grievances and offline support
+   • Taluka Agriculture Office — for preliminary guidance and document verification
+   • KVK (Krishi Vigyan Kendra) — for training on using the portal
+   • Gujarat Agriculture Department IT Cell — for technical issues
+
+7. GUJARAT-SPECIFIC DETAILS
+   Gujarat was one of the first states to launch a comprehensive online agriculture portal. iKhedut has processed over 1 crore applications since launch. The portal is integrated with the Gujarat Land Records system (7/12 database), Aadhaar database, and bank database for seamless verification. Gujarat has 5,000+ CSCs trained to assist farmers with iKhedut applications. The portal handles over Rs 3,000 crore in annual subsidy disbursements. iKhedut has a "Know Your Status" feature where farmers can check their application status without logging in. The portal sends automated SMS in Gujarati for every status update. Gujarat has achieved 95% DBT penetration for agriculture subsidies through iKhedut. The portal also provides a "Beneficiary List" feature where farmers can verify if their neighbors received benefits, ensuring transparency. iKhedut is linked to the Khedut App for mobile notifications.
+
+8. COMMON PROBLEMS & SOLUTIONS
+   • Registration failed: Common reasons include Aadhaar not linked to mobile number, name mismatch between Aadhaar and land record, or poor document image quality. Solution: Link Aadhaar to mobile at an Aadhaar centre; ensure name matches; upload clear, high-resolution photos.
+   • Application rejected: Check the rejection reason on the portal. Common reasons: missing caste certificate, non-empaneled vendor quotation, or scheme window closed. Correct and re-apply if the scheme is still open.
+   • Subsidy not received after approval: Check your bank account for DBT credit. If not received within 15 days of approval, contact the DAO with your approval letter and bank statement.
+   • Forgot password: Use the "Forgot Password" option on the portal. An OTP will be sent to your registered mobile number.
+   • Portal not loading: Use Google Chrome or Mozilla Firefox; clear cache; avoid using Internet Explorer. If still not working, visit a CSC.
+   • OTP not received: Ensure your mobile number is active and has network coverage. If not received after 2 attempts, try after 1 hour or contact the portal helpline.
+   • Scheme not visible: Schemes are opened in time windows. Check the "Active Schemes" section. If a scheme is closed, wait for the next window (usually announced on the portal and Khedut app).
+
+9. RELATED SCHEMES
+   • All Gujarat state and central agriculture schemes are accessible through iKhedut
+   • Khedut App — mobile companion for iKhedut notifications
+   • Digital Agriculture Mission — for farmer digital ID required for iKhedut registration
+   • PM-KISAN — though applied through pmkisan.gov.in, status is viewable on iKhedut
+   • e-NAM — for market linkage (separate portal but linked through Khedut App)
+
+10. CONTACT INFORMATION
+   • iKhedut Portal: ikhedut.gujarat.gov.in
+   • iKhedut Helpline: 1800-180-1551 (Kisan Call Centre)
+   • Gujarat Agriculture Department IT Cell: 079-23251001
+   • CSC Helpline: 1800-3000-3468
+   • Khedut App: Google Play Store / Apple App Store
+   • District Agriculture Officer (DAO): Contact your district Collector Office
+   • Email: ikhedut-support@gujarat.gov.in

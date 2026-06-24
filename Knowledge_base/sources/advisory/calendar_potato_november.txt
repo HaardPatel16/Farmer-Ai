@@ -1,0 +1,101 @@
+================================================================================
+POTATO CROP CALENDAR — GUJARAT — NOVEMBER
+================================================================================
+
+CROP: Potato
+MONTH: November
+PRIMARY REGION: Saurashtra, North Gujarat
+DOCUMENT TYPE: Month-wise Activity Calendar
+
+================================================================================
+1. SOIL PREPARATION FOR NOVEMBER
+================================================================================
+  • Well-drained sandy loam soils with pH 5.5-6.5 ideal for potato
+  • Apply FYM 15-20 tonnes per hectare 2-3 weeks before sowing
+  • Prepare ridges (20-25 cm high) for better drainage and tuber development
+  • In Saurashtra, apply gypsum 250 kg per hectare for sodic soil reclamation before sowing
+  • Soil should be loose and friable for tuber expansion; avoid compacted soils
+
+================================================================================
+2. SOWING / PLANTING DATES
+================================================================================
+  • Rabi potato sowing in Saurashtra and North Gujarat from mid-October to mid-November
+  • Seed rate: 2,000-2,500 kg per hectare of certified seed tubers (size 35-50g)
+  • Spacing: 60 cm between rows; 20-25 cm between plants
+  • Plant at 8-10 cm depth on top of ridges; cover with soil and light irrigation
+  • Treat seed tubers with Carbendazim 2g + Streptocycline 1g per kg OR Mancozeb 3g per kg to prevent seed-borne diseases
+  • Use certified varieties: Kufri Jyoti, Kufri Sindhuri, Gujarat Potato-1 for Gujarat conditions
+
+================================================================================
+3. IRRIGATION SCHEDULE
+================================================================================
+  • First irrigation immediately after sowing; then every 7-10 days depending on soil type
+  • Maintain soil moisture at 80% field capacity for optimal tuber development
+  • Critical irrigation at stolon formation (30 days), tuber initiation (45 days), and tuber bulking (60 days)
+  • Reduce irrigation 2 weeks before harvest to harden skin and improve storage life
+  • In North Gujarat, sprinkler irrigation can be used for uniform moisture distribution
+
+================================================================================
+4. FERTILIZER TIMING & DOSES
+================================================================================
+  • Basal dose at sowing: DAP 100 kg + potash 50 kg per hectare
+  • First top dressing (50 kg urea per hectare) at stolon formation (30 days after sowing)
+  • Second top dressing (50 kg urea per hectare) at tuber initiation (45 days after sowing)
+  • Third top dressing (20 kg urea per hectare) at tuber bulking stage (60 days after sowing)
+  • Micronutrients: foliar spray of 0.5% zinc sulphate + 0.2% boron at tuber initiation for better tuber size
+
+================================================================================
+5. PEST SCOUTING DATES
+================================================================================
+  • Early blight (Alternaria solani): if brown spots with concentric rings appear, spray Mancozeb 2.5g per litre
+  • Late blight (Phytophthora infestans): if water-soaked lesions appear on leaves, spray Metalaxyl+Mancozeb 2.5g per litre immediately
+  • Potato tuber moth: if larvae found in tubers, spray Indoxacarb 0.5ml per litre or use pheromone traps
+  • Aphids: if colonies exceed 10 per plant, spray Imidacloprid 0.5ml per litre
+  • White grubs: if damage observed, drench with Chlorpyriphos 2ml per litre
+  • Monitor every 7-10 days; early blight and late blight can cause total crop loss if not controlled
+
+================================================================================
+6. HARVESTING WINDOWS
+================================================================================
+  • NO harvest in November — potato is in germination/early vegetative stage
+  • Continue monitoring germination and seedling establishment
+  • Record keeping: document sowing date and variety for harvest planning (February-March)
+  • Prepare storage facilities and grading equipment for February-March harvest
+
+================================================================================
+7. POST-HARVEST OPERATIONS
+================================================================================
+  • NO post-harvest operations in November
+  • Prepare cold storage facilities for February-March harvest
+  • Contact potato traders, chip manufacturers, or market yards for price information
+  • Potato is a high-value crop; maintain quality standards for seed, table, and processing markets
+
+================================================================================
+8. WEATHER WATCH
+================================================================================
+  • Day temperatures: 28-32°C; nights 12-16°C; pleasant weather ideal for potato germination
+  • November dew is heavy — favours fungal diseases (early blight, late blight); increase scouting frequency
+  • First western disturbances may bring light rain to North Gujarat; beneficial for establishment
+  • Cold wave risk in North Gujarat by month-end; frost can damage young potato plants — protect with mulch
+  • IMD forecast: monitor for western disturbance predictions and cold wave warnings
+
+================================================================================
+9. GOVERNMENT SCHEME DEADLINES
+================================================================================
+  • PMFBY enrollment: complete by 15th December for Rabi potato; visit PACS or bank branch
+  • Potato seed subsidy: purchase certified seed tubers from authorized dealers with bill and Aadhaar
+  • Cold storage subsidy: contact district horticulture office for cold storage construction subsidy
+  • Soil Health Card: collect updated card from KVK or ATMA office before fertilizer application
+  • Kisan Credit Card (KCC): renew or apply for fresh credit before sowing season
+  • PM-KISAN: verify installment eligibility and Aadhaar seeding status
+
+================================================================================
+10. RELATED TOPICS & QUICK LINKS
+================================================================================
+  • Related: calendar_november.txt, calendar_december.txt, calendar_potato_december.txt
+  • Advisories: cold_wave_frost_protection.txt, spray_safety.txt, soil_testing_guide.txt
+  • Weather: imd_forecast_guide.txt, imd_seasonal_forecast_guide.txt
+  • Helpline: Kisan Call Centre 1800-180-1551, Gujarat Horticulture Department 079-232-58191
+  • Online: https://ikhedut.gujarat.gov.in, https://www.cpRI.org.in (Central Potato Research Institute)
+
+================================================================================

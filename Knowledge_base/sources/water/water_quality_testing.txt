@@ -1,0 +1,146 @@
+WATER QUALITY TESTING FOR SAFE IRRIGATION IN GUJARAT
+
+1. INTRODUCTION
+Water quality is as critical as water quantity for successful farming in Gujarat. Poor quality water can damage crops, reduce yields, degrade soil, and even contaminate food products. Gujarat faces unique water quality challenges: salinity in coastal and arid areas, fluoride and arsenic in North Gujarat, and industrial pollution in some districts. This guide explains what to test, how to test, and how to interpret water quality parameters for irrigation in Gujarat.
+
+2. KEY WATER QUALITY PARAMETERS FOR IRRIGATION
+
+2.1 Total Dissolved Solids (TDS) and Electrical Conductivity (EC)
+- TDS measures the total concentration of dissolved salts in water (measured in mg/liter or ppm)
+- EC is the electrical conductivity of water, expressed in dS/m (deciSiemens per meter) or mmho/cm. These are equivalent units.
+- Conversion: TDS (ppm) ≈ EC (dS/m) x 640 for most natural waters in Gujarat
+
+Gujarat irrigation water quality classification based on EC:
+- Excellent (EC < 0.25 dS/m): Suitable for all crops; very low salinity hazard
+- Good (EC 0.25-0.75 dS/m): Suitable for all crops with normal irrigation practices
+- Fair (EC 0.75-2.0 dS/m): Suitable for most crops; requires leaching fraction for sensitive crops
+- Poor (EC 2.0-3.0 dS/m): Suitable only for salt-tolerant crops; requires careful management
+- Very Poor (EC 3.0-6.0 dS/m): Only for highly salt-tolerant crops with excellent drainage and leaching
+- Unsuitable (EC > 6.0 dS/m): Not suitable for irrigation under normal conditions
+
+Typical Gujarat borewell EC ranges:
+- Saurashtra: 0.4-2.5 dS/m (varies by location; coastal areas higher)
+- North Gujarat: 0.5-4.0 dS/m (some areas have very high salinity)
+- Kutch: 1.5-8.0 dS/m (high salinity common)
+- Narmada canal water: 0.2-0.4 dS/m (excellent quality)
+
+2.2 pH (Acidity/Alkalinity)
+- pH measures how acidic or alkaline water is on a scale of 0-14
+- pH below 6.5 is acidic; above 8.5 is alkaline
+- Ideal irrigation water pH: 6.5-7.5
+- Most Gujarat groundwater is slightly alkaline (pH 7.2-8.2), which is acceptable
+- pH below 6.0 can dissolve soil nutrients and damage metal irrigation equipment
+- pH above 8.5 indicates carbonate/bicarbonate hazard, which can cause soil sodicity
+
+2.3 Sodium Adsorption Ratio (SAR)
+SAR measures the relative concentration of sodium to calcium and magnesium. High SAR causes soil structure breakdown, reducing infiltration and drainage.
+
+SAR classification for irrigation water:
+- SAR < 10: Excellent to good; no soil structure risk
+- SAR 10-18: Fair; may cause problems in fine-textured soils over time
+- SAR 18-26: Poor; will cause soil sodicity in most soils; requires amendments
+- SAR > 26: Very poor; unsuitable without gypsum application and excellent drainage
+
+Gujarat context: Many borewells in North Gujarat and Kutch have SAR > 15, requiring gypsum application when used for irrigation.
+
+2.4 Specific Ions (Chloride, Sulphate, Bicarbonate, Fluoride, Arsenic, Nitrate)
+- Chloride: Above 350 mg/liter is toxic to sensitive crops (mango, citrus, grapes). Above 700 mg/liter damages most crops.
+- Sulphate: Above 400 mg/liter can cause leaf burn in some crops; generally less toxic than chloride
+- Bicarbonate: High bicarbonate (above 500 mg/liter) combined with high pH causes iron chlorosis in crops and soil sodicity
+- Fluoride: Above 1.5 mg/liter is unsafe for drinking water. For irrigation, fluoride above 5 mg/liter can cause leaf tip burn in sensitive crops.
+- Arsenic: Some areas of North Gujarat (Patan, Mehsana, Banaskantha) have arsenic > 0.05 mg/liter. This is unsafe for drinking and problematic for food crops. Long-term use for irrigation can lead to arsenic accumulation in rice and vegetables.
+- Nitrate: Above 45 mg/liter indicates contamination from septic tanks or fertilizer runoff; not directly toxic to crops but indicates pollution
+
+3. WATER QUALITY TESTING METHODS
+
+3.1 Field Testing (Farmer-Level)
+Farmers can do basic water quality checks using simple tools:
+- EC/TDS meter: Portable digital meters cost Rs. 500-2,000. Insert the probe in water and read the display. Calibrate with standard solution every 3 months.
+- pH test strips or digital pH meter: Strips cost Rs. 200-500 for 100 strips; digital meters cost Rs. 1,000-3,000. Dip the strip or probe in water for the recommended time and compare colors or read the display.
+- Chloride test kit: Titrimetric kits using silver nitrate indicator cost Rs. 300-800. Useful for quick checks if salt damage is suspected.
+
+3.2 Laboratory Testing
+For comprehensive analysis, send water samples to a NABL-accredited laboratory. Recommended labs in Gujarat:
+- Gujarat Agricultural University (GAU) labs at Anand, Navsari, Junagadh, Sardarkrushinagar
+- State Water Testing Laboratory, Gandhinagar
+- Central Ground Water Board Laboratory, Ahmedabad
+- District Public Health Laboratory for drinking water parameters
+- Private NABL labs: Envirocare, Eurofins, etc.
+
+Sample collection procedure:
+- Run the borewell or tap for 5-10 minutes before collecting to flush the pipeline
+- Use a clean, rinsed plastic bottle (1 liter capacity, preferably new)
+- Fill completely, leaving no air bubble, and cap tightly
+- Label with date, source (borewell/canal/tank), depth, and farmer name
+- Deliver to the lab within 24 hours; for bacteria tests, deliver within 6 hours
+- Typical cost: Rs. 500-1,500 for full irrigation water quality analysis
+
+4. GUJARAT-SPECIFIC WATER QUALITY ISSUES
+
+4.1 Fluoride Problem (North Gujarat)
+Districts like Mehsana, Patan, Banaskantha, and parts of Sabarkantha have groundwater fluoride exceeding 1.5 mg/liter (WHO drinking limit) and sometimes reaching 10-15 mg/liter. For irrigation, fluoride is less critical than for drinking, but very high levels can cause leaf tip burn in sensitive crops. For drinking water, fluoride must be removed through reverse osmosis or activated alumina filters.
+
+4.2 Arsenic Contamination (North Gujarat)
+Arsenic above 0.05 mg/liter (WHO limit) is found in parts of Patan, Mehsana, and Banaskantha. Arsenic in irrigation water is a serious concern because it accumulates in rice (paddy) and leafy vegetables. In affected areas:
+- Avoid growing rice with arsenic-contaminated water; switch to less accumulative crops like pearl millet, cotton, or groundnut
+- Grow vegetables on raised beds with alternate water sources
+- Use arsenic removal filters (iron oxide-based) for drinking water
+
+4.3 Salinity in Coastal and Arid Areas (Kutch, coastal Saurashtra, coastal South Gujarat)
+Coastal aquifers often have EC > 3.0 dS/m due to seawater intrusion and geological salt deposits. Management strategies include:
+- Grow salt-tolerant crops: barley, cotton, mustard, sorghum, date palm, and coconut (in moderate salinity)
+- Use drip irrigation to maintain high soil moisture and reduce salt concentration at the root zone
+- Apply gypsum (calcium sulphate) to replace sodium on soil exchange sites
+- Ensure adequate leaching (drainage) to remove accumulated salts
+- In Kutch, use farm ponds to store and blend fresh rainwater with saline groundwater
+
+4.4 Industrial Pollution (Ankleshwar, Vapi, Vadodara, Ahmedabad)
+Industrial areas have reports of heavy metal contamination (chromium, lead, cadmium) in groundwater. Water from borewells near industrial estates should be tested for heavy metals before use for irrigation or drinking.
+
+5. SAFE IRRIGATION WATER GUIDELINES BY CROP
+
+Sensitive crops (EC < 1.0 dS/m, SAR < 10):
+- Mango, citrus, grapes, banana, pomegranate, strawberry, avocado, beans, peas, carrots
+- These crops should only be irrigated with Narmada canal water or fresh rainwater
+
+Moderately tolerant crops (EC 1.0-2.5 dS/m, SAR < 15):
+- Wheat, groundnut, cotton, sunflower, tomato, potato, onion, cabbage, cauliflower
+- Most Gujarat borewells fall in this range; manage with good drainage and occasional leaching
+
+Tolerant crops (EC 2.5-5.0 dS/m, SAR < 20):
+- Sorghum (jowar), pearl millet (bajra), barley, mustard, safflower, sugar beet, date palm, Bermuda grass
+- Suitable for most borewells in Gujarat except highly saline areas
+
+Highly tolerant crops (EC 5.0-10.0 dS/m):
+- Rhodes grass, kallar grass, certain barley varieties, salt-tolerant rice varieties (CSR series)
+- Only suitable for saline areas with no alternative water source
+
+6. CORRECTIVE MEASURES FOR POOR QUALITY WATER
+
+6.1 Blending
+Mix saline water with fresh water (Narmada canal or farm pond) to reduce EC and SAR. For example, blending EC 4.0 dS/m borewell water 1:1 with EC 0.3 dS/m canal water gives EC 2.15 dS/m, which is suitable for most crops.
+
+6.2 Amendments
+- Gypsum (calcium sulphate): Apply 2-5 tonnes per hectare depending on SAR level. Reduces soil sodicity caused by high-SAR water.
+- Sulphur: Apply elemental sulphur (500-1000 kg/ha) to reclaim highly alkaline soils
+- Farmyard manure and compost: Improve soil structure and water infiltration, helping leach salts
+- Green manuring: Incorporate dhaincha or sunnhemp to improve soil organic matter and structure
+
+6.3 Irrigation Method Adjustments
+- Use drip irrigation: Maintains high soil moisture, reducing salt concentration at the root zone; applies water uniformly
+- Use sprinkler irrigation: Avoid during hot windy periods when salt deposits on leaves can cause burn
+- Avoid flood irrigation with saline water: Causes uneven salt accumulation and waterlogging
+- Increase irrigation frequency: More frequent, lighter irrigations reduce salt buildup compared to heavy, infrequent irrigations
+
+7. WATER QUALITY TESTING SCHEDULE
+- New borewell: Test immediately before use; full analysis including heavy metals in industrial areas
+- Annual: Test EC, pH, chloride, and SAR before the kharif season
+- After floods: Test for bacterial contamination if borewell was submerged
+- If crop problems appear: Test immediately if leaf burn, stunting, or wilting suggests water quality issues
+- When yield declines: Rule out water quality before blaming other factors
+
+8. REGULATORY STANDARDS
+- The Bureau of Indian Standards (IS 11624:1986) provides irrigation water quality standards
+- The Gujarat Pollution Control Board monitors industrial water pollution
+- The Central Ground Water Board publishes annual water quality reports by district, available online at cgwb.gov.in
+- Farmers can access water quality data for their district through the GWRDC website or district agriculture office

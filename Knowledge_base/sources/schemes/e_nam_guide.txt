@@ -1,0 +1,76 @@
+1. SCHEME NAME & FULL OFFICIAL NAME
+   e-NAM (Electronic National Agriculture Market) — National Agriculture Market, Department of Agriculture & Farmers Welfare, Government of India, implemented through Gujarat State Agricultural Marketing Board (GSAMB).
+
+2. WHAT IS IT
+   e-NAM is a pan-India electronic trading portal that networks all existing APMC mandis to create a unified national market for agricultural commodities. It allows farmers to sell their produce online to buyers across the country, not just at their local mandi. In Gujarat, all 80+ APMCs are connected to e-NAM, enabling Gujarat farmers to access buyers from Maharashtra, Rajasthan, Madhya Pradesh, and other states. The platform provides transparent price discovery, quality testing, and direct payment to farmers' bank accounts. e-NAM eliminates information asymmetry, reduces the role of intermediaries, and ensures farmers get the best possible price for their produce. The platform includes features like live price dashboards, electronic bidding, quality certification, and assaying (testing). For Gujarat farmers, e-NAM is particularly beneficial for high-value crops like cumin, fennel, cotton, groundnut, and fruits where price variation between mandis can be significant.
+
+3. WHO IS ELIGIBLE
+   • All farmers registered with any Gujarat APMC
+   • Farmers must have Aadhaar-linked bank account
+   • Farmers must have a valid mobile number for OTP verification
+   • All categories of farmers: general, SC, ST, small, marginal, large
+   • Traders and buyers must be licensed by the APMC
+   • No landholding limit
+   • Exclusions: Farmers not registered with any APMC; farmers without Aadhaar or bank account
+
+4. BENEFITS PROVIDED
+   • Price transparency: See live prices from any mandi in Gujarat before deciding where to sell
+   • National market access: Buyers from across India can bid on your produce
+   • Better price realization: Farmers typically get 5-15% higher prices due to wider competition
+   • Electronic weighment: Accurate weighing with digital scales reduces disputes
+   • Quality testing: APMC lab tests moisture, foreign matter, and grade; quality certificate adds 5-10% premium
+   • Direct payment: Money credited directly to your bank account within 2 working days
+   • No cash handling: Reduces theft and fraud risks
+   • Electronic bidding: You can reject low bids and wait for better offers
+   • Reduced transport costs: You can sell from your nearest APMC even if the buyer is in another state
+   • SMS alerts: Price updates sent directly to your phone
+
+5. HOW TO REGISTER AND SELL (STEP-BY-STEP)
+   Step 1: Visit your nearest APMC with Aadhaar card, bank passbook, and land records (7/12).
+   Step 2: APMC staff will register you on e-NAM free of charge. You will get a farmer ID and login credentials.
+   Step 3: Alternatively, register online at enam.gov.in by clicking "Farmer Registration" and filling in your details.
+   Step 4: Download the e-NAM app from Play Store (available in Gujarati) for mobile access.
+   Step 5: Before selling, check live prices on the e-NAM app or portal for your crop at different mandis.
+   Step 6: Bring your produce to the registered APMC during market hours (typically 10 AM to 4 PM).
+   Step 7: At the APMC, your produce undergoes quality testing (moisture, foreign matter, grade).
+   Step 8: The lot is uploaded to the e-NAM platform with the quality certificate.
+   Step 9: Electronic bidding begins — buyers from across Gujarat and India can bid on your lot.
+   Step 10: The highest bid is displayed. You can ACCEPT or REJECT the bid. You retain the right to reject.
+   Step 11: If accepted, the buyer is notified, and the payment is processed.
+   Step 12: Payment is credited directly to your registered bank account within 2 working days.
+   Documents: Aadhaar, bank passbook, land record, mobile phone, and APMC registration (if already registered).
+
+6. WHERE TO REGISTER AND SELL
+   • e-NAM portal: enam.gov.in
+   • e-NAM mobile app: Available on Google Play Store (in Gujarati)
+   • Any registered Gujarat APMC (80+ mandis connected)
+   • APMC offices for in-person registration and selling
+   • Common Service Centres (CSCs) for registration help
+   • GSAMB offices for grievance redressal
+
+7. GUJARAT-SPECIFIC DETAILS
+   Gujarat has 80+ APMCs connected to e-NAM, covering all major agricultural districts. The state has been a leader in e-NAM adoption, with over 25 lakh farmers registered. Gujarat e-NAM handles major commodities: cotton, groundnut, cumin, fennel, castor, wheat, bajra, and vegetables. The highest e-NAM trading volumes in Gujarat are at Unjha (cumin/fennel), Gondal (groundnut), and Rajkot (cotton/groundnut). Gujarat has integrated e-NAM with the Khedut app, allowing farmers to see live prices on their phones. The state has installed electronic weighbridges and digital auction halls at all major APMCs. Gujarat farmers selling through e-NAM report price premiums of 5-10% for quality-certified produce. The state government provides APMC modernization grants under RKVY to improve e-NAM infrastructure. In Gujarat, e-NAM works best for lot sizes above 10 quintals; smaller lots may still be sold through traditional channels.
+
+8. COMMON PROBLEMS & SOLUTIONS
+   • Registration failed: Ensure your Aadhaar is linked to your bank account and mobile number. If not, visit your bank branch first.
+   • Price lower than expected: e-NAM prices reflect market demand; check prices on multiple days before selling. Consider storing if prices are depressed.
+   • Payment delay: If payment is not received within 2 working days, contact the APMC secretary with your lot number and e-NAM transaction ID.
+   • Quality grading dispute: You can request a re-test from the APMC quality lab. The second test is binding.
+   • App not working in Gujarati: Update the e-NAM app; ensure your phone language is set to Gujarati. If issues persist, use the web portal.
+   • Buyer default: e-NAM has a buyer rating system; if a buyer defaults, report to the APMC and e-NAM helpdesk. The buyer's license may be suspended.
+   • No bids received: This can happen for off-season or low-demand crops. Consider selling through traditional channels or storing in a warehouse.
+
+9. RELATED SCHEMES
+   • APMC Market Locations — for physical mandi information
+   • Warehouse Receipt Scheme — for storing produce before selling on e-NAM
+   • Price Support Scheme (PSS) — for MSP sales at APMCs
+   • AIF (Agriculture Infrastructure Fund) — for APMC infrastructure improvement
+   • Khedut App — for live price information from all Gujarat APMCs
+
+10. CONTACT INFORMATION
+   • e-NAM Helpline: 1800-270-0224 (toll-free)
+   • e-NAM Portal: enam.gov.in
+   • Gujarat GSAMB: 079-23241201
+   • Khedut App: Available on Google Play Store
+   • e-NAM Helpdesk Email: helpdesk-enam@gov.in
+   • District Marketing Officer: Contact through your district Collector Office

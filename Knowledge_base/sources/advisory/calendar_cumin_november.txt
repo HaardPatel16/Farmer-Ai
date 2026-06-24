@@ -1,0 +1,99 @@
+================================================================================
+CUMIN CROP CALENDAR — GUJARAT — NOVEMBER
+================================================================================
+
+CROP: Cumin
+MONTH: November
+PRIMARY REGION: North Gujarat, Saurashtra
+DOCUMENT TYPE: Month-wise Activity Calendar
+
+================================================================================
+1. SOIL PREPARATION FOR NOVEMBER
+================================================================================
+  • Light to medium loamy soils ideal for cumin; avoid heavy clay soils
+  • Soil pH should be 6.5-7.5; apply lime if pH < 6.0
+  • Apply FYM 5-10 tonnes per hectare 2-3 weeks before sowing
+  • Ensure excellent drainage — cumin is highly sensitive to waterlogging and root rot
+  • In North Gujarat, raised beds (15-20 cm high) are recommended for cumin to improve drainage
+
+================================================================================
+2. SOWING / PLANTING DATES
+================================================================================
+  • Sow mid-November to early December in North Gujarat and Saurashtra
+  • Cool, dry weather essential for good germination; avoid sowing during humid or cloudy conditions
+  • Seed rate: 10-12 kg per hectare; treat seeds with Carbendazim 2g + Streptocycline 1g per kg
+  • Spacing: 25-30 cm between rows; 10-15 cm between plants
+  • Sow at 2-3 cm depth; light soil coverage
+  • Use certified varieties: Gujarat Cumin-1, GC-2, GC-3 for high yield and oil content
+
+================================================================================
+3. IRRIGATION SCHEDULE
+================================================================================
+  • Light irrigation immediately after sowing to ensure germination
+  • Then irrigate every 10-12 days through the season; cumin needs consistent but light moisture
+  • Avoid over-irrigation — waterlogging causes wilt and blight complex
+  • In North Gujarat, drip irrigation is ideal for cumin; use 2-4 litre/hour emitters
+  • Reduce irrigation frequency as crop approaches maturity (February-March)
+
+================================================================================
+4. FERTILIZER TIMING & DOSES
+================================================================================
+  • Basal dose at sowing: DAP 50 kg + potash 20 kg per hectare
+  • First nitrogen top dressing (20 kg urea per hectare) at 30 days after sowing
+  • Second nitrogen top dressing (15 kg urea per hectare) at 50 days if crop looks pale
+  • Total nitrogen: 40-60 kg per hectare depending on soil fertility
+  • Micronutrients: apply zinc sulphate 25 kg per hectare as basal if soil is deficient
+
+================================================================================
+5. PEST SCOUTING DATES
+================================================================================
+  • Wilt and blight complex (Fusarium + Alternaria): drench with Carbendazim 1g + Mancozeb 2.5g per litre if wilting observed
+  • Powdery mildew (Erysiphe cichoracearum): if white powdery patches appear on leaves, spray Sulphur 2g per litre or Carbendazim 1g per litre
+  • Aphids: if colonies exceed 10 per plant, spray Imidacloprid 0.5ml per litre
+  • Thrips: if damage exceeds 5% leaf area, spray Fipronil 1.5ml per litre
+  • Root rot: if waterlogging occurs, drench with Metalaxyl 2.5g + Mancozeb 2.5g per litre
+  • Monitor every 7-10 days; cumin is a high-value crop and early pest detection is critical
+
+================================================================================
+6. HARVESTING WINDOWS
+================================================================================
+  • NO harvest in November — cumin is just germinated or in very early growth stage
+  • Continue monitoring germination and seedling establishment
+  • Record keeping: document sowing date and variety for harvest planning (February-March)
+
+================================================================================
+7. POST-HARVEST OPERATIONS
+================================================================================
+  • NO post-harvest operations in November
+  • Prepare storage facilities and drying yards for February-March harvest
+  • Contact spice traders or market yards for price information and procurement schedules
+  • Cumin is a high-value export crop; maintain quality standards for export certification
+
+================================================================================
+8. WEATHER WATCH
+================================================================================
+  • Day temperatures: 28-32°C; nights 12-16°C; pleasant weather ideal for cumin germination
+  • November dew is heavy — favours fungal diseases; increase scouting frequency
+  • First western disturbances may bring light rain to North Gujarat; beneficial for establishment
+  • Cold wave risk in North Gujarat by month-end; minimum temperatures may drop to 8-10°C
+  • IMD forecast: monitor for western disturbance predictions and cold wave warnings
+
+================================================================================
+9. GOVERNMENT SCHEME DEADLINES
+================================================================================
+  • PMFBY enrollment: complete by 15th December for Rabi cumin; visit PACS or bank branch
+  • Cumin seed subsidy: purchase certified seeds from authorized dealers with bill and Aadhaar
+  • Soil Health Card: collect updated card from KVK or ATMA office before fertilizer application
+  • Kisan Credit Card (KCC): renew or apply for fresh credit before sowing season
+  • PM-KISAN: verify installment eligibility and Aadhaar seeding status
+
+================================================================================
+10. RELATED TOPICS & QUICK LINKS
+================================================================================
+  • Related: calendar_november.txt, calendar_december.txt, calendar_february.txt
+  • Advisories: cold_wave_frost_protection.txt, spray_safety.txt, soil_testing_guide.txt
+  • Weather: imd_forecast_guide.txt, imd_seasonal_forecast_guide.txt
+  • Helpline: Kisan Call Centre 1800-180-1551, Gujarat Spices Board 079-232-48901
+  • Online: https://ikhedut.gujarat.gov.in, https://www.indianspices.com (Spices Board)
+
+================================================================================

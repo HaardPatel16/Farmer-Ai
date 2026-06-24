@@ -1,0 +1,281 @@
+================================================================================
+LATERITIC SOIL — COMPLETE SOIL PROFILE
+================================================================================
+
+1. SOIL TYPE NAME & CLASSIFICATION
+--------------------------------------------------------------------------------
+Lateritic soils, classified as Ferralsols (WRB) or Ultisols/Oxisols (USDA), are formed by
+intense tropical weathering and leaching of parent rocks under high rainfall and temperature
+conditions. The name "laterite" comes from the Latin word "later," meaning brick, because
+these soils harden like iron when exposed to air. In Gujarat, lateritic soils are found in
+the hilly and undulating terrain of the eastern tribal belt. They are characterised by high
+iron and aluminium oxide content, acidic to neutral pH, low fertility, and distinctive red,
+yellow, or brown colouration. These soils represent the oldest and most weathered soils in
+the state, having lost most of their base minerals through millions of years of leaching.
+
+2. PHYSICAL PROPERTIES
+--------------------------------------------------------------------------------
+Texture: Clay to clay loam in the subsoil; sandy loam to loam in the surface layer due to
+eluviation (leaching of clay from the topsoil). The clay fraction is dominated by kaolinite
+(rather than smectite in black soils), which has low shrink-swell capacity.
+
+Structure: Weak to moderate granular structure in the topsoil; massive or platy in the subsoil.
+The presence of iron oxides can create indurated (hardened) layers at depth.
+
+Colour: Red, reddish-brown, yellowish-red, or brown. The colour is due to the accumulation of
+iron oxides (hematite, goethite) and aluminium oxides that remain after silica and bases have
+been leached away. Bright red colour indicates well-drained conditions; yellowish colour
+indicates periodic waterlogging.
+
+Depth: Shallow to moderate (30–80 cm). In many areas, a hard lateritic pan or ironstone
+concretions (murram) occur at 30–50 cm depth, restricting root penetration. On steep slopes,
+soil depth may be less than 20 cm over bedrock.
+
+Drainage: Well-drained to excessively drained on slopes; poor drainage in valley bottoms and
+where hardpans occur. The high rainfall in the tribal belt means that drainage is generally
+adequate, but saturation can occur during intense monsoon events.
+
+Water-Holding Capacity: Low to moderate (80–140 mm/metre). The kaolinitic clay has lower
+water-holding capacity than smectite clay. Sandy surface layers drain quickly. However, clay
+subsoils can hold water but it is often tightly bound.
+
+Erosion Risk: Very high. Lateritic soils on slopes are highly susceptible to erosion due to:
+  • High rainfall intensity in the tribal belt
+  • Weak soil structure
+  • Shallow depth
+  • Removal of vegetation cover
+Sheet erosion, rill erosion, and gully formation are common problems.
+
+3. CHEMICAL PROPERTIES
+--------------------------------------------------------------------------------
+pH Range: 5.0 to 6.5, typically acidic to slightly acidic. The acidity is due to the leaching
+of bases (calcium, magnesium, potassium) and the presence of aluminium ions in the soil
+solution. In some areas, pH may drop to 4.5 in the subsoil.
+
+Organic Matter: Low to moderate (0.5–1.0%). Despite forest cover, the high temperature and
+rainfall accelerate decomposition. Organic matter content is higher under forest than under
+agriculture.
+
+NPK Status:
+  • Nitrogen: Low (120–200 kg/ha available N). Low organic matter and rapid mineralisation
+    limit nitrogen availability.
+  • Phosphorus: Very low (5–15 kg/ha available P). This is the most limiting nutrient in
+    lateritic soils. Phosphorus is strongly fixed by iron and aluminium oxides into
+    insoluble forms (Fe-P and Al-P compounds). Even when high P fertiliser is applied,
+    much of it becomes unavailable within weeks.
+  • Potassium: Low to moderate (100–200 kg/ha available K). Bases have been leached, but
+    some K remains in the weathered minerals.
+
+Micronutrients: Variable. Iron and aluminium are abundant (they form the soil itself), but
+availability depends on pH. At low pH, aluminium toxicity can occur (root damage, stunted
+growth). Manganese toxicity can occur in waterlogged conditions. Zinc and boron deficiencies
+are common. Copper is generally adequate.
+
+Cation Exchange Capacity (CEC): Low to moderate (10–20 cmol/kg). The kaolinite clay has low
+CEC compared to smectite. This means the soil has limited ability to retain nutrients, making
+frequent fertiliser applications necessary.
+
+Base Saturation: Low (<50%). The soil is dominated by hydrogen and aluminium ions on the
+exchange complex. Calcium and magnesium are deficient.
+
+Aluminium Toxicity: Exchangeable aluminium > 2 ppm can cause root tip damage and poor nutrient
+uptake in sensitive crops. This is a concern in strongly acidic lateritic soils (pH < 5.2).
+
+4. WHERE FOUND IN GUJARAT
+--------------------------------------------------------------------------------
+Lateritic soils are found in the eastern hilly and tribal districts of Gujarat:
+  • Dang District: The entire district, especially in the Western Ghats region. The highest
+    rainfall area in Gujarat with dense forests and steep slopes.
+  • Tapi District: Hilly talukas (Vyara, Nizar, Uchhal) and the Satpura range foothills.
+  • Narmada District: Hilly and undulating areas, particularly in the eastern talukas bordering
+    Madhya Pradesh.
+  • Chhota Udaipur District: The entire district, characterised by undulating terrain and rocky
+    outcrops. Some of the most degraded agricultural lands in Gujarat are found here.
+  • Panchmahal District: Eastern hilly talukas (Godhra, Lunavada, Santrampur, Kadana).
+  • Dahod District: Eastern hilly areas bordering Madhya Pradesh.
+  • Mahisagar District: Hilly and undulating terrain, especially in the eastern part.
+  • Vadodara District: Limited patches in the eastern hilly talukas (Chhota Udaipur border).
+
+Extent: Approximately 12–15% of Gujarat's total geographical area. The lateritic zone is
+predominantly tribal, with lower agricultural productivity than the alluvial and black soil
+regions.
+
+5. SUITABILITY FOR CROPS
+--------------------------------------------------------------------------------
+Best Crops (Adapted to Lateritic Conditions):
+  • Maize — The most important staple crop of the tribal belt. Tolerates acidic conditions
+    and grows well with moderate management. Varieties: Gujarat Makka-1, Ganga-5. Yields:
+    20–30 quintals/ha with good management (10–15 q/ha under poor management).
+  • Paddy (Rice) — Both upland and lowland rice. Tolerates acidity and poor drainage. Local
+    landraces are adapted to these conditions. Varieties: GR-11, Jaya. Yields: 25–35 quintals/ha
+    (transplanted) in valley areas.
+  • Tur (Pigeon Pea) — Long-duration varieties tolerate poor soil and fix nitrogen. BDN-2,
+    ICPL-87. Yields: 12–18 quintals/ha.
+  • Sorghum (Jowar) — Drought-tolerant grain and fodder sorghum on marginal lands.
+  • Millets — Finger millet (ragi) and pearl millet (bajra) in drier areas.
+  • Tuber Crops — Tapioca (cassava), sweet potato, and yam are traditional crops that tolerate
+    poor soils and provide food security.
+  • Cashew — The most suitable plantation crop for lateritic soils. Expanding in Chhota
+    Udaipur and Narmada. Tolerates acidity and poor fertility.
+  • Pineapple — Tolerates acidity and can grow on slopes with terracing.
+
+Moderately Suitable:
+  • Wheat — With heavy liming and fertilisation. Yields are lower than on alluvial or black soils.
+  • Gram (Chickpea) — On limed soils with phosphorus fertilisation.
+  • Vegetables — Tomato, brinjal, chilli with heavy amendment and irrigation.
+  • Mango — Local varieties perform reasonably well with management.
+  • Rubber — Experimental plantations in Dang (requires very high rainfall and terracing).
+
+Unsuitable Crops:
+  • Cotton — Requires neutral pH and high fertility; poor performance on acidic lateritic soils
+    without heavy amendment.
+  • Sugarcane — Requires deep, fertile, well-watered soils; not suitable for most lateritic areas.
+  • Groundnut — Pod development is poor; iron chlorosis is not a problem (iron is abundant) but
+    calcium deficiency can cause empty pods.
+  • Cumin and fennel — Require well-drained, calcareous soils; completely unsuitable.
+  • Citrus — Lime-induced chlorosis is not the issue (iron is abundant), but manganese toxicity
+    and poor drainage can cause problems.
+
+Yield Potential: Low to moderate under traditional management. With intensive amendment
+(liming, heavy organic matter, phosphorus fertilisation), yields can approach those of alluvial
+soils. However, the cost of amendment is often prohibitive for small tribal farmers. The key
+is to match crops to soil capabilities rather than attempting to convert lateritic soils
+into high-input fields.
+
+6. MANAGEMENT PRACTICES
+--------------------------------------------------------------------------------
+Fertiliser Recommendations:
+  • Nitrogen: 80–150 kg N/ha for cereals; 120–180 kg N/ha for cotton (if grown). Use ammonium
+    sulphate or urea. Split applications are essential due to low CEC and leaching risk.
+  • Phosphorus: 60–100 kg P2O5/ha. This is higher than for other soils because of extreme P
+    fixation. Use water-soluble P (DAP, SSP) and apply in bands near the root zone. Apply
+    at sowing time. Rock phosphate is NOT suitable for these soils due to low acidity
+    in some areas (pH > 5.5). Use of PSB (Phosphate Solubilising Bacteria) biofertiliser
+    is strongly recommended.
+  • Potassium: 40–60 kg K2O/ha. Most lateritic soils are deficient in K due to leaching.
+  • Lime: 2–4 tonnes/ha of agricultural lime (dolomite or calcite) every 3–4 years to raise
+    pH to 6.0–6.5. Lime application is essential for maize, wheat, and legumes. Apply lime
+    2–3 months before sowing and incorporate thoroughly. Lime also improves phosphorus
+    availability by reducing Fe/Al fixation.
+  • Zinc: 25 kg zinc sulphate/ha. Deficiency is common due to low organic matter and high pH
+    after liming. Foliar spray of 0.5% ZnSO4 for standing crops.
+  • Boron: 10 kg borax/ha for legumes and vegetables.
+  • Iron: Generally not needed as iron oxides are abundant. However, if pH is raised too high
+    by over-liming, iron deficiency can occur. Maintain pH below 6.8 to prevent this.
+  • Manganese: Monitor for toxicity if pH < 5.2. Apply lime if Mn toxicity symptoms appear
+    (brown spots on leaves, stunted roots).
+
+Irrigation: Limited irrigation is practiced due to hilly terrain and poor water access.
+Where available:
+  • Drip irrigation is preferred for vegetables and horticulture on terraced fields.
+  • Sprinkler irrigation for cereals on flat valley areas.
+  • Tank irrigation from traditional village ponds for paddy transplantation.
+  • Micro-catchments and farm ponds for supplemental irrigation.
+
+Tillage: Careful tillage is needed to prevent erosion:
+  • Contour tillage (ploughing along the contour, not up and down the slope) is mandatory.
+  • Minimum tillage to preserve soil structure and reduce erosion risk.
+  • Deep tillage should be avoided on shallow soils over bedrock.
+  • Use of hand tools (hoe, pickaxe) is common on steep slopes where machinery cannot operate.
+
+Special Practices:
+  • Terracing: Essential for cropping on slopes >10%. Bench terraces, contour bunds, and
+    half-moon terraces are used in Dang and Chhota Udaipur. Terracing reduces erosion by
+    80–90% and creates level planting surfaces.
+  • Contour Farming: Planting along contours, not up and down slopes. This is the minimum
+    requirement for any cultivation on lateritic slopes.
+  • Agroforestry: Planting nitrogen-fixing trees (Albizia, Leucaena, Gliricidia) along
+    contours and field boundaries. Trees stabilise soil, provide shade, and add leaf litter.
+  • Mulching: Apply crop residue mulch or grass mulch to reduce erosion, conserve moisture,
+    and moderate soil temperature. This is especially important in the dry season.
+  • Green Manuring: Incorporate green manure crops (dhaincha, sunnhemp, cowpea) before
+    maize or paddy to add nitrogen and organic matter.
+
+7. PROBLEMS & REMEDIES
+--------------------------------------------------------------------------------
+  • Soil Erosion: THE most severe and chronic problem. Heavy monsoon rains on slopes with weak
+    soil structure cause massive soil loss. Remedy: Terracing; contour bunding; contour farming;
+    vegetative barriers (vetiver grass, lemon grass); agroforestry; maintain ground cover;
+    avoid bare fallows; construct check dams in gullies.
+  • Acidity and Aluminium Toxicity: Low pH and high exchangeable aluminium damage roots and
+    reduce nutrient uptake. Remedy: Apply agricultural lime (2–4 t/ha) every 3–4 years; grow
+    acid-tolerant crops (maize, paddy, cashew); use acid-tolerant varieties; avoid over-liming
+    (pH > 6.8 can cause micronutrient deficiencies).
+  • Phosphorus Fixation: The most limiting nutrient constraint. Iron and aluminium oxides
+    fix applied phosphorus into unavailable forms. Remedy: Apply P in bands near roots; use
+    water-soluble P fertilisers; apply PSB biofertiliser; maintain pH 6.0–6.5 (optimal for P
+    availability); use organic matter to chelate Fe/Al and reduce fixation; apply small,
+    frequent P doses rather than one large application.
+  • Low Fertility: Low N, P, K, and organic matter. Remedy: Heavy organic matter addition (FYM
+    15–20 t/ha, green manuring); balanced fertilisation based on soil test; inclusion of
+    legumes in rotation; use of biofertilisers; shifting to agroforestry and horticulture which
+    better match soil capabilities.
+  • Shallow Depth: Hard rock or lateritic pan close to surface restricts rooting. Remedy:
+    Grow shallow-rooted crops; use raised beds to increase effective rooting depth; break
+    hardpans with blasting or deep ripping (expensive, rarely done); focus on perennial crops
+    (cashew, mango) that can penetrate cracks in rock.
+  • Water Scarcity: Despite high rainfall, water runs off quickly due to slopes and poor
+    infiltration. Remedy: Construct farm ponds, check dams, and percolation tanks; practice
+    contour bunding to capture runoff; use mulching to increase infiltration; plant cover
+    crops during monsoon to reduce runoff.
+  • Poor Drainage in Valleys: Valley bottoms can become waterlogged during monsoon. Remedy:
+    Open drainage channels; raised bed cultivation for vegetables; grow rice in waterlogged
+    patches.
+  • Nutrient Leaching: High rainfall leaches nutrients from the sandy surface layer. Remedy:
+    Split fertiliser applications; use slow-release fertilisers; maintain organic matter to
+    improve nutrient retention; apply fertilisers just before planting rather than far in advance.
+
+8. SOIL TESTING INTERPRETATION for this soil type
+--------------------------------------------------------------------------------
+When interpreting soil test results for lateritic soils:
+
+  • pH: Optimal range 6.0–6.5. If pH < 5.5, apply lime (2–4 t/ha) and expect aluminium toxicity.
+    If pH > 6.8, expect micronutrient deficiencies (iron, zinc, manganese) despite high
+    total iron content.
+  • Organic Matter: Target > 1.0%. If below 0.6%, apply FYM 20 t/ha and green manure.
+  • Nitrogen: If available N < 150 kg/ha, increase N application and include legumes.
+  • Phosphorus: If available P < 10 kg/ha, apply 80–100 kg P2O5/ha in bands. Use DAP or SSP.
+    Monitor P fixation — retest after 6 months to assess recovery.
+  • Potassium: If available K < 150 kg/ha, apply 60–80 kg K2O/ha. Most lateritic soils need
+    regular K application.
+  • Zinc: Critical level 0.6 ppm. Apply 25 kg ZnSO4/ha prophylactically.
+  • Lime Requirement: If pH < 5.5, apply 3–4 t/ha agricultural lime. If pH 5.5–6.0, apply
+    2–3 t/ha. Apply 2–3 months before sowing and incorporate thoroughly.
+  • Aluminium: If exchangeable Al > 2 ppm, apply lime immediately. Toxicity symptoms include
+    stunted roots, poor tillering, and purple leaf colouration.
+  • Iron: Total Fe is high but available Fe may be low if pH > 6.5. DTPA-Fe < 4.5 ppm indicates
+    deficiency. Foliar Fe spray if symptoms appear.
+
+9. ORGANIC MATTER IMPROVEMENT STRATEGIES
+--------------------------------------------------------------------------------
+  • Farm Yard Manure (FYM): Apply 15–20 tonnes/ha annually. This is critical for improving
+    soil structure, water retention, and nutrient availability in lateritic soils. Organic
+    matter also chelates iron and aluminium, reducing phosphorus fixation.
+  • Green Manuring: Incorporate dhaincha, sunnhemp, or cluster bean before maize or paddy.
+    Green manure adds 80–120 kg N/ha, improves structure, and increases microbial activity.
+    In the tribal belt, dhaincha is grown in jhum fallows before shifting cultivation.
+  • Compost and Vermicompost: 5–8 tonnes/ha for intensive cropping. Vermicompost is rich in
+    humic acids which improve soil structure and chelate micronutrients. Vermicompost is
+    particularly effective in reducing phosphorus fixation in lateritic soils.
+  • Crop Residue Management: Do not burn residues. Incorporate maize stover, paddy straw,
+    and legume residues into the soil. Mulching with crop residues reduces erosion and
+    adds organic matter gradually.
+  • Biofertilisers: PSB (essential for phosphorus management), Azotobacter, Azospirillum,
+    and VAM. VAM fungi improve phosphorus uptake in high P-fixing lateritic soils and
+    enhance drought tolerance.
+  • Agroforestry: Integrate trees (cashew, mango, jackfruit, bamboo) into cropping systems.
+    Leaf litter from trees adds organic matter, improves soil structure, and provides shade.
+    Cashew is particularly suitable as it tolerates poor soils and provides income.
+  • Cover Cropping: Use cowpea, horse gram, or moth bean during fallow periods to cover soil,
+    add biomass, and fix nitrogen. Cover crops are especially important during monsoon to
+    prevent erosion.
+  • Forest Litter Collection: In forested areas (Dang), collect and compost leaf litter from
+    forest floors (with permission) to make rich organic compost. This traditional practice
+    provides high-quality organic matter.
+  • Organic Farming: Transition to organic farming is well-suited for lateritic soils in the
+tribal belt because many farmers already use low chemical inputs. However, maintaining
+    phosphorus supply without synthetic fertilisers is challenging. Use rock phosphate + PSB
+    + VAM + organic matter. Foliar sprays of compost tea and vermiwash can supply
+    micronutrients. The 3-year transition period is manageable for subsistence crops.
+
+================================================================================

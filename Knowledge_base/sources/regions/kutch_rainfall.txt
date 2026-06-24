@@ -1,0 +1,145 @@
+================================================================================
+KUTCH RAINFALL & AGRO-CLIMATIC PROFILE — COMPLETE REGIONAL PROFILE
+================================================================================
+
+1. REGION OVERVIEW & LOCATION
+--------------------------------------------------------------------------------
+Kutch (Kachchh) is the largest district of Gujarat, located in the north-western
+extremity of the state, bordering Pakistan and the Arabian Sea. It includes the
+Rann of Kutch (Great and Little Rann), Banni grasslands, and the mainland Kutch.
+The district is divided into talukas such as Bhuj, Anjar, Mundra, Mandvi, Rapar,
+Lakhpat, Nakhatrana, and Abdasa. Agriculture in Kutch is among the most challenging
+in Gujarat due to aridity, salinity, and climatic extremes. The district is famous
+for its handicrafts, salt production, and livestock (Kutchi camel, Kankrej cattle),
+but crop agriculture is limited to specific zones.
+
+2. CLIMATE & RAINFALL
+--------------------------------------------------------------------------------
+Rainfall Pattern: Kutch receives the lowest rainfall in Gujarat, averaging 300mm
+to 450mm annually, with the western and northern fringes (Rann area) receiving
+less than 250mm. The monsoon is highly erratic and concentrated in July–August.
+Frequently, the district receives below-normal rainfall during the kharif season,
+forcing farmers to rely on drought-mitigation strategies.
+
+Temperature: Extreme temperatures are characteristic. Summer (April–June) sees
+temperatures of 40°C to 46°C, with the Rann surface exceeding 50°C. Winter
+(December–January) nights can drop to 4°C to 8°C, with frost risk in low-lying
+areas. The diurnal temperature range is very high (15–20°C difference).
+
+Humidity: Extremely low humidity (15–25%) during summer, rising to 60–70% during
+monsoon. The arid climate causes very high evapotranspiration rates (2000mm+ annually).
+
+Drought/Flood Risk: Drought is a near-perennial risk. The district faces drought
+conditions in 3 out of 5 years. Flooding is rare but can occur in the Rann when
+cyclonic rainfall from the Arabian Sea drains into the flat salt desert. The 2001
+earthquake also altered local drainage patterns in some areas.
+
+3. SOIL CHARACTERISTICS
+--------------------------------------------------------------------------------
+Kutch has diverse but generally poor soils:
+  • Sandy desert soils (Aeolian sands) in northern and western Kutch — very low
+    water-holding, low organic matter, shifting dunes.
+  • Saline-alkaline soils (usar/reh) around the Rann fringe — high EC and pH,
+    hard surface pans, poor crop establishment.
+  • Medium black soils in parts of Bhuj, Anjar, and Mundra — the best agricultural
+    soils but limited in extent.
+  • Coastal saline soils in Mundra, Mandvi, and Lakhpat — tidal influence,
+    high sodium content.
+
+General soil fertility: Very low organic matter (0.1–0.4%), low nitrogen, phosphorus,
+and zinc. High calcium carbonate in many areas. Salinity is the dominant soil
+constraint.
+
+4. MAJOR CROPS & CROP ROTATION
+--------------------------------------------------------------------------------
+Kharif Crops (strictly rainfed or minimal irrigation):
+  • Cotton — the most important cash crop; drought-resistant and short-duration
+    Bt cotton varieties (e.g., RCH-2, various BG-II hybrids) are essential.
+    Sowing: June 25 to July 20, only after assured rainfall.
+  • Bajra (Pearl Millet) — GHB-538, GHB-732; drought-escape crop on sandy soils.
+  • Guar (Cluster Bean) — drought-tolerant legume for fodder and gum; crucial
+    for soil nitrogen fixation.
+  • Castor — GCH-4, GCH-7 on deeper soils.
+  • Moth Bean (Matki) — traditional pulse of Kutch on marginal lands.
+
+Rabi Crops (very limited, on irrigated pockets or residual moisture):
+  • Cumin — high-value spice crop in Anjar, Bhuj, and Rapar with irrigation.
+  • Mustard — Rai-5, GM-1 on sandy soils.
+  • Wheat — very limited, only in command areas or with borewell irrigation.
+
+Crop Rotation:
+  • Bajra – Guar – Fallow (3-year rotation on sandy soils)
+  • Cotton – Cumin (with supplemental irrigation)
+  • Castor – Fallow (on marginal lands)
+
+5. WATER RESOURCES
+--------------------------------------------------------------------------------
+Water is the most critical limiting factor. The district has no perennial rivers.
+The Narmada canal system does not reach Kutch (except through the proposed
+Kutch Branch Canal, partially under construction). Groundwater is saline in most
+areas; only deep aquifers in Bhuj, Anjar, and Nakhatrana provide fresh water.
+
+Traditional water sources: Tanks (villages), farm ponds, and check dams are vital.
+Rainwater harvesting from rooftops and roads is promoted. The Kutch branch of the
+Sardar Sarovar canal (when completed) will transform the agricultural potential.
+
+6. AGRICULTURAL PRACTICES
+--------------------------------------------------------------------------------
+Sowing Windows: Very late and risky. Kharif sowing only after cumulative rainfall
+exceeds 60mm. Farmers often practice "dry sowing" (pre-sowing before rains) with
+risk-mitigation. If monsoon fails by July 20, farmers switch to contingency crops
+like guar or fodder sorghum.
+
+Irrigation Methods: Drip irrigation is non-negotiable for any irrigated crop due
+to extreme water scarcity. Subsurface drip is experimented with for cotton. Flood
+irrigation is practically absent except in a few canal command areas.
+
+Intercropping: Cotton + Guar (2:1) is common. Mixed cropping of bajra + moth bean
+provides food and fodder security.
+
+Special Practices: Deep ploughing to break hardpans in black soils; sand dune
+stabilisation with Prosopis and Acacia; use of windbreaks to reduce evaporation;
+mulching with crop residues to conserve soil moisture.
+
+7. COMMON CHALLENGES
+--------------------------------------------------------------------------------
+  • Extreme Water Scarcity: The defining challenge. Most agriculture is rainfed.
+  • Salinity: Soil and groundwater salinity limits crop choice in over 40% of
+the district.
+  • Pests: Whitefly in cotton, termites in sandy soils, spodoptera in irrigated
+    vegetable pockets.
+  • Diseases: Wilt in cotton and guar; root rot in bajra during waterlogging
+    (rare heavy rain events).
+  • Weather: Heatwaves, dust storms, delayed monsoon, and intermittent droughts.
+  • Livestock-Crop Conflict: Free grazing by large livestock populations damages
+    standing crops.
+  • Soil: Wind erosion, sand dune encroachment, and poor soil fertility.
+
+8. GOVERNMENT SCHEMES APPLICABLE
+--------------------------------------------------------------------------------
+  • PMFBY — crop insurance is critical for Kutch farmers due to high rainfall risk.
+  • PMKSY — micro-irrigation subsidies (drip/sprinkler) at 55–90% subsidy.
+  • MGNREGA — water harvesting structures, check dams, and afforestation.
+  • National Mission on Sustainable Agriculture (NMSA) — drought-proofing and
+    land reclamation.
+  • Soil Health Card Scheme — for saline soil management and amendment advice.
+  • Gujarat State Agricultural Marketing Board — APMC infrastructure for cotton
+    and cumin marketing.
+  • Kutch Branch Canal (Sardar Sarovar Project) — ongoing infrastructure project
+    that will bring Narmada water to the district.
+  • Disaster Relief and Drought Assistance — from Gujarat State Disaster Management.
+
+9. DISTRICTS INCLUDED IN THIS ZONE
+--------------------------------------------------------------------------------
+  • Kutch (Kachchh) district — entire district including:
+    - Bhuj taluka
+    - Anjar taluka
+    - Mundra taluka
+    - Mandvi taluka
+    - Rapar taluka
+    - Lakhpat taluka
+    - Nakhatrana taluka
+    - Abdasa taluka
+    - Gandhidham (urban industrial area, limited agriculture)
+
+================================================================================

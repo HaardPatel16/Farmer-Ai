@@ -1,0 +1,166 @@
+================================================================================
+FARMER SAHAYAK - BANASKANTHA PEST PROFILE
+================================================================================
+
+Banaskantha is North Gujarat's agricultural heartland and the state's premier
+potato and spice-producing district. The unique combination of arid climate,
+light sandy soils, and intensive irrigation creates a distinct pest and disease
+profile that differs from other Gujarat regions. This profile details the major
+pests, diseases, and their management for the district's primary crops.
+
+1. POTATO PESTS & DISEASES
+---------------------------
+Late Blight (Phytophthora infestans):
+This is the most destructive disease of potato in Banaskantha. The humid
+November-December conditions, combined with irrigation mist, create ideal
+conditions for late blight epidemics. The disease appears as water-soaked
+dark lesions on leaves and stems, spreading rapidly under cool, humid conditions.
+• Scout fields weekly from November 15 onwards
+• At first sign of disease, spray metalaxyl-mancozeb 2.5g/litre or
+  cymoxanil-mancozeb 2.5g/litre
+• Ensure adequate plant spacing for air circulation
+• Avoid overhead irrigation during late afternoon
+
+Aphids (Myzus persicae, Aphis gossypii):
+Aphids are serious vectors of Potato Virus Y (PVY) and Potato Leaf Roll Virus
+(PLRV), which cause seed degeneration and yield loss.
+• Spray imidacloprid 0.3ml/litre at first appearance
+• Use yellow sticky traps (20 per hectare) for monitoring
+• Remove and destroy volunteer potato plants that harbour aphids
+
+Cutworm (Agrotis spp.):
+Cutworms damage emerging potato shoots by cutting stems at soil level.
+• Apply chlorpyriphos 2ml/litre in the evening near plant base
+• Place bran bait (chlorpyriphos + jaggery + bran) in the evening
+
+Tuber Moth (Phthorimaea operculella):
+A major storage and field pest that bores into tubers.
+• Spray neem oil 3ml/litre or spinosad 0.3ml/litre
+• Ensure proper storage with good ventilation and use pheromone traps
+
+2. CUMIN PESTS & DISEASES
+-------------------------
+Cumin Blight (Alternaria burnsii):
+Endemic in Banaskantha, this fungal disease causes leaf spots, stem blight,
+and seed discolouration. Spreads rapidly in humid, cloudy conditions.
+• Spray carbendazim 0.5g/litre + mancozeb 2.5g/litre combination
+• Apply first spray at 30 days after sowing, repeat every 15 days
+• Use disease-free certified seed from KVK Dantiwada
+
+Aphids on Cumin:
+Aphids attack cumin umbels during flowering (January-February), causing major
+seed set failure through direct feeding and honeydew secretion promoting sooty mould.
+• Spray dimethoate 2ml/litre or acetamiprid 0.3g/litre
+• Apply during morning or evening to avoid flowering disruption
+• Monitor with yellow sticky traps from December onwards
+
+Powdery Mildew (Erysiphe polygoni):
+Appears as white powdery patches on leaves and stems, reducing photosynthesis.
+• Spray wettable sulphur 3g/litre or dinocap 2ml/litre
+• Ensure adequate plant spacing for air circulation
+
+Wilt (Fusarium oxysporum):
+Soil-borne disease causing yellowing and wilting of plants.
+• Practice crop rotation with cereals or legumes
+• Treat seeds with carbendazim + thiram (2g/kg seed)
+• Apply Trichoderma viride @ 5kg/ha in soil at sowing
+
+3. FENNEL PESTS & DISEASES
+--------------------------
+Alternaria Blight:
+Similar to cumin blight, causes leaf spots and blight on fennel.
+• Spray mancozeb 2.5g/litre + carbendazim 0.5g/litre
+• Remove and destroy infected plant debris after harvest
+
+Aphids and Thrips:
+Feed on tender leaves and umbels, reducing seed quality and yield.
+• Spray imidacloprid 0.3ml/litre or thiamethoxam 0.3g/litre
+• Apply neem oil 3ml/litre as preventive spray
+
+Powdery Mildew:
+• Spray wettable sulphur 3g/litre or dinocap 2ml/litre at first appearance
+
+4. BAJRA PESTS & DISEASES
+-------------------------
+Downy Mildew (Sclerospora graminicola) / "Green Ear":
+A major Kharif problem in Banaskantha. Infected plants show chlorotic streaks
+on leaves and green leafy structures replacing the grain ("green ear").
+• Seed treatment with metalaxyl 6g/kg seed is mandatory
+• Grow resistant varieties: GHB-558, GHB-732
+• Avoid susceptible local varieties in high-risk areas
+• Spray metalaxyl-mancozeb 2.5g/litre if symptoms appear
+
+Ergot (Claviceps fusiformis):
+Replaces grains with black sclerotia (honeydew stage visible first).
+• Treat seeds with thiram 2g/kg to prevent seedling infection
+• Remove and burn infected heads before sclerotia formation
+• Practice crop rotation with non-cereal crops
+
+5. CASTOR PESTS & DISEASES
+--------------------------
+Semi-looper Caterpillar (Achaea janata):
+Causes mass defoliation in August-September. Larvae skeletonize leaves and
+can strip plants completely in outbreak years.
+• Spray chlorpyrifos 2ml/litre or emamectin benzoate 0.4g/litre
+• Monitor from 45 days after sowing; spray at early larval stage
+• Collect and destroy egg masses manually
+
+Capsule Borer (Conogethes punctiferalis):
+Bores into castor capsules, causing seed damage and shattering.
+• Spray chlorpyrifos 2ml/litre or spinosad 0.3ml/litre
+• Install pheromone traps (5 per hectare) for monitoring
+
+6. COTTON PESTS
+---------------
+Pink Bollworm (Pectinophora gossypiella):
+Pressure is lower than Saurashtra but still significant in northern talukas.
+• Install pheromone traps from day 30 after sowing (8 traps per hectare)
+• Economic threshold: 8 moths per trap per week triggers spray
+• Spray emamectin benzoate 0.4g/litre or chlorantraniliprole 0.4ml/litre
+
+Aphid Colonies:
+Can be severe in October on cotton, especially in water-stressed fields.
+• Spray imidacloprid 0.3ml/litre at first appearance
+• Maintain adequate irrigation to reduce plant stress
+
+7. GROUNDNUT PESTS
+------------------
+Thrips (Thrips palmi, Scirtothrips dorsalis):
+Transmit Peanut Bud Necrosis Virus (PBNV/TSWV), causing severe yield loss.
+• Early season (June-July) thrips control is critical
+• Spray fipronil 1ml/litre at seedling stage (7-10 days after emergence)
+• Monitor with yellow sticky traps from germination
+
+Leaf Spot (Tikka Disease - Cercospora arachidicola + Phaeoisariopsis personata):
+• Spray mancozeb 2.5g/litre or chlorothalonil 2g/litre starting at 30 days
+  after sowing, repeat at 10-15 day intervals
+
+8. MUSTARD PESTS & DISEASES
+----------------------------
+Aphids (Lipaphis erysimi):
+Major pest causing honeydew secretion and virus transmission.
+• Spray dimethoate 2ml/litre or imidacloprid 0.3ml/litre
+• Release ladybird beetles (Coccinella septempunctata) for biological control
+
+White Rust (Albugo candida):
+Appears as white pustules on leaves, reducing yield and oil content.
+• Spray mancozeb 2.5g/litre at first appearance
+• Grow resistant varieties: GJM-2, GJM-3
+
+Alternaria Blight:
+• Spray carbendazim + mancozeb combination at first sign
+
+9. DISTRICT-SPECIFIC ADVISORIES
+-------------------------------
+• KVK Dantiwada (Krishi Vigyan Kendra) issues weekly pest alerts from October
+  to April for potato and spice crops. Contact: 02748-278219
+• The arid climate of Banaskantha means pest pressure is generally lower than
+  humid zones, but sprinkler and drip irrigation can create micro-humidity that
+  favours fungal diseases - monitor fields closely after irrigation
+• Apply preventive sprays for potato late blight from mid-November regardless
+  of symptoms, as the disease can explode within 48 hours under favourable conditions
+• Use disease-free certified seed for potato and spices to prevent introducing
+  pathogens into clean fields
+• Practice strict sanitation: remove and destroy crop residues after harvest to
+  reduce overwintering inoculum for fungal diseases
+================================================================================

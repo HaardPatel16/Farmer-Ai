@@ -1,0 +1,7 @@
+=== WHEAT FERTILIZER AND NUTRIENT MATRICES ===
+Guidelines: Anand Agricultural University
+
+1. IRRIGATED HIGH-YIELD DOSING
+- Total Requirement: 120:60:40 kg NPK per hectare.
+- Basal Load: Apply the full dose of Phosphorus (60 kg P2O5/ha) and Potassium (40 kg K2O/ha), along with 50% of the Nitrogen (60 kg N/ha) at the time of sowing.
+- Top-Dressing Split: Apply the remaining 50% of Nitrogen (60 kg N/ha) exactly 21-25 days post-sowing, synchronized with the first irrigation cycle (CRI stage).

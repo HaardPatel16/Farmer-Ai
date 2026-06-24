@@ -1,0 +1,106 @@
+================================================================================
+           GUJARAT FARMER KNOWLEDGE BASE
+           Agricultural Guide - File 102/407
+================================================================================
+
+TOPIC: Soil Testing Methods
+GUJARATI NAME: Mati Parikshan
+CATEGORY: Soil Science
+GUIDE TYPE: Comprehensive Technical Manual
+REGION: Gujarat State - All Agro-Climatic Zones
+DOCUMENT DATE: June 23, 2026
+================================================================================
+
+1. INTRODUCTION
+Soil testing is the scientific basis for profitable agriculture. Gujarat's Soil Health Card scheme provides free testing to all farmers.
+
+2. IMPORTANCE OF SOIL TESTING
+- Prevents wasteful fertilizer use
+- Identifies hidden deficiencies
+- Improves crop yields by 10-25%
+- Reduces input costs by 15-20%
+- Protects environment
+
+3. SAMPLING PROCEDURE
+When to Sample:
+- Before cropping season
+- Every 2-3 years routinely
+- When problems appear
+- Before starting new enterprises
+
+Sampling Protocol:
+Step 1: Remove surface debris
+Step 2: Collect from 8-10 spots per hectare
+Step 3: Sample 0-15 cm depth (annual crops) or 0-30 cm (perennials)
+Step 4: Mix in clean plastic bucket
+Step 5: Air dry, crush, sieve (2mm)
+Step 6: Submit 500g composite sample
+
+Label Information:
+- Farmer name, mobile number
+- Village, taluka, district, survey number
+- Previous/current crop
+- Date and depth of sampling
+
+4. PARAMETERS TESTED
+Basic (Free under SHC):
+pH, EC, OC, Available N, P, K, S, Zn, Fe, Mn, Cu, B
+
+Advanced (Paid):
+- Mechanical analysis (texture)
+- Cation exchange capacity
+- Calcium carbonate
+- Heavy metals
+- Microbial biomass
+
+5. INTERPRETATION GUIDE
+pH Levels:
+<5.5 Strongly acidic, 5.5-6.5 Slightly acidic, 6.5-7.5 Optimal, 7.5-8.5 Slightly alkaline, >8.5 Strongly alkaline
+
+EC (Salinity):
+<2 dS/m Normal, 2-4 Critical, 4-8 Saline, >8 Highly saline
+
+Organic Carbon:
+<0.4% Very low, 0.4-0.8% Low, 0.8-1.2% Medium, >1.2% High
+
+6. LABORATORIES IN GUJARAT
+Government (Free):
+- District Soil Testing Labs
+- Mobile testing vans
+- KVKs
+- Krishi Bhavans
+
+Private (Rs. 500-2000):
+- Faster turnaround (3-5 days)
+- Additional parameters
+- Home sampling available
+
+7. FERTILIZER RECOMMENDATIONS
+Based on Soil Test Results:
+Low status: 100% recommended dose
+Medium status: 75-80% dose
+High status: 50-60% dose
+
+8. COMMON MISTAKES
+- Sampling unusual spots
+- Using dirty containers
+- Sampling after fertilizer application
+- Mixing different fields
+- Sending wet samples
+- Incomplete labeling
+
+9. CASE STUDIES
+Rajkot Cotton Farmer:
+- Before: Rs. 4,500/acre wasted on unneeded fertilizers
+- After soil test: Saved Rs. 3,200/acre, yield up 12%
+
+Mehsana Vegetable Grower:
+- Problem: Poor growth despite high fertilizer
+- Soil test: Zinc deficiency, high pH
+- Correction: Zinc + pH management
+- Result: 30% yield increase
+
+================================================================================
+                         END OF FILE 102
+              Topic: Soil Testing Methods
+================================================================================
