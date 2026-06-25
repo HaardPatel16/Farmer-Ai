@@ -17,6 +17,12 @@ from PIL import Image
 from torchvision import transforms
 from torchvision.models import convnext_small
 
+# PIL allows ~89 megapixel decoded images by default — enough for a
+# malicious 7 MB compressed PNG to decode to hundreds of millions of
+# pixels and OOM the server. Lower the ceiling to 25 MP (≈ 5000x5000),
+# more than enough headroom for any real leaf photo.
+Image.MAX_IMAGE_PIXELS = 25_000_000
+
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MODEL_PATH = os.path.join(PROJECT_ROOT, "ML model", "Latest_Plant_Model_.pth")
 
@@ -27,8 +33,14 @@ NUM_CLASSES = 78
 # these are filled in).
 CLASS_NAMES = [f"class_{i}" for i in range(NUM_CLASSES)]
 
+# Inference preprocessing must match the training notebook's eval_transforms
+# exactly — anything else feeds the model a distribution shift and silently
+# tanks accuracy. Training used Resize(256) → CenterCrop(224), not a direct
+# Resize((224, 224)) stretch, so we replicate that here. ImageNet mean/std
+# match torchvision's pretrained ConvNeXt-Small expectations.
 _PREPROCESS = transforms.Compose([
-    transforms.Resize((224, 224)),
+    transforms.Resize(256),
+    transforms.CenterCrop(224),
     transforms.ToTensor(),
     transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
 ])
