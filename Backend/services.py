@@ -7,15 +7,17 @@ main.py's routes stay thin and just call into these functions.
 import asyncio
 import json
 import re
-from datetime import datetime, timedelta
+import threading
+from datetime import datetime, timedelta, timezone, date as date_cls
 
 import httpx
 import requests
 from groq import Groq
+from sqlalchemy import func
 from sqlalchemy.orm import Session
 
 from config import GROQ_API_KEY
-from database import KnowledgeChunk, WeatherCache, MarketCache
+from database import KnowledgeChunk, WeatherCache, MarketPriceSnapshot
 
 # --- Groq client setup ---
 
@@ -51,6 +53,17 @@ def ask_groq(question: str, language: str = "en", context: str = "", district: s
     else:
         language_instruction = "Reply in English."
 
+    # Compact scope guard (~30 tokens vs the ~150-token version we had
+    # before). The PRIMARY off-topic block now happens in main.py BEFORE
+    # we call Groq at all (see is_farming_question / OFFTOPIC_REFUSAL),
+    # so by the time we get here the query has already passed a keyword
+    # whitelist. This in-prompt line is just a backstop for edge cases
+    # where the local filter let something through.
+    scope_instruction = (
+        "Stay strictly on farming topics. If asked about anything else, "
+        "politely redirect to farming questions in one short sentence."
+    )
+
     district_instruction = ""
     if district:
         district_instruction = (
@@ -66,6 +79,7 @@ def ask_groq(question: str, language: str = "en", context: str = "", district: s
     if context:
         system_prompt = (
             "You are Farmer AI, an assistant helping farmers in Gujarat, India. "
+            f"{scope_instruction} "
             f"{language_instruction} Use the following reference information to "
             "answer accurately. If the reference information doesn't fully answer "
             "the question, you may use your own knowledge, but make this clear."
@@ -75,6 +89,7 @@ def ask_groq(question: str, language: str = "en", context: str = "", district: s
     else:
         system_prompt = (
             "You are Farmer AI, an assistant helping farmers in Gujarat, India. "
+            f"{scope_instruction} "
             f"{language_instruction} Answer using your general knowledge, and keep "
             "answers practical and relevant to Gujarat's farming conditions."
             f"{district_instruction}"
@@ -87,7 +102,7 @@ def ask_groq(question: str, language: str = "en", context: str = "", district: s
             {"role": "user", "content": question},
         ],
         temperature=0.3,
-        max_tokens=600,
+        max_tokens=700,
     )
 
     return response.choices[0].message.content
@@ -131,10 +146,157 @@ def ask_groq_disease_remedy(predictions: list[dict], language: str = "en") -> st
             {"role": "user", "content": "What is wrong with my plant and how do I treat it?"},
         ],
         temperature=0.3,
-        max_tokens=600,
+        max_tokens=700,
     )
 
     return response.choices[0].message.content
+
+
+# ---------------------------------------------------------------------------
+# Local off-topic filter — runs BEFORE we call Groq, so genuinely off-
+# topic queries (math, sports, jokes, trivia) cost zero Groq tokens. The
+# system prompt still carries a backstop scope instruction in case a
+# query slips through the whitelist, but in the common case Groq is
+# never invoked for non-farming questions at all.
+# ---------------------------------------------------------------------------
+
+# Hardcoded refusal text — sent verbatim when is_farming_question() returns
+# False. No Groq involvement, so cost is exactly 0 tokens.
+OFFTOPIC_REFUSAL_EN = (
+    "I'm Farmer AI — I can only help with farming-related questions "
+    "(crops, livestock, soil, weather, pest control, agricultural schemes, "
+    "and so on). Is there something agricultural I can help you with?"
+)
+OFFTOPIC_REFUSAL_GU = (
+    "હું Farmer AI છું — હું માત્ર ખેતી સંબંધિત પ્રશ્નોમાં મદદ કરી શકું છું "
+    "(પાક, પશુપાલન, માટી, હવામાન, જંતુ-નિયંત્રણ, કૃષિ યોજનાઓ વગેરે). "
+    "શું હું તમને કોઈ ખેતી સંબંધિત બાબતમાં મદદ કરી શકું?"
+)
+
+# Vocabulary that signals a farming/agriculture question. Hand-curated;
+# generous on inclusion — false positives (calling Groq for a borderline
+# query) are much cheaper than false negatives (refusing a real farmer).
+# Anything mentioning a Gujarat district or a Gujarati farming term is
+# also caught by the script/alias loops below.
+_FARMING_KEYWORDS = {
+    # Crops / produce
+    "crop", "crops", "cotton", "wheat", "bajra", "bajri", "rice", "paddy",
+    "groundnut", "peanut", "castor", "cumin", "fennel", "coriander",
+    "turmeric", "ginger", "garlic", "onion", "potato", "tomato", "brinjal",
+    "okra", "cabbage", "cauliflower", "chilli", "chili", "pepper",
+    "mango", "banana", "papaya", "guava", "lemon", "orange", "grape",
+    "pomegranate", "watermelon", "muskmelon", "sapota", "amla", "ber",
+    "sugarcane", "maize", "corn", "jowar", "barley", "millet", "millets",
+    "pulse", "pulses", "lentil", "moong", "urd", "chana", "gram", "tur",
+    "arhar", "soybean", "soyabean", "mustard", "sesame", "sunflower",
+    "safflower", "tobacco", "betel", "coconut", "cashew", "areca", "rubber",
+    "marigold", "rose", "jasmine", "gerbera", "carnation", "tuberose",
+    "isabgul", "psyllium", "guar", "matki",
+    # Livestock / dairy / fisheries
+    "cow", "cows", "buffalo", "buffaloes", "goat", "sheep", "poultry",
+    "chicken", "hen", "cattle", "livestock", "dairy", "milk", "butter",
+    "ghee", "honey", "bee", "bees", "beekeeping", "apiculture", "fish",
+    "fisheries", "shrimp", "fodder", "silage",
+    # Farming activities / inputs
+    "farm", "farms", "farmer", "farmers", "farming", "agriculture",
+    "agricultural", "agri", "cultivation", "cultivate", "sowing", "sow",
+    "harvest", "harvesting", "yield", "yields", "soil", "soils", "fertilizer",
+    "fertiliser", "fertilizers", "manure", "compost", "vermicompost",
+    "irrigation", "irrigate", "drip", "sprinkler", "pesticide", "pesticides",
+    "insecticide", "fungicide", "herbicide", "pest", "pests", "disease",
+    "diseases", "weed", "weeds", "bollworm", "aphid", "termite", "rust",
+    "blight", "wilt", "mildew", "rot", "spot", "leaf", "leaves", "stem",
+    "root", "seed", "seeds", "seedling", "sapling", "plant", "plants",
+    "agronomy", "organic", "biofertilizer", "biopesticide", "biocontrol",
+    "trichoderma", "pseudomonas", "neem", "panchagavya", "jeevamrut",
+    "ipm", "intercropping", "rotation", "mulch", "mulching",
+    # Climate / season
+    "rain", "rainfall", "monsoon", "drought", "flood", "temperature",
+    "humidity", "weather", "climate", "season", "kharif", "rabi", "zaid",
+    "summer", "winter",
+    # Soil / land
+    "land", "field", "fields", "hectare", "hectares", "acre", "acres",
+    "alluvial", "vertisol", "loam", "clay", "sandy", "saline", "alkaline",
+    "acidic",
+    # Schemes / finance / market
+    "scheme", "schemes", "subsidy", "subsidies", "kisan", "pmkisan",
+    "pmfby", "kcc", "msp", "mandi", "apmc", "fpo", "cooperative", "amul",
+    "nabard", "ikhedut", "loan", "credit", "insurance", "premium",
+    "procurement", "export", "import",
+    # Geography (region-level; districts handled separately)
+    "gujarat", "saurashtra", "kutch", "kachchh",
+}
+
+# Very-short whitelists for greetings and "who are you?" — these still
+# go through Groq (so the LLM can introduce itself naturally), but the
+# off-topic filter knows not to refuse them outright.
+_GREETING_PATTERNS = (
+    "hi", "hello", "hey", "namaste", "namaskar", "good morning",
+    "good evening", "who are you", "what can you do", "what do you do",
+    "help",
+)
+
+
+def _contains_gujarati_script(text: str) -> bool:
+    """True if any character is in the Gujarati Unicode block (U+0A80-U+0AFF).
+    A query typed in Gujarati on a Gujarat farming bot is almost certainly
+    farming-related — including all greetings and casual phrasing the
+    keyword whitelist can't cover. Accepting all Gujarati-script queries
+    is a much better trade-off than building a Gujarati-vocabulary list."""
+    return any(0x0A80 <= ord(ch) <= 0x0AFF for ch in text)
+
+
+def is_farming_question(query: str) -> bool:
+    """
+    Returns True if the query looks farming-related (or is a greeting we
+    should route through Groq normally). False means we can short-circuit
+    with a canned refusal and skip Groq entirely.
+
+    Conservative by design — false positives (calling Groq on a borderline
+    query) are fine; false negatives (refusing a real farmer) are not.
+    Any of these is sufficient:
+      - the query contains Gujarati script
+      - it matches an English greeting pattern
+      - it contains an English farming keyword
+      - it mentions a Gujarat district (English name, alias, or
+        Gujarati-script name)
+    """
+    if not query:
+        return False
+
+    # Any Gujarati-script characters → treat as on-topic. The user is
+    # interacting in their language with a Gujarat farming assistant —
+    # very unlikely to be off-topic, and the keyword whitelist alone
+    # can't cover Gujarati phrasing reliably.
+    if _contains_gujarati_script(query):
+        return True
+
+    q_lower = query.lower()
+
+    # English greetings → still go to Groq for a natural intro response.
+    q_stripped = q_lower.strip().rstrip("?.!,")
+    if q_stripped in _GREETING_PATTERNS:
+        return True
+    if any(q_stripped.startswith(g + " ") or g + " " in q_stripped for g in _GREETING_PATTERNS):
+        return True
+
+    # English farming vocabulary match.
+    if any(kw in q_lower for kw in _FARMING_KEYWORDS):
+        return True
+
+    # Mentions any Gujarat district by canonical name or alias.
+    if any(d in q_lower for d in GUJARAT_DISTRICT_COORDS):
+        return True
+    if any(a in q_lower for a in GUJARAT_DISTRICT_ALIASES):
+        return True
+
+    return False
+
+
+def offtopic_refusal(language: str = "en") -> str:
+    """Hardcoded refusal string used when is_farming_question() returns
+    False. No Groq call, so this costs exactly 0 tokens."""
+    return OFFTOPIC_REFUSAL_GU if language == "gu" else OFFTOPIC_REFUSAL_EN
 
 
 # --- Knowledge base search (simple keyword version for now) ---
@@ -204,11 +366,21 @@ def search_knowledge_base(db: Session, query: str, district: str | None = None, 
       - chunks with no district tag at all (districts is NULL) are treated
         as Gujarat-wide and still considered normally
 
-    This is intentionally basic — good enough for a handful of documents.
-    Can be upgraded to vector/semantic search later without changing
-    how it's called from main.py.
+    Note: this returns chunks regardless of how strong the match is. The
+    /chat route in main.py then runs kb_answer_coverage() post-hoc against
+    the LLM's answer to decide whether to label the response as KB-grounded,
+    mixed, or pure llm_reasoning. So a weak chunk being returned here
+    doesn't automatically mean the answer gets the KB badge.
     """
-    all_words = [w.lower() for w in query.split() if len(w) > 2]
+    # Strip trailing/leading punctuation from each token so "PM-KISAN?",
+    # "vermicompost?", or "groundnut," still match content that uses the
+    # plain word — otherwise a single stray "?" silently kills the search
+    # for any topic asked as a question (which is most of them).
+    all_words = [
+        w.strip(".,!?:;\"'()[]{}<>").lower()
+        for w in query.split()
+    ]
+    all_words = [w for w in all_words if len(w) > 2]
 
     # Filter down to technical/topic terms — drops generic words like
     # "tell", "about", "what" so they don't dilute density scoring with
@@ -217,10 +389,16 @@ def search_knowledge_base(db: Session, query: str, district: str | None = None, 
     # all), fall back to the unfiltered words rather than searching with
     # an empty list, since a vague query should still attempt a search.
     technical_words = [w for w in all_words if w not in STOPWORDS_QUERY]
-    query_words = technical_words if technical_words else all_words
-
-    if not query_words:
+    # Without at least one technical/topic word after stopword filtering,
+    # the query is almost certainly a greeting ("hi", "namaste") or pure
+    # chit-chat. Forcing a search via the unfiltered word list (the old
+    # fallback) just produced stray false-positive chunks — e.g. "hi"
+    # substring-matching "this" inside random text — so we now bail early
+    # so the caller's post-hoc coverage check routes the response to
+    # llm_reasoning instead of a false KB hit.
+    if not technical_words:
         return []
+    query_words = technical_words
 
     all_chunks = db.query(KnowledgeChunk).all()
     if not all_chunks:
@@ -263,6 +441,30 @@ def search_knowledge_base(db: Session, query: str, district: str | None = None, 
         doc_count = heading_word_doc_count.get(word, 0)
         return doc_count > 0 and (doc_count / total_chunks) <= RARITY_THRESHOLD
 
+    # `meaningful_query_words` — used for the HEADING boost. Requires the
+    # word to be rare across the corpus's headings, since otherwise generic
+    # terms light up the heading boost on unrelated chunks.
+    meaningful_query_words = [
+        w for w in query_words
+        if w not in STOPWORDS_QUERY
+        and w not in HEADING_BOOST_NOISE_WORDS
+        and is_rare_heading_word(w)
+    ]
+
+    # `filename_match_words` — used for the FILENAME boost / force-include.
+    # We deliberately DROP the heading-rarity requirement here: a topic
+    # like "rodent" or "marigold" can be missing from every section
+    # heading inside its dedicated file (because each chunk's heading is
+    # generic like "1. INTRODUCTION", "2. KEY CONCEPTS"), making
+    # is_rare_heading_word() return False — but the filename still
+    # clearly names the topic. Only stopword + structural-noise filtering
+    # applied here so we don't filename-match on "the"/"guide"/etc.
+    filename_match_words = [
+        w for w in query_words
+        if w not in STOPWORDS_QUERY
+        and w not in HEADING_BOOST_NOISE_WORDS
+    ]
+
     scored = []
     for chunk in all_chunks:
         chunk_districts = (
@@ -280,12 +482,28 @@ def search_knowledge_base(db: Session, query: str, district: str | None = None, 
         chunk_word_count = max(len(text_lower.split()), 1)
         match_count = sum(1 for word in query_words if word in text_lower)
 
-        if match_count == 0:
+        # Does this chunk's filename name the topic? If so, we want it
+        # in the candidate set even when its body section doesn't repeat
+        # the topic word — that's the whole point of having dedicated
+        # files per crop/scheme/topic. Critical for cases like
+        # "409_Marigold_Cultivation_Gujarat.txt" where most chunks are
+        # section bodies ("Planting", "Storage") that never repeat
+        # "marigold" — under match_count==0 they'd be silently skipped.
+        filename_match = False
+        if filename_match_words:
+            fn_tokens = re.sub(r"[_\-./]", " ", chunk.source_filename.lower())
+            fn_tokens = re.sub(r"\b\d+\b", " ", fn_tokens)
+            if any(w in fn_tokens for w in filename_match_words):
+                filename_match = True
+
+        if match_count == 0 and not filename_match:
             continue
 
         # Density score: matches per 100 words, so a short chunk that's
         # densely about the topic beats a long chunk that just mentions it
         # once in passing (e.g. a district's one-line crop list).
+        # (Zero when match_count==0; relies on the filename/heading boosts
+        # below to give filename-matched chunks a meaningful score.)
         score = (match_count / chunk_word_count) * 100
 
         # Strong boost when the chunk's own heading names the topic being
@@ -296,22 +514,10 @@ def search_knowledge_base(db: Session, query: str, district: str | None = None, 
         # look at the first real content line instead of just line one.
         heading_line = chunk_headings.get(chunk.id, "")
 
-        # Only query words that pass ALL of these can trigger the heading
-        # boost: not a generic question word (STOPWORDS_QUERY), not a
-        # generic structural/template word (HEADING_BOOST_NOISE_WORDS),
-        # AND rare across this knowledge base's actual headings. The
-        # rarity check catches knowledge-base-specific template noise
-        # automatically (no manual list could anticipate every recurring
-        # custom section title); the noise list catches ordinary generic
-        # English words that could coincidentally be statistically rare
-        # in a given corpus by chance without being a real topic signal.
-        meaningful_query_words = [
-            w for w in query_words
-            if w not in STOPWORDS_QUERY
-            and w not in HEADING_BOOST_NOISE_WORDS
-            and is_rare_heading_word(w)
-        ]
-
+        # `meaningful_query_words` was hoisted out of this loop (computed
+        # once above) — it's the rarity-filtered subset of query_words
+        # used by both the heading boost (below) and the filename match
+        # check (earlier in this iteration).
         if meaningful_query_words:
             # A heading like "4.1 COTTON (KAPAS) — Kharif crop" is a
             # dedicated section ABOUT cotton — the matched word appears
@@ -335,24 +541,221 @@ def search_knowledge_base(db: Session, query: str, district: str | None = None, 
         # heading boost above can't fire even though this is exactly the
         # right file. Uses the same rarity-filtered word list as the
         # heading boost, so "guide"/"cultivation" can't trigger this via
-        # the filename either. Smaller than a real heading match (+40,
-        # not +80) since a filename hit is a weaker signal than the
-        # chunk's own content actually naming the topic.
-        if meaningful_query_words:
-            filename_words = re.sub(r"[_\-./]", " ", chunk.source_filename.lower())
-            filename_words = re.sub(r"\b\d+\b", " ", filename_words)  # drop leading numbers like "004"
-            if any(word in filename_words for word in meaningful_query_words):
-                score += 40
+        # the filename either.
+        # Boost is +100 (above even the +80 dedicated-heading boost)
+        # because the PDF-test analysis showed that filename-matched
+        # chunks are the single most reliable indicator of the right
+        # file — and chunks inside the right file often score weakly
+        # on density because the topic word appears only in the
+        # filename + intro line, not throughout every chunk. Without
+        # this strong boost the long banana-cultivation guide's
+        # "Land Preparation" sub-chunk loses to a short paragraph in
+        # another file that happens to mention "banana" twice in 50
+        # words, and the right answer never surfaces.
+        if filename_match:
+            score += 100
 
         # Boost chunks that are specifically tagged with the district asked
         # about, so they outrank Gujarat-wide chunks with similar word overlap.
         if district and district in chunk_districts:
             score += 20
 
-        scored.append((score, chunk.chunk_text))
+        # Track filename alongside score+text so the force-include pass
+        # below can pull the top chunk per "expected" filename without
+        # re-scanning the DB.
+        scored.append((score, chunk.chunk_text, chunk.source_filename))
 
     scored.sort(key=lambda x: x[0], reverse=True)
-    return [text for _, text in scored[:limit]]
+
+    # Absolute-junk floor: 1.0 means "the matched word makes up at least
+    # 1% of the chunk's vocabulary" — anything less is essentially a
+    # stray substring hit. Deliberately permissive because the real
+    # "did Groq actually use these chunks?" verification happens post-hoc
+    # in main.py via kb_answer_coverage(). Setting this floor higher
+    # silently dropped legitimate hits where the topic word is hyphenated
+    # (e.g. "PM-KISAN") and thus skips the rarity-based heading/filename
+    # boosts that normally lift real hits to 80+.
+    MIN_TOP_SCORE = 1.0
+    scored = [(s, t, fn) for (s, t, fn) in scored if s >= MIN_TOP_SCORE]
+
+    # ── Filename force-include pass ──────────────────────────────────
+    # Goal: if the user asks about Trichoderma and we have a file named
+    # "182_Trichoderma_Application_Guide.txt", that file's top chunk
+    # must appear in the results — even if other files coincidentally
+    # mention "trichoderma" more densely in passing.
+    #
+    # The +100 filename boost above already pushes such chunks high in
+    # the ranking, but it's not a HARD guarantee — a very short heavily-
+    # boosted chunk from a different file could still outrank a long
+    # chunk from the right file with weak per-chunk density. This pass
+    # adds the hard guarantee on top.
+    #
+    # Algorithm: find every distinct filename whose name matches a
+    # meaningful query word, take that file's top-scoring chunk, and
+    # ensure at least one chunk per matched file appears in the final
+    # result (within the `limit`).
+    final: list[tuple[float, str]] = []
+    used_filenames: set[str] = set()
+
+    if filename_match_words:
+        # Build the set of "expected" filenames (those whose tokenized
+        # filename contains at least one non-stopword query word).
+        expected_filenames: set[str] = set()
+        for _s, _t, fn in scored:
+            fn_tokens = re.sub(r"[_\-./]", " ", fn.lower())
+            fn_tokens = re.sub(r"\b\d+\b", " ", fn_tokens)
+            if any(w in fn_tokens for w in filename_match_words):
+                expected_filenames.add(fn)
+
+        # First pass: pick the top-scoring chunk for each expected
+        # filename (in score order, so the strongest-matching expected
+        # file gets included before weaker ones if limit is tight).
+        for s, t, fn in scored:
+            if fn in expected_filenames and fn not in used_filenames:
+                final.append((s, t))
+                used_filenames.add(fn)
+                if len(final) >= limit:
+                    break
+
+    # Second pass: fill remaining slots from the natural top-K ranking,
+    # skipping any file we already represented above.
+    for s, t, fn in scored:
+        if len(final) >= limit:
+            break
+        if fn in used_filenames:
+            continue
+        final.append((s, t))
+        used_filenames.add(fn)
+
+    final_texts = [text for _, text in final]
+
+    # ── Semantic-search augmentation (optional) ─────────────────────
+    # Run semantic search in parallel with the keyword path and merge
+    # results. This catches cases the keyword scorer misses due to
+    # synonymy — e.g. "cold storage for mango" → the file is named
+    # "Cold_Chain_Management", "chain" never appears in the query, so
+    # keyword force-include doesn't fire. Embedding similarity does.
+    #
+    # Graceful: if sentence-transformers isn't installed or model load
+    # fails, embeddings.semantic_search returns None and the keyword
+    # results stand alone.
+    try:
+        from embeddings import semantic_search
+        sem_results = semantic_search(db, query, top_k=limit, district=district)
+    except Exception as e:
+        print(f"[search_kb] semantic_search failed (falling back to keyword-only): {e}")
+        sem_results = None
+
+    if sem_results:
+        # Merge: keep keyword results first (they have the district +
+        # filename heuristics baked in), then append any semantic
+        # results not already present. Cap at limit*2 — with limit=3
+        # this gives Groq up to 6 chunks total (3 keyword + up to 3
+        # unique semantic), keeping prompt size tight while still
+        # letting semantic search contribute when it finds something
+        # keyword missed.
+        existing = set(final_texts)
+        merged = list(final_texts)
+        for r in sem_results:
+            if r["text"] not in existing:
+                merged.append(r["text"])
+                existing.add(r["text"])
+            if len(merged) >= limit * 2:
+                break
+        return merged
+
+    return final_texts
+
+
+# ---------------------------------------------------------------------------
+# Source-of-truth verification for the /chat source_type label.
+# ---------------------------------------------------------------------------
+# The keyword scorer above is liberal — for queries like "tell me a joke
+# about a tractor" it will surface the tractor-maintenance guide because
+# the keyword match is technically there. Groq, given those irrelevant
+# chunks, sees they don't fit the question and writes a joke from its own
+# training data anyway. The /chat route used to label that response
+# "Knowledge Base" because chunks were retrieved, even though none of the
+# answer actually came from the KB. This post-hoc check fixes that by
+# comparing the answer's content words to the chunks' content words: if
+# the overlap is too low, the answer was effectively LLM-generated and
+# gets labeled accordingly.
+
+# Words this short are too noisy (mostly stopwords, conjunctions, etc.)
+# to be useful for content overlap. 4+ char threshold keeps "soil",
+# "crop", "wheat", "drip", "pest" while dropping "and", "the", "for".
+_MIN_CONTENT_WORD_LEN = 4
+
+
+def _content_words(text: str) -> set[str]:
+    """Extract distinct lowercase content words (4+ chars, alpha-only)
+    from arbitrary text. Used by kb_answer_coverage() to compute
+    answer-vs-chunks overlap for source_type classification."""
+    words = re.findall(r"[a-zA-Z]+", text.lower())
+    return {w for w in words if len(w) >= _MIN_CONTENT_WORD_LEN}
+
+
+# Phrases the LLM uses when it openly admits it's filling gaps with
+# general knowledge instead of (or alongside) the retrieved chunks.
+# Detecting these is a stronger "this is mixed" signal than coverage
+# alone, because the LLM can have a high content-word overlap with the
+# chunks while still being upfront that the chunks didn't fully answer
+# the question. main.py demotes "knowledge_base" -> "mixed" when any of
+# these phrases appears.
+_LLM_HEDGE_PHRASES = (
+    "based on my general knowledge",
+    "based on general knowledge",
+    "from my general knowledge",
+    "the reference information does not",
+    "the reference information doesn't",
+    "the reference information provided does not",
+    "the reference information provided doesn't",
+    "the provided reference information does not",
+    "the provided reference information doesn't",
+    "the reference does not mention",
+    "the reference doesn't mention",
+    "doesn't specifically mention",
+    "does not specifically mention",
+    "not specifically mentioned",
+    "however, i can provide",
+    "however, based on my",
+    "however, based on general",
+    "i don't have specific",
+    "i do not have specific",
+)
+
+
+def answer_has_llm_hedge(answer: str) -> bool:
+    """True if the answer text contains one of the canonical phrases the
+    LLM uses to signal it's drawing on general training data rather than
+    (or in addition to) the retrieved chunks. Cheap substring check."""
+    answer_lower = answer.lower()
+    return any(phrase in answer_lower for phrase in _LLM_HEDGE_PHRASES)
+
+
+def kb_answer_coverage(answer: str, chunks: list[str]) -> float:
+    """
+    Returns the fraction (0.0-1.0) of the answer's distinct content
+    words that also appear in the retrieved chunks. This is a measure
+    of how much of the LLM's answer is actually grounded in the KB vs
+    invented from its own general training.
+
+    main.py thresholds this value into three source-type tiers:
+      - < 0.20  -> answer is mostly LLM general knowledge
+                   (tractor-joke vs tractor-maintenance guide: ~10-15%)
+      - 0.20-0.70 -> mixed: KB context helped but LLM filled gaps
+                   (Trichoderma-application answer that pulls some facts
+                    from the guide but adds its own framing)
+      - >= 0.70  -> answer is largely paraphrasing the chunks
+                   (PM-KISAN definition, district profile lookups: ~60-90%)
+    """
+    if not chunks:
+        return 0.0
+    answer_words = _content_words(answer)
+    if not answer_words:
+        return 0.0
+    chunk_words = _content_words(" ".join(chunks))
+    return len(answer_words & chunk_words) / len(answer_words)
 
 
 # --- Weather (Open-Meteo — free, no API key needed) ---
@@ -509,6 +912,20 @@ def detect_all_districts(text: str) -> list[str]:
     return found
 
 
+# Keys every cached weather row must have for the cache hit to be valid.
+# Older cache rows written before these fields existed are treated as stale
+# and re-fetched, instead of silently returning a partial result. Used by
+# both get_weather() (single district) and get_all_weather_concurrent()
+# (batch endpoint) so the schema-guard logic stays consistent.
+# Includes the tomorrow-forecast fields (added for "will it rain tomorrow?"
+# style questions) — any row missing them is auto-refetched.
+_WEATHER_REQUIRED_KEYS = {
+    "temperature_c", "humidity_percent", "weather_code",
+    "rainfall_now_mm", "rainfall_today_mm",
+    "rainfall_tomorrow_mm", "temp_max_tomorrow_c", "temp_min_tomorrow_c",
+}
+
+
 def get_weather(db: Session, district: str) -> dict:
     """
     Returns current weather for a Gujarat district, using Open-Meteo.
@@ -526,14 +943,12 @@ def get_weather(db: Session, district: str) -> dict:
 
     if cached and cached.fetched_at > datetime.utcnow() - timedelta(minutes=WEATHER_CACHE_MINUTES):
         data = json.loads(cached.data_json)
-        # Guard against stale cache rows saved before rainfall fields existed.
-        # If any expected key is missing, treat the cache as invalid and
+        # Guard against stale cache rows saved before rainfall fields existed:
+        # if any expected key is missing, treat the cache as invalid and
         # fall through to a fresh API call instead of returning partial data.
-        required_keys = {
-            "temperature_c", "humidity_percent", "weather_code",
-            "rainfall_now_mm", "rainfall_today_mm",
-        }
-        if required_keys.issubset(data.keys()):
+        # Uses the same shape-check set as get_all_weather_concurrent() so
+        # both code paths stay in lockstep when the schema evolves.
+        if _WEATHER_REQUIRED_KEYS.issubset(data.keys()):
             data["cached"] = True
             return data
 
@@ -543,11 +958,17 @@ def get_weather(db: Session, district: str) -> dict:
 
     lat, lon = coords
     url = "https://api.open-meteo.com/v1/forecast"
+    # `forecast_days=2` returns today + tomorrow in the daily arrays at
+    # indices [0] and [1]. Adding temp_max/min and precipitation_sum to
+    # the daily fields lets us answer "will it rain tomorrow?" style
+    # questions with a real predicted value instead of admitting we
+    # only have current readings.
     params = {
         "latitude": lat,
         "longitude": lon,
         "current": "temperature_2m,relative_humidity_2m,weather_code,precipitation",
-        "daily": "precipitation_sum",
+        "daily": "precipitation_sum,temperature_2m_max,temperature_2m_min",
+        "forecast_days": 2,
         "timezone": "Asia/Kolkata",
     }
 
@@ -555,6 +976,7 @@ def get_weather(db: Session, district: str) -> dict:
     response.raise_for_status()
     raw = response.json()
 
+    daily = raw["daily"]
     result = {
         # Store the canonical lowercase key, not the user-supplied casing,
         # so cached and fresh responses use the same shape regardless of
@@ -564,23 +986,23 @@ def get_weather(db: Session, district: str) -> dict:
         "humidity_percent": raw["current"]["relative_humidity_2m"],
         "weather_code": raw["current"]["weather_code"],
         "rainfall_now_mm": raw["current"]["precipitation"],
-        "rainfall_today_mm": raw["daily"]["precipitation_sum"][0],
+        "rainfall_today_mm": daily["precipitation_sum"][0],
+        # Tomorrow's forecast (index [1] of the 2-day daily array).
+        "rainfall_tomorrow_mm": daily["precipitation_sum"][1],
+        "temp_max_tomorrow_c": daily["temperature_2m_max"][1],
+        "temp_min_tomorrow_c": daily["temperature_2m_min"][1],
         "cached": False,
     }
 
     db.add(WeatherCache(district=district_key, data_json=json.dumps(result)))
+    # Same retention as the batch path: anything older than the cache
+    # TTL is dead weight, so prune in the same commit as the insert.
+    db.query(WeatherCache).filter(
+        WeatherCache.fetched_at < datetime.utcnow() - timedelta(minutes=WEATHER_CACHE_MINUTES)
+    ).delete(synchronize_session=False)
     db.commit()
 
     return result
-
-
-# Keys every cached weather row must have for the cache hit to be valid.
-# Older cache rows written before these fields existed are treated as stale
-# and re-fetched, instead of silently returning a partial result.
-_WEATHER_REQUIRED_KEYS = {
-    "temperature_c", "humidity_percent", "weather_code",
-    "rainfall_now_mm", "rainfall_today_mm",
-}
 
 
 async def _fetch_one_weather_async(
@@ -594,11 +1016,15 @@ async def _fetch_one_weather_async(
     doesn't sink the rest of the batch.
     """
     lat, lon = coords
+    # Mirrors get_weather()'s params exactly so single-district and batch
+    # paths produce the same response shape — same daily fields, same
+    # forecast_days=2 covering today + tomorrow.
     params = {
         "latitude": lat,
         "longitude": lon,
         "current": "temperature_2m,relative_humidity_2m,weather_code,precipitation",
-        "daily": "precipitation_sum",
+        "daily": "precipitation_sum,temperature_2m_max,temperature_2m_min",
+        "forecast_days": 2,
         "timezone": "Asia/Kolkata",
     }
     try:
@@ -611,13 +1037,17 @@ async def _fetch_one_weather_async(
         print(f"[weather/all] async fetch failed for '{district_key}': {e}")
         return None
 
+    daily = raw["daily"]
     return {
         "district": district_key,
         "temperature_c": raw["current"]["temperature_2m"],
         "humidity_percent": raw["current"]["relative_humidity_2m"],
         "weather_code": raw["current"]["weather_code"],
         "rainfall_now_mm": raw["current"]["precipitation"],
-        "rainfall_today_mm": raw["daily"]["precipitation_sum"][0],
+        "rainfall_today_mm": daily["precipitation_sum"][0],
+        "rainfall_tomorrow_mm": daily["precipitation_sum"][1],
+        "temp_max_tomorrow_c": daily["temperature_2m_max"][1],
+        "temp_min_tomorrow_c": daily["temperature_2m_min"][1],
         "cached": False,
     }
 
@@ -691,13 +1121,36 @@ async def get_all_weather_concurrent(db: Session) -> list[dict]:
             db.add_all(new_rows)
             db.commit()
 
+    # Prune anything older than the cache TTL. The reader only ever
+    # consults rows newer than `cutoff` (= now - WEATHER_CACHE_MINUTES),
+    # so older rows are pure disk weight. Keeping the table at ≤ 33
+    # rows (one per district) means every cache read is instant.
+    pruned = db.query(WeatherCache).filter(
+        WeatherCache.fetched_at < cutoff
+    ).delete(synchronize_session=False)
+    if pruned:
+        db.commit()
+
     return results
 
 
 # --- Market prices (data.gov.in Agmarknet — free, needs API key) ---
 
 MARKET_API_BASE = "https://api.data.gov.in/resource/9ef84268-d588-465a-a308-a864a43d0070"
-MARKET_CACHE_HOURS = 6
+
+# Backend polls data.gov.in this often. Endpoint hits within this window
+# return the snapshot table as-is — no synchronous fetch in the request path.
+MARKET_REFRESH_MINUTES = 30
+
+# Tracks the wall-clock time of the last successful refresh so the lazy-
+# refresh fallback (endpoint hit) knows whether the background poller
+# already covered it. Set by refresh_market_snapshots(); seeded on
+# startup from the newest snapshot row's created_at, so a server restart
+# inside a fresh 30-min window doesn't immediately trigger another fetch.
+_last_market_refresh_at: datetime | None = None
+# True while a refresh is in flight (background or lazy). Stops endpoint
+# handlers from queuing a second refresh on top of the first.
+_market_refresh_in_progress: bool = False
 
 # Categories shown as filter pills on the frontend, with the major Gujarat
 # crops in each — used to power a "browse by category" market price screen
@@ -753,11 +1206,33 @@ CROP_CATEGORIES = {
     },
 }
 
-# The 9 fields the data.gov.in resource returns per record, in display order.
+# Fields the data.gov.in resource returns per record that we actually
+# store/display. `state` is dropped — it's always "Gujarat" (the only
+# state we query) and nothing reads it downstream.
 MARKET_RECORD_FIELDS = [
-    "state", "district", "market", "commodity", "variety",
+    "district", "market", "commodity", "variety",
     "grade", "arrival_date", "min_price", "max_price", "modal_price",
 ]
+
+
+# Agmarknet data is Indian, so the snapshot calendar must be IST — UTC
+# would roll over 5.5 hours late and briefly tag late-evening IST fetches
+# with the previous day.
+_IST = timezone(timedelta(hours=5, minutes=30))
+
+
+def _ist_today() -> date_cls:
+    return datetime.now(_IST).date()
+
+
+def _snapshot_key(rec: dict) -> tuple:
+    """Identity used to dedupe a record within a single day's snapshot."""
+    return (
+        rec.get("commodity") or "",
+        rec.get("market") or "",
+        rec.get("variety") or "",
+        rec.get("district") or "",
+    )
 
 
 def _normalize_record(rec: dict) -> dict:
@@ -767,227 +1242,276 @@ def _normalize_record(rec: dict) -> dict:
     return {field: rec.get(field) for field in MARKET_RECORD_FIELDS}
 
 
-def get_market_price(
-    db: Session,
-    commodity: str,
+# ---------------------------------------------------------------------------
+# Snapshot storage: market_price_snapshots is the SOLE source of truth for
+# /market-price/all. The background poller (started in main.py) refreshes
+# the table every MARKET_REFRESH_MINUTES; the endpoint just reads from it.
+# ---------------------------------------------------------------------------
+
+_MARKET_HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) FarmerAI/1.0"}
+
+
+def _build_params(api_key: str, commodity: str | None = None, limit: int = 100) -> dict:
+    p = {
+        "api-key": api_key,
+        "format": "json",
+        "filters[state.keyword]": "Gujarat",
+        "limit": limit,
+    }
+    if commodity:
+        p["filters[commodity]"] = commodity
+    return p
+
+
+async def _fetch_from_api_async(
+    client: "httpx.AsyncClient",
     api_key: str,
-    market: str = None,
-    district: str = None,
-    limit: int = 20,
-) -> dict:
-    """
-    Returns mandi price records for a commodity in Gujarat, using the
-    data.gov.in Agmarknet dataset (resource 9ef84268-d588-465a-a308-a864a43d0070).
-    Checks cache first; only calls the live API if the cache is missing or stale.
-
-    Returns up to `limit` records (all 9 fields each: state, district, market,
-    commodity, variety, grade, arrival_date, min_price, max_price, modal_price),
-    not just the single cheapest/top one — so the frontend can show a full
-    table of mandis instead of one row.
-    """
-    cache_key_commodity = commodity.lower()
-    # district is folded into the same market-cache key field (no separate
-    # column exists) — without this, a cache hit for one district's query
-    # would be silently returned for a different district asked about
-    # within the same MARKET_CACHE_HOURS window.
-    cache_key_market = f"{(market or '').lower()}|{(district or '').lower()}"
-
-    cached = (
-        db.query(MarketCache)
-        .filter(MarketCache.commodity == cache_key_commodity)
-        .filter(MarketCache.market == cache_key_market)
-        .order_by(MarketCache.fetched_at.desc())
-        .first()
-    )
-
-    if cached and cached.fetched_at > datetime.utcnow() - timedelta(hours=MARKET_CACHE_HOURS):
-        data = json.loads(cached.data_json)
-        data["cached"] = True
-        return data
-
-    if not api_key:
-        return {"error": "Market price API key is not configured. Add MARKET_API_KEY to your .env file."}
-
-    params = {
-        "api-key": api_key,
-        "format": "json",
-        "filters[state.keyword]": "Gujarat",
-        "filters[commodity]": commodity,
-        "limit": limit,
-    }
-    if market:
-        params["filters[market]"] = market
-    if district:
-        params["filters[district]"] = district
-
-    # data.gov.in silently stalls (no response, no error — just hangs until
-    # timeout) on requests carrying the default "python-requests/x.x" User-
-    # Agent string. A browser-style UA gets an instant response. Confirmed
-    # via diagnostics: raw sockets and a Mozilla UA both return in <1s;
-    # requests/httpx with their default UA time out 100% of the time.
-    headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) FarmerAI/1.0"}
-
-    response = requests.get(MARKET_API_BASE, params=params, headers=headers, timeout=15)
-    response.raise_for_status()
-    raw = response.json()
-
-    records = raw.get("records", [])
-    if not records:
-        return {"error": f"No price data found for '{commodity}' in Gujarat."}
-
-    normalized = [_normalize_record(r) for r in records]
-
-    result = {
-        "commodity": commodity,
-        "count": len(normalized),
-        "records": normalized,
-        "cached": False,
-    }
-
-    db.add(MarketCache(
-        commodity=cache_key_commodity,
-        market=cache_key_market,
-        data_json=json.dumps(result),
-    ))
-    db.commit()
-
-    return result
-
-
-def get_all_market_prices(db: Session, api_key: str, district: str = None, limit: int = 100) -> dict:
-    """
-    Returns mandi price records for EVERY commodity currently traded in
-    Gujarat today — a true union of every crop across all of CROP_CATEGORIES
-    (each looked up via get_market_price(), so it benefits from the same
-    per-crop cache), PLUS a generic state-only discovery query to also pick
-    up any crop currently trading that isn't in any of our category lists.
-
-    Previously this only ran the generic discovery query and skipped the
-    category crop lists entirely — since data.gov.in doesn't guarantee any
-    particular ordering, that meant "All" often came back as a handful of
-    records from a single mandi instead of actually covering cash crops,
-    oilseeds, grains, etc. like the category pills suggest it would.
-
-    Records are deduplicated by (commodity, market, variety, arrival_date),
-    since the same record can otherwise show up once via its category fetch
-    and again via the generic discovery query.
-    """
-    cache_key_commodity = "__all__"
-    # district folded into the market-cache key field, same as
-    # get_market_price() — otherwise this cache entry would be reused
-    # across different district filters.
-    cache_key_market = f"|{(district or '').lower()}"
-
-    cached = (
-        db.query(MarketCache)
-        .filter(MarketCache.commodity == cache_key_commodity)
-        .filter(MarketCache.market == cache_key_market)
-        .order_by(MarketCache.fetched_at.desc())
-        .first()
-    )
-
-    if cached and cached.fetched_at > datetime.utcnow() - timedelta(hours=MARKET_CACHE_HOURS):
-        data = json.loads(cached.data_json)
-        data["cached"] = True
-        return data
-
-    if not api_key:
-        return {"error": "Market price API key is not configured. Add MARKET_API_KEY to your .env file."}
-
-    all_records = []
-    seen_keys = set()
-
-    def add_record(rec: dict):
-        key = (rec.get("commodity"), rec.get("market"), rec.get("variety"), rec.get("arrival_date"))
-        if key in seen_keys:
-            return
-        seen_keys.add(key)
-        all_records.append(rec)
-
-    # 1. Union of every crop in every real category (each cached individually).
-    for category_key, category in CROP_CATEGORIES.items():
-        if category_key == "all":
-            continue
-        for crop_name in category["crops"]:
-            try:
-                crop_result = get_market_price(db, crop_name, api_key, district=district, limit=10)
-            except Exception as e:
-                print(f"[market/all] category-crop fetch failed for '{crop_name}': {e}")
-                continue
-            for rec in crop_result.get("records", []):
-                add_record(rec)
-
-    # 2. Generic discovery query, to also catch crops outside our category
-    # lists — same approach the old implementation used on its own.
-    params = {
-        "api-key": api_key,
-        "format": "json",
-        "filters[state.keyword]": "Gujarat",
-        "limit": limit,
-    }
-    if district:
-        params["filters[district]"] = district
-
-    # Same fix as get_market_price(): data.gov.in stalls indefinitely on
-    # the default python-requests User-Agent, so a browser-style one is
-    # required for a normal response time.
-    headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) FarmerAI/1.0"}
-
+    commodity: str | None = None,
+    limit: int = 100,
+) -> list[dict]:
+    """One async HTTP call to data.gov.in, returning normalized records
+    or [] on failure. data.gov.in stalls indefinitely on the default UA,
+    so a browser-style header is required."""
     try:
-        response = requests.get(MARKET_API_BASE, params=params, headers=headers, timeout=15)
-        response.raise_for_status()
-        raw = response.json()
-        for r in raw.get("records", []):
-            add_record(_normalize_record(r))
+        r = await client.get(
+            MARKET_API_BASE,
+            params=_build_params(api_key, commodity=commodity, limit=limit),
+            headers=_MARKET_HEADERS,
+            timeout=15,
+        )
+        r.raise_for_status()
+        raw = r.json()
     except Exception as e:
-        print(f"[market/all] generic discovery fetch failed: {e}")
+        print(f"[market] fetch failed (commodity={commodity!r}): {e}")
+        return []
+    return [_normalize_record(rec) for rec in raw.get("records", [])]
 
-    if not all_records:
-        return {"error": "No price data found for Gujarat today."}
 
-    result = {
-        "category": "all",
-        "label": "All",
-        "count": len(all_records),
-        "records": all_records,
-        "cached": False,
+def _store_records(db: Session, records: list[dict]) -> int:
+    """Insert records into market_price_snapshots under today's IST date
+    (deduped by commodity/market/variety/district), then delete every
+    row whose snapshot_date < today. Returns the number of new rows."""
+    today = _ist_today()
+
+    # Retention: today only. The first refresh past IST midnight drops
+    # everything from prior days.
+    db.query(MarketPriceSnapshot).filter(
+        MarketPriceSnapshot.snapshot_date < today
+    ).delete(synchronize_session=False)
+
+    if not records:
+        db.commit()
+        return 0
+
+    # Dedupe key intentionally EXCLUDES arrival_date. data.gov.in often
+    # shifts the same mandi's reported arrival_date by 1 day between polls
+    # (e.g. Cotton@Rajkot at 10:00 shows 25/06, at 10:30 shows 26/06) — if
+    # arrival_date was part of the key, both versions would survive as
+    # separate rows and today's count would balloon over the day. With it
+    # excluded, each (commodity, market, variety, district) gets exactly
+    # ONE row per snapshot_date, updated in-place when fresher data lands.
+    existing_today_rows = {
+        (r.commodity or "", r.market or "", r.variety or "", r.district or ""): r
+        for r in db.query(MarketPriceSnapshot)
+        .filter(MarketPriceSnapshot.snapshot_date == today).all()
     }
 
-    db.add(MarketCache(
-        commodity=cache_key_commodity,
-        market=cache_key_market,
-        data_json=json.dumps(result),
-    ))
-    db.commit()
-
-    return result
-
-
-def get_market_prices_for_category(db: Session, category_key: str, api_key: str, district: str = None) -> dict:
-    """
-    Fetches market prices for every crop in a given category (e.g. 'oilseeds'),
-    one commodity at a time, and merges the results into a single response.
-    Crops with no data that day are skipped rather than failing the whole call.
-    """
-    category = CROP_CATEGORIES.get(category_key)
-    if not category:
-        return {"error": f"Unknown category '{category_key}'."}
-
-    all_records = []
-    for crop_name in category["crops"]:
-        try:
-            crop_result = get_market_price(db, crop_name, api_key, district=district, limit=10)
-            if "records" in crop_result:
-                all_records.extend(crop_result["records"])
-        except Exception as e:
-            print(f"[market] category fetch failed for '{crop_name}': {e}")
+    seen_in_batch: set[tuple] = set()
+    new_rows = []
+    updated = 0
+    for rec in records:
+        key = (
+            rec.get("commodity") or "",
+            rec.get("market") or "",
+            rec.get("variety") or "",
+            rec.get("district") or "",
+        )
+        if key in seen_in_batch:
             continue
+        seen_in_batch.add(key)
+
+        existing = existing_today_rows.get(key)
+        if existing is not None:
+            # Update in place — latest poll wins on price + arrival_date.
+            existing.arrival_date = rec.get("arrival_date")
+            existing.grade = rec.get("grade")
+            existing.min_price = str(rec.get("min_price")) if rec.get("min_price") is not None else None
+            existing.max_price = str(rec.get("max_price")) if rec.get("max_price") is not None else None
+            existing.modal_price = str(rec.get("modal_price")) if rec.get("modal_price") is not None else None
+            updated += 1
+            continue
+
+        new_rows.append(MarketPriceSnapshot(
+            snapshot_date=today,
+            commodity=rec.get("commodity"),
+            market=rec.get("market"),
+            district=rec.get("district"),
+            variety=rec.get("variety"),
+            grade=rec.get("grade"),
+            arrival_date=rec.get("arrival_date"),
+            min_price=str(rec.get("min_price")) if rec.get("min_price") is not None else None,
+            max_price=str(rec.get("max_price")) if rec.get("max_price") is not None else None,
+            modal_price=str(rec.get("modal_price")) if rec.get("modal_price") is not None else None,
+        ))
+
+    if new_rows:
+        db.add_all(new_rows)
+    db.commit()
+    if updated:
+        print(f"[market/store] {len(new_rows)} new rows, {updated} updated in place")
+    return len(new_rows)
+
+
+def _row_to_dict(r: MarketPriceSnapshot) -> dict:
+    """Snapshot row → response shape (9 documented Agmarknet fields)."""
+    return {
+        "state": "Gujarat",
+        "district": r.district,
+        "market": r.market,
+        "commodity": r.commodity,
+        "variety": r.variety,
+        "grade": r.grade,
+        "arrival_date": r.arrival_date,
+        "min_price": r.min_price,
+        "max_price": r.max_price,
+        "modal_price": r.modal_price,
+    }
+
+
+def _read_snapshot(db: Session, district: str | None = None) -> list[dict]:
+    """Read today's snapshot rows, optionally filtered by district
+    (case-insensitive). Only consumer is /market-price/all via
+    get_all_market_prices — kept tiny on purpose."""
+    today = _ist_today()
+    q = db.query(MarketPriceSnapshot).filter(MarketPriceSnapshot.snapshot_date == today)
+    if district:
+        q = q.filter(func.lower(MarketPriceSnapshot.district) == district.lower())
+    return [_row_to_dict(r) for r in q.all()]
+
+
+async def refresh_market_snapshots_async(db: Session, api_key: str) -> int:
+    """Full poll, concurrent: fan out every per-crop request via httpx +
+    asyncio.gather, plus the generic discovery call. Writes to the
+    snapshot table and prunes < today. Returns NEW rows inserted.
+    ~3-5 s wall-clock vs ~40-80 s sequential."""
+    global _last_market_refresh_at, _market_refresh_in_progress
+
+    if not api_key:
+        print("[market/refresh] skipped: MARKET_API_KEY not configured")
+        return 0
+    if _market_refresh_in_progress:
+        # A previous refresh is still running — don't pile up.
+        return 0
+
+    _market_refresh_in_progress = True
+    try:
+        # Build the request list: one per crop in every category, plus a
+        # final generic discovery call to catch anything not in our lists.
+        crops = [
+            crop
+            for key, cat in CROP_CATEGORIES.items() if key != "all"
+            for crop in cat["crops"]
+        ]
+
+        async with httpx.AsyncClient() as client:
+            tasks = [
+                _fetch_from_api_async(client, api_key, commodity=c, limit=20) for c in crops
+            ]
+            tasks.append(_fetch_from_api_async(client, api_key, limit=100))
+            results = await asyncio.gather(*tasks)
+
+        # Dedupe across all responses.
+        seen: set[tuple] = set()
+        collected: list[dict] = []
+        for batch in results:
+            for rec in batch:
+                key = (
+                    rec.get("commodity"), rec.get("market"),
+                    rec.get("variety"), rec.get("district"), rec.get("arrival_date"),
+                )
+                if key in seen:
+                    continue
+                seen.add(key)
+                collected.append(rec)
+
+        inserted = _store_records(db, collected)
+        _last_market_refresh_at = datetime.utcnow()
+        print(f"[market/refresh] fetched {len(collected)} records, inserted {inserted} new rows")
+        return inserted
+    finally:
+        _market_refresh_in_progress = False
+
+
+def refresh_market_snapshots(db: Session, api_key: str) -> int:
+    """Sync wrapper used by the lazy fallback inside request handlers and
+    by anything that wants a blocking refresh. The background poller in
+    main.py uses the async variant directly."""
+    return asyncio.run(refresh_market_snapshots_async(db, api_key))
+
+
+def _refresh_is_stale() -> bool:
+    """True if no refresh has run within MARKET_REFRESH_MINUTES — used by
+    endpoint handlers as a lazy fallback when the background poller is
+    behind (cold start, or it errored)."""
+    if _last_market_refresh_at is None:
+        return True
+    return _last_market_refresh_at < datetime.utcnow() - timedelta(minutes=MARKET_REFRESH_MINUTES)
+
+
+def _seed_last_refresh_from_db(db: Session) -> None:
+    """Called once on startup: seeds _last_market_refresh_at from the
+    newest snapshot row's created_at, so a server restart inside a fresh
+    30-min window doesn't immediately re-fetch."""
+    global _last_market_refresh_at
+    row = (
+        db.query(MarketPriceSnapshot.created_at)
+        .order_by(MarketPriceSnapshot.created_at.desc())
+        .first()
+    )
+    if row and row[0]:
+        _last_market_refresh_at = row[0]
+
+
+def ensure_fresh_market_data(db: Session, api_key: str) -> None:
+    """Fire-and-forget refresh trigger. If data is stale AND no refresh is
+    already in flight, spawn a background thread to refresh — the current
+    request returns whatever's in the snapshot table right now, instead
+    of waiting up to ~5 s for ~40 HTTP calls.
+
+    The first /market-price/all hit after server boot will get the
+    snapshot rows already populated by the startup refresh; if for some
+    reason none exist yet, the response is just empty and the next
+    request (after the background refresh lands) gets the data."""
+    if not _refresh_is_stale() or _market_refresh_in_progress:
+        return
+
+    def _bg():
+        bg_db = None
+        try:
+            from database import SessionLocal
+            bg_db = SessionLocal()
+            asyncio.run(refresh_market_snapshots_async(bg_db, api_key))
+        except Exception as e:
+            print(f"[market] background lazy refresh failed: {e}")
+        finally:
+            if bg_db is not None:
+                bg_db.close()
+
+    threading.Thread(target=_bg, name="market-lazy-refresh", daemon=True).start()
+
+
+def get_all_market_prices(db: Session, api_key: str, district: str = None) -> dict:
+    """Returns every snapshot row stored for today across Gujarat, optionally
+    district-filtered. Drives /market-price/all (the only market endpoint)."""
+    ensure_fresh_market_data(db, api_key)
+
+    records = _read_snapshot(db, district=district)
+    if not records:
+        return {"error": "No price data found for Gujarat."}
 
     return {
-        "category": category_key,
-        "label": category["label"],
-        "count": len(all_records),
-        "records": all_records,
+        "count": len(records),
+        "records": records,
     }
 
 
@@ -1019,14 +1543,14 @@ if __name__ == "__main__":
     except Exception as e:
         print("Knowledge base test FAILED:", e)
 
-    print("\n--- Testing get_market_price() ---")
+    print("\n--- Testing get_all_market_prices() ---")
     try:
         from config import MARKET_API_KEY
         if not MARKET_API_KEY:
             print("Skipped: MARKET_API_KEY not set in .env.")
         else:
-            market = get_market_price(db, "Cotton", api_key=MARKET_API_KEY)
-            print("Market response:", market)
+            market = get_all_market_prices(db, api_key=MARKET_API_KEY)
+            print("Market response keys:", list(market.keys()), "count:", market.get("count"))
     except Exception as e:
         print("Market test FAILED:", e)
 

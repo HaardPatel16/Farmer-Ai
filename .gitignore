@@ -12,5 +12,7 @@ venv/
 .DS_Store
 
 # ML model weights — too large for GitHub
-# Download separately and place in ML model/
 ML model/*.pth
+
+# Node
+Frontend/node_modules/

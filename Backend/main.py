@@ -17,9 +17,14 @@ from sqlalchemy import func
 from database import get_db, Chat, Feedback
 from services import (
     ask_groq, ask_groq_disease_remedy, search_knowledge_base, get_weather,
-    get_all_weather_concurrent, get_market_price, get_market_prices_for_category,
-    get_all_market_prices, CROP_CATEGORIES, detect_district,
+    get_all_weather_concurrent, get_all_market_prices, detect_district,
+    kb_answer_coverage, answer_has_llm_hedge,
+    is_farming_question, offtopic_refusal,
+    refresh_market_snapshots_async, _seed_last_refresh_from_db,
+    MARKET_REFRESH_MINUTES,
 )
+import asyncio
+from database import SessionLocal
 from ml_model import predict_top_k
 from config import MARKET_API_KEY
 
@@ -70,6 +75,12 @@ class FeedbackRequest(BaseModel):
 
 WEATHER_KEYWORDS = ["weather", "temperature", "rain", "rainfall", "forecast", "humidity", "climate", "precipitation"]
 
+# Max bytes accepted by /diagnose. 8 MB is generous for any phone-camera
+# JPEG/PNG; anything larger is almost certainly an upload mistake or abuse.
+# Enforced after the bytes are read; combined with PIL's MAX_IMAGE_PIXELS
+# cap in ml_model.py this bounds both compressed and decoded memory cost.
+MAX_IMAGE_BYTES = 8 * 1024 * 1024
+
 
 def detect_weather_request(query: str):
     """
@@ -87,6 +98,64 @@ def detect_weather_request(query: str):
 # ---------------------------------------------------------------------------
 # Routes
 # ---------------------------------------------------------------------------
+
+# ---------------------------------------------------------------------------
+# Background market-price poller. Runs every MARKET_REFRESH_MINUTES, fetches
+# data.gov.in, writes today's snapshot rows, prunes anything older than today.
+# Endpoint handlers read straight from the snapshot table.
+# ---------------------------------------------------------------------------
+
+async def _market_price_poller():
+    # First refresh fires immediately so the snapshot table is populated
+    # before any frontend request arrives. HTTP calls are concurrent via
+    # the async refresh path; the only sync part is the DB write.
+    while True:
+        db = SessionLocal()
+        try:
+            await refresh_market_snapshots_async(db, MARKET_API_KEY)
+        except Exception as e:
+            print(f"[market/poller] refresh failed: {type(e).__name__}: {e}")
+        finally:
+            db.close()
+        await asyncio.sleep(MARKET_REFRESH_MINUTES * 60)
+
+
+@app.on_event("startup")
+async def _start_market_poller():
+    # Seed last-refresh marker from the newest snapshot row so a restart
+    # inside a fresh 30-min window doesn't immediately re-fetch.
+    db = SessionLocal()
+    try:
+        _seed_last_refresh_from_db(db)
+    finally:
+        db.close()
+    asyncio.create_task(_market_price_poller())
+
+
+@app.on_event("startup")
+async def _warm_embeddings_on_startup():
+    """Kick off the sentence-transformer model load + chunk indexing in a
+    daemon thread so users don't pay the 2-5 min cost on their first chat.
+    Until it finishes, semantic_search() returns None immediately and the
+    keyword path serves the answer — chat is never blocked."""
+    try:
+        from embeddings import warm_index_in_background
+        warm_index_in_background(SessionLocal)
+        print("[startup] embeddings warmup started in background thread")
+    except Exception as e:
+        print(f"[startup] could not start embeddings warmup: {e}")
+
+
+@app.get("/embeddings/status")
+def embeddings_status():
+    """Tells you whether the semantic-search warmup has finished.
+    state: not_started | warming | ready | failed | idle_empty_kb."""
+    try:
+        from embeddings import get_status
+        return get_status()
+    except Exception as e:
+        return {"state": "unknown", "error": str(e)}
+
 
 @app.get("/")
 def root():
@@ -106,7 +175,33 @@ def chat(request: ChatRequest, db: Session = Depends(get_db)):
     if request.language not in ("en", "gu"):
         raise HTTPException(status_code=400, detail="language must be 'en' or 'gu'.")
 
-    # Step 0: weather intent check — if the query asks about weather in a
+    # Step 0 (cheapest): local off-topic filter. If the query mentions
+    # nothing farming-related — math, sports, jokes, trivia, etc. — we
+    # skip Groq entirely and return a canned refusal. Zero tokens spent,
+    # zero quota burned. Groq's compact in-prompt SCOPE line is just a
+    # backstop for borderline queries that pass the whitelist.
+    if not is_farming_question(request.query):
+        refusal = offtopic_refusal(language=request.language)
+        chat_row = Chat(
+            session_id=request.session_id,
+            query=request.query,
+            response=refusal,
+            language=request.language,
+            source_type="llm_reasoning",
+            confidence_score=None,
+            district=None,
+        )
+        db.add(chat_row)
+        db.commit()
+        db.refresh(chat_row)
+        return ChatResponse(
+            chat_id=chat_row.id,
+            response=refusal,
+            source_type="llm_reasoning",
+            language=request.language,
+        )
+
+    # Step 0a: weather intent check — if the query asks about weather in a
     # known district, fetch real live data and hand it to Groq as context
     # instead of letting it guess.
     weather_context = None
@@ -121,8 +216,11 @@ def chat(request: ChatRequest, db: Session = Depends(get_db)):
                     f"humidity is {weather_data['humidity_percent']}%, "
                     f"current rainfall is {weather_data['rainfall_now_mm']}mm, "
                     f"total rainfall so far today is {weather_data['rainfall_today_mm']}mm. "
+                    f"Tomorrow's forecast: rainfall {weather_data.get('rainfall_tomorrow_mm', 0)}mm, "
+                    f"max temperature {weather_data.get('temp_max_tomorrow_c', '?')}°C, "
+                    f"min temperature {weather_data.get('temp_min_tomorrow_c', '?')}°C. "
                     "Use these exact figures in your answer; do not say you "
-                    "lack real-time access."
+                    "lack real-time access or forecast data."
                 )
         except Exception as e:
             print(f"[weather] get_weather() failed for '{weather_district}': {e}")
@@ -146,11 +244,6 @@ def chat(request: ChatRequest, db: Session = Depends(get_db)):
     context_parts.extend(kb_chunks)
 
     context = "\n\n".join(context_parts)
-    if weather_context:
-        source_type = "weather_api"
-    else:
-        source_type = "knowledge_base" if kb_chunks else "llm_reasoning"
-    confidence_score = float(len(kb_chunks)) if kb_chunks else None
 
     # Step 2: call Groq — pass district through so it tailors advice to
     # local soil/climate/crop conditions, combined with any KB context.
@@ -162,10 +255,46 @@ def chat(request: ChatRequest, db: Session = Depends(get_db)):
             district=district,
         )
     except Exception as e:
+        # Log the underlying error so 503s are diagnosable from the uvicorn
+        # terminal — without this print, a Groq 429 (rate limit), an
+        # invalid API key, and a network outage all look identical to the
+        # frontend, with no clue in the backend either.
+        print(f"[chat] ask_groq failed: {type(e).__name__}: {e}")
         raise HTTPException(
             status_code=503,
             detail="AI service is temporarily unavailable. Please try again shortly.",
         )
+
+    # Decide source_type AFTER the answer is generated, by measuring how
+    # much of the answer's vocabulary overlaps with the retrieved chunks.
+    # Three-tier so a partial-KB answer doesn't get the same badge as a
+    # purely KB-derived one:
+    #   coverage < 0.20  -> "llm_reasoning"   (KB had little/no influence)
+    #   0.20 <= cov < 0.70 -> "mixed"           (some KB, mostly LLM filled gaps)
+    #   coverage >= 0.70 -> "knowledge_base"  (answer is paraphrasing chunks)
+    # Weather always wins when present, since the live-data injection
+    # is the whole reason that path exists.
+    kb_coverage = kb_answer_coverage(answer, kb_chunks)
+    # A "knowledge_base" badge implies the answer came essentially from
+    # your documents. The LLM hedging language ("the reference doesn't
+    # mention X, however based on my general knowledge…") is a direct
+    # admission it's mixing — demote to "mixed" even if coverage looks
+    # high, since the user-visible truth is that part of the answer
+    # came from training data.
+    llm_hedged = bool(kb_chunks) and answer_has_llm_hedge(answer)
+    if weather_context:
+        source_type = "weather_api"
+    elif kb_coverage >= 0.70 and not llm_hedged:
+        source_type = "knowledge_base"
+    elif kb_coverage >= 0.20 or llm_hedged:
+        source_type = "mixed"
+    else:
+        source_type = "llm_reasoning"
+
+    # Store the actual coverage ratio (0-1) so it's introspectable in
+    # pgAdmin — much more meaningful than the old "count of chunks"
+    # placeholder, and lets you sanity-check threshold calibration.
+    confidence_score = round(kb_coverage, 3) if kb_chunks else None
 
     # Step 3: save to DB
     chat_row = Chat(
@@ -187,9 +316,6 @@ def chat(request: ChatRequest, db: Session = Depends(get_db)):
         source_type=source_type,
         language=request.language,
     )
-
-
-MAX_IMAGE_BYTES = 8 * 1024 * 1024  # 8 MB — generous for phone photos, cheap to enforce
 
 
 @app.post("/diagnose")
@@ -225,7 +351,8 @@ def diagnose_leaf(
 
     try:
         remedy = ask_groq_disease_remedy(predictions, language=language)
-    except Exception:
+    except Exception as e:
+        print(f"[diagnose] ask_groq_disease_remedy failed: {type(e).__name__}: {e}")
         raise HTTPException(
             status_code=503,
             detail="AI service is temporarily unavailable. Please try again shortly.",
@@ -235,7 +362,10 @@ def diagnose_leaf(
     # the persisted Chat row and the chat-history sidebar make sense
     # (otherwise this conversation has an AI bubble with no preceding user
     # bubble, and the History preview would be blank).
-    top_pred = predictions[0] if predictions else {"label": "unknown", "confidence": 0.0}
+    # predict_top_k() is contracted to return at least one item (k is
+    # clamped to min(k, NUM_CLASSES) and NUM_CLASSES is 78), so no empty-
+    # list guard is needed here.
+    top_pred = predictions[0]
     query_label = (
         "🌿 Leaf diagnosis — most likely "
         f"{top_pred['label']} ({top_pred['confidence'] * 100:.1f}% confidence)"
@@ -295,11 +425,13 @@ def weather(
 ):
     """
     Returns current weather for a Gujarat district.
-    Uses a 60-minute cache — won't call Open-Meteo on every request.
+    Backed by the same WEATHER_CACHE_MINUTES cache as /weather/all — won't
+    call Open-Meteo on every request.
     """
     try:
         result = get_weather(db, district)
     except Exception as e:
+        print(f"[weather] get_weather failed for '{district}': {type(e).__name__}: {e}")
         raise HTTPException(
             status_code=503,
             detail="Weather service is temporarily unavailable. Please try again shortly.",
@@ -336,35 +468,13 @@ async def weather_all(db: Session = Depends(get_db)):
     return {"districts": results}
 
 
-@app.get("/market-price/categories")
-def market_price_categories():
-    """
-    Returns the list of crop categories (cash crops, oilseeds, grains &
-    cereals, pulses, spices, fruits, vegetables, others) with the crops
-    in each — powers the category pills on the frontend's market screen.
-    """
-    return {
-        "categories": [
-            {"key": key, "label": cat["label"], "icon": cat["icon"], "crops": cat["crops"]}
-            for key, cat in CROP_CATEGORIES.items()
-        ]
-    }
-
-
-@app.get("/market-price/category/{category_key}")
-def market_price_by_category(
-    category_key: str,
+@app.get("/market-price/all")
+def market_price_all(
     district: str = Query(None, description="Optional: filter by Gujarat district"),
     db: Session = Depends(get_db),
 ):
-    """
-    Returns live mandi prices for every crop in a category, e.g. 'oilseeds'.
-    Each record has all 9 Agmarknet fields: state, district, market,
-    commodity, variety, grade, arrival_date, min_price, max_price, modal_price.
-    """
-    if category_key not in CROP_CATEGORIES:
-        raise HTTPException(status_code=404, detail=f"Unknown category '{category_key}'.")
-
+    """Returns every snapshot row stored for today across all of Gujarat.
+    Powers the single flat table on the frontend's market screen."""
     if not MARKET_API_KEY:
         raise HTTPException(
             status_code=503,
@@ -372,57 +482,14 @@ def market_price_by_category(
                    "Register at data.gov.in to obtain an API key, "
                    "then set MARKET_API_KEY in your .env file.",
         )
-
     try:
-        if category_key == "all":
-            result = get_all_market_prices(db, api_key=MARKET_API_KEY, district=district)
-        else:
-            result = get_market_prices_for_category(db, category_key, api_key=MARKET_API_KEY, district=district)
+        result = get_all_market_prices(db, api_key=MARKET_API_KEY, district=district)
     except Exception as e:
-        print(f"[market-price] category fetch failed for '{category_key}': {e}")
-        raise HTTPException(
-            status_code=503,
-            detail="Market price service is temporarily unavailable. Please try again shortly.",
-        )
+        print(f"[market-price/all] fetch failed: {e}")
+        raise HTTPException(status_code=503, detail="Market price service is temporarily unavailable.")
 
     if "error" in result:
         raise HTTPException(status_code=404, detail=result["error"])
-
-    return result
-
-
-@app.get("/market-price")
-def market_price(
-    commodity: str = Query(..., description="Crop/commodity name, e.g. 'Cotton'"),
-    district: str = Query(None, description="Optional: filter by district"),
-    market: str = Query(None, description="Optional: filter by mandi/market name"),
-    db: Session = Depends(get_db),
-):
-    """
-    Returns live mandi price records for a specific commodity in Gujarat.
-    Each record has all 9 Agmarknet fields: state, district, market,
-    commodity, variety, grade, arrival_date, min_price, max_price, modal_price.
-    """
-    if not MARKET_API_KEY:
-        raise HTTPException(
-            status_code=503,
-            detail="Market price data is not yet configured. "
-                   "Register at data.gov.in to obtain an API key, "
-                   "then set MARKET_API_KEY in your .env file.",
-        )
-
-    try:
-        result = get_market_price(db, commodity, api_key=MARKET_API_KEY, market=market, district=district)
-    except Exception as e:
-        print(f"[market-price] fetch failed for '{commodity}': {e}")
-        raise HTTPException(
-            status_code=503,
-            detail="Market price service is temporarily unavailable. Please try again shortly.",
-        )
-
-    if "error" in result:
-        raise HTTPException(status_code=404, detail=result["error"])
-
     return result
 
 

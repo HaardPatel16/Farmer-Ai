@@ -9,7 +9,7 @@ Other files import from here like:
 
 from datetime import datetime
 
-from sqlalchemy import create_engine, Column, Integer, String, Text, Float, DateTime, ForeignKey
+from sqlalchemy import create_engine, Column, Integer, String, Text, Float, DateTime, Date, ForeignKey, Index
 from sqlalchemy.orm import sessionmaker, declarative_base
 
 from config import DATABASE_URL
@@ -77,15 +77,31 @@ class WeatherCache(Base):
     fetched_at = Column(DateTime, default=datetime.utcnow)
 
 
-class MarketCache(Base):
-    """Stores recent market price lookups so we don't call the API on every request."""
-    __tablename__ = "market_cache"
+class MarketPriceSnapshot(Base):
+    """One row per (commodity, market, variety, district) for today's IST
+    date. Anything older is deleted on every refresh — only the current
+    day is ever retained."""
+    __tablename__ = "market_price_snapshots"
 
     id = Column(Integer, primary_key=True, index=True)
-    commodity = Column(String, nullable=False, index=True)
-    market = Column(String, nullable=True, index=True)
-    data_json = Column(Text, nullable=False)   # full list of record dicts, JSON-encoded
-    fetched_at = Column(DateTime, default=datetime.utcnow)
+    snapshot_date = Column(Date, nullable=False, index=True)   # IST calendar date this snapshot belongs to
+    commodity = Column(String, nullable=False)
+    market = Column(String, nullable=True)
+    district = Column(String, nullable=True)
+    variety = Column(String, nullable=True)
+    grade = Column(String, nullable=True)
+    arrival_date = Column(String, nullable=True)               # as returned by data.gov.in (string DD/MM/YYYY)
+    min_price = Column(String, nullable=True)
+    max_price = Column(String, nullable=True)
+    modal_price = Column(String, nullable=True)
+    created_at = Column(DateTime, default=datetime.utcnow)
+
+    __table_args__ = (
+        Index(
+            "ix_market_snapshot_lookup",
+            "snapshot_date", "commodity", "market", "variety", "district",
+        ),
+    )
 
 
 # --- Helper ---
@@ -107,4 +123,4 @@ if __name__ == "__main__":
     # Safe to run multiple times — it only creates tables that don't already exist.
     print("Connecting to database and creating tables...")
     Base.metadata.create_all(bind=engine)
-    print("Done. Tables created: chats, feedback, knowledge_chunks, weather_cache, market_cache")
+    print("Done. Tables created: chats, feedback, knowledge_chunks, weather_cache, market_price_snapshots")

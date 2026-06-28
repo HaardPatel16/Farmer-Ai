@@ -1,8 +1,19 @@
-/* ── CSS Variables ── */
+/* ── CSS Variables ──
+   Global theme is the warm Gujarat-crop palette (cream + gold + olive
+   green). Previously the home/modal screens used a generic blue/white
+   "tech dashboard" palette while the chat screen used this warm one,
+   producing a visually disjointed product. Unifying around the warm
+   palette makes the whole site read as one cohesive farming assistant.
+   The chat-specific variable set (--chat-bg, etc.) lives below and
+   stays — that scope is now only for chat-bubble-specific overrides,
+   not global theming. */
 :root {
-  --primary: #2563EB;
-  --primary-light: #60A5FA;
-  --primary-pale: #DBEAFE;
+  /* Primary = the dominant interactive color. Olive green instead of
+     electric blue so it feels native to the farming aesthetic. */
+  --primary: #2C4A35;
+  --primary-light: #4B6E4F;
+  --primary-pale: #D9E4DC;
+  /* Wheat/leaf accent groups — already warm, kept intact. */
   --wheat: #C8932A;
   --wheat-light: #F0C674;
   --wheat-dark: #8A6310;
@@ -11,16 +22,28 @@
   --leaf-light: #6EE7A0;
   --leaf-dark: #15803D;
   --leaf-pale: #DCFCE7;
-  --bg: #F8FAFC;
-  --bg-card: #FFFFFF;
-  --bg-glass: rgba(255, 255, 255, 0.72);
-  --text: #1F2937;
-  --text-muted: #6B7280;
-  --text-inverse: #FFFFFF;
-  --border: rgba(37, 99, 235, 0.12);
-  --shadow-sm: 0 1px 4px rgba(37, 99, 235, 0.08);
-  --shadow-md: 0 4px 20px rgba(37, 99, 235, 0.12);
-  --shadow-lg: 0 8px 40px rgba(37, 99, 235, 0.16);
+  /* Weather-specific accent. Reintroduces a "sky" blue exclusively for
+     the weather card and weather modal — everything else in the site
+     stays on the unified warm palette. Chosen as a calm slate-blue
+     (not electric blue) so it pairs comfortably with the cream base
+     instead of clashing. */
+  --weather-accent: #2A6BB0;
+  --weather-accent-light: #5B92D0;
+  --weather-accent-pale: #DCE8F4;
+  /* Surfaces — cream instead of cool gray-white. */
+  --bg: #F6F1E7;
+  --bg-card: #FFFEFB;
+  --bg-glass: rgba(255, 254, 251, 0.78);
+  /* Text — earthy near-black for max contrast on cream. */
+  --text: #23291F;
+  --text-muted: #767D6C;
+  --text-inverse: #FFFEFB;
+  /* Borders & shadows recolored from blue to olive so they don't
+     leak a blue tint onto otherwise warm-toned surfaces. */
+  --border: rgba(35, 41, 31, 0.12);
+  --shadow-sm: 0 1px 4px rgba(35, 41, 31, 0.06);
+  --shadow-md: 0 4px 20px rgba(35, 41, 31, 0.10);
+  --shadow-lg: 0 8px 40px rgba(35, 41, 31, 0.14);
   --radius-sm: 10px;
   --radius-md: 16px;
   --radius-lg: 24px;
@@ -29,28 +52,55 @@
 }
 
 [data-theme="dark"] {
-  --primary: #60A5FA;
-  --primary-light: #93C5FD;
-  --primary-pale: rgba(96, 165, 250, 0.15);
-  --wheat: #E0B158;
-  --wheat-light: #F0C674;
-  --wheat-dark: #F0C674;
-  --wheat-pale: rgba(224, 177, 88, 0.16);
-  --leaf: #4ADE80;
-  --leaf-light: #86EFAC;
-  --leaf-dark: #4ADE80;
-  --leaf-pale: rgba(74, 222, 128, 0.16);
-  --bg: #0C1220;
-  --bg-card: #131D30;
-  --bg-glass: rgba(19, 29, 48, 0.82);
-  --text: #E5EAF2;
-  --text-muted: #8B97AD;
-  --text-inverse: #0C1220;
-  --border: rgba(96, 165, 250, 0.14);
-  --shadow-sm: 0 1px 4px rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.4);
-  --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.5);
+  /* "Gujarat at dusk" palette — the light mode is sunlit cream + olive;
+     this is the same farm 12 hours later. Warm-dark earth base (not
+     cool slate), brightened sage-olive primary so the brand's green
+     action identity carries across modes, and each accent family stays
+     in its own hue (wheat = gold, leaf = bright green, weather = sky
+     blue) — same semantic separation as light mode, just luminance-
+     tuned for the dark substrate.
+     Anchors:
+       #14110D  warm near-black base    → --bg
+       #1E1A14  elevated warm-dark      → --bg-card
+       #7BB582  brightened sage-olive   → --primary  (same role as light)
+       #F2EDE0  warm cream text         → --text     (matches light --bg) */
+  --primary: #7BB582;
+  --primary-light: #9CC9A2;
+  --primary-pale: rgba(123, 181, 130, 0.18);
+  /* Wheat: brighter golden wheat, readable on warm-dark, preserves
+     "the wheat ear" semantic from the light theme. */
+  --wheat: #E5B963;
+  --wheat-light: #F0CD8A;
+  --wheat-dark: #C49A48;
+  --wheat-pale: rgba(229, 185, 99, 0.16);
+  /* Leaf: vivid leaf-green for KB / "verified" semantic — visibly
+     different from --primary's sage so the two roles never collide. */
+  --leaf: #5FCE8C;
+  --leaf-light: #8AE0AA;
+  --leaf-dark: #44B774;
+  --leaf-pale: rgba(95, 206, 140, 0.16);
+  /* Weather: clear daytime sky-blue at dark-appropriate brightness. */
+  --weather-accent: #6FA8DC;
+  --weather-accent-light: #93BFE3;
+  --weather-accent-pale: rgba(111, 168, 220, 0.16);
+  --bg: #221C12;
+  --bg-card: #2E2718;
+  --bg-glass: rgba(46, 39, 24, 0.82);
+  --text: #F2EDE0;
+  --text-muted: #A39C8C;
+  --text-inverse: #221C12;
+  /* Warm-cream border tint matches the substrate's warm cast so dividers
+     don't introduce a cold blue/white edge on otherwise warm surfaces. */
+  --border: rgba(242, 237, 224, 0.10);
+  --shadow-sm: 0 1px 4px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.42);
+  --shadow-lg: 0 12px 48px rgba(0, 0, 0, 0.55);
 }
+
+/* The body::before warm-cream gradient is calibrated for the light cream
+   substrate; on the warm-dark base it would render as dirty smudges.
+   Hide it in dark mode — the dark substrate alone carries the mood. */
+[data-theme="dark"] body::before { display: none; }
 
 /* ── Bold chat theme (Gujarat crop palette) ──
    Self-contained variable set, scoped only to .chat-screen and the nav
@@ -73,6 +123,7 @@
   --chat-red-pale: #EEDCD0;
   --chat-green: #2C4A35;
   --chat-green-light: #4B6E4F;
+  --chat-green-pale: #D9E4DC;
   --chat-border: rgba(35, 41, 31, 0.10);
   --chat-shadow: 0 4px 24px rgba(35, 41, 31, 0.06);
   --chat-shadow-lg: 0 16px 48px rgba(35, 41, 31, 0.12);
@@ -81,27 +132,42 @@
 /* Sidebar is a sibling of .chat-screen, not a descendant — CSS custom
    properties only cascade down the DOM tree, so without repeating this
    selector for .nav-rail.rail-on-chat here, the sidebar would silently
-   fall back to the root :root/[data-theme="dark"] blue palette in dark
-   mode while the chat area used this olive-green one, producing a
-   mismatched blue+green sidebar/chat split. */
+   fall back to the root :root/[data-theme="dark"] values in dark mode
+   and inherit a slightly different luminance/contrast curve from the
+   chat area. Now that the global theme is also warm-palette the two
+   would look similar, but they're not exactly equal (chat-screen
+   variables are tuned specifically for chat-bubble legibility), so
+   we still repeat this selector to keep the sidebar in lockstep with
+   the chat surface. */
 [data-theme="dark"] .chat-screen,
 [data-theme="dark"] .nav-rail.rail-on-chat {
-  --chat-bg: #14180F;
-  --chat-bg-deep: #0D100A;
-  --chat-surface: #1E241A;
-  --chat-text: #ECE8DC;
-  --chat-text-muted: #98A08C;
-  --chat-orange: #D49A6A;
-  --chat-orange-pale: rgba(212, 154, 106, 0.16);
-  --chat-gold: #D4B85E;
-  --chat-gold-pale: rgba(212, 184, 94, 0.14);
-  --chat-red: #C68468;
-  --chat-red-pale: rgba(198, 132, 104, 0.16);
-  --chat-green: #9FBF9A;
-  --chat-green-light: #7FA67E;
-  --chat-border: rgba(236, 232, 220, 0.08);
-  --chat-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
-  --chat-shadow-lg: 0 16px 56px rgba(0, 0, 0, 0.55);
+  /* Chat surface uses the SAME "Gujarat at dusk" anchors as the global
+     dark theme above (#14110D base → #1E1A14 elevated → #7BB582 sage
+     → #F2EDE0 cream text). Identical hex codes for the same DOM roles
+     so navigating Home → Chat is visually continuous. */
+  --chat-bg: #221C12;
+  --chat-bg-deep: #1A150D;
+  --chat-surface: #2E2718;
+  --chat-text: #F2EDE0;
+  --chat-text-muted: #A39C8C;
+  /* Warm accent family — backs the "AI Reasoning" badge, source-type
+     pills, etc. Same wheat/gold hues used in the global block; chat
+     scope just exposes them under chat-* names. */
+  --chat-orange: #E5B963;
+  --chat-orange-pale: rgba(229, 185, 99, 0.16);
+  --chat-gold: #E5B963;
+  --chat-gold-pale: rgba(229, 185, 99, 0.16);
+  --chat-red: #D49074;
+  --chat-red-pale: rgba(212, 144, 116, 0.16);
+  /* chat-green — the sage-olive primary. Same as --primary in the
+     global block — keeps the green action identity. */
+  --chat-green: #7BB582;
+  --chat-green-light: #9CC9A2;
+  --chat-green-pale: rgba(123, 181, 130, 0.20);
+  /* Warm-cream border tint matches the substrate. */
+  --chat-border: rgba(242, 237, 224, 0.10);
+  --chat-shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
+  --chat-shadow-lg: 0 16px 56px rgba(0, 0, 0, 0.50);
 }
 
 /* ── Reset ── */
@@ -118,8 +184,22 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
+/* ── Type system ──
+   Two families across the whole app:
+     --font-display  : Fraunces (Latin) + Noto Serif Gujarati (script) —
+                       used at 24px+ only (wordmarks, headers, large numerics).
+                       Optical sizing makes the curves soften at display sizes.
+     --font-body     : Inter Tight (Latin) + Noto Sans Gujarati (script) —
+                       used for chat body, paragraphs, buttons, labels.
+   Buttons are body-family at weight 600 with +0.02em tracking — keeps the
+   system disciplined without adding a third face. */
+:root {
+  --font-display: 'Fraunces', 'Noto Serif Gujarati', Georgia, 'Times New Roman', serif;
+  --font-body: 'Inter Tight', 'Noto Sans Gujarati', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: var(--font-body);
   background: var(--bg);
   color: var(--text);
   min-height: 100dvh;
@@ -128,14 +208,25 @@ body {
   transition: background var(--transition), color var(--transition);
 }
 
-/* ── Background gradient ── */
+/* ── Background gradient — Gujarat afternoon haze ──
+   Cool, paler cream at the top (the morning sky just before the heat
+   builds) settling into a warmer, dustier wheat at the bottom (the
+   field at midday). Vertical and deliberate rather than two arbitrary
+   radial blobs, so the page reads as "earth below, sky above" — a
+   subliminal cue for an agriculture product. The leaf-pale flicker at
+   the bottom-right horizon stays as the only off-axis warmth, hinting
+   at a single mango tree on the edge of the plot. */
 body::before {
   content: '';
   position: fixed;
   inset: 0;
   background:
-    radial-gradient(ellipse 80% 50% at 20% -10%, rgba(37, 99, 235, 0.10) 0%, transparent 60%),
-    radial-gradient(ellipse 60% 40% at 90% 110%, rgba(96, 165, 250, 0.08) 0%, transparent 55%);
+    linear-gradient(180deg,
+      rgba(244, 240, 232, 0.55) 0%,
+      rgba(238, 229, 211, 0.00) 38%,
+      rgba(214, 188, 138, 0.08) 88%,
+      rgba(200, 147, 42, 0.10) 100%),
+    radial-gradient(ellipse 50% 35% at 88% 96%, rgba(44, 74, 53, 0.06) 0%, transparent 60%);
   pointer-events: none;
   z-index: 0;
 }
@@ -742,36 +833,47 @@ body::before {
   text-align: center;
 }
 
+/* Wheat glyph removed — the wordmark stands on its own now. Bigger
+   size, slightly looser tracking, more breathing room under it. The
+   "AI" half gets visual weight via the colour sweep alone; no divider
+   needed when the type is this confident. */
 .home-wordmark {
-  font-size: clamp(1.9rem, 5vw, 2.8rem);
+  font-family: var(--font-body);
+  font-size: clamp(2.6rem, 7vw, 4.2rem);
   font-weight: 800;
-  letter-spacing: -0.02em;
-  margin-bottom: 6px;
-  line-height: 1.1;
+  letter-spacing: -0.025em;
+  margin-bottom: 22px;
+  line-height: 1;
+  text-align: center;
+  /* Subtle warm glow behind the wordmark, just enough to feel like the
+     letters are sitting on a soft halo of light rather than floating
+     flat. ~6% wheat — invisible if you're looking for it, present if
+     you're not. */
+  filter: drop-shadow(0 1px 0 rgba(255, 255, 255, 0.5));
 }
 
+/* Slow horizontal sweep across the brand triad (primary olive → leaf →
+   wheat → back to olive). All three colours are already in the palette,
+   so the wordmark literally cycles through the website's own theme. */
 .home-wordmark-text {
-  background: linear-gradient(90deg, var(--primary), var(--leaf), var(--wheat), var(--primary));
-  background-size: 300% auto;
+  background: linear-gradient(90deg,
+    var(--primary) 0%,
+    var(--leaf) 35%,
+    var(--wheat) 65%,
+    var(--primary) 100%);
+  background-size: 280% auto;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  animation: homeWordmarkSweep 7s linear infinite;
-}
-
-.home-wordmark-wheat {
-  display: inline-block;
-  padding: 0 0.08em;
+  animation: homeWordmarkSweep 8s linear infinite;
+  /* Keep the non-breaking space between "Farmer" and "AI" sized so the
+     two words read as one mark, not two. */
+  word-spacing: -0.05em;
 }
 
 @keyframes homeWordmarkSweep {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  100% {
-    background-position: 300% 50%;
-  }
+  0%   { background-position: 0% 50%; }
+  100% { background-position: 280% 50%; }
 }
 
 .home-title {
@@ -782,65 +884,68 @@ body::before {
   margin-bottom: 22px;
 }
 
+/* ── Home layout: hero chat on top, 4-card action shelf below ──
+   The shelf is a flat row on desktop (1280px+), 2×2 on tablet, single
+   column on mobile. Everything fits without scrolling on a standard
+   720p+ viewport — no more "small scroll thing" hanging at the bottom. */
 .home-cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas:
-    "weather market"
-    "chat    chat";
-  gap: 20px;
-  align-items: start;
-  max-width: 760px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 100%;
+  max-width: 1040px;
   margin: 0 auto;
 }
 
-.home-card-weather,
-.home-card-market {
-  padding: 24px 26px;
-  gap: 6px;
+.home-action-shelf {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  width: 100%;
 }
 
-.home-card-weather .home-card-icon,
-.home-card-market .home-card-icon {
-  font-size: 2.1rem;
+/* All four shelf cards share the same compact metrics — keeps the row
+   visually unified while letting each one carry its own accent colour. */
+.home-action-shelf .home-card {
+  padding: 18px 18px 16px;
+  gap: 4px;
+  min-height: 168px;
 }
 
-.home-card-weather .home-card-top,
-.home-card-market .home-card-top {
-  margin-bottom: 6px;
+.home-action-shelf .home-card-icon {
+  font-size: 1.7rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.home-card-weather .home-card-title,
-.home-card-market .home-card-title {
-  font-size: 1.2rem;
+.home-action-shelf .home-card-top {
+  margin-bottom: 4px;
 }
 
-.home-card-weather .home-card-desc,
-.home-card-market .home-card-desc {
-  font-size: 0.9rem;
-  line-height: 1.45;
+.home-action-shelf .home-card-title {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
 }
 
-.home-card-weather .home-card-cta,
-.home-card-market .home-card-cta {
-  font-size: 0.86rem;
-  margin-top: 8px;
+.home-action-shelf .home-card-desc {
+  font-size: 0.82rem;
+  line-height: 1.4;
 }
 
-.home-card-weather {
-  grid-area: weather;
-}
-
-.home-card-market {
-  grid-area: market;
+.home-action-shelf .home-card-cta {
+  font-size: 0.78rem;
+  margin-top: auto;
+  padding-top: 8px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
 }
 
 .home-card-chat {
-  grid-area: chat;
   width: 100%;
-  max-width: 760px;
-  margin: 0 auto;
-  padding: 36px 40px;
+  padding: 28px 36px 32px;
   background: linear-gradient(120deg, var(--wheat-pale), var(--bg-card) 35%, var(--bg-card) 65%, var(--wheat-pale));
   background-size: 250% 250%;
   animation: chatCardGradient 9s ease infinite;
@@ -1004,11 +1109,69 @@ body::before {
 }
 
 .home-card-weather .home-card-glow {
-  background: radial-gradient(circle, var(--primary-light), transparent 70%);
+  /* Sky-blue glow — weather is the one card on the home screen that
+     intentionally breaks from the unified warm palette, because users
+     associate weather with sky/water and a warm yellow glow felt off
+     theme. The blue is muted (slate-blue, not electric) so it sits
+     gracefully next to the chat card's wheat glow and the market
+     card's leaf glow. */
+  background: radial-gradient(circle, var(--weather-accent-light), transparent 70%);
 }
 
 .home-card-market .home-card-glow {
   background: radial-gradient(circle, var(--leaf-light), transparent 70%);
+}
+
+/* Each card's hover border picks up its own accent so it never falls
+   back to the universal olive — Weather → sky-blue, Market → leaf,
+   Diagnose → teal (below), Schemes → wheat-gold (below). */
+.home-card-weather:hover { border-color: var(--weather-accent); }
+.home-card-market:hover  { border-color: var(--leaf); }
+/* Chat hero has its own always-on animated rainbow border via ::before,
+   so its base border is transparent. Keep it transparent on hover too —
+   otherwise the universal :hover rule paints a dark olive ring on top
+   of the rainbow. */
+.home-card-chat:hover    { border-color: transparent; }
+
+/* Teal-leaf accent for diagnose — sits between the market's leaf-green
+   and a clinical/medical teal, signalling "AI vision on a plant" without
+   going into medical-grey territory that would feel cold next to the
+   warm card neighbours. */
+.home-card-diagnose .home-card-icon { color: #2D8C7E; }
+.home-card-diagnose .home-card-live-dot { background: #6FB8AB; }
+.home-card-diagnose .home-card-glow {
+  background: radial-gradient(circle, rgba(45, 140, 126, 0.35), transparent 70%);
+}
+.home-card-diagnose:hover { border-color: #2D8C7E; }
+
+/* Wheat-gold accent for schemes — government documents in India
+   traditionally use a saffron/gold seal motif, so the shield icon +
+   gold dot reads as "official paperwork" without being literal. */
+.home-card-schemes .home-card-icon { color: var(--wheat-dark); }
+.home-card-schemes .home-card-live-dot { background: var(--wheat); }
+.home-card-schemes .home-card-glow {
+  background: radial-gradient(circle, var(--wheat-light), transparent 70%);
+}
+.home-card-schemes:hover { border-color: var(--wheat-dark); }
+
+/* ── Entrance: dealing-card stagger ──
+   Cards rise from a slightly rotated "stack" position into their grid
+   slots, in sequence — 70ms apart. Reads as a farmer placing seed
+   packets on the table. Each card sets --stagger inline (0..4) so the
+   delay scales without per-card CSS. Respects reduced motion. */
+.home-card {
+  animation: dealCard 520ms cubic-bezier(0.2, 0.7, 0.2, 1) backwards;
+  animation-delay: calc(var(--stagger, 0) * 70ms);
+}
+
+@keyframes dealCard {
+  0%   { opacity: 0; transform: translateY(14px) rotate(1.5deg) scale(0.985); }
+  60%  { opacity: 1; }
+  100% { opacity: 1; transform: translateY(0) rotate(0) scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-card { animation: none; }
 }
 
 .home-card-top {
@@ -1023,30 +1186,34 @@ body::before {
   line-height: 1;
 }
 
+/* Replaces the old gradient pills (Online / 33 districts / Live mandi
+   rates). Those were pure decoration carrying obvious info. Now: small
+   muted text with a single tinted dot, in the family colour of each
+   card. Same vertical rhythm, ~90% less visual noise. */
 .home-card-live-badge {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  font-size: 0.74rem;
-  font-weight: 700;
-  padding: 5px 10px 5px 8px;
-  border-radius: 999px;
+  gap: 7px;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--text-muted);
   white-space: nowrap;
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
 }
 
-.home-card-chat .home-card-live-badge {
-  background: var(--wheat-pale);
-  color: var(--wheat-dark);
+.home-card-chat .home-card-live-dot {
+  background: var(--primary-light);
 }
 
-.home-card-weather .home-card-live-badge {
-  background: var(--primary-pale);
-  color: var(--primary);
+.home-card-weather .home-card-live-dot {
+  background: var(--weather-accent-light);
 }
 
-.home-card-market .home-card-live-badge {
-  background: var(--leaf-pale);
-  color: var(--leaf-dark);
+.home-card-market .home-card-live-dot {
+  background: var(--leaf);
 }
 
 .home-card-live-dot {
@@ -1073,8 +1240,13 @@ body::before {
 }
 
 .home-card-title {
-  font-size: 1.25rem;
-  font-weight: 700;
+  /* Display family for the three big card titles — pairs with the
+     italic wordmark above and reinforces the "this is a designed
+     surface, not a SaaS template" message. */
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
   color: var(--text);
   position: relative;
   z-index: 1;
@@ -1102,24 +1274,47 @@ body::before {
 }
 
 .home-card-weather .home-card-cta {
-  color: var(--primary);
+  /* "View dashboard →" link inherits the weather card's blue identity
+     instead of the site-wide olive primary. */
+  color: var(--weather-accent);
 }
 
 .home-card-market .home-card-cta {
   color: var(--leaf-dark);
 }
 
+.home-card-diagnose .home-card-cta {
+  /* Matches the diagnose card's teal-leaf identity (same hex used for
+     icon, dot, hover border). */
+  color: #2D8C7E;
+}
+
+.home-card-schemes .home-card-cta {
+  /* Matches the schemes card's wheat-gold identity. */
+  color: var(--wheat-dark);
+}
+
+/* Tablet: shelf goes 2×2 so each card has decent width to breathe. */
+@media (max-width: 900px) {
+  .home-action-shelf {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 @media (max-width: 560px) {
-  .home-cards {
+  .home-action-shelf {
     grid-template-columns: 1fr;
-    grid-template-areas:
-      "weather"
-      "market"
-      "chat";
+    gap: 12px;
+  }
+
+  .home-action-shelf .home-card {
+    min-height: auto;
+    padding: 16px 16px 14px;
   }
 
   .home-card-chat {
     max-width: 100%;
+    padding: 22px 22px 24px;
   }
 
   .home-screen {
@@ -1185,7 +1380,7 @@ body::before {
   z-index: 1;
   background: var(--chat-bg);
   min-height: 100dvh;
-  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: var(--font-body);
 }
 
 .chat-screen>.chat-wordmark,
@@ -1248,16 +1443,20 @@ body::before {
   color: var(--chat-green);
 }
 
+/* Was a gold "Online" pill — enterprise-chat-widget vocabulary that
+   contradicted the warm tone of the rest of the app. Now: language
+   indicator in muted text, no background, single tinted dot. */
 .chat-wordmark-badge {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 7px;
   font-size: 0.74rem;
-  font-weight: 700;
-  color: var(--chat-green);
-  background: var(--chat-gold-pale);
-  padding: 5px 12px 5px 9px;
-  border-radius: 999px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--chat-text-muted);
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
   white-space: nowrap;
 }
 
@@ -1335,6 +1534,8 @@ body::before {
 .ai-message .avatar {
   background: var(--chat-gold-pale);
   border-color: var(--chat-gold);
+  /* Sprout SVG inherits via currentColor — olive against gold-pale. */
+  color: var(--chat-green);
 }
 
 .user-message .avatar {
@@ -1366,7 +1567,12 @@ body::before {
 }
 
 .ai-message .bubble {
+  /* Spend boldness once: the left gold bar is the structural device that
+     marks "AI speaking". The perimeter border on top of it was decoration
+     on top of decoration — removed. The bubble now sits cleanly on the
+     background, anchored only by the bar + soft shadow. */
   border-radius: 16px 16px 16px 4px;
+  border: none;
   border-left: 3px solid var(--chat-gold);
   padding-left: 16px;
 }
@@ -1395,6 +1601,37 @@ body::before {
   margin-bottom: 8px;
   background: var(--chat-gold-pale);
   color: var(--chat-gold);
+}
+
+/* One distinct color per source type so the farmer can tell at a glance
+   whether an answer is grounded in real documents, fetched from live
+   weather data, produced by the ML leaf-disease model, or generated
+   from the LLM's own general training. */
+.source-badge.source-badge--kb {
+  background: var(--chat-green-pale, rgba(44, 74, 53, 0.14));
+  color: var(--chat-green, #2c4a35);
+}
+
+.source-badge.source-badge--weather {
+  background: var(--chat-orange-pale, rgba(184, 112, 62, 0.18));
+  color: var(--chat-orange, #b8703e);
+}
+
+.source-badge.source-badge--leaf {
+  background: var(--chat-green-pale, rgba(44, 74, 53, 0.14));
+  color: var(--chat-green-light, #4b6e4f);
+}
+
+.source-badge.source-badge--llm {
+  background: var(--chat-gold-pale);
+  color: var(--chat-gold);
+}
+
+/* Mixed = part KB, part LLM. Blend the kb-green and llm-gold visually
+   so the badge reads as "between the two" at a glance. */
+.source-badge.source-badge--mixed {
+  background: linear-gradient(90deg, var(--chat-green-pale, rgba(44, 74, 53, 0.14)) 0%, var(--chat-gold-pale) 100%);
+  color: var(--chat-green, #2c4a35);
 }
 
 /* AI response text — formatted by formatAiText() in app.js. Each "span"
@@ -1823,8 +2060,10 @@ body::before {
 }
 
 .weather-modal-title {
-  font-size: 1.15rem;
-  font-weight: 700;
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
   color: var(--text);
 }
 
@@ -1856,9 +2095,12 @@ body::before {
 }
 
 .weather-close-btn:hover {
-  border-color: var(--primary);
-  color: var(--primary);
-  background: var(--primary-pale);
+  /* Blue to match the weather identity (--weather-accent), same colour
+     family as the °C temperature reading on each card. Was olive before,
+     which clashed visually with the blue surface of the modal. */
+  border-color: var(--weather-accent);
+  color: var(--weather-accent);
+  background: color-mix(in srgb, var(--weather-accent) 10%, transparent);
 }
 
 /* Search + stats bar */
@@ -1888,7 +2130,7 @@ body::before {
 
 .weather-search:focus {
   border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.10);
+  box-shadow: 0 0 0 3px rgba(44, 74, 53, 0.10);
 }
 
 .weather-search::placeholder {
@@ -1978,9 +2220,15 @@ body::before {
 }
 
 .weather-card-temp {
-  font-size: 1.7rem;
-  font-weight: 700;
-  color: var(--primary);
+  font-family: var(--font-display);
+  font-size: 1.85rem;
+  font-weight: 600;
+  /* Display family + tabular figures so the big temp readings across
+     33 cards line up to the decimal point — without tnum each column
+     wobbles ~2-3px depending on whether the number contains 1s or 0s. */
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+  color: var(--weather-accent);
   margin-bottom: 10px;
 }
 
@@ -2001,6 +2249,33 @@ body::before {
 .weather-stat-row span:last-child {
   color: var(--text);
   font-weight: 600;
+}
+
+/* Tomorrow-forecast footer (Open-Meteo's day-2 daily values). A
+   visually subtle line under the live "today" stats — its job is to
+   answer "should I irrigate tonight / spray tomorrow?" at a glance
+   without expanding the card or requiring a click. */
+.weather-card-tomorrow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px dashed var(--border);
+  font-size: 0.74rem;
+  color: var(--text-muted);
+}
+
+.weather-tomorrow-label {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+}
+
+.weather-tomorrow-values {
+  color: var(--text);
+  font-weight: 500;
 }
 
 .weather-card.weather-card-loading {
@@ -2134,8 +2409,10 @@ body::before {
 }
 
 .market-modal-title {
-  font-size: 1.15rem;
-  font-weight: 700;
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
   color: var(--text);
   flex-shrink: 0;
 }
@@ -2176,49 +2453,6 @@ body::before {
 }
 
 /* Category pills */
-.market-category-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  padding: 16px 24px;
-  border-bottom: 1px solid var(--border);
-  background: var(--bg-card);
-  flex-shrink: 0;
-}
-
-.market-category-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  padding: 8px 16px;
-  border-radius: 999px;
-  border: 1.5px solid var(--border);
-  background: var(--bg);
-  color: var(--text);
-  font-size: 0.86rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all var(--transition);
-  font-family: inherit;
-  white-space: nowrap;
-}
-
-.market-category-pill:hover {
-  border-color: var(--leaf);
-  color: var(--leaf-dark);
-}
-
-.market-category-pill.active {
-  background: var(--leaf);
-  border-color: var(--leaf);
-  color: var(--text-inverse);
-}
-
-.market-category-pill-icon {
-  font-size: 0.95rem;
-  line-height: 1;
-}
-
 /* Search box + record count row, directly below the category pills */
 .market-toolbar {
   display: flex;
@@ -2279,7 +2513,10 @@ body::before {
 .market-table-wrap {
   flex: 1;
   overflow: auto;
-  padding: 0 24px 28px;
+  /* Horizontal padding is intentionally 0 so the sticky <thead> band
+     spans edge-to-edge — the inset breathing room is added back on the
+     first/last cells below. Bottom padding gives the last row room. */
+  padding: 0 0 28px;
 }
 
 .market-table-wrap::-webkit-scrollbar {
@@ -2327,6 +2564,18 @@ body::before {
   white-space: normal;
   overflow-wrap: break-word;
   vertical-align: top;
+}
+
+/* Push the first and last columns away from the modal edges, so the
+   sticky header band still reaches edge-to-edge while the text inside
+   it has the same 24px gutter the rest of the modal uses. */
+.market-table thead th:first-child,
+.market-table tbody td:first-child {
+  padding-left: 24px;
+}
+.market-table thead th:last-child,
+.market-table tbody td:last-child {
+  padding-right: 24px;
 }
 
 /* Commodity/variety names can run long (e.g. "Sesamum(Sesame,Gingelly,Til)")
@@ -2451,18 +2700,17 @@ body::before {
     margin-left: 0;
   }
 
-  .market-category-row {
-    padding: 12px 16px;
-    gap: 8px;
-  }
-
-  .market-category-pill {
-    padding: 7px 13px;
-    font-size: 0.8rem;
-  }
-
   .market-table-wrap {
-    padding: 0 16px 20px;
+    padding: 0 0 20px;
+  }
+
+  .market-table thead th:first-child,
+  .market-table tbody td:first-child {
+    padding-left: 16px;
+  }
+  .market-table thead th:last-child,
+  .market-table tbody td:last-child {
+    padding-right: 16px;
   }
 
   .market-refresh-note {
@@ -2506,4 +2754,237 @@ body::before {
   .market-table tbody td {
     padding: 10px 8px;
   }
+}
+
+/* ── Schemes finder modal ──
+   Same shape as weather/market modals so the user instantly understands
+   the layout, but the inner content is a vertically-scrolling list of
+   scheme cards instead of a grid or table. Each scheme card has a small
+   colored stripe down its left edge keyed to the scheme's "domain"
+   (income, insurance, credit, soil) — a structural device that encodes
+   real info, not decoration. */
+.schemes-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 18, 14, 0.55);
+  backdrop-filter: blur(4px);
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.schemes-overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.schemes-modal {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  width: 100%;
+  max-width: 760px;
+  max-height: 88vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 30px 80px -20px rgba(20, 18, 14, 0.35);
+  transform: translateY(20px) scale(0.985);
+  transition: transform 0.32s cubic-bezier(0.2, 0.7, 0.2, 1);
+  overflow: hidden;
+}
+
+.schemes-overlay.open .schemes-modal {
+  transform: translateY(0) scale(1);
+}
+
+.schemes-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 22px 26px 18px;
+  border-bottom: 1px solid var(--border);
+}
+
+.schemes-modal-title {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.schemes-modal-sub {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+}
+
+.schemes-close-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1.5px solid var(--border);
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all var(--transition);
+}
+
+.schemes-close-btn:hover {
+  border-color: var(--wheat-dark);
+  color: var(--wheat-dark);
+  background: var(--wheat-pale);
+}
+
+.schemes-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px 22px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.scheme-card {
+  /* Was a clickable <a> with three columns (stripe · body · "Open →").
+     Now a plain container — the two actions live inside the body so we
+     can have an external portal link AND an in-app "Ask AI" button
+     without nesting anchors. */
+  display: grid;
+  grid-template-columns: 4px 1fr;
+  gap: 16px;
+  padding: 16px 18px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--bg);
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.scheme-card:hover {
+  border-color: var(--scheme-color, var(--wheat));
+  box-shadow: var(--shadow-sm);
+}
+
+/* The left stripe encodes the scheme's domain — readable at a glance
+   without needing a label. */
+.scheme-stripe {
+  border-radius: 4px;
+  background: var(--scheme-color, var(--primary));
+  align-self: stretch;
+}
+
+.scheme-card[data-domain="income"]    { --scheme-color: var(--leaf); }
+.scheme-card[data-domain="insurance"] { --scheme-color: var(--weather-accent); }
+.scheme-card[data-domain="credit"]    { --scheme-color: var(--wheat-dark); }
+.scheme-card[data-domain="soil"]      { --scheme-color: #8B6F47; }
+.scheme-card[data-domain="state"]     { --scheme-color: var(--primary); }
+
+.scheme-body {
+  min-width: 0;
+}
+
+.scheme-title {
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 4px;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.scheme-tag {
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--scheme-color, var(--primary));
+  padding: 2px 7px;
+  border: 1px solid currentColor;
+  border-radius: 4px;
+  background: transparent;
+}
+
+.scheme-desc {
+  font-size: 0.84rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* Two actions per scheme, sitting under the description: the external
+   portal link (primary, accent-coloured) and the in-app "Ask AI" trigger
+   that drops a comprehensive question into the chat (secondary, muted
+   until hover). The accent on "Open official portal" is the scheme's
+   own domain colour, so it inherits the visual identity of the stripe. */
+.scheme-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+.scheme-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.005em;
+  text-decoration: none;
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: inherit;
+  cursor: pointer;
+  transition: color var(--transition), transform 0.15s ease;
+}
+
+.scheme-action:hover {
+  transform: translateX(2px);
+}
+
+.scheme-action-portal {
+  color: var(--scheme-color, var(--primary));
+}
+
+.scheme-action-ask {
+  color: var(--text-muted);
+}
+
+.scheme-action-ask:hover {
+  color: var(--scheme-color, var(--primary));
+}
+
+.schemes-modal-footer {
+  padding: 12px 26px 16px;
+  border-top: 1px solid var(--border);
+  background: var(--bg);
+  font-size: 0.74rem;
+  color: var(--text-muted);
+  text-align: center;
+  letter-spacing: 0.01em;
+}
+
+@media (max-width: 560px) {
+  .schemes-modal {
+    max-height: 92vh;
+    border-radius: var(--radius-md);
+  }
+  .schemes-modal-header { padding: 18px 18px 14px; }
+  .schemes-list { padding: 12px 16px 18px; }
+  .scheme-card { grid-template-columns: 3px 1fr; padding: 14px; }
+  .scheme-actions { gap: 14px; margin-top: 10px; }
+  .scheme-action { font-size: 0.78rem; }
 }

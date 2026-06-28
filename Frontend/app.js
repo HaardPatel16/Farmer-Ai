@@ -40,7 +40,6 @@ const weatherSearch = document.getElementById("weatherSearch");
 const weatherDistrictCount = document.getElementById("weatherDistrictCount");
 const marketOverlay = document.getElementById("marketOverlay");
 const marketCloseBtn = document.getElementById("marketCloseBtn");
-const marketCategoryRow = document.getElementById("marketCategoryRow");
 const marketTableWrap = document.getElementById("marketTableWrap");
 const marketModalTitle = document.getElementById("marketModalTitle");
 const marketRefreshNote = document.getElementById("marketRefreshNote");
@@ -92,7 +91,6 @@ const i18n = {
     placeholder: "Ask a question...",
     inputHint: "Press Enter to send",
     welcome: "Hello! I'm Farmer AI, your agricultural assistant for Gujarat. Ask me anything about crops, weather, farming practices, or government schemes.",
-    thinking: "Farmer AI is thinking...",
     modalTitle: "What went wrong?",
     wrong_info: "Wrong information",
     wrong_language: "Wrong language",
@@ -103,21 +101,24 @@ const i18n = {
     not_helpful: "👎 Not helpful",
     kb_badge: "Knowledge Base",
     llm_badge: "AI Reasoning",
+    weather_badge: "Weather API",
+    leaf_badge: "Leaf Diagnosis",
+    mixed_badge: "AI + Knowledge Base",
     error_chat: "Sorry, I'm temporarily unavailable. Please try again in a moment.",
-    error_feedback: "Could not save feedback. Please try again.",
     history_loading: "Loading history...",
     history_empty: "No past conversations yet",
     history_error: "Could not load history",
     history_delete: "Delete this conversation",
     history_delete_confirm: "Delete this conversation permanently? This cannot be undone.",
     history_delete_error: "Could not delete this conversation. Please try again.",
-    you: "You",
     weather_title: "Gujarat Weather",
-    weather_loading: "Loading...",
     weather_error: "Unable to load",
     weather_humidity: "Humidity",
     weather_rain_now: "Rain now",
     weather_rain_today: "Rain today",
+    weather_tomorrow_label: "Tomorrow",
+    weather_tomorrow_temp_range: "{min}-{max}°C",
+    weather_tomorrow_rain: "{mm}mm rain",
     weather_refresh_note: "Auto-refreshing every 10 min",
     weather_districts_all: "{count} districts",
     weather_districts_filtered: "{visible} of {total} districts",
@@ -128,18 +129,31 @@ const i18n = {
     diagnose_upload_label: "Upload",
     diagnose_camera_label: "Camera",
     home_ask_placeholder: "Type your question…",
-    home_title: "What do you need today?",
+    home_title: "Your fields. Your language. Real answers.",
     chat_card_title: "Ask Farmer AI",
     chat_card_desc: "Crops, schemes, soil, pests — ask anything in English or Gujarati.",
-    chat_card_live: "Online",
+    chat_card_live: "English · auto",
     weather_card_title: "Weather",
     weather_card_desc: "Live temperature, humidity and rainfall for every district.",
     weather_card_cta: "View dashboard →",
-    weather_card_live: "33 districts",
+    weather_card_live: "Auto-updates every 10 min",
     market_card_title: "Crop Market Prices",
     market_card_desc: "Live mandi prices for Gujarat's major crops, by category.",
     market_card_cta: "Check prices →",
-    market_card_live: "Live mandi rates",
+    market_card_live: "Auto-updates every 30 min",
+    diagnose_home_card_title: "Diagnose a Leaf",
+    diagnose_home_card_desc: "Snap a photo, get the disease + remedy.",
+    diagnose_home_card_cta: "Scan a leaf →",
+    diagnose_home_card_live: "AI vision",
+    schemes_card_title: "Scheme Finder",
+    schemes_card_desc: "Subsidies & schemes you can apply to.",
+    schemes_card_cta: "Browse schemes →",
+    schemes_card_live: "Government",
+    schemes_modal_title: "Government schemes for Gujarat farmers",
+    schemes_modal_sub: "Tap any scheme to read details. Eligibility checker coming soon.",
+    schemes_modal_footer: "Last reviewed: June 2026 · Links go to official portals",
+    scheme_action_portal: "Open official portal",
+    scheme_action_ask: "Ask AI about this",
     market_title: "Crop Market Prices",
     market_refresh_note: "Live mandi prices · data.gov.in",
     market_search_placeholder: "Search any crop or mandi...",
@@ -166,7 +180,6 @@ const i18n = {
     placeholder: "પ્રશ્ન પૂછો...",
     inputHint: "મોકલવા Enter દબાવો",
     welcome: "નમસ્તે! હું Farmer AI છું, ગુજરાત માટેનો તમારો કૃષિ સહાયક. પાક, હવામાન, ખેતી અથવા સરકારી યોજનાઓ વિશે પૂછો.",
-    thinking: "Farmer AI વિચારી રહ્યો છે...",
     modalTitle: "શું ખોટું થયું?",
     wrong_info: "ખોટી માહિતી",
     wrong_language: "ખોટી ભાષા",
@@ -177,21 +190,24 @@ const i18n = {
     not_helpful: "👎 ઉપયોગી નથી",
     kb_badge: "જ્ઞાન આધાર",
     llm_badge: "AI તર્ક",
+    weather_badge: "હવામાન સેવા",
+    leaf_badge: "પાન નિદાન",
+    mixed_badge: "AI + જ્ઞાન આધાર",
     error_chat: "માફ કરશો, હું અત્યારે ઉપલબ્ધ નથી. થોડી વાર પછી ફરી પ્રયાસ કરો.",
-    error_feedback: "પ્રતિસાદ સાચવી શકાયો નહીં. ફરી પ્રયાસ કરો.",
     history_loading: "ઇતિહાસ લોડ થઈ રહ્યો છે...",
     history_empty: "હજુ સુધી કોઈ જૂની વાતચીત નથી",
     history_error: "ઇતિહાસ લોડ કરી શકાયો નહીં",
     history_delete: "આ વાતચીત કાઢી નાખો",
     history_delete_confirm: "આ વાતચીત કાયમ માટે કાઢી નાખવી છે? આ પાછું લાવી શકાશે નહીં.",
     history_delete_error: "આ વાતચીત કાઢી શકાઈ નહીં. ફરી પ્રયાસ કરો.",
-    you: "તમે",
     weather_title: "ગુજરાત હવામાન",
-    weather_loading: "લોડ થઈ રહ્યું છે...",
     weather_error: "લોડ કરી શકાયું નથી",
     weather_humidity: "ભેજ",
     weather_rain_now: "હાલમાં વરસાદ",
     weather_rain_today: "આજે વરસાદ",
+    weather_tomorrow_label: "આવતીકાલે",
+    weather_tomorrow_temp_range: "{min}-{max}°C",
+    weather_tomorrow_rain: "{mm}mm વરસાદ",
     weather_refresh_note: "દર 10 મિનિટે રિફ્રેશ થાય છે",
     weather_search_placeholder: "જિલ્લો શોધો...",
     weather_districts_all: "{count} જિલ્લા",
@@ -202,18 +218,31 @@ const i18n = {
     diagnose_upload_label: "અપલોડ",
     diagnose_camera_label: "કેમેરા",
     home_ask_placeholder: "તમારો પ્રશ્ન ટાઈપ કરો…",
-    home_title: "આજે તમને શું જરૂર છે?",
+    home_title: "તમારા ખેતર. તમારી ભાષા. સાચા જવાબ.",
     chat_card_title: "Farmer AI ને પૂછો",
     chat_card_desc: "પાક, યોજનાઓ, માટી, જીવાતો — અંગ્રેજી અથવા ગુજરાતીમાં કંઈપણ પૂછો.",
-    chat_card_live: "ઓનલાઇન",
+    chat_card_live: "ગુજરાતી · ઓટો",
     weather_card_title: "હવામાન",
     weather_card_desc: "દરેક જિલ્લા માટે જીવંત તાપમાન, ભેજ અને વરસાદ.",
     weather_card_cta: "ડેશબોર્ડ જુઓ →",
-    weather_card_live: "33 જિલ્લા",
+    weather_card_live: "દર 10 મિનિટે ઓટો-અપડેટ",
     market_card_title: "પાક બજાર ભાવ",
     market_card_desc: "ગુજરાતના મુખ્ય પાકોના જીવંત મંડી ભાવ, શ્રેણી પ્રમાણે.",
     market_card_cta: "ભાવ જુઓ →",
-    market_card_live: "જીવંત મંડી ભાવ",
+    market_card_live: "દર 30 મિનિટે ઓટો-અપડેટ",
+    diagnose_home_card_title: "પાનનું નિદાન કરો",
+    diagnose_home_card_desc: "ફોટો લો, રોગ અને ઉપાય મેળવો.",
+    diagnose_home_card_cta: "પાન સ્કેન કરો →",
+    diagnose_home_card_live: "AI દ્રષ્ટિ",
+    schemes_card_title: "યોજના શોધક",
+    schemes_card_desc: "તમે અરજી કરી શકો તેવી સબસિડી અને યોજનાઓ.",
+    schemes_card_cta: "યોજનાઓ જુઓ →",
+    schemes_card_live: "સરકારી",
+    schemes_modal_title: "ગુજરાતના ખેડૂતો માટે સરકારી યોજનાઓ",
+    schemes_modal_sub: "વિગતો વાંચવા માટે કોઈપણ યોજના પર ટૅપ કરો. પાત્રતા તપાસનાર ટૂંક સમયમાં આવી રહ્યું છે.",
+    schemes_modal_footer: "છેલ્લે સમીક્ષા: જૂન 2026 · લિંક્સ સત્તાવાર પોર્ટલ પર જાય છે",
+    scheme_action_portal: "સત્તાવાર પોર્ટલ ખોલો",
+    scheme_action_ask: "AI ને આ વિશે પૂછો",
     market_title: "પાક બજાર ભાવ",
     market_refresh_note: "જીવંત મંડી ભાવ · data.gov.in",
     market_search_placeholder: "કોઈપણ પાક અથવા મંડી શોધો...",
@@ -286,37 +315,6 @@ function districtDisplayName(districtKey) {
   return districtKey;
 }
 
-// Category keys come from the backend in English; translate just the
-// pill labels here rather than round-tripping language through the API.
-const categoryLabels = {
-  en: {
-    all: "All",
-    cash_crops: "Cash crops",
-    oilseeds: "Oilseeds",
-    grains_cereals: "Grains & cereals",
-    pulses: "Pulses",
-    spices: "Spices",
-    fruits: "Fruits",
-    vegetables: "Vegetables",
-    others: "Others",
-  },
-  gu: {
-    all: "બધા",
-    cash_crops: "રોકડિયા પાક",
-    oilseeds: "તેલીબિયાં",
-    grains_cereals: "અનાજ",
-    pulses: "કઠોળ",
-    spices: "મસાલા",
-    fruits: "ફળો",
-    vegetables: "શાકભાજી",
-    others: "અન્ય",
-  },
-};
-
-function categoryLabel(key, fallback) {
-  return (categoryLabels[language] && categoryLabels[language][key]) || fallback || key;
-}
-
 // ── Theme ──────────────────────────────────────────────────────────────────
 
 function applyTheme(theme) {
@@ -379,10 +377,37 @@ function applyLanguage(lang) {
   marketCardDesc.textContent = t("market_card_desc");
   marketCardCta.textContent = t("market_card_cta");
   marketCardLiveLabel.textContent = t("market_card_live");
+  // Diagnose home card (separate IDs from the chat-sidebar diagnose card,
+  // which still owns `diagnoseCardTitle`/`diagnoseCardDesc`).
+  const dT = document.getElementById("homeDiagnoseTitle");
+  const dD = document.getElementById("homeDiagnoseDesc");
+  const dC = document.getElementById("homeDiagnoseCta");
+  const dL = document.getElementById("diagnoseCardLiveLabel");
+  if (dT) dT.textContent = t("diagnose_home_card_title");
+  if (dD) dD.textContent = t("diagnose_home_card_desc");
+  if (dC) dC.textContent = t("diagnose_home_card_cta");
+  if (dL) dL.textContent = t("diagnose_home_card_live");
+  // Schemes home card
+  const sT = document.getElementById("schemesCardTitle");
+  const sD = document.getElementById("schemesCardDesc");
+  const sC = document.getElementById("schemesCardCta");
+  const sL = document.getElementById("schemesCardLiveLabel");
+  if (sT) sT.textContent = t("schemes_card_title");
+  if (sD) sD.textContent = t("schemes_card_desc");
+  if (sC) sC.textContent = t("schemes_card_cta");
+  if (sL) sL.textContent = t("schemes_card_live");
+  // Schemes modal chrome + re-render list if open, so switching language
+  // while the modal is visible updates everything in place.
+  const smT = document.getElementById("schemesModalTitle");
+  const smS = document.getElementById("schemesModalSub");
+  const smF = document.getElementById("schemesModalFooter");
+  if (smT) smT.textContent = t("schemes_modal_title");
+  if (smS) smS.textContent = t("schemes_modal_sub");
+  if (smF) smF.textContent = t("schemes_modal_footer");
+  if (schemesOverlay && schemesOverlay.classList.contains("open")) renderSchemes();
   marketModalTitle.textContent = t("market_title");
   marketRefreshNote.textContent = t("market_refresh_note");
   marketSearch.placeholder = t("market_search_placeholder");
-  if (marketCategoriesCache) renderCategoryPills(marketCategoriesCache);
   if (marketOverlay.classList.contains("open")) {
     if (lastMarketRecords) renderMarketTable(lastMarketRecords);
     else renderMarketEmptyState();
@@ -450,16 +475,39 @@ function showDiagnoseScanPreview(file) {
 
 // ── Render an AI bubble ───────────────────────────────────────────────────
 
+// Map backend's source_type field to a {label, css-modifier} pair.
+// Backend stores four real values: "knowledge_base" (KB grounded),
+// "weather_api" (live Open-Meteo data injected), "leaf_diagnosis" (ML
+// classifier + Groq remedy), and "llm_reasoning" (Groq from general
+// training only). Previously the frontend treated everything except
+// knowledge_base as "AI Reasoning", which mislabeled every weather and
+// every leaf-diagnosis response — defeating the whole point of telling
+// farmers where the answer came from.
+function badgeFor(sourceType) {
+  switch (sourceType) {
+    case "knowledge_base":
+      return { text: t("kb_badge"), cls: "source-badge--kb" };
+    case "weather_api":
+      return { text: t("weather_badge"), cls: "source-badge--weather" };
+    case "leaf_diagnosis":
+      return { text: t("leaf_badge"), cls: "source-badge--leaf" };
+    case "mixed":
+      return { text: t("mixed_badge"), cls: "source-badge--mixed" };
+    default:
+      return { text: t("llm_badge"), cls: "source-badge--llm" };
+  }
+}
+
 function appendAiMessage(text, chatId, sourceType) {
-  const badge = sourceType === "knowledge_base" ? t("kb_badge") : t("llm_badge");
+  const { text: badgeText, cls: badgeCls } = badgeFor(sourceType);
 
   const msg = document.createElement("div");
   msg.className = "message ai-message";
   msg.dataset.chatId = chatId;
   msg.innerHTML = `
-    <div class="avatar">🌾</div>
+    <div class="avatar"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20 C4 11 10 4 20 4 C20 14 13 20 4 20 Z" fill="currentColor" fill-opacity="0.18" stroke="currentColor"/><path d="M4 20 C9 15 14 10 20 4"/></svg></div>
     <div class="bubble">
-      <span class="source-badge">${badge}</span>
+      <span class="source-badge ${badgeCls}">${badgeText}</span>
       <div class="ai-text">${formatAiText(text)}</div>
       <span class="timestamp">${formatTime(new Date())}</span>
       <div class="feedback-row">
@@ -487,7 +535,7 @@ function appendErrorMessage(text) {
   const msg = document.createElement("div");
   msg.className = "message ai-message";
   msg.innerHTML = `
-    <div class="avatar">🌾</div>
+    <div class="avatar"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20 C4 11 10 4 20 4 C20 14 13 20 4 20 Z" fill="currentColor" fill-opacity="0.18" stroke="currentColor"/><path d="M4 20 C9 15 14 10 20 4"/></svg></div>
     <div class="bubble">
       <p style="color:#EF4444">${escapeHtml(text)}</p>
       <span class="timestamp">${formatTime(new Date())}</span>
@@ -779,6 +827,24 @@ function weatherIconFor(code) {
 
 function weatherCardHtml(data) {
   const icon = weatherIconFor(data.weather_code);
+  // Tomorrow-forecast footer — only render when the backend actually
+  // supplied the forecast fields (some older cached rows might not).
+  // Guards on `!= null` so a legitimate 0mm or 0°C still renders.
+  let tomorrowRow = "";
+  if (data.temp_max_tomorrow_c != null && data.temp_min_tomorrow_c != null) {
+    const tempRange = t("weather_tomorrow_temp_range")
+      .replace("{min}", Math.round(data.temp_min_tomorrow_c))
+      .replace("{max}", Math.round(data.temp_max_tomorrow_c));
+    const rainBit = data.rainfall_tomorrow_mm != null
+      ? ` · ${t("weather_tomorrow_rain").replace("{mm}", data.rainfall_tomorrow_mm)}`
+      : "";
+    tomorrowRow = `
+      <div class="weather-card-tomorrow">
+        <span class="weather-tomorrow-label">${t("weather_tomorrow_label")}</span>
+        <span class="weather-tomorrow-values">${tempRange}${rainBit}</span>
+      </div>
+    `;
+  }
   return `
     <div class="weather-card" data-district="${escapeHtml(data.district.toLowerCase())}">
       <div class="weather-card-top">
@@ -791,6 +857,7 @@ function weatherCardHtml(data) {
         <div class="weather-stat-row"><span>🌧️ ${t("weather_rain_now")}</span><span>${data.rainfall_now_mm}mm</span></div>
         <div class="weather-stat-row"><span>☔ ${t("weather_rain_today")}</span><span>${data.rainfall_today_mm}mm</span></div>
       </div>
+      ${tomorrowRow}
     </div>
   `;
 }
@@ -897,22 +964,10 @@ weatherSearch.addEventListener("input", (e) => {
 });
 
 // ── Market prices dashboard ──────────────────────────────────────────────
+// Single flat table — every crop, every mandi. Search box filters
+// `lastMarketRecords` client-side, no second fetch needed.
 
-let marketCategoriesCache = null;   // [{key, label, icon, crops}, ...] from backend
-let activeMarketCategory = null;    // currently selected category key
-let lastMarketRecords = null;       // most recently rendered records array (category view)
-let allCropsCache = null;           // merged records across every category, for search mode
-let allCropsFetchPromise = null;    // in-flight fetch, so rapid keystrokes share one request
-const MARKET_REFRESH_MS = 6 * 60 * 60 * 1000; // 6h — matches backend cache
-
-function renderCategoryPills(categories) {
-  marketCategoryRow.innerHTML = categories.map(cat => `
-    <button class="market-category-pill ${cat.key === activeMarketCategory ? "active" : ""}" data-category="${escapeHtml(cat.key)}">
-      <span class="market-category-pill-icon">${cat.icon}</span>
-      <span>${escapeHtml(categoryLabel(cat.key, cat.label))}</span>
-    </button>
-  `).join("");
-}
+let lastMarketRecords = null;       // most recently rendered records array (unfiltered)
 
 function renderMarketLoading() {
   marketTableWrap.innerHTML = `<div class="market-table-loading">${t("market_loading")}</div>`;
@@ -970,51 +1025,29 @@ function marketTableHtml(records) {
   `;
 }
 
-function renderMarketTable(records) {
-  lastMarketRecords = records;
+// Stable hierarchical sort: Commodity → Variety → District. Done once
+// per render (cheap for ~400 rows) using localeCompare so Gujarati script
+// and English both order naturally without ad-hoc collation rules.
+function sortMarketRecords(records) {
+  const norm = v => (v || "").toString();
+  return records.slice().sort((a, b) =>
+    norm(a.commodity).localeCompare(norm(b.commodity)) ||
+    norm(a.variety).localeCompare(norm(b.variety)) ||
+    norm(a.district).localeCompare(norm(b.district))
+  );
+}
 
-  if (!records || records.length === 0) {
+function renderMarketTable(records) {
+  const all = sortMarketRecords(records || []);
+
+  if (all.length === 0) {
     marketTableWrap.innerHTML = `<div class="market-table-empty">${t("market_no_results")}</div>`;
     marketRecordCount.textContent = "";
     return;
   }
 
-  marketTableWrap.innerHTML = marketTableHtml(records);
-  marketRecordCount.textContent = t("market_records_count").replace("{count}", records.length);
-}
-
-// ── Cross-category search ("common search for all crops") ──────────────
-// Pills still do a single-category fetch (fast, focused). Typing in the
-// search box switches into a separate mode that fetches every category in
-// parallel once, merges the records, and searches across all of them —
-// completely independent of whichever pill happens to be selected.
-
-async function ensureAllCropsLoaded() {
-  if (allCropsCache) return allCropsCache;
-  if (allCropsFetchPromise) return allCropsFetchPromise;
-
-  if (!marketCategoriesCache) {
-    await fetchMarketCategories();
-  }
-  // Exclude "all" — its endpoint already returns the union of every other
-  // category (plus a generic discovery query), so including it here would
-  // duplicate every record once via its own category and once via "all".
-  const categories = (marketCategoriesCache || []).filter(cat => cat.key !== "all");
-
-  allCropsFetchPromise = Promise.all(
-    categories.map(cat =>
-      fetch(`${API_BASE}/market-price/category/${encodeURIComponent(cat.key)}`)
-        .then(res => (res.ok ? res.json() : { records: [] }))
-        .catch(() => ({ records: [] }))
-    )
-  ).then(results => {
-    const merged = results.flatMap(r => r.records || []);
-    allCropsCache = merged;
-    allCropsFetchPromise = null;
-    return merged;
-  });
-
-  return allCropsFetchPromise;
+  marketTableWrap.innerHTML = marketTableHtml(all);
+  marketRecordCount.textContent = t("market_records_count").replace("{count}", all.length);
 }
 
 function matchesQuery(rec, query) {
@@ -1026,74 +1059,35 @@ function matchesQuery(rec, query) {
   );
 }
 
-async function runMarketSearch(query) {
+function applyMarketSearch(query) {
+  const all = lastMarketRecords || [];
+  if (!query) {
+    renderMarketTable(all);
+    return;
+  }
+  renderMarketTable(all.filter(rec => matchesQuery(rec, query)));
+}
+
+async function fetchAllMarketPrices() {
   renderMarketLoading();
   try {
-    const all = await ensureAllCropsLoaded();
-    const matches = all.filter(rec => matchesQuery(rec, query));
-    renderMarketTable(matches);
+    const res = await fetch(`${API_BASE}/market-price/all`);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const data = await res.json();
+    lastMarketRecords = data.records || [];
+    const q = (marketSearch && marketSearch.value.trim().toLowerCase()) || "";
+    applyMarketSearch(q);
   } catch (err) {
-    console.error("Market search error:", err);
+    console.error("Market fetch error:", err);
     renderMarketError();
   }
 }
-
-function exitSearchMode() {
-  // Restore whatever the active category pill was showing before search.
-  if (activeMarketCategory) {
-    fetchMarketCategory(activeMarketCategory);
-  } else {
-    renderMarketEmptyState();
-  }
-}
-
-async function fetchMarketCategories() {
-  try {
-    const res = await fetch(`${API_BASE}/market-price/categories`);
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const data = await res.json();
-    marketCategoriesCache = data.categories || [];
-    renderCategoryPills(marketCategoriesCache);
-  } catch (err) {
-    console.error("Market categories error:", err);
-    marketCategoryRow.innerHTML = "";
-  }
-}
-
-async function fetchMarketCategory(categoryKey) {
-  activeMarketCategory = categoryKey;
-  if (marketCategoriesCache) renderCategoryPills(marketCategoriesCache);
-  renderMarketLoading();
-
-  try {
-    const res = await fetch(`${API_BASE}/market-price/category/${encodeURIComponent(categoryKey)}`);
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const data = await res.json();
-    renderMarketTable(data.records || []);
-  } catch (err) {
-    console.error("Market category fetch error:", err);
-    renderMarketError();
-  }
-}
-
-marketCategoryRow.addEventListener("click", (e) => {
-  const pill = e.target.closest(".market-category-pill");
-  if (!pill) return;
-  if (marketSearch) marketSearch.value = ""; // selecting a pill always exits search mode
-  fetchMarketCategory(pill.dataset.category);
-});
 
 let marketSearchDebounce = null;
 marketSearch.addEventListener("input", (e) => {
   const query = e.target.value.trim().toLowerCase();
   clearTimeout(marketSearchDebounce);
-
-  if (!query) {
-    exitSearchMode();
-    return;
-  }
-
-  marketSearchDebounce = setTimeout(() => runMarketSearch(query), 220);
+  marketSearchDebounce = setTimeout(() => applyMarketSearch(query), 120);
 });
 
 function openMarketDashboard() {
@@ -1101,12 +1095,7 @@ function openMarketDashboard() {
   marketRefreshNote.textContent = t("market_refresh_note");
   marketOverlay.classList.add("open");
   if (marketSearch) marketSearch.value = "";
-
-  if (!marketCategoriesCache) fetchMarketCategories();
-  else renderCategoryPills(marketCategoriesCache);
-
-  if (lastMarketRecords && activeMarketCategory) renderMarketTable(lastMarketRecords);
-  else renderMarketEmptyState();
+  fetchAllMarketPrices();
 }
 
 function closeMarketDashboard() {
@@ -1141,6 +1130,199 @@ function showChat(prefillQuery) {
 }
 
 openChatBtn.addEventListener("click", () => showChat());
+
+// Diagnose home card: routes the user to the chat screen and immediately
+// pops the OS file picker. Same backend flow as the chat-sidebar Upload
+// button — no duplicate plumbing, the home card is just a more findable
+// entry point for the feature.
+const openDiagnoseCardBtn = document.getElementById("openDiagnoseCardBtn");
+if (openDiagnoseCardBtn) {
+  openDiagnoseCardBtn.addEventListener("click", () => {
+    startNewChat();
+    showChat();
+    // Slight delay so the chat screen transition completes before the
+    // native picker steals focus — otherwise some browsers swallow the click.
+    setTimeout(() => diagnoseFileInput.click(), 180);
+  });
+}
+
+// Schemes home card → open schemes modal.
+const openSchemesCardBtn = document.getElementById("openSchemesCardBtn");
+const schemesOverlay = document.getElementById("schemesOverlay");
+const schemesCloseBtn = document.getElementById("schemesCloseBtn");
+const schemesList = document.getElementById("schemesList");
+
+// Static seed data. Swap with /schemes endpoint when backend lands; the
+// modal render code reads from this array regardless of source.
+// `domain` keys the left-stripe colour: income | insurance | credit |
+// soil | state.
+const SCHEMES = [
+  {
+    domain: "income",
+    title: "PM-KISAN",
+    title_gu: "PM-KISAN",
+    tag: "Income support",
+    tag_gu: "આવક સહાય",
+    desc: "₹6,000/year direct cash transfer to small & marginal farmer families, in three ₹2,000 instalments.",
+    desc_gu: "નાના અને સીમાંત ખેડૂત પરિવારોને દર વર્ષે ₹6,000 સીધી રોકડ સહાય, ત્રણ ₹2,000ના હપતામાં.",
+    link: "https://pmkisan.gov.in",
+    // Pre-filled question covers the six things every farmer actually asks
+    // about a scheme: am I eligible, how much, when paid, how to apply,
+    // documents, and why applications get rejected.
+    question: "Explain PM-KISAN for a Gujarat farmer: who is eligible and who is excluded, exactly how much money I get and when each instalment is paid, the step-by-step process to register (both online and at the CSC), the documents I need, how to check my payment status, and the most common reasons applications get rejected or instalments are stopped.",
+    question_gu: "ગુજરાતના ખેડૂત માટે PM-KISAN સમજાવો: કોણ પાત્ર છે અને કોણ બાકાત છે, મને કેટલા પૈસા મળે છે અને દરેક હપતો ક્યારે ચૂકવાય છે, ઑનલાઇન અને CSC બંને રીતે રજિસ્ટ્રેશનની પ્રક્રિયા, જરૂરી દસ્તાવેજો, મારી ચુકવણીની સ્થિતિ કેવી રીતે તપાસવી, અને અરજી નકારવા અથવા હપતા બંધ થવાના સામાન્ય કારણો.",
+  },
+  {
+    domain: "insurance",
+    title: "Pradhan Mantri Fasal Bima Yojana",
+    title_gu: "પ્રધાનમંત્રી ફસલ બીમા યોજના",
+    tag: "Crop insurance",
+    tag_gu: "પાક વીમો",
+    desc: "Premium-subsidised cover against drought, flood, pest, hail and post-harvest losses for notified crops.",
+    desc_gu: "દુષ્કાળ, પૂર, જીવાત, કરા અને કાપણી પછીના નુકસાન સામે પ્રીમિયમ-સબસિડીવાળું વીમા કવર.",
+    link: "https://pmfby.gov.in",
+    question: "Explain PMFBY for a Gujarat farmer: which crops and risks are covered, what premium I pay as a percentage of sum insured for kharif and rabi crops, the cut-off dates for enrolment, how claims are calculated and paid, the documents and process to file a claim after a crop loss, and the main reasons claims get rejected or delayed.",
+    question_gu: "ગુજરાતના ખેડૂત માટે PMFBY સમજાવો: કયા પાક અને જોખમો આવરી લેવાય છે, ખરીફ અને રવિ પાક માટે વીમા રકમના ટકા તરીકે મારે કેટલું પ્રીમિયમ ભરવું પડે, નોંધણીની છેલ્લી તારીખો, દાવાની ગણતરી અને ચુકવણી કેવી રીતે થાય છે, પાક નુકસાન પછી દાવો કરવાની પ્રક્રિયા અને દસ્તાવેજો, અને દાવા નકારવા કે વિલંબના મુખ્ય કારણો.",
+  },
+  {
+    domain: "credit",
+    title: "Kisan Credit Card (KCC)",
+    title_gu: "કિસાન ક્રેડિટ કાર્ડ (KCC)",
+    tag: "Credit",
+    tag_gu: "ધિરાણ",
+    desc: "Short-term credit up to ₹3 lakh for crop inputs, at 7% interest with prompt-repayment reduction to 4%.",
+    desc_gu: "પાક ઇનપુટ્સ માટે ₹3 લાખ સુધીની ટૂંકા-ગાળાની લોન, 7% વ્યાજ પર — સમયસર ચુકવણીમાં ઘટાડીને 4%.",
+    link: "https://www.myscheme.gov.in/schemes/kcc",
+    question: "Explain Kisan Credit Card (KCC) for a Gujarat farmer: who qualifies, the maximum credit I can get based on my land size and crops, the effective interest rate after the prompt-repayment subvention, what I can use the credit for (inputs, livestock, allied activities), the documents and process to apply through my bank, how renewal works, and what happens if I miss a repayment.",
+    question_gu: "ગુજરાતના ખેડૂત માટે કિસાન ક્રેડિટ કાર્ડ (KCC) સમજાવો: કોણ પાત્ર છે, મારી જમીન અને પાક પ્રમાણે મહત્તમ કેટલી લોન મળે, સમયસર-ચુકવણી સબવેન્શન પછી અસરકારક વ્યાજ દર, હું તેનો ઉપયોગ શેના માટે કરી શકું (ઇનપુટ્સ, પશુપાલન, સંબંધિત પ્રવૃત્તિ), મારી બેન્ક દ્વારા અરજીની પ્રક્રિયા અને દસ્તાવેજો, રિન્યુઅલ કેવી રીતે થાય, અને હપતો ચૂકી જાઉં તો શું થાય.",
+  },
+  {
+    domain: "soil",
+    title: "Soil Health Card",
+    title_gu: "સોઇલ હેલ્થ કાર્ડ",
+    tag: "Soil testing",
+    tag_gu: "માટી પરીક્ષણ",
+    desc: "Free lab analysis of your field's soil with nutrient-specific fertilizer recommendations, valid for 3 years.",
+    desc_gu: "તમારા ખેતરની માટીનું મફત લેબ વિશ્લેષણ — પોષક-તત્ત્વ આધારિત ખાતર સૂચનો સાથે, 3 વર્ષ માટે માન્ય.",
+    link: "https://soilhealth.dac.gov.in",
+    question: "Explain the Soil Health Card scheme for a Gujarat farmer: how to get my soil tested (the sampling procedure, where to submit samples, cost if any), what the card actually tells me about my soil's nutrients and pH, how to read the fertilizer recommendations, how often I should retest, and how I can use the report to lower my fertilizer cost without hurting yield.",
+    question_gu: "ગુજરાતના ખેડૂત માટે સોઇલ હેલ્થ કાર્ડ યોજના સમજાવો: માટીનું પરીક્ષણ કેવી રીતે કરાવવું (નમૂના લેવાની પદ્ધતિ, ક્યાં સબમિટ કરવા, કિંમત), કાર્ડ ખરેખર મને માટીના પોષક તત્ત્વો અને pH વિશે શું જણાવે છે, ખાતરની ભલામણો કેવી રીતે વાંચવી, ફરી ક્યારે ટેસ્ટ કરાવવો, અને ઉત્પાદન ઘટાડ્યા વગર ખાતર ખર્ચ ઘટાડવા માટે રિપોર્ટનો ઉપયોગ કેવી રીતે કરવો.",
+  },
+  {
+    domain: "state",
+    title: "iKhedut Portal (Gujarat)",
+    title_gu: "આઇ-ખેડૂત પોર્ટલ (ગુજરાત)",
+    tag: "State subsidies",
+    tag_gu: "રાજ્ય સબસિડી",
+    desc: "Single-window application for Gujarat-specific subsidies on seeds, equipment, irrigation and horticulture.",
+    desc_gu: "બીજ, સાધનો, સિંચાઈ અને બાગાયત માટેની ગુજરાત-વિશિષ્ટ સબસિડી માટેનું એક-બારી અરજી પ્લેટફોર્મ.",
+    link: "https://ikhedut.gujarat.gov.in",
+    question: "Explain the iKhedut portal for a Gujarat farmer: which categories of subsidies are available (seeds, drip/sprinkler irrigation, farm equipment, horticulture, livestock), how the application window and selection process works, the documents I need to upload, how subsidies are disbursed, how to track my application status, and tips to improve my chances of approval given limited annual quotas.",
+    question_gu: "ગુજરાતના ખેડૂત માટે આઇ-ખેડૂત પોર્ટલ સમજાવો: કઈ સબસિડી શ્રેણીઓ ઉપલબ્ધ છે (બીજ, ડ્રિપ/સ્પ્રિંકલર સિંચાઈ, ખેત-સાધનો, બાગાયત, પશુપાલન), અરજી વિન્ડો અને પસંદગી પ્રક્રિયા કેવી રીતે કામ કરે છે, મારે કયા દસ્તાવેજો અપલોડ કરવા, સબસિડી કેવી રીતે વિતરિત થાય, મારી અરજીની સ્થિતિ કેવી રીતે ટ્રૅક કરવી, અને મર્યાદિત વાર્ષિક ક્વોટા જોતાં મંજૂરીની તકો વધારવાની ટિપ્સ.",
+  },
+  {
+    domain: "income",
+    title: "PM-KMY (Pension)",
+    title_gu: "PM-KMY (પેન્શન)",
+    tag: "Pension",
+    tag_gu: "પેન્શન",
+    desc: "₹3,000/month pension after age 60 for small & marginal farmers. ₹55–200/month contribution depending on entry age.",
+    desc_gu: "નાના અને સીમાંત ખેડૂતો માટે 60 વર્ષ પછી દર મહિને ₹3,000 પેન્શન. પ્રવેશ ઉંમર પ્રમાણે ₹55–200/મહિને યોગદાન.",
+    link: "https://maandhan.in/pmkmy",
+    question: "Explain PM-KMY (Kisan Maandhan Yojana) for a Gujarat farmer: who is eligible, the exact monthly contribution required at different entry ages between 18 and 40, how the government's matching contribution works, when and how the ₹3,000/month pension is paid after age 60, what happens to the corpus if I die or want to exit early, and how to enrol at my nearest CSC.",
+    question_gu: "ગુજરાતના ખેડૂત માટે PM-KMY (કિસાન માનધન યોજના) સમજાવો: કોણ પાત્ર છે, 18 થી 40 વચ્ચે અલગ-અલગ પ્રવેશ ઉંમરે જરૂરી ચોક્કસ માસિક યોગદાન, સરકારનું મેચિંગ યોગદાન કેવી રીતે કામ કરે છે, 60 વર્ષ પછી ₹3,000/મહિને પેન્શન ક્યારે અને કેવી રીતે ચૂકવાય છે, મારા મૃત્યુ કે વહેલા બહાર નીકળવા પર કોર્પસનું શું થાય છે, અને નજીકના CSC પર નોંધણી કેવી રીતે કરવી.",
+  },
+];
+
+function renderSchemes() {
+  if (!schemesList) return;
+  const gu = language === "gu";
+  const portalLabel = t("scheme_action_portal");
+  const askLabel = t("scheme_action_ask");
+  schemesList.innerHTML = SCHEMES.map((s, i) => {
+    const title = gu ? s.title_gu : s.title;
+    const tag = gu ? s.tag_gu : s.tag;
+    const desc = gu ? s.desc_gu : s.desc;
+    return `
+    <div class="scheme-card" data-domain="${escapeHtml(s.domain)}" data-scheme-i="${i}">
+      <span class="scheme-stripe" aria-hidden="true"></span>
+      <div class="scheme-body">
+        <div class="scheme-title">
+          ${escapeHtml(title)}
+          <span class="scheme-tag">${escapeHtml(tag)}</span>
+        </div>
+        <div class="scheme-desc">${escapeHtml(desc)}</div>
+        <div class="scheme-actions">
+          <a class="scheme-action scheme-action-portal"
+             href="${escapeHtml(s.link)}" target="_blank" rel="noopener noreferrer">
+            ${escapeHtml(portalLabel)}
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M7 17 L17 7"/><path d="M8 7 H17 V16"/>
+            </svg>
+          </a>
+          <button class="scheme-action scheme-action-ask" type="button" data-ask-i="${i}">
+            ${escapeHtml(askLabel)}
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12 H19"/><path d="M13 6 L19 12 L13 18"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  `;
+  }).join("");
+
+  // Single delegated handler for all "Ask AI" buttons — closes the modal,
+  // navigates to chat, pre-fills the input with the comprehensive question,
+  // focuses so the user can edit (add their district, plot size, etc.)
+  // before sending. We deliberately don't auto-send: the question is a
+  // strong default, but every farmer has slightly different context worth
+  // adding.
+  schemesList.querySelectorAll(".scheme-action-ask").forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      const idx = Number(btn.dataset.askI);
+      const scheme = SCHEMES[idx];
+      if (!scheme) return;
+      closeSchemesModal();
+      askAboutScheme(scheme);
+    });
+  });
+}
+
+// Starts a fresh chat session and auto-sends the scheme's pre-filled
+// question. The user lands in the chat screen with their question
+// already posted and the AI reply streaming in — zero extra clicks
+// after pressing "Ask AI about this".
+function askAboutScheme(scheme) {
+  startNewChat();           // fresh session_id, wiped welcome view
+  const q = language === "gu" ? scheme.question_gu : scheme.question;
+  showChat(q);              // navigates to chat AND auto-sends the prefill
+}
+
+function openSchemesModal() {
+  if (!schemesOverlay) return;
+  renderSchemes();
+  schemesOverlay.classList.add("open");
+}
+function closeSchemesModal() {
+  if (!schemesOverlay) return;
+  schemesOverlay.classList.remove("open");
+}
+
+if (openSchemesCardBtn) openSchemesCardBtn.addEventListener("click", openSchemesModal);
+if (schemesCloseBtn) schemesCloseBtn.addEventListener("click", closeSchemesModal);
+if (schemesOverlay) {
+  schemesOverlay.addEventListener("click", (e) => {
+    if (e.target === schemesOverlay) closeSchemesModal();
+  });
+}
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && schemesOverlay && schemesOverlay.classList.contains("open")) {
+    closeSchemesModal();
+  }
+});
 homeBackBtn.addEventListener("click", showHome);
 
 // ── Home "ask a question" box — types straight into the card and the

@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,700&family=Inter+Tight:wght@400;500;600;700&family=Noto+Sans+Gujarati:wght@400;500;700&family=Noto+Serif+Gujarati:wght@500;700&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -128,17 +128,23 @@
   <main class="home-screen" id="homeScreen">
     <div class="home-inner">
       <h1 class="home-wordmark" aria-label="Farmer AI">
-        <span class="home-wordmark-text">Farmer</span><span class="home-wordmark-wheat">🌾</span><span
-          class="home-wordmark-text">AI</span>
+        <span class="home-wordmark-text">Farmer&nbsp;AI</span>
       </h1>
 
-      <h1 class="home-title" id="homeTitle">What do you need today?</h1>
+      <h1 class="home-title" id="homeTitle">Your fields. Your language. Real answers.</h1>
 
+      <!-- Hero: chat card with input — the primary action. -->
       <div class="home-cards">
-        <div class="home-card home-card-chat" id="openChatBtn">
+        <div class="home-card home-card-chat" id="openChatBtn" style="--stagger: 0;">
           <div class="home-card-glow"></div>
           <div class="home-card-top">
-            <div class="home-card-icon">🌾</div>
+            <div class="home-card-icon">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.7"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 20 C4 11 10 4 20 4 C20 14 13 20 4 20 Z" fill="currentColor" fill-opacity="0.18"/>
+                <path d="M4 20 C9 15 14 10 20 4"/>
+              </svg>
+            </div>
             <div class="home-card-live-badge">
               <span class="home-card-live-dot"></span>
               <span id="chatCardLiveLabel">Online</span>
@@ -160,37 +166,109 @@
           </div>
         </div>
 
-        <button class="home-card home-card-weather" id="openWeatherCardBtn">
-          <div class="home-card-glow"></div>
-          <div class="home-card-top">
-            <div class="home-card-icon">⛅</div>
-            <div class="home-card-live-badge">
-              <span class="home-card-live-dot"></span>
-              <span id="weatherCardLiveLabel">33 districts</span>
+        <!-- Action shelf: 4 secondary tools, equal weight, dealt in sequence. -->
+        <div class="home-action-shelf" role="list">
+          <button class="home-card home-card-weather" id="openWeatherCardBtn" style="--stagger: 1;" role="listitem">
+            <div class="home-card-glow"></div>
+            <div class="home-card-top">
+              <div class="home-card-icon">⛅</div>
+              <div class="home-card-live-badge">
+                <span class="home-card-live-dot"></span>
+                <span id="weatherCardLiveLabel">33 districts</span>
+              </div>
             </div>
-          </div>
-          <h2 class="home-card-title" id="weatherCardTitle">Weather</h2>
-          <p class="home-card-desc" id="weatherCardDesc">Live temperature, humidity and rainfall for every district.</p>
-          <span class="home-card-cta" id="weatherCardCta">View dashboard →</span>
-        </button>
+            <h2 class="home-card-title" id="weatherCardTitle">Weather</h2>
+            <p class="home-card-desc" id="weatherCardDesc">Live conditions for every district.</p>
+            <span class="home-card-cta" id="weatherCardCta">View dashboard →</span>
+          </button>
 
-        <button class="home-card home-card-market" id="openMarketCardBtn">
-          <div class="home-card-glow"></div>
-          <div class="home-card-top">
-            <div class="home-card-icon">🌿</div>
-            <div class="home-card-live-badge">
-              <span class="home-card-live-dot"></span>
-              <span id="marketCardLiveLabel">Live mandi rates</span>
+          <button class="home-card home-card-market" id="openMarketCardBtn" style="--stagger: 2;" role="listitem">
+            <div class="home-card-glow"></div>
+            <div class="home-card-top">
+              <div class="home-card-icon">🌿</div>
+              <div class="home-card-live-badge">
+                <span class="home-card-live-dot"></span>
+                <span id="marketCardLiveLabel">Auto-updates every 30 min</span>
+              </div>
             </div>
-          </div>
-          <h2 class="home-card-title" id="marketCardTitle">Crop Market Prices</h2>
-          <p class="home-card-desc" id="marketCardDesc">Live mandi prices for Gujarat's major crops, by category.</p>
-          <span class="home-card-cta" id="marketCardCta">Check prices →</span>
-        </button>
+            <h2 class="home-card-title" id="marketCardTitle">Mandi Prices</h2>
+            <p class="home-card-desc" id="marketCardDesc">Live rates across Gujarat APMCs.</p>
+            <span class="home-card-cta" id="marketCardCta">Check prices →</span>
+          </button>
+
+          <button class="home-card home-card-diagnose" id="openDiagnoseCardBtn" style="--stagger: 3;" role="listitem">
+            <div class="home-card-glow"></div>
+            <div class="home-card-top">
+              <div class="home-card-icon">
+                <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M4 20 C4 11 10 4 20 4 C20 14 13 20 4 20 Z" fill="currentColor" fill-opacity="0.22"/>
+                  <circle cx="12" cy="12" r="2.2" fill="currentColor" fill-opacity="0.9"/>
+                </svg>
+              </div>
+              <div class="home-card-live-badge">
+                <span class="home-card-live-dot"></span>
+                <span id="diagnoseCardLiveLabel">AI vision</span>
+              </div>
+            </div>
+            <h2 class="home-card-title" id="homeDiagnoseTitle">Diagnose a Leaf</h2>
+            <p class="home-card-desc" id="homeDiagnoseDesc">Snap a photo, get the disease + remedy.</p>
+            <span class="home-card-cta" id="homeDiagnoseCta">Scan a leaf →</span>
+          </button>
+
+          <button class="home-card home-card-schemes" id="openSchemesCardBtn" style="--stagger: 4;" role="listitem">
+            <div class="home-card-glow"></div>
+            <div class="home-card-top">
+              <div class="home-card-icon">
+                <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M12 2 L20 6 V12 C20 16.5 16.5 20.5 12 22 C7.5 20.5 4 16.5 4 12 V6 Z"
+                    fill="currentColor" fill-opacity="0.18"/>
+                  <path d="M12 2 L20 6 V12 C20 16.5 16.5 20.5 12 22 C7.5 20.5 4 16.5 4 12 V6 Z"/>
+                  <path d="M9 12 l2.2 2.2 L15 10.5"/>
+                </svg>
+              </div>
+              <div class="home-card-live-badge">
+                <span class="home-card-live-dot"></span>
+                <span id="schemesCardLiveLabel">Government</span>
+              </div>
+            </div>
+            <h2 class="home-card-title" id="schemesCardTitle">Scheme Finder</h2>
+            <p class="home-card-desc" id="schemesCardDesc">Subsidies & schemes you can apply to.</p>
+            <span class="home-card-cta" id="schemesCardCta">Browse schemes →</span>
+          </button>
+        </div>
       </div>
 
     </div>
   </main>
+
+  <!-- ── Schemes Finder modal ── -->
+  <div class="schemes-overlay" id="schemesOverlay" role="dialog" aria-modal="true"
+    aria-labelledby="schemesModalTitle">
+    <div class="schemes-modal">
+      <div class="schemes-modal-header">
+        <div>
+          <h3 class="schemes-modal-title" id="schemesModalTitle">Government schemes for Gujarat farmers</h3>
+          <p class="schemes-modal-sub" id="schemesModalSub">Tap any scheme to read details. Eligibility checker coming
+            soon.</p>
+        </div>
+        <button class="schemes-close-btn" id="schemesCloseBtn" title="Close" aria-label="Close">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <div class="schemes-list" id="schemesList">
+        <!-- Cards injected by app.js -->
+      </div>
+      <div class="schemes-modal-footer" id="schemesModalFooter">
+        Last reviewed: June 2026 · Links go to official portals
+      </div>
+    </div>
+  </div>
 
   <!-- ── Chat screen ── -->
   <main class="chat-screen" id="chatScreen">
@@ -211,7 +289,7 @@
 
       <!-- Welcome message -->
       <div class="message ai-message" id="welcomeMsg">
-        <div class="avatar">🌾</div>
+        <div class="avatar"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20 C4 11 10 4 20 4 C20 14 13 20 4 20 Z" fill="currentColor" fill-opacity="0.18" stroke="currentColor"/><path d="M4 20 C9 15 14 10 20 4"/></svg></div>
         <div class="bubble">
           <p id="welcomeText">Hello! I'm Farmer AI, your agricultural assistant for Gujarat. Ask me anything about
             crops, weather, farming practices, or government schemes.</p>
@@ -320,10 +398,6 @@
             </svg>
           </button>
         </div>
-      </div>
-
-      <div class="market-category-row" id="marketCategoryRow">
-        <!-- Category pills injected by app.js -->
       </div>
 
       <div class="market-table-wrap" id="marketTableWrap">
