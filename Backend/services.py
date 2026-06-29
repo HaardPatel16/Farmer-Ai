@@ -17,7 +17,7 @@ from sqlalchemy import func
 from sqlalchemy.orm import Session
 
 from config import GROQ_API_KEY
-from database import KnowledgeChunk, WeatherCache, MarketPriceSnapshot
+from database import KnowledgeChunk, WeatherCache, MarketPriceSnapshot, utcnow_naive
 
 # --- Groq client setup ---
 
@@ -274,10 +274,14 @@ def is_farming_question(query: str) -> bool:
     q_lower = query.lower()
 
     # English greetings → still go to Groq for a natural intro response.
+    # We accept exact matches and prefix matches only ("hi there", "hello!")
+    # — the previous version also did a bare `" " + g + " " in text` check
+    # which substring-matched anywhere in the query and let arbitrary
+    # non-farming text through to Groq just because it contained " hi ".
     q_stripped = q_lower.strip().rstrip("?.!,")
     if q_stripped in _GREETING_PATTERNS:
         return True
-    if any(q_stripped.startswith(g + " ") or g + " " in q_stripped for g in _GREETING_PATTERNS):
+    if any(q_stripped.startswith(g + " ") for g in _GREETING_PATTERNS):
         return True
 
     # English farming vocabulary match.
@@ -313,16 +317,16 @@ def offtopic_refusal(language: str = "en") -> str:
 STOPWORDS_QUERY = {
     "tell", "all", "information", "about", "gujarat", "what", "how",
     "the", "and", "for", "are", "with", "this", "that", "from", "have",
-    "does", "can", "you", "give", "please", "know", "need", "want",
+    "does", "can", "you", "give", "please", "know", "need", "want", "wants",
     "is", "in", "of", "to", "it", "on", "at", "by", "or", "be", "as",
     "me", "my", "your", "yours", "i", "we", "us", "our", "they", "them",
     "their", "there", "here", "when", "where", "which", "who", "whom",
     "why", "will", "would", "could", "should", "shall", "may", "might",
     "must", "do", "did", "done", "had", "has", "but", "not", "no", "yes",
     "some", "any", "more", "most", "much", "many", "few", "good", "best",
-    "better", "good", "also", "just", "like", "get", "got", "make",
+    "better", "also", "just", "like", "get", "got", "make",
     "made", "see", "look", "looking", "find", "explain", "describe",
-    "list", "show", "say", "said", "going", "go", "want", "wants",
+    "list", "show", "say", "said", "going", "go",
 }
 
 # Generic English words that describe document STRUCTURE rather than
@@ -941,7 +945,7 @@ def get_weather(db: Session, district: str) -> dict:
         .first()
     )
 
-    if cached and cached.fetched_at > datetime.utcnow() - timedelta(minutes=WEATHER_CACHE_MINUTES):
+    if cached and cached.fetched_at > utcnow_naive() - timedelta(minutes=WEATHER_CACHE_MINUTES):
         data = json.loads(cached.data_json)
         # Guard against stale cache rows saved before rainfall fields existed:
         # if any expected key is missing, treat the cache as invalid and
@@ -998,7 +1002,7 @@ def get_weather(db: Session, district: str) -> dict:
     # Same retention as the batch path: anything older than the cache
     # TTL is dead weight, so prune in the same commit as the insert.
     db.query(WeatherCache).filter(
-        WeatherCache.fetched_at < datetime.utcnow() - timedelta(minutes=WEATHER_CACHE_MINUTES)
+        WeatherCache.fetched_at < utcnow_naive() - timedelta(minutes=WEATHER_CACHE_MINUTES)
     ).delete(synchronize_session=False)
     db.commit()
 
@@ -1066,7 +1070,7 @@ async def get_all_weather_concurrent(db: Session) -> list[dict]:
       3. Sync: write new cache rows for the successful fetches and commit
          once at the end (one round-trip instead of 33).
     """
-    cutoff = datetime.utcnow() - timedelta(minutes=WEATHER_CACHE_MINUTES)
+    cutoff = utcnow_naive() - timedelta(minutes=WEATHER_CACHE_MINUTES)
 
     # --- Phase 1: read existing cache rows in a single query ---
     # Pull the latest row per district by ordering newest-first then keeping
@@ -1149,8 +1153,12 @@ MARKET_REFRESH_MINUTES = 30
 # inside a fresh 30-min window doesn't immediately trigger another fetch.
 _last_market_refresh_at: datetime | None = None
 # True while a refresh is in flight (background or lazy). Stops endpoint
-# handlers from queuing a second refresh on top of the first.
+# handlers from queuing a second refresh on top of the first. Mutated only
+# under _market_refresh_lock so the background poller and the lazy
+# fallback thread can't both pass the "is a refresh running?" check at the
+# same moment and double-fetch.
 _market_refresh_in_progress: bool = False
+_market_refresh_lock = threading.Lock()
 
 # Categories shown as filter pills on the frontend, with the major Gujarat
 # crops in each — used to power a "browse by category" market price screen
@@ -1399,11 +1407,15 @@ async def refresh_market_snapshots_async(db: Session, api_key: str) -> int:
     if not api_key:
         print("[market/refresh] skipped: MARKET_API_KEY not configured")
         return 0
-    if _market_refresh_in_progress:
-        # A previous refresh is still running — don't pile up.
-        return 0
 
-    _market_refresh_in_progress = True
+    # Atomic check-and-set under the lock so two concurrent callers
+    # (background poller + lazy fallback thread) can't both observe
+    # in_progress=False and race into double-fetching.
+    with _market_refresh_lock:
+        if _market_refresh_in_progress:
+            return 0
+        _market_refresh_in_progress = True
+
     try:
         # Build the request list: one per crop in every category, plus a
         # final generic discovery call to catch anything not in our lists.
@@ -1435,18 +1447,12 @@ async def refresh_market_snapshots_async(db: Session, api_key: str) -> int:
                 collected.append(rec)
 
         inserted = _store_records(db, collected)
-        _last_market_refresh_at = datetime.utcnow()
+        _last_market_refresh_at = utcnow_naive()
         print(f"[market/refresh] fetched {len(collected)} records, inserted {inserted} new rows")
         return inserted
     finally:
-        _market_refresh_in_progress = False
-
-
-def refresh_market_snapshots(db: Session, api_key: str) -> int:
-    """Sync wrapper used by the lazy fallback inside request handlers and
-    by anything that wants a blocking refresh. The background poller in
-    main.py uses the async variant directly."""
-    return asyncio.run(refresh_market_snapshots_async(db, api_key))
+        with _market_refresh_lock:
+            _market_refresh_in_progress = False
 
 
 def _refresh_is_stale() -> bool:
@@ -1455,7 +1461,7 @@ def _refresh_is_stale() -> bool:
     behind (cold start, or it errored)."""
     if _last_market_refresh_at is None:
         return True
-    return _last_market_refresh_at < datetime.utcnow() - timedelta(minutes=MARKET_REFRESH_MINUTES)
+    return _last_market_refresh_at < utcnow_naive() - timedelta(minutes=MARKET_REFRESH_MINUTES)
 
 
 def _seed_last_refresh_from_db(db: Session) -> None:
@@ -1482,6 +1488,10 @@ def ensure_fresh_market_data(db: Session, api_key: str) -> None:
     snapshot rows already populated by the startup refresh; if for some
     reason none exist yet, the response is just empty and the next
     request (after the background refresh lands) gets the data."""
+    # Cheap pre-check first (no lock). The authoritative in_progress
+    # guard is inside refresh_market_snapshots_async itself, which holds
+    # the lock — this short-circuit just avoids spawning a thread when
+    # we already know there's nothing to do.
     if not _refresh_is_stale() or _market_refresh_in_progress:
         return
 

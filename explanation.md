@@ -181,8 +181,16 @@ At most one `snapshot_date` value exists at any moment: today. The first refresh
 multipart upload (image) ──► size guard (8 MB)
                               │
                               ▼
-                       predict_top_k(image_bytes, k)
-                              │  ← ConvNeXt-Small, 78 classes, CPU forward pass
+                       predict_top_k(image_bytes, k, remove_bg=True)
+                              │
+                              │  ← rembg (U²-Net) strips the background and
+                              │    composites the leaf onto a white canvas,
+                              │    so the classifier doesn't waste capacity
+                              │    on soil / hands / desk pixels. Falls
+                              │    back to the raw image if rembg errors.
+                              ▼
+                       ConvNeXt-Small, 78 classes, CPU forward pass
+                              │
                               ▼
                        ask_groq_disease_remedy(predictions, language)
                               │
@@ -193,11 +201,20 @@ multipart upload (image) ──► size guard (8 MB)
                        {chat_id, response, predictions, …}
 ```
 
+**Background removal** (`ml_model._remove_background`) uses
+[rembg](https://github.com/danielgatis/rembg) with the `u2net` model
+(~170 MB, auto-downloaded to `~/.u2net/` on first ever run). The session
+is warmed on server startup in a daemon thread (`_warm_bg_remover_on_startup`)
+so the first `/diagnose` request doesn't pay the download/load cost. The
+rembg call returns RGBA; we composite onto solid white before returning
+RGB so the existing ImageNet preprocess pipeline (3 channels) is
+unchanged. Send `remove_bg=false` in the form data to skip this step.
+
 The synthetic chat row exists so the History sidebar and the feedback flow still work — feedback is FK'd to `chats.id`, and a leaf diagnosis with no chat row would have nowhere to attach a thumbs-up to.
 
 The front door for this feature is now the **Diagnose a Leaf** home card. Clicking it starts a fresh chat session and pops the OS file picker. Same backend; just a more findable entry point than the old chat-sidebar Upload button.
 
-Known limit: `CLASS_NAMES` in `ml_model.py` is still placeholders (`class_0`…`class_77`). The pipeline runs end-to-end; the labels read as generic until the original training class order is filled in.
+**Class names.** `ml_model.py` no longer hardcodes the class list. It looks for `ML model/class_names.json` next to the `.pth` weights — a flat JSON array of 78 strings, in the same order ImageFolder used at training time (alphabetical by directory name, by default). If the file is missing or malformed, inference still runs end-to-end with placeholder labels (`class_0`…`class_77`) and a clear warning is logged at boot, so the pipeline is verifiable before the names file is in place.
 
 ---
 
@@ -228,13 +245,18 @@ Known limit: `CLASS_NAMES` in `ml_model.py` is still placeholders (`class_0`…`
 
 The semantic-search model (`paraphrase-multilingual-MiniLM-L12-v2`, ~120 MB) takes 2–5 min to download and embed every KB chunk on first use. Without intervention, the first user-facing `/chat` after a server restart would block for that whole window.
 
-**The fix** is a daemon thread kicked off at server boot:
+**The fix** is a daemon thread kicked off from the FastAPI `lifespan`
+context manager at server boot:
 
 ```python
-# main.py — startup hook
-threading.Thread(target=lambda: _ensure_indexed(SessionLocal()),
-                 name="embeddings-warm", daemon=True).start()
+# main.py — lifespan startup
+from embeddings import warm_index_in_background
+warm_index_in_background(SessionLocal)
 ```
+
+`warm_index_in_background` spawns the daemon thread internally (see
+`embeddings.py`) and returns immediately, so route registration isn't
+blocked by the 2-5 minute model-load + chunk-embed window.
 
 Inside `embeddings.py`:
 

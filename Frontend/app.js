@@ -598,11 +598,15 @@ async function diagnoseImage(file) {
       body: formData,
     });
 
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    if (!res.ok) {
+      const errData = await res.json().catch(() => ({}));
+      throw new Error(errData.detail || `HTTP ${res.status}`);
+    }
     const data = await res.json();
     appendAiMessage(data.response, data.chat_id, data.source_type);
   } catch (err) {
-    appendErrorMessage(t("error_chat"));
+    const msg = (err.message && !err.message.startsWith("HTTP")) ? err.message : t("error_chat");
+    appendErrorMessage(msg);
     console.error("Diagnose error:", err);
   } finally {
     setWaiting(false);

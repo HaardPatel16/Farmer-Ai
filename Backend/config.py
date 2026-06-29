@@ -35,10 +35,15 @@ if not GROQ_API_KEY:
 
 
 if __name__ == "__main__":
-    # Quick standalone check: run this file directly to confirm
-    # your .env is being read correctly, without printing secrets.
+    # Quick standalone check: confirms the .env is being read correctly
+    # without printing any secret material. The previous version dumped
+    # the first 8 chars of GROQ_API_KEY and the first 15 of DATABASE_URL,
+    # which is enough to fingerprint the key on any pasted log.
     print("DATABASE_URL loaded:", "Yes" if DATABASE_URL else "No")
     print("GROQ_API_KEY loaded:", "Yes" if GROQ_API_KEY else "No")
     print("MARKET_API_KEY loaded:", "Yes" if MARKET_API_KEY else "No")
-    print("DATABASE_URL starts with:", DATABASE_URL[:15] + "...")
-    print("GROQ_API_KEY starts with:", GROQ_API_KEY[:8] + "...")
+    if DATABASE_URL:
+        # Show only the driver portion (e.g. "postgresql"), never the
+        # host, user, password, or db name.
+        driver = DATABASE_URL.split("://", 1)[0] if "://" in DATABASE_URL else "?"
+        print("DATABASE_URL driver:", driver)

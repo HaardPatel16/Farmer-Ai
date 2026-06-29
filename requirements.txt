@@ -13,3 +13,6 @@ torchvision>=0.15.0
 pillow>=10.0.0
 python-multipart>=0.0.9
 sentence-transformers>=2.7.0
+numpy>=1.26.0
+rembg>=2.0.50
+onnxruntime>=1.16.0

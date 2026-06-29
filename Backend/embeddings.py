@@ -204,16 +204,23 @@ def semantic_search(db, query: str, top_k: int = 5, district: str | None = None)
     return [{"text": t, "similarity": s} for s, t in scored[:top_k]]
 
 
-def semantic_search_available() -> bool:
-    """Quick check: can semantic search be used at all on this install?
-    Doesn't trigger the model load — just tells you whether the import
-    would work. Useful for app startup health checks."""
-    if _model is not None:
-        return True
-    if _model_load_failed:
-        return False
+def rebuild_index(db_factory) -> None:
+    """Drop the in-memory embedding index and rebuild from the current
+    knowledge_chunks rows. Call this after re-running ingest.py so the
+    semantic-search results pick up newly-added chunks without needing a
+    server restart. Rebuild runs synchronously on the caller's thread; if
+    you want it non-blocking, wrap in a daemon thread the same way
+    warm_index_in_background does.
+    """
+    global _chunks_index, _warming, _warm_started_at, _warm_finished_at, _warm_total_chunks
+    with _load_lock:
+        _chunks_index = []
+        _warming = False
+        _warm_started_at = None
+        _warm_finished_at = None
+        _warm_total_chunks = 0
+    db = db_factory()
     try:
-        import sentence_transformers  # noqa: F401
-        return True
-    except ImportError:
-        return False
+        _ensure_indexed(db)
+    finally:
+        db.close()

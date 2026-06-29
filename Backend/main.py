@@ -8,13 +8,18 @@ Run with:
 Then open http://127.0.0.1:8000/docs to test all endpoints via Swagger UI.
 """
 
+import asyncio
+import os
+import threading
+from contextlib import asynccontextmanager
+
 from fastapi import FastAPI, Depends, HTTPException, Query, UploadFile, File, Form
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from sqlalchemy.orm import Session
 from sqlalchemy import func
 
-from database import get_db, Chat, Feedback
+from database import get_db, Chat, Feedback, SessionLocal
 from services import (
     ask_groq, ask_groq_disease_remedy, search_knowledge_base, get_weather,
     get_all_weather_concurrent, get_all_market_prices, detect_district,
@@ -23,10 +28,70 @@ from services import (
     refresh_market_snapshots_async, _seed_last_refresh_from_db,
     MARKET_REFRESH_MINUTES,
 )
-import asyncio
-from database import SessionLocal
-from ml_model import predict_top_k
+from ml_model import predict_top_k, warm_bg_remover, warm_classifier, MODEL_PATH
+from embeddings import get_status as embeddings_get_status, warm_index_in_background
 from config import MARKET_API_KEY
+
+# ---------------------------------------------------------------------------
+# Startup / shutdown lifecycle
+# ---------------------------------------------------------------------------
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    # Seed the last-refresh marker so a restart inside a fresh poll window
+    # doesn't immediately re-fetch market data.
+    db = SessionLocal()
+    try:
+        _seed_last_refresh_from_db(db)
+    finally:
+        db.close()
+
+    # Keep a strong reference to the poller task on app.state so it isn't
+    # eligible for garbage collection while running, and so the shutdown
+    # path below can cancel it cleanly.
+    poller_task = asyncio.create_task(_market_price_poller(), name="market-price-poller")
+    app.state.poller_task = poller_task
+
+    # Warm the leaf-diagnosis stack (rembg U²-Net + ConvNeXt-Small) only
+    # when the .pth model file is present — no point downloading 170 MB
+    # of rembg weights or paying torch.load cost if /diagnose will return
+    # 503 anyway.
+    if os.path.exists(MODEL_PATH):
+        def _warm_diagnosis_stack():
+            try:
+                warm_bg_remover()
+                print("[startup] rembg session ready")
+            except Exception as e:
+                print(f"[startup] rembg warmup failed (diagnose will fall back to raw image): {type(e).__name__}: {e}")
+            try:
+                warm_classifier()
+                print("[startup] ConvNeXt classifier loaded")
+            except Exception as e:
+                print(f"[startup] classifier warmup failed: {type(e).__name__}: {e}")
+        threading.Thread(target=_warm_diagnosis_stack, name="diagnose-warm", daemon=True).start()
+    else:
+        print(f"[startup] ML model not found at '{MODEL_PATH}' — diagnosis warmup skipped")
+
+    # Warm the sentence-transformer + chunk index; chat works keyword-only
+    # until this finishes (~2-5 min on first boot).
+    try:
+        warm_index_in_background(SessionLocal)
+        print("[startup] embeddings warmup started in background thread")
+    except Exception as e:
+        print(f"[startup] could not start embeddings warmup: {e}")
+
+    try:
+        yield
+    finally:
+        # Cancel the background poller cleanly so uvicorn shutdown doesn't
+        # emit "Task was destroyed but it is pending!" warnings, and so the
+        # task isn't killed mid-DB-write.
+        poller_task.cancel()
+        try:
+            await poller_task
+        except (asyncio.CancelledError, Exception):
+            pass
+
 
 # ---------------------------------------------------------------------------
 # App setup
@@ -36,6 +101,7 @@ app = FastAPI(
     title="Farmer AI",
     description="AI assistant for farmers in Gujarat, India.",
     version="0.1.0",
+    lifespan=lifespan,
 )
 
 # Allow the plain HTML/JS frontend (opened as a local file or served from
@@ -109,41 +175,23 @@ async def _market_price_poller():
     # First refresh fires immediately so the snapshot table is populated
     # before any frontend request arrives. HTTP calls are concurrent via
     # the async refresh path; the only sync part is the DB write.
+    # CancelledError must propagate so the lifespan shutdown can join the
+    # task; everything else is logged and the loop continues.
     while True:
         db = SessionLocal()
         try:
             await refresh_market_snapshots_async(db, MARKET_API_KEY)
+        except asyncio.CancelledError:
+            db.close()
+            raise
         except Exception as e:
             print(f"[market/poller] refresh failed: {type(e).__name__}: {e}")
         finally:
             db.close()
-        await asyncio.sleep(MARKET_REFRESH_MINUTES * 60)
-
-
-@app.on_event("startup")
-async def _start_market_poller():
-    # Seed last-refresh marker from the newest snapshot row so a restart
-    # inside a fresh 30-min window doesn't immediately re-fetch.
-    db = SessionLocal()
-    try:
-        _seed_last_refresh_from_db(db)
-    finally:
-        db.close()
-    asyncio.create_task(_market_price_poller())
-
-
-@app.on_event("startup")
-async def _warm_embeddings_on_startup():
-    """Kick off the sentence-transformer model load + chunk indexing in a
-    daemon thread so users don't pay the 2-5 min cost on their first chat.
-    Until it finishes, semantic_search() returns None immediately and the
-    keyword path serves the answer — chat is never blocked."""
-    try:
-        from embeddings import warm_index_in_background
-        warm_index_in_background(SessionLocal)
-        print("[startup] embeddings warmup started in background thread")
-    except Exception as e:
-        print(f"[startup] could not start embeddings warmup: {e}")
+        try:
+            await asyncio.sleep(MARKET_REFRESH_MINUTES * 60)
+        except asyncio.CancelledError:
+            raise
 
 
 @app.get("/embeddings/status")
@@ -151,8 +199,7 @@ def embeddings_status():
     """Tells you whether the semantic-search warmup has finished.
     state: not_started | warming | ready | failed | idle_empty_kb."""
     try:
-        from embeddings import get_status
-        return get_status()
+        return embeddings_get_status()
     except Exception as e:
         return {"state": "unknown", "error": str(e)}
 
@@ -223,8 +270,9 @@ def chat(request: ChatRequest, db: Session = Depends(get_db)):
                     "lack real-time access or forecast data."
                 )
         except Exception as e:
+            # weather_context stays None (its initial value above), so the
+            # rest of /chat proceeds as if the weather lookup didn't fire.
             print(f"[weather] get_weather() failed for '{weather_district}': {e}")
-            weather_context = None  # fall back to normal flow if the API call fails
 
     # Step 0b: general district detection — unlike weather_district above,
     # this isn't gated on weather keywords, so it catches district mentions
@@ -319,38 +367,56 @@ def chat(request: ChatRequest, db: Session = Depends(get_db)):
 
 
 @app.post("/diagnose")
-def diagnose_leaf(
+async def diagnose_leaf(
     image: UploadFile = File(...),
     session_id: str = Form(...),
     top_k: int = Form(3),
     language: str = Form("en"),
+    remove_bg: bool = Form(True),
     db: Session = Depends(get_db),
 ):
     """
     Accepts a photo of a plant leaf, runs it through the ConvNeXt-Small leaf
-    disease classifier, asks Groq for remedies, persists the exchange to the
-    chats table (so feedback can reference it), and returns a response
-    shaped like /chat so the frontend's chat-rendering path can reuse the
-    same fields (chat_id, response, source_type).
+    disease classifier (with optional rembg background removal), asks Groq
+    for remedies, persists the exchange to the chats table (so feedback can
+    reference it), and returns a response shaped like /chat so the
+    frontend's chat-rendering path can reuse the same fields (chat_id,
+    response, source_type).
     """
     if language not in ("en", "gu"):
         raise HTTPException(status_code=400, detail="language must be 'en' or 'gu'.")
     if top_k < 1 or top_k > 10:
         raise HTTPException(status_code=400, detail="top_k must be between 1 and 10.")
-    if image.content_type and not image.content_type.startswith("image/"):
-        raise HTTPException(status_code=400, detail="Uploaded file must be an image.")
+    # Require a present, image/* Content-Type. The previous version
+    # short-circuited when the header was missing, letting a client bypass
+    # the check by simply omitting it; PIL would still reject it later but
+    # the error path leaked decoder internals.
+    if not image.content_type or not image.content_type.startswith("image/"):
+        raise HTTPException(status_code=400, detail="Uploaded file must be an image with a valid image/* Content-Type.")
 
-    image_bytes = image.file.read()
+    # Async read so an 8 MB upload doesn't pin the event loop the way the
+    # previous sync `image.file.read()` did.
+    image_bytes = await image.read()
     if len(image_bytes) > MAX_IMAGE_BYTES:
         raise HTTPException(status_code=413, detail="Image is too large (max 8 MB).")
 
+    # predict_top_k is CPU-bound (rembg ONNX + ConvNeXt forward) — offload
+    # to a worker thread so concurrent requests aren't serialized on the
+    # event loop. Same treatment for the Groq call below.
     try:
-        predictions = predict_top_k(image_bytes, k=top_k)
+        predictions = await asyncio.to_thread(predict_top_k, image_bytes, top_k, remove_bg)
+    except FileNotFoundError as e:
+        raise HTTPException(status_code=503, detail=str(e))
+    except ValueError as e:
+        # Raised by _open_raw_rgb on un-decodable bytes — message is
+        # safe to surface (no PIL internals).
+        raise HTTPException(status_code=400, detail=str(e))
     except Exception as e:
-        raise HTTPException(status_code=400, detail=f"Could not process image: {e}")
+        print(f"[diagnose] predict_top_k failed: {type(e).__name__}: {e}")
+        raise HTTPException(status_code=400, detail="Could not process image.")
 
     try:
-        remedy = ask_groq_disease_remedy(predictions, language=language)
+        remedy = await asyncio.to_thread(ask_groq_disease_remedy, predictions, language)
     except Exception as e:
         print(f"[diagnose] ask_groq_disease_remedy failed: {type(e).__name__}: {e}")
         raise HTTPException(

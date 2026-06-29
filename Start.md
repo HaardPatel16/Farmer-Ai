@@ -50,7 +50,7 @@ Prompt should now start with `(venv)`. **Do this every time** you open a new ter
 pip install -r requirements.txt
 ```
 
-Pulls `fastapi`, `uvicorn`, `sqlalchemy`, `psycopg2-binary`, `python-dotenv`, `groq`, `httpx`, `requests`, `pypdf`, `torch`, `torchvision`, `pillow`, `python-multipart`, `sentence-transformers`.
+Pulls `fastapi`, `uvicorn`, `sqlalchemy`, `psycopg2-binary`, `python-dotenv`, `groq`, `httpx`, `requests`, `pypdf`, `torch`, `torchvision`, `pillow`, `python-multipart`, `sentence-transformers`, `rembg`, `onnxruntime`.
 
 > `torch` + `torchvision` are large (~150 MB) — they power the leaf classifier. First install takes a few minutes on slow connections.
 
@@ -192,7 +192,7 @@ http://127.0.0.1:5500
 | `mixed` | KB chunks helped but the LLM filled gaps with general knowledge. |
 | `llm_reasoning` | No relevant KB chunk — answer is pure LLM training data. Plausible, not verified. |
 | `weather_api` | Live Open-Meteo data was injected into the answer. |
-| `leaf_diagnosis` | Came from `/diagnose-leaf` — ConvNeXt prediction + Groq remedy. |
+| `leaf_diagnosis` | Came from `/diagnose` — ConvNeXt prediction + Groq remedy. |
 
 ---
 

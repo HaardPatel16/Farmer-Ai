@@ -7,12 +7,26 @@ Other files import from here like:
     from database import SessionLocal, Chat, Feedback, KnowledgeChunk
 """
 
-from datetime import datetime
+from datetime import datetime, timezone
 
 from sqlalchemy import create_engine, Column, Integer, String, Text, Float, DateTime, Date, ForeignKey, Index
 from sqlalchemy.orm import sessionmaker, declarative_base
 
 from config import DATABASE_URL
+
+
+def utcnow_naive() -> datetime:
+    """Naive UTC timestamp. Replaces `datetime.utcnow()`, which is
+    deprecated in Python 3.12+ and emits a DeprecationWarning on every
+    call. We keep the stored value naive (no tzinfo) so it matches the
+    existing schema (`DateTime` columns without `timezone=True`) and so
+    comparisons against legacy rows continue to work.
+
+    Use this helper everywhere the codebase used to call
+    `datetime.utcnow()` directly — both for column defaults below and
+    for cache-freshness comparisons in services.py.
+    """
+    return datetime.now(timezone.utc).replace(tzinfo=None)
 
 # --- Connection setup ---
 
@@ -41,7 +55,7 @@ class Chat(Base):
     source_type = Column(String, nullable=True)       # 'knowledge_base' / 'llm_reasoning'
     confidence_score = Column(Float, nullable=True)   # how confident the KB match was
     district = Column(String, nullable=True, index=True)  # detected district, if any (e.g. 'bhavnagar')
-    created_at = Column(DateTime, default=datetime.utcnow)
+    created_at = Column(DateTime, default=utcnow_naive)
 
 
 class Feedback(Base):
@@ -52,7 +66,7 @@ class Feedback(Base):
     chat_id = Column(Integer, ForeignKey("chats.id"), nullable=False)
     score = Column(Integer, nullable=False)           # 1 = like, -1 = dislike
     reason = Column(String, nullable=True)             # only set for dislikes, e.g. 'wrong_info'
-    created_at = Column(DateTime, default=datetime.utcnow)
+    created_at = Column(DateTime, default=utcnow_naive)
 
 
 class KnowledgeChunk(Base):
@@ -64,7 +78,7 @@ class KnowledgeChunk(Base):
     chunk_text = Column(Text, nullable=False)            # the actual text content
     keywords = Column(Text, nullable=True)               # simple keywords for search
     districts = Column(Text, nullable=True, index=True)  # comma-separated district keys this chunk covers, e.g. "rajkot,junagadh,bhavnagar" (NULL = applies Gujarat-wide)
-    created_at = Column(DateTime, default=datetime.utcnow)
+    created_at = Column(DateTime, default=utcnow_naive)
 
 
 class WeatherCache(Base):
@@ -74,7 +88,7 @@ class WeatherCache(Base):
     id = Column(Integer, primary_key=True, index=True)
     district = Column(String, nullable=False, index=True)
     data_json = Column(Text, nullable=False)            # raw API response as JSON text
-    fetched_at = Column(DateTime, default=datetime.utcnow)
+    fetched_at = Column(DateTime, default=utcnow_naive)
 
 
 class MarketPriceSnapshot(Base):
@@ -94,7 +108,7 @@ class MarketPriceSnapshot(Base):
     min_price = Column(String, nullable=True)
     max_price = Column(String, nullable=True)
     modal_price = Column(String, nullable=True)
-    created_at = Column(DateTime, default=datetime.utcnow)
+    created_at = Column(DateTime, default=utcnow_naive)
 
     __table_args__ = (
         Index(
