@@ -257,7 +257,7 @@ git push
 
 ### What never to commit
 
-The repo already has a `.gitignore` covering `.env`, `venv/`, `__pycache__/`, and `ML model/*.pth`. If you ever run anything that creates a `Frontend/node_modules/` directory, add it to `.gitignore` too — that folder is large and unnecessary.
+The repo's `.gitignore` already covers `.env`, `venv/`, `__pycache__/`, `ML model/*.pth`, and `Frontend/node_modules/`. The frontend is vanilla HTML/CSS/JS — no `npm install` is ever needed. If you (or an editor) somehow create a `node_modules/` folder, it'll be ignored automatically.
 
 If you accidentally committed a secret, **rotate the key immediately** (revoke + create a new one on Groq/data.gov.in). Removing it from git history is more work than rotating, and the leaked one is already public.
 
