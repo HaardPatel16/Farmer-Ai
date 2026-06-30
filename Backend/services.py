@@ -354,7 +354,7 @@ HEADING_BOOST_NOISE_WORDS = {
 }
 
 
-def search_knowledge_base(db: Session, query: str, district: str | None = None, limit: int = 3):
+def search_knowledge_base(db: Session, query: str, district: str | None = None, top_k: int = 3):
     """
     Keyword search over knowledge_chunks table, scored by match density
     rather than raw match count, so a long district crop-list chunk that
@@ -597,7 +597,7 @@ def search_knowledge_base(db: Session, query: str, district: str | None = None, 
     # Algorithm: find every distinct filename whose name matches a
     # meaningful query word, take that file's top-scoring chunk, and
     # ensure at least one chunk per matched file appears in the final
-    # result (within the `limit`).
+    # result (within `top_k`).
     final: list[tuple[float, str]] = []
     used_filenames: set[str] = set()
 
@@ -613,18 +613,18 @@ def search_knowledge_base(db: Session, query: str, district: str | None = None, 
 
         # First pass: pick the top-scoring chunk for each expected
         # filename (in score order, so the strongest-matching expected
-        # file gets included before weaker ones if limit is tight).
+        # file gets included before weaker ones if top_k is tight).
         for s, t, fn in scored:
             if fn in expected_filenames and fn not in used_filenames:
                 final.append((s, t))
                 used_filenames.add(fn)
-                if len(final) >= limit:
+                if len(final) >= top_k:
                     break
 
     # Second pass: fill remaining slots from the natural top-K ranking,
     # skipping any file we already represented above.
     for s, t, fn in scored:
-        if len(final) >= limit:
+        if len(final) >= top_k:
             break
         if fn in used_filenames:
             continue
@@ -634,39 +634,33 @@ def search_knowledge_base(db: Session, query: str, district: str | None = None, 
     final_texts = [text for _, text in final]
 
     # ── Semantic-search augmentation (optional) ─────────────────────
-    # Run semantic search in parallel with the keyword path and merge
-    # results. This catches cases the keyword scorer misses due to
-    # synonymy — e.g. "cold storage for mango" → the file is named
+    # If keyword hits alone didn't fill top_k slots, try to top up from
+    # semantic search. This catches cases the keyword scorer misses due
+    # to synonymy — e.g. "cold storage for mango" → the file is named
     # "Cold_Chain_Management", "chain" never appears in the query, so
     # keyword force-include doesn't fire. Embedding similarity does.
     #
     # Graceful: if sentence-transformers isn't installed or model load
     # fails, embeddings.semantic_search returns None and the keyword
-    # results stand alone.
-    try:
-        from embeddings import semantic_search
-        sem_results = semantic_search(db, query, top_k=limit, district=district)
-    except Exception as e:
-        print(f"[search_kb] semantic_search failed (falling back to keyword-only): {e}")
-        sem_results = None
+    # results stand alone. We only top up — never pad past the score
+    # floor; if only 1-2 keyword chunks cleared it, we return 1-2 plus
+    # whatever unique semantic hits fill the remaining slots up to top_k.
+    if len(final_texts) < top_k:
+        try:
+            from embeddings import semantic_search
+            sem_results = semantic_search(db, query, top_k=top_k, district=district)
+        except Exception as e:
+            print(f"[search_kb] semantic_search failed (falling back to keyword-only): {e}")
+            sem_results = None
 
-    if sem_results:
-        # Merge: keep keyword results first (they have the district +
-        # filename heuristics baked in), then append any semantic
-        # results not already present. Cap at limit*2 — with limit=3
-        # this gives Groq up to 6 chunks total (3 keyword + up to 3
-        # unique semantic), keeping prompt size tight while still
-        # letting semantic search contribute when it finds something
-        # keyword missed.
-        existing = set(final_texts)
-        merged = list(final_texts)
-        for r in sem_results:
-            if r["text"] not in existing:
-                merged.append(r["text"])
-                existing.add(r["text"])
-            if len(merged) >= limit * 2:
-                break
-        return merged
+        if sem_results:
+            existing = set(final_texts)
+            for r in sem_results:
+                if r["text"] not in existing:
+                    final_texts.append(r["text"])
+                    existing.add(r["text"])
+                if len(final_texts) >= top_k:
+                    break
 
     return final_texts
 
