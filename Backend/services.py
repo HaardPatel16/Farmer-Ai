@@ -354,13 +354,24 @@ HEADING_BOOST_NOISE_WORDS = {
 }
 
 
-def search_knowledge_base(db: Session, query: str, district: str | None = None, top_k: int = 3):
+def search_knowledge_base(db: Session, query: str, district: str | None = None, top_k: int = 4):
     """
-    Keyword search over knowledge_chunks table, scored by match density
+    Hybrid retrieval over the knowledge_chunks table. Runs BOTH a keyword
+    density scorer and embedding semantic_search() on every query, fuses
+    the two rankings with Reciprocal Rank Fusion (rank-based, since the
+    two score scales aren't comparable), de-duplicates near-identical
+    chunks with MMR, and returns up to top_k chunk texts (or an empty list
+    if nothing matches / the knowledge base is empty).
+
+    The keyword scorer (below) still does the heavy lifting — match density
     rather than raw match count, so a long district crop-list chunk that
     merely mentions a crop once doesn't outscore a short, dense chunk that's
-    actually ABOUT that crop. Returns a list of matching chunk texts, or an
-    empty list if nothing matches or the knowledge base is empty.
+    actually ABOUT that crop — plus district isolation, heading/filename/
+    district boosts, the MIN_TOP_SCORE floor, and the filename force-include
+    guarantee. Semantic search adds a second candidate list that catches
+    synonymy the keyword path misses. When semantic search is still warming
+    up (returns None) the function degrades gracefully to keyword-only with
+    Jaccard-based dedup.
 
     `district` is optional. When provided:
       - chunks tagged with that district get a score boost (more relevant)
@@ -582,85 +593,152 @@ def search_knowledge_base(db: Session, query: str, district: str | None = None, 
     MIN_TOP_SCORE = 1.0
     scored = [(s, t, fn) for (s, t, fn) in scored if s >= MIN_TOP_SCORE]
 
-    # ── Filename force-include pass ──────────────────────────────────
-    # Goal: if the user asks about Trichoderma and we have a file named
-    # "182_Trichoderma_Application_Guide.txt", that file's top chunk
-    # must appear in the results — even if other files coincidentally
-    # mention "trichoderma" more densely in passing.
-    #
-    # The +100 filename boost above already pushes such chunks high in
-    # the ranking, but it's not a HARD guarantee — a very short heavily-
-    # boosted chunk from a different file could still outrank a long
-    # chunk from the right file with weak per-chunk density. This pass
-    # adds the hard guarantee on top.
-    #
-    # Algorithm: find every distinct filename whose name matches a
-    # meaningful query word, take that file's top-scoring chunk, and
-    # ensure at least one chunk per matched file appears in the final
-    # result (within `top_k`).
-    final: list[tuple[float, str]] = []
-    used_filenames: set[str] = set()
+    # ── Keyword-ranked candidate list ────────────────────────────────
+    # `scored` is already sorted best-first and floored. Keep the FULL
+    # list (not pre-cut to top_k) so Reciprocal Rank Fusion below has a
+    # complete keyword ranking to fuse against the semantic one, and
+    # remember each chunk's filename for the force-include + per-file
+    # de-dup passes further down.
+    keyword_ranked = [t for (_s, t, _fn) in scored]
+    filename_by_text: dict[str, str] = {}
+    for _s, t, fn in scored:
+        filename_by_text.setdefault(t, fn)
 
+    # ── Filename force-include set ───────────────────────────────────
+    # Goal (unchanged): if the user asks about Trichoderma and we have a
+    # file named "182_Trichoderma_Application_Guide.txt", that file's top
+    # chunk MUST appear in the results — even if other files mention
+    # "trichoderma" more densely in passing, and even if fusion/MMR below
+    # would otherwise reorder it out. We collect the expected filenames
+    # and each one's top-scoring chunk here, then guarantee them during
+    # final assembly.
+    expected_filenames: set[str] = set()
+    forced_reps: list[str] = []  # top chunk text per expected file, score order
     if filename_match_words:
-        # Build the set of "expected" filenames (those whose tokenized
-        # filename contains at least one non-stopword query word).
-        expected_filenames: set[str] = set()
-        for _s, _t, fn in scored:
+        seen_forced_files: set[str] = set()
+        for _s, t, fn in scored:
             fn_tokens = re.sub(r"[_\-./]", " ", fn.lower())
             fn_tokens = re.sub(r"\b\d+\b", " ", fn_tokens)
             if any(w in fn_tokens for w in filename_match_words):
                 expected_filenames.add(fn)
+                if fn not in seen_forced_files:
+                    seen_forced_files.add(fn)
+                    forced_reps.append(t)
 
-        # First pass: pick the top-scoring chunk for each expected
-        # filename (in score order, so the strongest-matching expected
-        # file gets included before weaker ones if top_k is tight).
-        for s, t, fn in scored:
-            if fn in expected_filenames and fn not in used_filenames:
-                final.append((s, t))
-                used_filenames.add(fn)
-                if len(final) >= top_k:
-                    break
+    # ── Always run semantic search too ───────────────────────────────
+    # Previously semantic search only ran when keyword hits under-filled
+    # top_k, so it almost never fired and the final chunks were keyword-
+    # only (and often near-duplicates). Now we ALWAYS retrieve a semantic
+    # candidate list and fuse the two rankings. Pull a generous pool so
+    # RRF has a real second list and MMR has embeddings for most
+    # candidates. semantic_search returns None while the model is still
+    # warming up or failed to load — in that case we proceed keyword-only
+    # with Jaccard dedup ([] would mean "ran, but no candidates").
+    sem_pool = max(top_k * 5, 20)
+    sem_results = None
+    try:
+        from embeddings import semantic_search
+        sem_results = semantic_search(db, query, top_k=sem_pool, district=district)
+    except Exception as e:
+        print(f"[search_kb] semantic_search failed (keyword-only): {e}")
+        sem_results = None
 
-    # Second pass: fill remaining slots from the natural top-K ranking,
-    # skipping any file we already represented above.
-    for s, t, fn in scored:
-        if len(final) >= top_k:
+    semantic_ranked: list[str] = []
+    emb_by_text: dict[str, object] = {}
+    if sem_results:
+        for r in sem_results:
+            semantic_ranked.append(r["text"])
+            filename_by_text.setdefault(r["text"], r.get("filename") or "")
+            if r.get("embedding") is not None:
+                emb_by_text[r["text"]] = r["embedding"]
+
+    # ── Reciprocal Rank Fusion (k=60) ────────────────────────────────
+    # Keyword density-scores and cosine similarities aren't on the same
+    # scale, so we fuse by RANK, not raw score: each list contributes
+    # 1/(RRF_K + rank) for a chunk, summed across both lists. Chunks both
+    # retrievers rank highly rise to the top; a chunk found by only one
+    # still ranks on its own merit. With semantic unavailable the union
+    # collapses to the keyword ranking unchanged (keyword-only still works).
+    RRF_K = 60
+    rrf: dict[str, float] = {}
+    for rank, t in enumerate(keyword_ranked):
+        rrf[t] = rrf.get(t, 0.0) + 1.0 / (RRF_K + rank)
+    for rank, t in enumerate(semantic_ranked):
+        rrf[t] = rrf.get(t, 0.0) + 1.0 / (RRF_K + rank)
+
+    if not rrf:
+        return []
+
+    fused = sorted(rrf, key=lambda t: rrf[t], reverse=True)
+
+    # ── MMR de-duplication (lambda = 0.7) ────────────────────────────
+    # The fused list often contains near-duplicate chunks (the original
+    # complaint). MMR greedily re-ranks to balance relevance against
+    # redundancy: at each step pick the candidate maximizing
+    #   lambda * relevance(c) - (1 - lambda) * max_sim(c, already_picked)
+    # Relevance is the normalized RRF score — it already fuses the keyword
+    # and semantic signal, so no separate query-similarity term is needed
+    # and nothing has to be re-encoded. Redundancy uses cosine of the
+    # reused index embeddings when BOTH chunks have one, else Jaccard word
+    # overlap (which is also the sole metric when semantic is still warming
+    # and emb_by_text is empty).
+    MMR_LAMBDA = 0.7
+    # Cap the working pool: MMR is O(n^2) and we only need enough to fill
+    # top_k after force-include.
+    pool = fused[:sem_pool]
+
+    max_rrf = max(rrf[t] for t in pool)
+    rel = {t: (rrf[t] / max_rrf if max_rrf > 0 else 0.0) for t in pool}
+
+    def _similarity(a: str, b: str) -> float:
+        ea, eb = emb_by_text.get(a), emb_by_text.get(b)
+        if ea is not None and eb is not None:
+            # Index vectors are L2-normalized → dot product is cosine.
+            return float(ea @ eb)
+        return _jaccard_overlap(a, b)
+
+    mmr_ordered: list[str] = []
+    remaining = list(pool)
+    while remaining:
+        if not mmr_ordered:
+            best = max(remaining, key=lambda t: rel[t])  # seed with most relevant
+        else:
+            best = max(
+                remaining,
+                key=lambda t: MMR_LAMBDA * rel[t]
+                - (1 - MMR_LAMBDA) * max(_similarity(t, s) for s in mmr_ordered),
+            )
+        mmr_ordered.append(best)
+        remaining.remove(best)
+
+    # ── Final assembly: force-include + per-file dedup, then cut ──────
+    # Mirrors the previous behaviour: guarantee one chunk per expected
+    # (filename-matched) file first, then fill remaining slots from the
+    # MMR order, never repeating a filename, capped at top_k.
+    final_texts: list[str] = []
+    used_filenames: set[str] = set()
+
+    for t in forced_reps:
+        if len(final_texts) >= top_k:
             break
-        if fn in used_filenames:
+        fn = filename_by_text.get(t, "")
+        if fn and fn in used_filenames:
             continue
-        final.append((s, t))
-        used_filenames.add(fn)
+        final_texts.append(t)
+        if fn:
+            used_filenames.add(fn)
 
-    final_texts = [text for _, text in final]
-
-    # ── Semantic-search augmentation (optional) ─────────────────────
-    # If keyword hits alone didn't fill top_k slots, try to top up from
-    # semantic search. This catches cases the keyword scorer misses due
-    # to synonymy — e.g. "cold storage for mango" → the file is named
-    # "Cold_Chain_Management", "chain" never appears in the query, so
-    # keyword force-include doesn't fire. Embedding similarity does.
-    #
-    # Graceful: if sentence-transformers isn't installed or model load
-    # fails, embeddings.semantic_search returns None and the keyword
-    # results stand alone. We only top up — never pad past the score
-    # floor; if only 1-2 keyword chunks cleared it, we return 1-2 plus
-    # whatever unique semantic hits fill the remaining slots up to top_k.
-    if len(final_texts) < top_k:
-        try:
-            from embeddings import semantic_search
-            sem_results = semantic_search(db, query, top_k=top_k, district=district)
-        except Exception as e:
-            print(f"[search_kb] semantic_search failed (falling back to keyword-only): {e}")
-            sem_results = None
-
-        if sem_results:
-            existing = set(final_texts)
-            for r in sem_results:
-                if r["text"] not in existing:
-                    final_texts.append(r["text"])
-                    existing.add(r["text"])
-                if len(final_texts) >= top_k:
-                    break
+    for t in mmr_ordered:
+        if len(final_texts) >= top_k:
+            break
+        if t in final_texts:
+            continue
+        fn = filename_by_text.get(t, "")
+        if fn and fn in used_filenames:
+            continue
+        final_texts.append(t)
+        if fn:
+            used_filenames.add(fn)
 
     return final_texts
 
@@ -691,6 +769,20 @@ def _content_words(text: str) -> set[str]:
     answer-vs-chunks overlap for source_type classification."""
     words = re.findall(r"[a-zA-Z]+", text.lower())
     return {w for w in words if len(w) >= _MIN_CONTENT_WORD_LEN}
+
+
+def _jaccard_overlap(a: str, b: str) -> float:
+    """Word-overlap (Jaccard) similarity between two chunk texts, used as
+    the MMR redundancy metric in search_knowledge_base() when embeddings
+    aren't available — either because semantic search is still warming up,
+    or for a candidate that only the keyword retriever surfaced (so it has
+    no vector in the semantic result set). Reuses the same content-word
+    extraction as the coverage check, so 'soil'/'cotton'/'drip' count
+    toward overlap while stopwords don't."""
+    wa, wb = _content_words(a), _content_words(b)
+    if not wa or not wb:
+        return 0.0
+    return len(wa & wb) / len(wa | wb)
 
 
 # Phrases the LLM uses when it openly admits it's filling gaps with
