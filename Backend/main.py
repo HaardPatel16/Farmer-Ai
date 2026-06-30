@@ -305,6 +305,10 @@ def chat(request: ChatRequest, db: Session = Depends(get_db)):
     except Exception:
         kb_chunks = []   # don't crash the whole chat if KB search fails
 
+    # Terminal-side visibility so retrieval can be debugged live while
+    # tailing uvicorn output, not just after the fact from pgAdmin.
+    print(f"[chat] sent {len(kb_chunks)} chunks to Groq | query='{request.query[:80]}' | district={district}")
+
     context_parts = []
     if weather_context:
         context_parts.append(weather_context)
@@ -364,6 +368,17 @@ def chat(request: ChatRequest, db: Session = Depends(get_db)):
     confidence_score = round(kb_coverage, 3) if kb_chunks else None
 
     # Step 3: save to DB
+    # Persist the chunks that fed Groq so retrieval failures are
+    # diagnosable from pgAdmin. Join with a clear separator so SELECTs
+    # stay readable; cap total length at ~6 KB so a runaway retrieval
+    # can't blow up the row size.
+    if kb_chunks:
+        chunks_joined = "\n\n---\n\n".join(kb_chunks)
+        if len(chunks_joined) > 6000:
+            chunks_joined = chunks_joined[:6000] + "…[truncated]"
+    else:
+        chunks_joined = None
+
     chat_row = Chat(
         session_id=request.session_id,
         query=request.query,
@@ -372,6 +387,8 @@ def chat(request: ChatRequest, db: Session = Depends(get_db)):
         source_type=source_type,
         confidence_score=confidence_score,
         district=district,
+        chunks_sent_count=len(kb_chunks),
+        chunks_sent=chunks_joined,
     )
     db.add(chat_row)
     db.commit()

@@ -159,9 +159,19 @@ def warm_index_in_background(db_factory):
 def semantic_search(db, query: str, top_k: int = 5, district: str | None = None):
     """
     Returns up to top_k chunks ranked by cosine similarity to the query.
-    Each result is a {"text": str, "similarity": float} dict. Returns
-    None if the model failed to load or the index couldn't be built —
-    callers should treat None as "fall back to keyword search only".
+    Each result is a dict with keys:
+        "text"       — the chunk text
+        "filename"   — its source filename
+        "similarity" — cosine similarity to the query (pre-normalized dot)
+        "embedding"  — the chunk's L2-normalized index vector
+    The "embedding" is the SAME vector built once at index time — it is
+    returned (not recomputed) so callers can reuse it for MMR
+    de-duplication without re-encoding anything.
+
+    Returns None if the model failed to load or the index couldn't be
+    built — callers should treat None as "fall back to keyword search
+    only". An empty list means the index is ready but produced no
+    candidates (e.g. a degenerate zero-norm query).
 
     `district`, when given, filters out chunks tagged for OTHER districts
     (same semantics as services.py's keyword path), so a Bhavnagar-tagged
@@ -198,9 +208,20 @@ def semantic_search(db, query: str, top_k: int = 5, district: str | None = None)
                 continue
         # Pre-normalized vectors → cosine sim is dot product.
         sim = float(q_emb @ c["embedding"])
-        scored.append((sim, c["text"]))
+        scored.append((sim, c))
 
     scored.sort(key=lambda x: x[0], reverse=True)
-    return [{"text": t, "similarity": s} for s, t in scored[:top_k]]
+    # Carry the chunk's filename and its already-computed normalized
+    # embedding through so the hybrid retriever in services.py can fuse
+    # and MMR-dedup without re-encoding anything.
+    return [
+        {
+            "text": c["text"],
+            "filename": c["filename"],
+            "similarity": s,
+            "embedding": c["embedding"],
+        }
+        for s, c in scored[:top_k]
+    ]
 
 

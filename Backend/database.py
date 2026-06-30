@@ -60,8 +60,16 @@ class Chat(Base):
     response = Column(Text, nullable=False)           # the bot's answer
     language = Column(String, nullable=False)         # 'en' or 'gu'
     source_type = Column(String, nullable=True)       # 'knowledge_base' / 'llm_reasoning'
-    confidence_score = Column(Float, nullable=True)   # how confident the KB match was
+    confidence_score = Column(Float, nullable=True)   # KB-coverage ratio (0..1) of the answer
     district = Column(String, nullable=True, index=True)  # detected district, if any (e.g. 'bhavnagar')
+    # Debug columns: persist the KB chunks that were sent to Groq for this
+    # exact request so retrieval issues can be diagnosed post-hoc from
+    # pgAdmin (e.g. "why did this answer get llm_reasoning — was it 0
+    # chunks, or low coverage?"). chunks_sent_count is the cheap signal;
+    # chunks_sent is the actual joined chunk texts (truncated by the
+    # caller if you want to bound row size).
+    chunks_sent_count = Column(Integer, nullable=True)
+    chunks_sent = Column(Text, nullable=True)
     created_at = Column(DateTime, default=utcnow_naive)
 
 
