@@ -24,6 +24,21 @@ GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 # if this is missing, rather than the whole app refusing to start.
 MARKET_API_KEY = os.getenv("MARKET_API_KEY")
 
+# Comma-separated list of origins the browser is allowed to call the API
+# from. Defaults to localhost dev ports + file:// (Origin: null) so the
+# plain index.html opened from disk still works. Override with
+# `ALLOWED_ORIGINS=https://your-domain.com,https://www.your-domain.com`
+# before any public deployment. Use "*" only on a fully trusted LAN.
+_default_origins = (
+    "http://127.0.0.1:8000,http://localhost:8000,"
+    "http://127.0.0.1:5500,http://localhost:5500,"
+    "http://127.0.0.1:5173,http://localhost:5173,"
+    "null"
+)
+ALLOWED_ORIGINS = [
+    o.strip() for o in os.getenv("ALLOWED_ORIGINS", _default_origins).split(",") if o.strip()
+]
+
 # Fail loudly and early if required variables are missing,
 # rather than letting the app start and crash later with a
 # confusing error somewhere deep in database.py or services.py.

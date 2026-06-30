@@ -31,7 +31,14 @@ def utcnow_naive() -> datetime:
 # --- Connection setup ---
 
 # The engine manages the actual connection pool to Postgres.
-engine = create_engine(DATABASE_URL)
+# pool_pre_ping issues a cheap SELECT 1 before handing out a pooled
+# connection, so we transparently recover from connections that the
+# database (or any firewall/proxy between us and it) closed during an
+# idle stretch — common with managed Postgres providers that drop
+# long-idle sockets. Without this, the first request after a quiet period
+# 500s with an OperationalError; the cost is ~1 round-trip per request,
+# which is negligible against any real query.
+engine = create_engine(DATABASE_URL, pool_pre_ping=True)
 
 # SessionLocal is a factory for creating database sessions — each request
 # in main.py will open one session, use it, then close it.

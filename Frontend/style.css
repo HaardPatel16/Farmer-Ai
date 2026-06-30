@@ -471,93 +471,10 @@ body::before {
   margin: 0;
 }
 
-/* ── Leaf scanning animation ── */
-.diagnose-scan-stage {
-  position: relative;
-  height: 138px;
-  border-radius: 12px;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(155deg, var(--chat-bg-deep, #ece3d1), var(--chat-surface, #fffefb) 80%);
-  border: 1px solid var(--chat-border, rgba(46, 125, 79, 0.18));
-}
-
-.diagnose-scan-preview {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0;
-  transition: opacity var(--transition);
-}
-
-.diagnose-scan-stage.has-image .diagnose-scan-preview {
-  opacity: 1;
-}
-
-.diagnose-scan-stage.has-image .diagnose-scan-grid {
-  opacity: 0;
-}
-
-.diagnose-scan-stage.has-image .diagnose-scan-leaf {
-  opacity: 0;
-}
-
-/* No grid overlay or sweeping beam — a static leaf with a faint, slow
-   breathing fade reads as calm/idle rather than an attention-grabbing
-   "scanning" effect. */
-.diagnose-scan-grid {
-  display: none;
-}
-
-.diagnose-scan-leaf {
-  position: relative;
-  z-index: 1;
-  color: var(--chat-green, #2c4a35);
-  opacity: 0.55;
-  animation: diagnose-leaf-breathe 4.5s ease-in-out infinite;
-  transition: opacity var(--transition);
-}
-
-@keyframes diagnose-leaf-breathe {
-
-  0%,
-  100% {
-    opacity: 0.4;
-  }
-
-  50% {
-    opacity: 0.7;
-  }
-}
-
-.diagnose-scan-line {
-  display: none;
-}
-
-@keyframes diagnose-scan-sweep {
-
-  0% {
-    top: 10%;
-    opacity: 0;
-  }
-
-  10% {
-    opacity: 1;
-  }
-
-  90% {
-    opacity: 1;
-  }
-
-  100% {
-    top: 88%;
-    opacity: 0;
-  }
-}
+/* (Removed: .diagnose-scan-stage and related preview/grid/leaf rules. The
+   sidebar diagnose card is now title + Upload + Camera only — the photo
+   preview lives inside the chat as a user-side image bubble, see
+   .user-message--image / .leaf-photo in the chat section.) */
 
 .diagnose-card-actions {
   display: flex;
@@ -1587,6 +1504,106 @@ body::before {
 
 .user-message .timestamp {
   color: rgba(246, 241, 231, 0.7);
+}
+
+/* ── User image bubble (leaf photo) ──────────────────────────────────────
+   The photo bubble is the same green pill as every other user message —
+   the photo just sits inside it on a checkered transparency field so the
+   cutout, when it lands, reads as "background actually removed" rather
+   than as "white photo on green bubble". The original and cutout share a
+   tile so the crossfade is a simple opacity swap. */
+.user-message--image .bubble--image {
+  padding: 8px 8px 10px;
+  width: min(220px, 70vw);
+  max-width: 70vw;
+}
+
+.leaf-photo {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  /* Subtle checker pattern shows through any genuinely transparent
+     pixels in the cutout — but the backend composites the cutout onto
+     white, so in practice this only shows briefly while the cutout is
+     decoding. Kept as defense-in-depth in case the backend ever serves
+     a true RGBA cutout. */
+  background:
+    linear-gradient(45deg, rgba(0, 0, 0, 0.04) 25%, transparent 25%) 0 0 / 14px 14px,
+    linear-gradient(-45deg, rgba(0, 0, 0, 0.04) 25%, transparent 25%) 0 7px / 14px 14px,
+    linear-gradient(45deg, transparent 75%, rgba(0, 0, 0, 0.04) 75%) 7px -7px / 14px 14px,
+    linear-gradient(-45deg, transparent 75%, rgba(0, 0, 0, 0.04) 75%) -7px 0 / 14px 14px,
+    #ffffff;
+  aspect-ratio: 1 / 1;
+}
+
+.leaf-photo-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: opacity 320ms ease;
+}
+
+.leaf-photo-img--original {
+  opacity: 1;
+  z-index: 1;
+}
+
+/* Cutout sits above the original; fades in once its src loads. The
+   original keeps full opacity underneath, so during the transition the
+   user sees the cutout dissolving onto its predecessor — no flicker. */
+.leaf-photo-img--cutout {
+  opacity: 0;
+  z-index: 2;
+}
+
+.leaf-photo-img--cutout.is-visible {
+  opacity: 1;
+}
+
+/* "Background removed" annotation. Sits at the bottom of the photo on a
+   translucent dark band so it's legible over both the original and the
+   cutout. Fades in once the cutout is shown, holds briefly, then fades
+   out — set by JS, not animated in CSS, so the timing is deterministic. */
+.leaf-photo-tag {
+  position: absolute;
+  left: 8px;
+  right: 8px;
+  bottom: 8px;
+  z-index: 3;
+  display: block;
+  padding: 4px 8px;
+  border-radius: 6px;
+  background: rgba(20, 30, 22, 0.78);
+  color: #f6f1e7;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 220ms ease, transform 220ms ease;
+  pointer-events: none;
+  backdrop-filter: blur(2px);
+}
+
+.leaf-photo-tag.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.leaf-photo-caption {
+  margin: 8px 4px 0;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: rgba(246, 241, 231, 0.9);
+  word-break: break-all;
+}
+
+.user-message--image .timestamp {
+  margin-left: 4px;
 }
 
 /* Source badge */

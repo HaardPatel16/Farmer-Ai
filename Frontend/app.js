@@ -1,6 +1,25 @@
 /* ── Farmer AI — app.js ── */
 
-const API_BASE = "http://127.0.0.1:8000";
+// API base resolution, in priority order:
+//   1. window.__API_BASE__ injected by index.html — explicit override wins.
+//   2. file:// (page opened directly from disk) → talk to the dev backend
+//      on localhost:8000. crypto.randomUUID() also requires a secure
+//      context, so this branch already implies dev.
+//   3. localhost dev server on a non-8000 port (Vite, Live Server, etc.)
+//      → still point at the backend on :8000.
+//   4. Anything else (real deployment) → same-origin, so a reverse proxy
+//      can route /chat etc. to the FastAPI process without further config.
+const API_BASE = (() => {
+  if (typeof window !== "undefined" && window.__API_BASE__) {
+    return String(window.__API_BASE__).replace(/\/+$/, "");
+  }
+  const { protocol, hostname, origin } = window.location;
+  if (protocol === "file:") return "http://127.0.0.1:8000";
+  if (hostname === "localhost" || hostname === "127.0.0.1") {
+    return `${protocol}//${hostname}:8000`;
+  }
+  return origin;
+})();
 
 // ── State ──────────────────────────────────────────────────────────────────
 
@@ -53,10 +72,12 @@ const diagnoseUploadBtn = document.getElementById("diagnoseUploadBtn");
 const diagnoseCameraBtn = document.getElementById("diagnoseCameraBtn");
 const diagnoseFileInput = document.getElementById("diagnoseFileInput");
 const diagnoseCameraInput = document.getElementById("diagnoseCameraInput");
-const diagnoseScanStage = document.getElementById("diagnoseScanStage");
-const diagnoseScanPreview = document.getElementById("diagnoseScanPreview");
+// diagnoseScanStage / diagnoseScanPreview / diagnoseCardDesc were removed
+// when the sidebar card was stripped down to "heading + 2 buttons" — the
+// photo and its bg-removal swap now live inside the chat itself
+// (see appendUserImageMessage / diagnoseImage below). All references in
+// this file are null-guarded, so the missing nodes are a no-op.
 const diagnoseCardTitle = document.getElementById("diagnoseCardTitle");
-const diagnoseCardDesc = document.getElementById("diagnoseCardDesc");
 const diagnoseUploadLabel = document.getElementById("diagnoseUploadLabel");
 const diagnoseCameraLabel = document.getElementById("diagnoseCameraLabel");
 
@@ -339,6 +360,7 @@ themeToggle.addEventListener("click", toggleTheme);
 function applyLanguage(lang) {
   language = lang;
   localStorage.setItem("farmerAI_lang", lang);
+  document.documentElement.lang = lang === "gu" ? "gu" : "en";
   langToggle.querySelectorAll(".segmented-option").forEach(btn => {
     btn.classList.toggle("active", btn.dataset.lang === lang);
   });
@@ -351,7 +373,6 @@ function applyLanguage(lang) {
   weatherRefreshNote.textContent = t("weather_refresh_note");
   if (weatherSearch) weatherSearch.placeholder = t("weather_search_placeholder");
   if (diagnoseCardTitle) diagnoseCardTitle.textContent = t("diagnose_card_title");
-  if (diagnoseCardDesc) diagnoseCardDesc.textContent = t("diagnose_card_desc");
   if (diagnoseUploadLabel) diagnoseUploadLabel.textContent = t("diagnose_upload_label");
   if (diagnoseCameraLabel) diagnoseCameraLabel.textContent = t("diagnose_camera_label");
   if (homeAskInput) homeAskInput.placeholder = t("home_ask_placeholder");
@@ -462,15 +483,63 @@ function appendUserMessage(text) {
   scrollToBottom();
 }
 
-// ── Preview the uploaded leaf photo inside the diagnose card ──────────────
+// ── User-side image bubble for an uploaded leaf photo ─────────────────────
+//
+// The farmer sees their own photo as a chat message the moment they pick
+// the file (or the moment the camera capture closes), well before the
+// /diagnose round-trip finishes. Once the response lands, the same
+// bubble's <img> is swapped to the WebP cutout the classifier actually
+// saw, via a 300 ms crossfade — so the user implicitly understands that
+// the model ran on a cleaned-up version of their photo.
+//
+// Returns { imgEl, captionEl } so the caller can mutate the bubble after
+// the network call without re-querying the DOM.
 
-let diagnoseScanPreviewUrl = null;
+function appendUserImageMessage(file) {
+  const objectUrl = URL.createObjectURL(file);
+  const msg = document.createElement("div");
+  msg.className = "message user-message user-message--image";
+  // The hidden img layered behind is the crossfade target — we set its
+  // src after the response lands, then animate opacity on the wrapper.
+  msg.innerHTML = `
+    <div class="avatar"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12 12c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm0 2c-3.33 0-10 1.67-10 5v2h20v-2c0-3.33-6.67-5-10-5z"/></svg></div>
+    <div class="bubble bubble--image">
+      <div class="leaf-photo">
+        <img class="leaf-photo-img leaf-photo-img--original" alt="Uploaded leaf" />
+        <img class="leaf-photo-img leaf-photo-img--cutout" alt="" aria-hidden="true" />
+        <span class="leaf-photo-tag" aria-hidden="true">Background removed</span>
+      </div>
+      <p class="leaf-photo-caption">${escapeHtml(file.name || "Leaf photo")}</p>
+      <span class="timestamp">${formatTime(new Date())}</span>
+    </div>
+  `;
+  const originalEl = msg.querySelector(".leaf-photo-img--original");
+  const cutoutEl = msg.querySelector(".leaf-photo-img--cutout");
+  const captionEl = msg.querySelector(".leaf-photo-caption");
+  const tagEl = msg.querySelector(".leaf-photo-tag");
+  originalEl.src = objectUrl;
+  // Release the blob URL once the image has actually rendered — keeping
+  // it around forever would leak across many uploads in one session.
+  originalEl.addEventListener("load", () => URL.revokeObjectURL(objectUrl), { once: true });
+  chatWindow.appendChild(msg);
+  scrollToBottom();
+  return { originalEl, cutoutEl, captionEl, tagEl };
+}
 
-function showDiagnoseScanPreview(file) {
-  if (diagnoseScanPreviewUrl) URL.revokeObjectURL(diagnoseScanPreviewUrl);
-  diagnoseScanPreviewUrl = URL.createObjectURL(file);
-  diagnoseScanPreview.src = diagnoseScanPreviewUrl;
-  diagnoseScanStage.classList.add("has-image");
+// Swap the user's photo bubble to the cutout the classifier saw, via a
+// crossfade. The "Background removed" tag flashes in, holds for ~1.8 s,
+// then fades — long enough to register, short enough not to clutter.
+function applyCutoutToImageBubble(handles, dataUrl, bgRemoved) {
+  if (!handles || !dataUrl) return;
+  const { cutoutEl, tagEl } = handles;
+  cutoutEl.addEventListener("load", () => {
+    cutoutEl.classList.add("is-visible");
+    if (bgRemoved && tagEl) {
+      tagEl.classList.add("is-visible");
+      setTimeout(() => tagEl.classList.remove("is-visible"), 1800);
+    }
+  }, { once: true });
+  cutoutEl.src = dataUrl;
 }
 
 // ── Render an AI bubble ───────────────────────────────────────────────────
@@ -582,8 +651,10 @@ async function diagnoseImage(file) {
     showChat();
   }
 
-  showDiagnoseScanPreview(file);
-  appendUserMessage(file.name || "Leaf photo");
+  // Render the user's photo bubble first so the chat feels responsive
+  // during the ~1–3 s diagnose round-trip; capture its handles so we can
+  // swap in the cutout once the response arrives.
+  const imageHandles = appendUserImageMessage(file);
   setWaiting(true);
 
   try {
@@ -603,6 +674,10 @@ async function diagnoseImage(file) {
       throw new Error(errData.detail || `HTTP ${res.status}`);
     }
     const data = await res.json();
+    // Crossfade the user's bubble photo to the WebP cutout the model saw.
+    // No-op if the backend couldn't produce one (rembg disabled or encode
+    // failed) — the original photo stays put.
+    applyCutoutToImageBubble(imageHandles, data.processed_image, data.bg_removed);
     appendAiMessage(data.response, data.chat_id, data.source_type);
   } catch (err) {
     const msg = (err.message && !err.message.startsWith("HTTP")) ? err.message : t("error_chat");
@@ -772,7 +847,11 @@ function formatAiText(rawText) {
     // Requires a space after the "*" and a space/start-of-text before it,
     // so this doesn't trip on "**bold**" (no space after the first "*")
     // or on a literal multiplication/escaped asterisk mid-word.
-    .replace(/(\s)\*\s+(?!\*)/g, "$1\u0001BULLET\u0001")
+    // The placeholder uses Unicode Private Use Area codepoints
+    // (U+E000\u2026U+F8FF) which the Unicode spec guarantees will never be
+    // assigned real glyphs \u2014 no LLM output can contain them \u2014 so this
+    // round-trip is safe against any text the model produces.
+    .replace(/(\s)\*\s+(?!\*)/g, "$1\uE000BULLET\uE001")
     // Also split off a trailing closing remark after the last point
     // (e.g. "...90x45 cm. These are just a few key points...") so it
     // doesn't get glued onto that point's line.
@@ -787,7 +866,7 @@ function formatAiText(rawText) {
 
   // Restore the bullet marker placeholder as an actual line break now that
   // bold conversion (which also uses *) is done, so the two don't collide.
-  const withBulletBreaks = withBold.split("\u0001BULLET\u0001").join("\n• ");
+  const withBulletBreaks = withBold.split("\uE000BULLET\uE001").join("\n• ");
 
   // Turn each resulting line into its own line. Numbered points and
   // bullets get the .ai-point treatment (slight indent); a line that's
@@ -1412,8 +1491,14 @@ async function switchToSession(targetSessionId) {
 async function deleteSession(targetSessionId) {
   if (!window.confirm(t("history_delete_confirm"))) return;
 
+  // The session_id IS the auth capability — backend accepts the delete
+  // for any caller who can produce the (unguessable) UUID. Same model as
+  // GET /chat/history?session_id=…, which has always trusted possession
+  // of the UUID. No extra headers required.
   try {
-    const res = await fetch(`${API_BASE}/chat/session/${targetSessionId}`, { method: "DELETE" });
+    const res = await fetch(`${API_BASE}/chat/session/${targetSessionId}`, {
+      method: "DELETE",
+    });
     if (!res.ok) throw new Error("Delete failed");
 
     // If the deleted session was the active one, start a fresh session

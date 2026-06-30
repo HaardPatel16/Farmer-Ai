@@ -8,6 +8,7 @@ import asyncio
 import json
 import re
 import threading
+from dataclasses import dataclass
 from datetime import datetime, timedelta, timezone, date as date_cls
 
 import httpx
@@ -354,6 +355,114 @@ HEADING_BOOST_NOISE_WORDS = {
 }
 
 
+# ──────────────────────────────────────────────────────────────────────────
+# Knowledge-base index cache.
+#
+# search_knowledge_base() used to pull every row out of knowledge_chunks on
+# every /chat call and recompute per-chunk headings + corpus heading-word
+# rarity from scratch. With ~800 chunks that's a couple thousand regex
+# matches per request and a full table scan over the JSON-heavy text column.
+#
+# This cache holds:
+#   * lightweight tuples for every chunk (id + the few fields the scoring
+#     loop actually touches), so we never hand SQLAlchemy ORM objects back
+#     to a caller after their session closed
+#   * the derived chunk_headings map and heading_word_doc_count corpus
+#     histogram — the expensive part to recompute
+#
+# Invalidation is keyed on (row_count, max_id): the ingest script either
+# inserts rows (max_id jumps), deletes-then-reinserts a file (count stays
+# the same but max_id moves), or both. A cheap pair of aggregates checks
+# this in microseconds; on mismatch we rebuild under a lock so concurrent
+# /chat requests don't all stampede the rebuild.
+# ──────────────────────────────────────────────────────────────────────────
+
+
+@dataclass
+class _KBChunkLite:
+    id: int
+    chunk_text: str
+    keywords: str | None
+    source_filename: str
+    districts: str | None
+
+
+_kb_cache_lock = threading.Lock()
+_kb_cache_key: tuple[int, int] | None = None
+_kb_cache_chunks: list[_KBChunkLite] = []
+_kb_cache_headings: dict[int, str] = {}
+_kb_cache_heading_doc_count: dict[str, int] = {}
+
+
+def _build_kb_index(chunks: list[_KBChunkLite]) -> tuple[dict[int, str], dict[str, int]]:
+    headings: dict[int, str] = {}
+    heading_doc_count: dict[str, int] = {}
+    for chunk in chunks:
+        content_lines = [
+            line.strip() for line in chunk.chunk_text.strip().split("\n")
+            if line.strip() and not re.match(r"^[-=_*#~]{3,}$", line.strip())
+        ]
+        heading_line = content_lines[0].lower() if content_lines else ""
+        headings[chunk.id] = heading_line
+        for word in set(re.findall(r"[a-z]{3,}", heading_line)):
+            heading_doc_count[word] = heading_doc_count.get(word, 0) + 1
+    return headings, heading_doc_count
+
+
+def _get_kb_index(db: Session):
+    """Returns (chunks, chunk_headings, heading_word_doc_count, total_chunks).
+
+    Hot path is a single SELECT max(id)+count(id) aggregate; on cache hit
+    we return the cached structures without touching the chunk rows. Cache
+    rebuild on miss is serialized via a lock so two concurrent first-time
+    callers don't both run the O(N) preprocessing pass."""
+    global _kb_cache_key, _kb_cache_chunks, _kb_cache_headings, _kb_cache_heading_doc_count
+
+    row = db.query(
+        func.count(KnowledgeChunk.id),
+        func.max(KnowledgeChunk.id),
+    ).one()
+    count = int(row[0] or 0)
+    max_id = int(row[1] or 0)
+    cache_key = (count, max_id)
+
+    if cache_key == _kb_cache_key and _kb_cache_chunks:
+        return (
+            _kb_cache_chunks,
+            _kb_cache_headings,
+            _kb_cache_heading_doc_count,
+            len(_kb_cache_chunks),
+        )
+
+    with _kb_cache_lock:
+        # Re-check under the lock — another thread may have just rebuilt.
+        if cache_key == _kb_cache_key and _kb_cache_chunks:
+            return (
+                _kb_cache_chunks,
+                _kb_cache_headings,
+                _kb_cache_heading_doc_count,
+                len(_kb_cache_chunks),
+            )
+
+        rows = db.query(KnowledgeChunk).all()
+        chunks = [
+            _KBChunkLite(
+                id=r.id,
+                chunk_text=r.chunk_text,
+                keywords=r.keywords,
+                source_filename=r.source_filename,
+                districts=r.districts,
+            )
+            for r in rows
+        ]
+        headings, heading_doc_count = _build_kb_index(chunks)
+        _kb_cache_chunks = chunks
+        _kb_cache_headings = headings
+        _kb_cache_heading_doc_count = heading_doc_count
+        _kb_cache_key = cache_key
+        return chunks, headings, heading_doc_count, len(chunks)
+
+
 def search_knowledge_base(db: Session, query: str, district: str | None = None, limit: int = 3):
     """
     Keyword search over knowledge_chunks table, scored by match density
@@ -404,34 +513,14 @@ def search_knowledge_base(db: Session, query: str, district: str | None = None, 
         return []
     query_words = technical_words
 
-    all_chunks = db.query(KnowledgeChunk).all()
+    # Cached corpus index — see _get_kb_index above. all_chunks and
+    # chunk_headings/heading_word_doc_count are shared across requests and
+    # rebuilt only when the chunks table grows or its max(id) advances
+    # (i.e. after an ingest run). The expensive per-corpus regex pass that
+    # used to live inline here now happens at most once per ingest cycle.
+    all_chunks, chunk_headings, heading_word_doc_count, total_chunks = _get_kb_index(db)
     if not all_chunks:
         return []
-
-    # --- Pass 1: compute heading-word rarity across the WHOLE knowledge
-    # base, so the heading boost below only trusts words that are
-    # genuinely distinctive — not a fixed, hand-maintained noise list
-    # (which can never anticipate every generic section label a large,
-    # template-heavy knowledge base will contain, e.g. "Guide",
-    # "Cultivation", or a lettered sub-heading like "C. Organic Nutrition
-    # Options"). A word that appears in most chunks' headings carries
-    # almost no information about which chunk is relevant; a word that
-    # appears in only a handful of headings is a strong, trustworthy signal.
-    total_chunks = len(all_chunks)
-    heading_word_doc_count: dict[str, int] = {}
-    chunk_headings: dict[int, str] = {}  # cache so pass 2 doesn't redo this work
-
-    for chunk in all_chunks:
-        content_lines = [
-            line.strip() for line in chunk.chunk_text.strip().split("\n")
-            if line.strip() and not re.match(r"^[-=_*#~]{3,}$", line.strip())
-        ]
-        heading_line = content_lines[0].lower() if content_lines else ""
-        chunk_headings[chunk.id] = heading_line
-
-        seen_in_this_heading = set(re.findall(r"[a-z]{3,}", heading_line))
-        for word in seen_in_this_heading:
-            heading_word_doc_count[word] = heading_word_doc_count.get(word, 0) + 1
 
     # A heading word is "rare enough to trust" if it appears in under 5%
     # of all chunk headings in the knowledge base. With ~800+ chunks this
@@ -1488,12 +1577,20 @@ def ensure_fresh_market_data(db: Session, api_key: str) -> None:
     snapshot rows already populated by the startup refresh; if for some
     reason none exist yet, the response is just empty and the next
     request (after the background refresh lands) gets the data."""
-    # Cheap pre-check first (no lock). The authoritative in_progress
-    # guard is inside refresh_market_snapshots_async itself, which holds
-    # the lock — this short-circuit just avoids spawning a thread when
-    # we already know there's nothing to do.
-    if not _refresh_is_stale() or _market_refresh_in_progress:
-        return
+    # Read both flags under the lock so the staleness check and the
+    # in-progress check observe a consistent snapshot — without the lock,
+    # two concurrent callers could each see stale=True/in_progress=False
+    # at different instants and both spawn refresh threads. The inner CAS
+    # inside refresh_market_snapshots_async would still dedupe the work,
+    # but we'd waste a thread + DB session opening each time. The flag
+    # itself stays owned by refresh_market_snapshots_async — DON'T set it
+    # here, or the inner CAS will think a refresh is already in flight
+    # and return 0 without doing any work.
+    with _market_refresh_lock:
+        if _market_refresh_in_progress:
+            return
+        if not _refresh_is_stale():
+            return
 
     def _bg():
         bg_db = None

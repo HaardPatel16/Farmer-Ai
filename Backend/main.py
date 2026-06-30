@@ -30,7 +30,7 @@ from services import (
 )
 from ml_model import predict_top_k, warm_bg_remover, warm_classifier, MODEL_PATH
 from embeddings import get_status as embeddings_get_status, warm_index_in_background
-from config import MARKET_API_KEY
+from config import MARKET_API_KEY, ALLOWED_ORIGINS
 
 # ---------------------------------------------------------------------------
 # Startup / shutdown lifecycle
@@ -105,12 +105,17 @@ app = FastAPI(
 )
 
 # Allow the plain HTML/JS frontend (opened as a local file or served from
-# the same machine) to call this backend without CORS errors.
+# the same machine) to call this backend without CORS errors. Origins,
+# methods, and headers are all narrowed: a public deployment should set
+# ALLOWED_ORIGINS in .env, and the method/header allow-lists block stray
+# preflight surprises like a malicious site sending TRACE or arbitrary
+# X-* headers.
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],   # tighten this before any public deployment
-    allow_methods=["*"],
-    allow_headers=["*"],
+    allow_origins=ALLOWED_ORIGINS,
+    allow_credentials=False,
+    allow_methods=["GET", "POST", "DELETE", "OPTIONS"],
+    allow_headers=["Content-Type"],
 )
 
 
@@ -139,7 +144,21 @@ class FeedbackRequest(BaseModel):
 # Weather intent detection (used inside /chat)
 # ---------------------------------------------------------------------------
 
-WEATHER_KEYWORDS = ["weather", "temperature", "rain", "rainfall", "forecast", "humidity", "climate", "precipitation"]
+# English + Gujarati weather vocabulary. Gujarati farmers often type their
+# questions in Gujarati script ("શું વરસાદ આવશે?", "હવામાન કેવું છે?") and
+# the previous English-only list never triggered the live-weather injection
+# for them, so Groq had to guess. Each term is matched as a plain substring,
+# so root forms cover the inflected variants ("વરસાદ"/"વરસાદી", "તાપમાન"/
+# "તાપમાનની"). Casing only matters for the English half — Gujarati script
+# has no case, so query_lower doesn't affect those.
+WEATHER_KEYWORDS = [
+    # English
+    "weather", "temperature", "rain", "rainfall", "forecast",
+    "humidity", "climate", "precipitation",
+    # Gujarati: hawaman (weather), varsad (rain), tapaman (temperature),
+    # aagahi (forecast), bharaaye (humidity), vaataavaran (climate)
+    "હવામાન", "વરસાદ", "તાપમાન", "આગાહી", "ભેજ", "વાતાવરણ",
+]
 
 # Max bytes accepted by /diagnose. 8 MB is generous for any phone-camera
 # JPEG/PNG; anything larger is almost certainly an upload mistake or abuse.
@@ -404,7 +423,10 @@ async def diagnose_leaf(
     # to a worker thread so concurrent requests aren't serialized on the
     # event loop. Same treatment for the Groq call below.
     try:
-        predictions = await asyncio.to_thread(predict_top_k, image_bytes, top_k, remove_bg)
+        diagnosis = await asyncio.to_thread(predict_top_k, image_bytes, top_k, remove_bg)
+        predictions = diagnosis["predictions"]
+        processed_image_b64 = diagnosis["processed_image_b64"]
+        bg_removed = diagnosis["bg_removed"]
     except FileNotFoundError as e:
         raise HTTPException(status_code=503, detail=str(e))
     except ValueError as e:
@@ -456,6 +478,15 @@ async def diagnose_leaf(
         "source_type": "leaf_diagnosis",
         "language": language,
         "predictions": predictions,
+        # Small WebP preview of the image the classifier actually saw — the
+        # frontend crossfades the user's upload thumbnail to this so the
+        # farmer sees exactly what the model was looking at. None if rembg
+        # was disabled and we skipped the encode, or if encoding failed.
+        "processed_image": (
+            f"data:image/webp;base64,{processed_image_b64}"
+            if processed_image_b64 else None
+        ),
+        "bg_removed": bg_removed,
     }
 
 
@@ -485,7 +516,7 @@ def submit_feedback(request: FeedbackRequest, db: Session = Depends(get_db)):
 
 
 @app.get("/weather")
-def weather(
+async def weather(
     district: str = Query(..., description="Gujarat district name, e.g. 'Ahmedabad'"),
     db: Session = Depends(get_db),
 ):
@@ -493,9 +524,15 @@ def weather(
     Returns current weather for a Gujarat district.
     Backed by the same WEATHER_CACHE_MINUTES cache as /weather/all — won't
     call Open-Meteo on every request.
+
+    get_weather() is sync (it uses requests + SQLAlchemy's sync session),
+    so we offload it to a worker thread; that keeps the event loop free
+    to serve other requests during the up-to-10s Open-Meteo round-trip on
+    a cache miss, instead of blocking a precious threadpool slot for the
+    whole call the way the previous sync route did.
     """
     try:
-        result = get_weather(db, district)
+        result = await asyncio.to_thread(get_weather, db, district)
     except Exception as e:
         print(f"[weather] get_weather failed for '{district}': {type(e).__name__}: {e}")
         raise HTTPException(
@@ -637,12 +674,24 @@ def chat_sessions(db: Session = Depends(get_db)):
 
 
 @app.delete("/chat/session/{session_id}")
-def delete_chat_session(session_id: str, db: Session = Depends(get_db)):
+def delete_chat_session(
+    session_id: str,
+    db: Session = Depends(get_db),
+):
     """
     Permanently deletes every chat message belonging to a session_id, along
     with any feedback (👍/👎) left on those messages.
     This is a HARD delete — rows are removed from the database, not just
     hidden — so this cannot be undone.
+
+    Auth model: knowing the session_id is itself the capability. The
+    session_id is an unguessable client-generated UUID, never put in URLs
+    or shared, and the same value already grants full *read* access via
+    /chat/history?session_id=… — so requiring a separate admin token for
+    *delete* added no real security (an attacker who knows the UUID can
+    already exfiltrate everything) while breaking the in-app delete UI
+    for the legitimate owner. The two operations now share one auth
+    surface: possession of the UUID.
 
     Feedback rows must be deleted first: Feedback.chat_id has a foreign key
     to Chat.id, so Postgres rejects deleting a chat that still has feedback

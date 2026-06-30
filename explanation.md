@@ -49,7 +49,7 @@ Two timing patterns to keep in mind:
 
 | Table | Purpose | Lifecycle |
 |---|---|---|
-| `chats` | Every Q&A: query, response, language, source_type, district, confidence_score. | Append-only; one row per `/chat` or `/diagnose-leaf` call. |
+| `chats` | Every Q&A: query, response, language, source_type, district, confidence_score. | Append-only; one row per `/chat` or `/diagnose` call. |
 | `feedback` | 👍/👎 with optional reason. FK to `chats.id`. | Append-only; bounded by chat count. |
 | `knowledge_chunks` | Chunked & district-tagged content from `Knowledge_base/sources/`. | Rebuilt by re-running `ingest.py`. |
 | `weather_cache` | One row per Open-Meteo response, keyed by district. | Bounded at ~33 rows — every fetch prunes everything older than the 10 min TTL. |
@@ -175,7 +175,7 @@ At most one `snapshot_date` value exists at any moment: today. The first refresh
 
 ---
 
-## Pipeline 4 — `/diagnose-leaf`
+## Pipeline 4 — `/diagnose`
 
 ```
 multipart upload (image) ──► size guard (8 MB)
@@ -319,7 +319,7 @@ Responsive: 4 cards in a row on desktop, 2×2 on tablet, single column on mobile
 ### Action handlers
 
 - **Weather / Mandi** → open their respective modals (live data from backend).
-- **Diagnose** → `startNewChat()` → `showChat()` → triggers the hidden file input. Posts to `/diagnose-leaf`.
+- **Diagnose** → `startNewChat()` → `showChat()` → triggers the hidden file input. Posts to `/diagnose`.
 - **Scheme Finder** → opens the Schemes modal (no backend; static seed in `app.js`). Each scheme card has two actions:
   - *Open official portal* → `<a target="_blank">` to the real govt portal.
   - *Ask AI about this* → `startNewChat()` + `showChat(scheme.question)` — auto-sends a comprehensive pre-filled question (eligibility, amount, application, documents, status, rejection reasons). All 6 schemes have English + Gujarati versions; the right one is picked at click time.

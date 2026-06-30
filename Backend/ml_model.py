@@ -15,6 +15,7 @@ real disease names.
 import io
 import json
 import os
+import threading
 
 import torch
 import torch.nn as nn
@@ -99,6 +100,7 @@ _PREPROCESS = transforms.Compose([
 ])
 
 _model = None
+_model_lock = threading.Lock()
 
 # rembg model used for the cutout. "u2net" is the general-purpose default,
 # ~170 MB, works well for plant leaves against natural backgrounds.
@@ -107,18 +109,24 @@ _model = None
 # auto-downloaded to ~/.u2net/ on first use.
 _BG_MODEL_NAME = "u2net"
 _bg_session = None
+_bg_session_lock = threading.Lock()
 
 
 def _get_bg_session():
     """Lazily creates and caches the rembg ONNX session. First call triggers
     a one-time model download (~170 MB) — warm it up at server startup
     (see main.py _warm_bg_remover_on_startup) so the first /diagnose
-    request isn't slow."""
+    request isn't slow. The lock prevents two concurrent first-time
+    callers from each spinning up a separate ONNX session (rembg's
+    new_session is not safe to invoke concurrently)."""
     global _bg_session
-    if _bg_session is None:
-        from rembg import new_session  # local import — see header note
-        _bg_session = new_session(_BG_MODEL_NAME)
-    return _bg_session
+    if _bg_session is not None:
+        return _bg_session
+    with _bg_session_lock:
+        if _bg_session is None:
+            from rembg import new_session  # local import — see header note
+            _bg_session = new_session(_BG_MODEL_NAME)
+        return _bg_session
 
 
 def _remove_background(image_bytes: bytes) -> Image.Image:
@@ -150,18 +158,34 @@ def _load_model() -> nn.Module:
         )
     model = convnext_small()
     model.classifier[2] = nn.Linear(768, NUM_CLASSES)
-    state_dict = torch.load(MODEL_PATH, map_location="cpu", weights_only=False)
+    # weights_only=True refuses pickle code execution; the checkpoint is a
+    # plain state_dict, so this is the safe path. Fall back to the legacy
+    # loader only if a future checkpoint format requires it, and log loudly
+    # so the operator knows untrusted bytes are being deserialized.
+    try:
+        state_dict = torch.load(MODEL_PATH, map_location="cpu", weights_only=True)
+    except Exception as e:
+        print(
+            f"[ml_model] torch.load(weights_only=True) failed ({type(e).__name__}: {e}); "
+            "retrying with weights_only=False. Only use trusted .pth files."
+        )
+        state_dict = torch.load(MODEL_PATH, map_location="cpu", weights_only=False)
     model.load_state_dict(state_dict)
     model.eval()
     return model
 
 
 def get_model() -> nn.Module:
-    """Lazily loads the model once and caches it for subsequent requests."""
+    """Lazily loads the model once and caches it for subsequent requests.
+    The lock prevents two concurrent first-time /diagnose requests from each
+    paying ~10s of torch.load + state-dict copy and double-loading weights."""
     global _model
-    if _model is None:
-        _model = _load_model()
-    return _model
+    if _model is not None:
+        return _model
+    with _model_lock:
+        if _model is None:
+            _model = _load_model()
+        return _model
 
 
 def warm_classifier() -> None:
@@ -183,23 +207,52 @@ def _open_raw_rgb(image_bytes: bytes) -> Image.Image:
         raise ValueError(f"Image could not be decoded ({type(e).__name__}).") from e
 
 
-def predict_top_k(image_bytes: bytes, k: int = 3, remove_bg: bool = True) -> list[dict]:
+def _encode_preview_webp(image: Image.Image, max_side: int = 512, quality: int = 78) -> bytes:
+    """Encode the classifier's input image as a small WebP preview suitable
+    for sending back to the chat UI. We downscale to a max side of 512 px
+    so the base64 payload stays in the ~30–80 KB range — the frontend only
+    renders this at ~220 px wide, so anything bigger is wasted bytes. WebP
+    quality 78 is roughly visually lossless for foliage on a white field
+    and compresses ~4× better than the equivalent JPEG."""
+    preview = image.copy()
+    preview.thumbnail((max_side, max_side), Image.LANCZOS)
+    buf = io.BytesIO()
+    preview.save(buf, format="WEBP", quality=quality, method=4)
+    return buf.getvalue()
+
+
+def predict_top_k(image_bytes: bytes, k: int = 3, remove_bg: bool = True) -> dict:
     """
-    Runs the classifier on a single image and returns the top_k predictions
-    as a list of {"label": str, "confidence": float} dicts, sorted by
-    confidence descending.
+    Runs the classifier on a single image and returns:
+
+        {
+            "predictions": list[{"label": str, "confidence": float}],  # top_k, descending
+            "processed_image_b64": str | None,   # WebP bytes, base64-encoded; None on encode failure
+            "bg_removed": bool,                  # True iff rembg actually ran successfully
+        }
 
     When remove_bg is True (default), rembg strips the background first so
     the model focuses on the leaf. If rembg fails for any reason
     (download failure, corrupt session, exotic image format), we fall
-    back to the raw image rather than fail the whole request.
+    back to the raw image rather than fail the whole request, and
+    bg_removed comes back False so the frontend can decide whether to
+    advertise "Background removed" to the user.
+
+    processed_image_b64 is the *same* image the classifier actually saw
+    (post-rembg if it ran, the raw decode otherwise), downscaled and
+    re-encoded as WebP — the chat UI swaps the user's upload thumbnail to
+    this once the response lands, so the farmer sees what the model saw.
 
     Model-file existence is checked lazily by get_model() — a missing
     .pth raises FileNotFoundError, which the route maps to 503.
     """
+    import base64
+
+    bg_removed = False
     if remove_bg:
         try:
             image = _remove_background(image_bytes)
+            bg_removed = True
         except Exception as e:
             print(f"[ml_model] background removal failed, using raw image: {type(e).__name__}: {e}")
             image = _open_raw_rgb(image_bytes)
@@ -215,7 +268,23 @@ def predict_top_k(image_bytes: bytes, k: int = 3, remove_bg: bool = True) -> lis
 
     top_probs, top_indices = torch.topk(probs, k=min(k, NUM_CLASSES))
 
-    return [
+    predictions = [
         {"label": CLASS_NAMES[idx], "confidence": round(prob.item(), 4)}
         for prob, idx in zip(top_probs, top_indices)
     ]
+
+    # Encode the preview AFTER inference rather than before so the encode
+    # failure mode (rare — basically only out-of-memory) doesn't take down
+    # the diagnosis itself.
+    try:
+        webp = _encode_preview_webp(image)
+        processed_image_b64 = base64.b64encode(webp).decode("ascii")
+    except Exception as e:
+        print(f"[ml_model] preview encode failed: {type(e).__name__}: {e}")
+        processed_image_b64 = None
+
+    return {
+        "predictions": predictions,
+        "processed_image_b64": processed_image_b64,
+        "bg_removed": bg_removed,
+    }
