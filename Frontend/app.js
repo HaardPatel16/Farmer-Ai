@@ -1,4 +1,4 @@
-/* ── Farmer AI — app.js ── */
+﻿/* ── Farmer AI — app.js ── */
 
 // API base resolution, in priority order:
 //   1. window.__API_BASE__ injected by index.html — explicit override wins.
@@ -40,7 +40,6 @@ const navRail = document.getElementById("navRail");
 const chatWindow = document.getElementById("chatWindow");
 const chatInput = document.getElementById("chatInput");
 const sendBtn = document.getElementById("sendBtn");
-const typingIndicator = document.getElementById("typingIndicator");
 const langToggle = document.getElementById("langToggle");
 const themeToggle = document.getElementById("themeToggle");
 const themeIcon = document.getElementById("themeIcon");
@@ -456,14 +455,31 @@ function formatTime(date) {
 }
 
 function scrollToBottom() {
-  chatWindow.scrollTo({ top: chatWindow.scrollHeight, behavior: "smooth" });
+  // The chat can scroll in one of two places depending on layout:
+  //   1. .chat-window has overflow-y: auto → it scrolls internally
+  //   2. its content pushes .chat-screen taller than the viewport →
+  //      the PAGE scrolls (document/window)
+  // In practice case 2 is what actually happens here (the page scrollbar
+  // is on the right edge of the browser, not inside the chat window), so
+  // scrolling only chatWindow was a no-op. We drive both, so whichever is
+  // the real scroller lands at the bottom.
+  //
+  // Double RAF: first frame lets the browser reflow the newly-appended
+  // bubble; second catches any additional growth (markdown images, fonts).
+  requestAnimationFrame(() => {
+    const doScroll = () => {
+      chatWindow.scrollTo({ top: chatWindow.scrollHeight, behavior: "smooth" });
+      window.scrollTo({ top: document.documentElement.scrollHeight, behavior: "smooth" });
+    };
+    doScroll();
+    requestAnimationFrame(doScroll);
+  });
 }
 
 function setWaiting(val) {
   isWaiting = val;
   chatInput.disabled = val;
   sendBtn.disabled = val;
-  typingIndicator.classList.toggle("visible", val);
   if (val) scrollToBottom();
 }
 
@@ -833,6 +849,11 @@ function formatAiText(rawText) {
   const escaped = escapeHtml(rawText);
 
   const withLineBreaks = escaped
+    // Normalize any Markdown "#"/"##"/… heading the model sometimes emits
+    // into our **bold** heading form, so it renders as a heading instead of
+    // showing literal hash characters. Anchored to start-of-text or a
+    // newline so a "#" mid-sentence (e.g. "grade #2") is left alone.
+    .replace(/(^|\n)\s*#{1,6}\s*([^\n]+)/g, "$1**$2**")
     // Break before a bolded section heading like "**Crop Details:**" —
     // this can appear anywhere in the text (often right after the
     // previous section's last bullet, with no other separator), so this
@@ -843,6 +864,13 @@ function formatAiText(rawText) {
     // starts a new point (but not numbers that are just part of a value,
     // like "75-100 mm").
     .replace(/(\s)(\d{1,2}\.\s+\*\*)/g, "$1\n$2")
+    // Break "- Point one - Point two" (the format the backend prompt now
+    // asks Groq to use) into separate bullet lines, reusing the same
+    // newline+bullet the "*" rule ultimately produces (no "*" collision here, so no placeholder needed). Requires a space after "-" and
+    // whitespace/start before it, so numeric ranges ("75-100"), hyphenated
+    // words ("medium-to-deep"), and negatives ("-5") — none of which have a
+    // space around the hyphen — are left untouched.
+    .replace(/(^|\s)-\s+(?=\S)/g, "\n• ")
     // Break "* Point one. * Point two." into separate bullet lines.
     // Requires a space after the "*" and a space/start-of-text before it,
     // so this doesn't trip on "**bold**" (no space after the first "*")
@@ -1555,6 +1583,211 @@ document.addEventListener("click", (e) => {
 
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") closeSettings();
+});
+
+// ── Statistics (operator) dashboard ──────────────────────────────────────
+// Hidden behind the Settings panel — not a farmer feature. Reads GET /stats,
+// which is gated by ADMIN_TOKEN on the backend. When the backend has a token
+// configured, the first request 401s and we prompt for it once, caching it
+// in localStorage so subsequent opens don't re-ask. All server text is run
+// through escapeHtml() before insertion.
+const statsOverlay = document.getElementById("statsOverlay");
+const statsBody = document.getElementById("statsBody");
+const openStatsBtn = document.getElementById("openStatsBtn");
+const statsCloseBtn = document.getElementById("statsCloseBtn");
+const statsRefreshBtn = document.getElementById("statsRefreshBtn");
+const ADMIN_TOKEN_KEY = "farmerai_admin_token";
+
+function openStatsModal() {
+  closeSettings();
+  if (!statsOverlay) return;
+  statsOverlay.classList.add("open");
+  loadStats();
+}
+
+function closeStatsModal() {
+  if (!statsOverlay) return;
+  statsOverlay.classList.remove("open");
+}
+
+async function loadStats(promptOnAuthFail = true) {
+  statsBody.innerHTML = `<div class="stats-loading">Loading…</div>`;
+  const token = localStorage.getItem(ADMIN_TOKEN_KEY) || "";
+  const url = `${API_BASE}/stats${token ? `?token=${encodeURIComponent(token)}` : ""}`;
+  try {
+    const res = await fetch(url);
+    if (res.status === 401) {
+      // Locked backend. Ask for the token once, cache it, and retry.
+      if (promptOnAuthFail) {
+        const entered = window.prompt("Enter admin token to view statistics:");
+        if (entered) {
+          localStorage.setItem(ADMIN_TOKEN_KEY, entered.trim());
+          return loadStats(false); // retry once; don't loop on a bad token
+        }
+      }
+      localStorage.removeItem(ADMIN_TOKEN_KEY);
+      statsBody.innerHTML = `<div class="stats-error">Not authorized. A valid admin token is required.</div>`;
+      return;
+    }
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    renderStats(await res.json());
+  } catch (err) {
+    statsBody.innerHTML = `<div class="stats-error">Could not load statistics (${escapeHtml(err.message)}). Is the backend running?</div>`;
+  }
+}
+
+// Percentage of `n` out of `d`, integer, guarded against divide-by-zero.
+function statPctOf(n, d) {
+  return d > 0 ? Math.round((100 * n) / d) : 0;
+}
+
+// Section header with a valence-coloured dot (green = positive metric,
+// red = dislikes, wheat = usage) so each section's role is legible at a
+// glance — the colour maps to the metric family, it isn't decoration.
+function statsSection(title, tone) {
+  return `<h4 class="stats-section-title"><span class="stats-dot stats-dot--${tone}"></span>${title}</h4>`;
+}
+
+function renderStats(d) {
+  const t2 = d.totals || {};
+  const fb = t2.total_feedback || 0;
+  const satisfaction = t2.like_pct == null ? "—" : `${t2.like_pct}%`;
+
+  // ── KPI row: four figures, satisfaction carries a mini split bar so the
+  // headline number is backed by its like/dislike composition. ──
+  const satBar = fb
+    ? `<span class="kpi-bar">
+         <span class="kpi-bar-pos" style="width:${statPctOf(t2.likes, fb)}%"></span>
+         <span class="kpi-bar-neg" style="width:${statPctOf(t2.dislikes, fb)}%"></span>
+       </span>`
+    : `<span class="kpi-bar kpi-bar--empty"></span>`;
+
+  const cards = `
+    <div class="stats-cards">
+      <div class="stat-kpi">
+        <span class="stat-kpi-label">Total chats</span>
+        <span class="stat-kpi-num">${t2.total_chats ?? 0}</span>
+      </div>
+      <div class="stat-kpi stat-kpi--wide">
+        <span class="stat-kpi-label">Satisfaction</span>
+        <span class="stat-kpi-num">${satisfaction}</span>
+        ${satBar}
+        <span class="stat-kpi-foot">${fb ? `${t2.likes} of ${fb} ratings positive` : "No ratings yet"}</span>
+      </div>
+      <div class="stat-kpi">
+        <span class="stat-kpi-label">Likes</span>
+        <span class="stat-kpi-num stat-pos">${t2.likes ?? 0}</span>
+      </div>
+      <div class="stat-kpi">
+        <span class="stat-kpi-label">Dislikes</span>
+        <span class="stat-kpi-num stat-neg">${t2.dislikes ?? 0}</span>
+      </div>
+    </div>`;
+
+  // ── Signature: satisfaction split bar per answer source. ──
+  const sourceRows = (d.by_source_type || []).map(r => {
+    const total = r.likes + r.dislikes;
+    const lp = statPctOf(r.likes, total);
+    const dp = statPctOf(r.dislikes, total);
+    const bar = total
+      ? `<span class="sat-bar">
+           <span class="sat-bar-pos" style="width:${lp}%"></span>
+           <span class="sat-bar-neg" style="width:${dp}%"></span>
+         </span>`
+      : `<span class="sat-bar sat-bar--empty"></span>`;
+    return `
+      <div class="sat-row">
+        <div class="sat-row-top">
+          <span class="sat-src">${escapeHtml(r.source_type)}</span>
+          <span class="sat-meta">${r.chats} chats${total ? ` · ${lp}% positive` : " · no ratings"}</span>
+        </div>
+        ${bar}
+        <div class="sat-legend">
+          <span class="stat-pos">${r.likes} 👍</span>
+          <span class="stat-neg">${r.dislikes} 👎</span>
+        </div>
+      </div>`;
+  }).join("") || `<div class="stats-empty">No chats recorded yet.</div>`;
+
+  const sourceSection = statsSection("Satisfaction by answer source", "pos") +
+    `<div class="sat-list">${sourceRows}</div>`;
+
+  // ── Dislike breakdowns as ranked horizontal bars. ──
+  const barList = (rows, keyName) => {
+    if (!rows || !rows.length) return `<div class="stats-empty-mini">Nothing yet</div>`;
+    const max = Math.max(...rows.map(r => r.count));
+    return rows.map(r => `
+      <div class="hbar-row">
+        <span class="hbar-label">${escapeHtml(String(r[keyName]))}</span>
+        <span class="hbar-track"><span class="hbar-fill hbar-neg" style="width:${statPctOf(r.count, max)}%"></span></span>
+        <span class="hbar-val">${r.count}</span>
+      </div>`).join("");
+  };
+
+  const breakdowns = `
+    <div class="stats-mini-wrap">
+      <div class="stats-mini">${statsSection("Dislikes by reason", "neg")}${barList(d.dislikes_by_reason, "reason")}</div>
+      <div class="stats-mini">${statsSection("Dislikes by district", "neg")}${barList(d.dislikes_by_district, "district")}</div>
+    </div>`;
+
+  // ── Usage: per-day activity bar (∝ chats) with gold token counts. ──
+  const usage = d.usage_by_day || [];
+  const uMax = usage.length ? Math.max(...usage.map(u => u.chats)) : 1;
+  const usageRows = usage.map(u => `
+    <div class="usage-row">
+      <span class="usage-day">${escapeHtml(u.day)}</span>
+      <span class="hbar-track"><span class="hbar-fill hbar-wheat" style="width:${statPctOf(u.chats, uMax)}%"></span></span>
+      <span class="usage-chats">${u.chats}</span>
+      <span class="usage-tokens">${u.tokens.toLocaleString()} tok</span>
+    </div>`).join("") || `<div class="stats-empty-mini">No activity yet</div>`;
+
+  const usageSection = statsSection("Usage — last 14 days", "wheat") +
+    `<div class="usage-list">${usageRows}</div>`;
+
+  // ── The actionable list: dislikes with retrieval diagnostics. ──
+  const dislikeItems = (d.recent_dislikes || []).map(r => {
+    const cov = r.confidence_score == null ? "—" : `${Math.round(r.confidence_score * 100)}%`;
+    const chunks = r.chunks_sent
+      ? `<pre class="stats-chunks">${escapeHtml(r.chunks_sent)}</pre>`
+      : `<div class="stats-empty-mini">No KB chunks were sent for this answer.</div>`;
+    return `
+      <details class="stats-dislike">
+        <summary>
+          <span class="stats-dislike-q">${escapeHtml(r.query || "")}</span>
+          <span class="stats-tags">
+            <span class="stats-tag stats-tag--reason">${escapeHtml(r.reason || "no reason")}</span>
+            <span class="stats-tag">${escapeHtml(r.source_type || "?")}</span>
+            <span class="stats-tag">cov ${cov}</span>
+            ${r.district ? `<span class="stats-tag">${escapeHtml(r.district)}</span>` : ""}
+          </span>
+        </summary>
+        <div class="stats-dislike-body">
+          <div class="stats-dislike-label">Answer given</div>
+          <div class="stats-dislike-answer">${escapeHtml(r.response || "")}</div>
+          <div class="stats-dislike-label">Chunks sent to Groq</div>
+          ${chunks}
+        </div>
+      </details>`;
+  }).join("") || `<div class="stats-empty">No dislikes yet — nothing to review.</div>`;
+
+  const dislikes = statsSection(`Dislikes to review (${(d.recent_dislikes || []).length})`, "neg") +
+    `<div class="stats-dislikes">${dislikeItems}</div>`;
+
+  statsBody.innerHTML = cards + sourceSection + breakdowns + usageSection + dislikes;
+}
+
+if (openStatsBtn) openStatsBtn.addEventListener("click", openStatsModal);
+if (statsCloseBtn) statsCloseBtn.addEventListener("click", closeStatsModal);
+if (statsRefreshBtn) statsRefreshBtn.addEventListener("click", () => loadStats(false));
+if (statsOverlay) {
+  statsOverlay.addEventListener("click", (e) => {
+    if (e.target === statsOverlay) closeStatsModal();
+  });
+}
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && statsOverlay && statsOverlay.classList.contains("open")) {
+    closeStatsModal();
+  }
 });
 
 // ── Diagnose Disease card (upload / camera) ──────────────────────────────

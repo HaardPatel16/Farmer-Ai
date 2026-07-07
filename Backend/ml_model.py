@@ -12,6 +12,7 @@ the names file is a soft requirement that turns those placeholders into
 real disease names.
 """
 
+import base64
 import io
 import json
 import os
@@ -22,6 +23,16 @@ import torch.nn as nn
 from PIL import Image
 from torchvision import transforms
 from torchvision.models import convnext_small
+
+# Pillow 9.1 introduced PIL.Image.Resampling.* and 10.0 removed the
+# top-level aliases (Image.LANCZOS, Image.BICUBIC, …). Resolve once at
+# import time so the rest of the file doesn't care which install is on
+# the system — if Resampling is missing (Pillow < 9.1), fall back to the
+# legacy attribute, which still exists in that range.
+try:
+    _LANCZOS = Image.Resampling.LANCZOS
+except AttributeError:
+    _LANCZOS = Image.LANCZOS
 
 # rembg = https://github.com/danielgatis/rembg — U²-Net-based background
 # removal. Run before the ConvNeXt preprocess so the classifier sees only
@@ -115,10 +126,10 @@ _bg_session_lock = threading.Lock()
 def _get_bg_session():
     """Lazily creates and caches the rembg ONNX session. First call triggers
     a one-time model download (~170 MB) — warm it up at server startup
-    (see main.py _warm_bg_remover_on_startup) so the first /diagnose
-    request isn't slow. The lock prevents two concurrent first-time
-    callers from each spinning up a separate ONNX session (rembg's
-    new_session is not safe to invoke concurrently)."""
+    (see main.py's _warm_diagnosis_stack, invoked from the lifespan hook)
+    so the first /diagnose request isn't slow. The lock prevents two
+    concurrent first-time callers from each spinning up a separate ONNX
+    session (rembg's new_session is not safe to invoke concurrently)."""
     global _bg_session
     if _bg_session is not None:
         return _bg_session
@@ -126,6 +137,19 @@ def _get_bg_session():
         if _bg_session is None:
             from rembg import new_session  # local import — see header note
             _bg_session = new_session(_BG_MODEL_NAME)
+            # rembg's BaseSession already auto-picks CUDAExecutionProvider
+            # over CPUExecutionProvider when onnxruntime-gpu + a CUDA GPU
+            # are both present (see rembg.sessions.base.BaseSession.__init__)
+            # — but it does so silently. Mirror the explicit device print
+            # used by embeddings.py / ml_model.py's classifier so an
+            # operator can tell from the logs whether background removal
+            # is actually running on GPU or fell back to CPU.
+            try:
+                active_provider = _bg_session.inner_session.get_providers()[0]
+            except Exception:
+                active_provider = "unknown"
+            device_label = "GPU" if "CUDA" in active_provider or "ROCM" in active_provider else "CPU"
+            print(f"[ml_model] rembg background remover running on {device_label} ({active_provider})")
         return _bg_session
 
 
@@ -150,6 +174,19 @@ def warm_bg_remover() -> None:
     _get_bg_session()
 
 
+def _pick_device() -> torch.device:
+    """Return a torch.device for the leaf classifier. CUDA when available,
+    CPU otherwise. Mirrors the helper in embeddings.py so both ML stacks
+    answer the GPU/CPU question identically."""
+    return torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
+
+# Resolved once on first model load and reused for the input tensor in
+# predict_top_k(). Without a single source of truth, a model on CUDA and
+# input on CPU silently raises RuntimeError on .forward().
+_device = _pick_device()
+
+
 def _load_model() -> nn.Module:
     if not os.path.exists(MODEL_PATH):
         raise FileNotFoundError(
@@ -171,7 +208,9 @@ def _load_model() -> nn.Module:
         )
         state_dict = torch.load(MODEL_PATH, map_location="cpu", weights_only=False)
     model.load_state_dict(state_dict)
+    model.to(_device)
     model.eval()
+    print(f"[ml_model] ConvNeXt-Small running on {str(_device).upper()}")
     return model
 
 
@@ -215,7 +254,7 @@ def _encode_preview_webp(image: Image.Image, max_side: int = 512, quality: int =
     quality 78 is roughly visually lossless for foliage on a white field
     and compresses ~4× better than the equivalent JPEG."""
     preview = image.copy()
-    preview.thumbnail((max_side, max_side), Image.LANCZOS)
+    preview.thumbnail((max_side, max_side), _LANCZOS)
     buf = io.BytesIO()
     preview.save(buf, format="WEBP", quality=quality, method=4)
     return buf.getvalue()
@@ -246,8 +285,6 @@ def predict_top_k(image_bytes: bytes, k: int = 3, remove_bg: bool = True) -> dic
     Model-file existence is checked lazily by get_model() — a missing
     .pth raises FileNotFoundError, which the route maps to 503.
     """
-    import base64
-
     bg_removed = False
     if remove_bg:
         try:
@@ -259,7 +296,7 @@ def predict_top_k(image_bytes: bytes, k: int = 3, remove_bg: bool = True) -> dic
     else:
         image = _open_raw_rgb(image_bytes)
 
-    input_tensor = _PREPROCESS(image).unsqueeze(0)
+    input_tensor = _PREPROCESS(image).unsqueeze(0).to(_device)
 
     model = get_model()
     with torch.no_grad():
@@ -268,8 +305,12 @@ def predict_top_k(image_bytes: bytes, k: int = 3, remove_bg: bool = True) -> dic
 
     top_probs, top_indices = torch.topk(probs, k=min(k, NUM_CLASSES))
 
+    # .item() on the 0-dim LongTensor — current PyTorch happens to
+    # accept a 0-dim tensor as a list index via __index__, but that's
+    # an implementation detail to not rely on. .item() also future-proofs
+    # if NUM_CLASSES > 2**31 (it won't, but be explicit).
     predictions = [
-        {"label": CLASS_NAMES[idx], "confidence": round(prob.item(), 4)}
+        {"label": CLASS_NAMES[idx.item()], "confidence": round(prob.item(), 4)}
         for prob, idx in zip(top_probs, top_indices)
     ]
 

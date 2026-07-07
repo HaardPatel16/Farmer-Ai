@@ -24,6 +24,16 @@ GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 # if this is missing, rather than the whole app refusing to start.
 MARKET_API_KEY = os.getenv("MARKET_API_KEY")
 
+# Secret token that gates the operator-only /stats endpoint. Optional:
+#  - SET it (any long random string) to lock the stats dashboard so only
+#    someone who knows the token can read usage/feedback data. Required
+#    before any public deployment, since /stats exposes farmer questions,
+#    token spend, and dislike diagnostics.
+#  - LEAVE it unset for local/dev, where the endpoint stays open for
+#    convenience. Same "possession of the secret = capability" model as the
+#    session-delete route (no user accounts).
+ADMIN_TOKEN = os.getenv("ADMIN_TOKEN")
+
 # Comma-separated list of origins the browser is allowed to call the API
 # from. Defaults to localhost dev ports + file:// (Origin: null) so the
 # plain index.html opened from disk still works. Override with
@@ -35,8 +45,14 @@ _default_origins = (
     "http://127.0.0.1:5173,http://localhost:5173,"
     "null"
 )
+# Treat an *empty* ALLOWED_ORIGINS env var the same as an unset one — a
+# blank value would otherwise produce an empty allowlist and silently
+# block every browser, with the failure showing up only as a generic CORS
+# error in devtools (hard to attribute). `or` collapses ""/None to the
+# default; an explicit list of origins still wins, including the literal
+# "*" if the operator really wants a wide-open API on a trusted LAN.
 ALLOWED_ORIGINS = [
-    o.strip() for o in os.getenv("ALLOWED_ORIGINS", _default_origins).split(",") if o.strip()
+    o.strip() for o in (os.getenv("ALLOWED_ORIGINS") or _default_origins).split(",") if o.strip()
 ]
 
 # Fail loudly and early if required variables are missing,

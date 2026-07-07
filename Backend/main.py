@@ -9,9 +9,24 @@ Then open http://127.0.0.1:8000/docs to test all endpoints via Swagger UI.
 """
 
 import asyncio
+import hmac
 import os
+import sys
 import threading
 from contextlib import asynccontextmanager
+
+# Force stdout/stderr to UTF-8 before any other module's import-time prints
+# can fire. The default Windows console is cp1252 ("charmap"), which raises
+# UnicodeEncodeError on common diagnostic characters (Gujarati script,
+# arrows, check-marks, em-dashes). A failed print inside a background
+# thread — like the embeddings warmup — kills that thread silently and
+# leaves the rest of the app pretending the work is still in progress.
+# This is a pure-output fix; it does not affect file I/O or DB I/O.
+try:
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+except Exception:
+    pass
 
 from fastapi import FastAPI, Depends, HTTPException, Query, UploadFile, File, Form
 from fastapi.middleware.cors import CORSMiddleware
@@ -26,11 +41,11 @@ from services import (
     kb_answer_coverage, answer_has_llm_hedge,
     is_farming_question, offtopic_refusal,
     refresh_market_snapshots_async, _seed_last_refresh_from_db,
-    MARKET_REFRESH_MINUTES,
+    MARKET_REFRESH_MINUTES, CHAT_HISTORY_MAX_TURNS,
 )
 from ml_model import predict_top_k, warm_bg_remover, warm_classifier, MODEL_PATH
 from embeddings import get_status as embeddings_get_status, warm_index_in_background
-from config import MARKET_API_KEY, ALLOWED_ORIGINS
+from config import MARKET_API_KEY, ALLOWED_ORIGINS, ADMIN_TOKEN
 
 # ---------------------------------------------------------------------------
 # Startup / shutdown lifecycle
@@ -38,6 +53,21 @@ from config import MARKET_API_KEY, ALLOWED_ORIGINS
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
+    # One-line GPU summary up front — the individual warmup threads below
+    # (embeddings, classifier, rembg) each log their own device once they
+    # actually load, but that happens seconds to minutes later on separate
+    # daemon threads. Printing the raw CUDA availability here immediately
+    # tells an operator whether any GPU accel is even possible on this
+    # machine, without waiting on those threads.
+    try:
+        import torch
+        if torch.cuda.is_available():
+            print(f"[startup] CUDA GPU detected: {torch.cuda.get_device_name(0)} — ML workloads will use it")
+        else:
+            print("[startup] no CUDA GPU detected — embeddings/classifier/rembg will run on CPU")
+    except Exception as e:
+        print(f"[startup] GPU check failed ({type(e).__name__}: {e}) — assuming CPU")
+
     # Seed the last-refresh marker so a restart inside a fresh poll window
     # doesn't immediately re-fetch market data.
     db = SessionLocal()
@@ -131,7 +161,12 @@ class ChatRequest(BaseModel):
 class ChatResponse(BaseModel):
     chat_id: int
     response: str
-    source_type: str        # 'knowledge_base' or 'llm_reasoning'
+    # source_type is one of: 'knowledge_base' (>=70% KB coverage),
+    # 'mixed' (20-70% coverage or LLM hedge detected), 'weather_api'
+    # (live Open-Meteo data injected as context), or 'llm_reasoning'
+    # (no real KB grounding). /diagnose returns 'leaf_diagnosis' via
+    # its own ad-hoc dict, not this schema.
+    source_type: str
     language: str
 
 class FeedbackRequest(BaseModel):
@@ -165,6 +200,96 @@ WEATHER_KEYWORDS = [
 # Enforced after the bytes are read; combined with PIL's MAX_IMAGE_PIXELS
 # cap in ml_model.py this bounds both compressed and decoded memory cost.
 MAX_IMAGE_BYTES = 8 * 1024 * 1024
+
+
+# Source types that should NOT be replayed as prior turns to Groq:
+#  - "llm_reasoning" from the local off-topic refusal path never called
+#    Groq, and its canned refusal text would just confuse a follow-up
+#    (we handle that here rather than tag those rows specifically).
+#  - "leaf_diagnosis" replies are image-triggered and reference labels
+#    the follow-up turn has no image for.
+# Everything else (knowledge_base / mixed / weather_api / genuine
+# llm_reasoning that DID call Groq) is fair game.
+_HISTORY_EXCLUDED_SOURCES = {"leaf_diagnosis"}
+
+
+def load_chat_history(db: Session, session_id: str) -> list[dict]:
+    """Return the last CHAT_HISTORY_MAX_TURNS (user, assistant) pairs for
+    this session, in chronological order, in Groq's messages shape. Skips
+    leaf-diagnosis rows since their "user message" is a synthetic label
+    and their answer references an image the follow-up doesn't have.
+    Off-topic refusals are also skipped: their query text is real but the
+    canned refusal reply would derail any follow-up if replayed as
+    prior context."""
+    rows = (
+        db.query(Chat)
+        .filter(Chat.session_id == session_id)
+        .filter(~Chat.source_type.in_(_HISTORY_EXCLUDED_SOURCES))
+        .order_by(Chat.created_at.desc())
+        .limit(CHAT_HISTORY_MAX_TURNS * 3)  # over-fetch, then filter refusals below
+        .all()
+    )
+    # Drop off-topic refusals (they share source_type "llm_reasoning" with
+    # legitimate LLM answers, so we can't filter them out in SQL — the
+    # cheap tell is `chunks_sent_count is None AND confidence_score is None`
+    # AND source_type=='llm_reasoning', which is exactly how the refusal
+    # branch persists rows).
+    kept = [
+        r for r in rows
+        if not (
+            r.source_type == "llm_reasoning"
+            and r.chunks_sent_count is None
+            and r.confidence_score is None
+        )
+    ]
+    kept = kept[:CHAT_HISTORY_MAX_TURNS]
+    kept.reverse()  # oldest → newest, matching conversational order
+
+    history: list[dict] = []
+    for r in kept:
+        history.append({"role": "user", "content": r.query})
+        history.append({"role": "assistant", "content": r.response})
+    return history
+
+
+# Anaphoric pronouns that signal "this query refers back to a previous
+# turn". Matched as whole words so "italy" doesn't trip on "it".
+_FOLLOWUP_PRONOUNS = {
+    "it", "its", "it's", "this", "that", "these", "those", "them", "they",
+    "there", "he", "she", "him", "her", "his", "hers", "their", "theirs",
+}
+
+# Short-query threshold (words after stripping punctuation). A 1-3 word
+# question like "and irrigation?" or "what about fertilizer" clearly
+# depends on prior turns; longer questions usually stand on their own.
+_FOLLOWUP_SHORT_WORDS = 3
+
+
+def _looks_like_followup(query: str) -> bool:
+    """True if the query looks like it depends on earlier turns — either
+    it's very short or it contains an anaphoric pronoun. Used to decide
+    whether KB retrieval should be augmented with prior user turns."""
+    words = [w.strip(".,!?:;\"'()[]{}<>").lower() for w in query.split()]
+    words = [w for w in words if w]
+    if len(words) <= _FOLLOWUP_SHORT_WORDS:
+        return True
+    if any(w in _FOLLOWUP_PRONOUNS for w in words):
+        return True
+    return False
+
+
+def _build_retrieval_query(current: str, history: list[dict]) -> str:
+    """Return the query string used for KB search + district detection.
+    Concatenates prior user turns onto `current` only when `current`
+    looks like a follow-up per _looks_like_followup(); otherwise returns
+    the raw current query so a fresh topic isn't polluted by earlier
+    conversation."""
+    if not history or not _looks_like_followup(current):
+        return current
+    prev_user_turns = " ".join(
+        m["content"] for m in history if m.get("role") == "user"
+    ).strip()
+    return f"{prev_user_turns} {current}".strip() if prev_user_turns else current
 
 
 def detect_weather_request(query: str):
@@ -216,7 +341,9 @@ async def _market_price_poller():
 @app.get("/embeddings/status")
 def embeddings_status():
     """Tells you whether the semantic-search warmup has finished.
-    state: not_started | warming | ready | failed | idle_empty_kb."""
+    state: not_started | warming | ready | failed | idle_empty_kb.
+    Also returns `warm_error` (str or null) when state == "failed" so
+    operators can see the actual exception message in the response."""
     try:
         return embeddings_get_status()
     except Exception as e:
@@ -246,7 +373,25 @@ def chat(request: ChatRequest, db: Session = Depends(get_db)):
     # skip Groq entirely and return a canned refusal. Zero tokens spent,
     # zero quota burned. Groq's compact in-prompt SCOPE line is just a
     # backstop for borderline queries that pass the whitelist.
+    #
+    # Exception: mid-conversation follow-ups. If the session already has
+    # at least one on-topic exchange AND the current query is short or
+    # pronoun-heavy ("about its fetrilizers", "and irrigation?"), treat
+    # it as a continuation instead of refusing. Rejecting these was the
+    # single biggest usability hit: typos and pronouns will never match
+    # the vocabulary whitelist, but they're almost never off-topic in an
+    # active farming chat. We DO peek at history here (an extra DB read
+    # on the refusal path) — cheap compared to the wrong refusal.
+    is_followup_context = False
     if not is_farming_question(request.query):
+        try:
+            _peek_history = load_chat_history(db, request.session_id)
+        except Exception:
+            _peek_history = []
+        if _peek_history and _looks_like_followup(request.query):
+            is_followup_context = True
+
+    if not is_followup_context and not is_farming_question(request.query):
         refusal = offtopic_refusal(language=request.language)
         chat_row = Chat(
             session_id=request.session_id,
@@ -293,21 +438,60 @@ def chat(request: ChatRequest, db: Session = Depends(get_db)):
             # rest of /chat proceeds as if the weather lookup didn't fire.
             print(f"[weather] get_weather() failed for '{weather_district}': {e}")
 
-    # Step 0b: general district detection — unlike weather_district above,
+    # Step 0b: pull recent conversation for this session so follow-ups
+    # like "and what fertilizer for that?" have context. Bounded by
+    # CHAT_HISTORY_MAX_TURNS and further trimmed by ask_groq to
+    # CHAT_HISTORY_MAX_CHARS (~600 words) as a safety net. Loaded BEFORE
+    # KB search so we can also feed the previous user turn into keyword
+    # retrieval — otherwise "tell me about its irrigation" as a follow-up
+    # to a cotton question retrieves generic irrigation chunks (no "cotton"
+    # token in the query) and Groq's answer scores 0% KB coverage.
+    try:
+        history = load_chat_history(db, request.session_id)
+    except Exception as e:
+        print(f"[chat] load_chat_history failed (proceeding without): {e}")
+        history = []
+
+    # Build a retrieval-only query. Only augment with previous user turns
+    # when the CURRENT query looks like a follow-up (short, or contains
+    # anaphoric pronouns like "it/its/that/those"). A self-contained
+    # question that names a real topic — "tell me about bajra in gujarat"
+    # — must NOT be diluted with earlier cotton/irrigation words, or
+    # search_knowledge_base returns a mix of unrelated chunks and coverage
+    # drops below the KB threshold. Groq's messages array carries full
+    # history either way, so context isn't lost for the LLM.
+    retrieval_query = _build_retrieval_query(request.query, history)
+
+    # Step 0c: general district detection — unlike weather_district above,
     # this isn't gated on weather keywords, so it catches district mentions
     # in ANY kind of farming question (soil, crops, schemes, pests, etc).
-    # Reuses weather_district if already found, to avoid detecting twice.
-    district = weather_district or detect_district(request.query)
+    # Runs against retrieval_query so "what about Bhavnagar?" following an
+    # earlier cotton question still detects the district; falls back to
+    # current-query-only if that yields nothing.
+    district = weather_district or detect_district(retrieval_query)
 
-    # Step 1: knowledge base search
+    # Step 1: knowledge base search — using the augmented retrieval_query
+    # so a follow-up like "tell me about its irrigation" carries the
+    # earlier "cotton" token into keyword scoring and semantic search.
+    # The exception path LOGS the failure now (previously it silently
+    # swallowed, which is exactly how the "0 chunks with no [search_kb]
+    # trace" symptom was going undiagnosed — the function was crashing
+    # and we couldn't tell from the outside).
+    print(f"[chat] calling search_knowledge_base retrieval={retrieval_query!r}", flush=True)
     try:
-        kb_chunks = search_knowledge_base(db, request.query, district=district)
-    except Exception:
-        kb_chunks = []   # don't crash the whole chat if KB search fails
+        kb_chunks = search_knowledge_base(db, retrieval_query, district=district)
+    except Exception as e:
+        print(f"[chat] search_knowledge_base RAISED: {type(e).__name__}: {e}", flush=True)
+        import traceback
+        traceback.print_exc()
+        kb_chunks = []
 
     # Terminal-side visibility so retrieval can be debugged live while
     # tailing uvicorn output, not just after the fact from pgAdmin.
-    print(f"[chat] sent {len(kb_chunks)} chunks to Groq | query='{request.query[:80]}' | district={district}")
+    print(
+        f"[chat] sent {len(kb_chunks)} chunks to Groq | "
+        f"query='{request.query[:80]}' | retrieval='{retrieval_query[:120]}' | district={district}"
+    )
 
     context_parts = []
     if weather_context:
@@ -319,11 +503,12 @@ def chat(request: ChatRequest, db: Session = Depends(get_db)):
     # Step 2: call Groq — pass district through so it tailors advice to
     # local soil/climate/crop conditions, combined with any KB context.
     try:
-        answer = ask_groq(
+        answer, usage = ask_groq(
             question=request.query,
             language=request.language,
             context=context,
             district=district,
+            history=history,
         )
     except Exception as e:
         # Log the underlying error so 503s are diagnosable from the uvicorn
@@ -379,6 +564,14 @@ def chat(request: ChatRequest, db: Session = Depends(get_db)):
     else:
         chunks_joined = None
 
+    # Terminal-side token visibility so quota spend can be tailed live.
+    # Also stored on the row so cumulative per-session cost is queryable
+    # from pgAdmin without re-parsing logs.
+    print(
+        f"[chat] tokens: prompt={usage['prompt_tokens']} "
+        f"completion={usage['completion_tokens']} | history_turns={len(history) // 2}"
+    )
+
     chat_row = Chat(
         session_id=request.session_id,
         query=request.query,
@@ -389,6 +582,8 @@ def chat(request: ChatRequest, db: Session = Depends(get_db)):
         district=district,
         chunks_sent_count=len(kb_chunks),
         chunks_sent=chunks_joined,
+        prompt_tokens=usage["prompt_tokens"] or None,
+        completion_tokens=usage["completion_tokens"] or None,
     )
     db.add(chat_row)
     db.commit()
@@ -429,6 +624,16 @@ async def diagnose_leaf(
     # the error path leaked decoder internals.
     if not image.content_type or not image.content_type.startswith("image/"):
         raise HTTPException(status_code=400, detail="Uploaded file must be an image with a valid image/* Content-Type.")
+
+    # Cheap pre-check on the Content-Length header (when present) so we
+    # reject a 500 MB body *before* allocating 500 MB of RAM to read it.
+    # Curl, every browser, and the project's frontend all set this header
+    # on file uploads. A malicious client could omit it — but then the
+    # post-read length check below still catches them; this is just the
+    # first line of defense, not the only one.
+    declared_size = getattr(image, "size", None)
+    if declared_size is not None and declared_size > MAX_IMAGE_BYTES:
+        raise HTTPException(status_code=413, detail="Image is too large (max 8 MB).")
 
     # Async read so an 8 MB upload doesn't pin the event loop the way the
     # previous sync `image.file.read()` did.
@@ -530,6 +735,174 @@ def submit_feedback(request: FeedbackRequest, db: Session = Depends(get_db)):
     db.commit()
 
     return {"status": "ok", "chat_id": request.chat_id, "score": request.score}
+
+
+@app.get("/stats")
+def stats(
+    token: str = Query(None, description="Admin token; required only if ADMIN_TOKEN is set in .env"),
+    db: Session = Depends(get_db),
+):
+    """
+    Operator-only dashboard data: usage, feedback satisfaction, and a list of
+    recent dislikes with the retrieval diagnostics already stored on each
+    Chat row (source_type, KB coverage, and the exact chunks_sent to Groq).
+    Powers the hidden Statistics view in the frontend's Settings panel.
+
+    Auth: possession-of-token, same model as DELETE /chat/session. If
+    ADMIN_TOKEN is configured in .env we require a constant-time match;
+    if it's unset (local dev) the endpoint is open. Constant-time compare
+    (hmac.compare_digest) avoids leaking token length/prefix via response
+    timing.
+    """
+    if ADMIN_TOKEN:
+        if not token or not hmac.compare_digest(token, ADMIN_TOKEN):
+            raise HTTPException(status_code=401, detail="Invalid or missing admin token.")
+
+    total_chats = db.query(func.count(Chat.id)).scalar() or 0
+
+    # Feedback can accumulate MORE THAN ONE row per chat: the chat UI
+    # re-enables its vote buttons after a page reload (history re-renders
+    # them fresh), so a farmer can rate the same answer again. Counting
+    # every row double-counts those votes and inflates every satisfaction
+    # number. Restrict ALL feedback aggregation below to the LATEST vote per
+    # chat — the highest Feedback.id for each chat_id. Reused as a subquery
+    # in each .in_() filter.
+    latest_feedback_ids = (
+        db.query(func.max(Feedback.id)).group_by(Feedback.chat_id)
+    )
+
+    likes = (
+        db.query(func.count(Feedback.id))
+        .filter(Feedback.score == 1, Feedback.id.in_(latest_feedback_ids))
+        .scalar()
+    ) or 0
+    dislikes = (
+        db.query(func.count(Feedback.id))
+        .filter(Feedback.score == -1, Feedback.id.in_(latest_feedback_ids))
+        .scalar()
+    ) or 0
+    total_feedback = likes + dislikes
+    like_pct = round(100.0 * likes / total_feedback, 1) if total_feedback else None
+
+    # Satisfaction by source_type: total chats per type, plus how many of
+    # those got liked / disliked. This is the headline "does the KB pipeline
+    # actually help?" metric — compare like/dislike ratios across
+    # knowledge_base vs mixed vs llm_reasoning.
+    by_source: dict[str, dict] = {}
+    for st, cnt in (
+        db.query(Chat.source_type, func.count(Chat.id))
+        .group_by(Chat.source_type)
+        .all()
+    ):
+        by_source[st or "unknown"] = {"chats": cnt, "likes": 0, "dislikes": 0}
+    for st, score, cnt in (
+        db.query(Chat.source_type, Feedback.score, func.count(Feedback.id))
+        .join(Feedback, Feedback.chat_id == Chat.id)
+        .filter(Feedback.id.in_(latest_feedback_ids))
+        .group_by(Chat.source_type, Feedback.score)
+        .all()
+    ):
+        bucket = by_source.setdefault(st or "unknown", {"chats": 0, "likes": 0, "dislikes": 0})
+        if score == 1:
+            bucket["likes"] = cnt
+        elif score == -1:
+            bucket["dislikes"] = cnt
+    by_source_type = [
+        {"source_type": k, **v}
+        for k, v in sorted(by_source.items(), key=lambda kv: -kv[1]["chats"])
+    ]
+
+    # Dislikes grouped by the reason the farmer picked (wrong_info /
+    # wrong_language / irrelevant / other), most common first.
+    dislikes_by_reason = [
+        {"reason": r or "unspecified", "count": c}
+        for r, c in sorted(
+            db.query(Feedback.reason, func.count(Feedback.id))
+            .filter(Feedback.score == -1, Feedback.id.in_(latest_feedback_ids))
+            .group_by(Feedback.reason)
+            .all(),
+            key=lambda x: -x[1],
+        )
+    ]
+
+    # Dislikes grouped by district — surfaces regions the KB covers poorly.
+    dislikes_by_district = [
+        {"district": d or "none", "count": c}
+        for d, c in sorted(
+            db.query(Chat.district, func.count(Feedback.id))
+            .join(Feedback, Feedback.chat_id == Chat.id)
+            .filter(Feedback.score == -1, Feedback.id.in_(latest_feedback_ids))
+            .group_by(Chat.district)
+            .all(),
+            key=lambda x: -x[1],
+        )
+    ][:15]
+
+    # Usage + token spend per day, last 14 days (newest first). func.date()
+    # collapses the timestamp to a calendar day; token sum coalesces NULLs
+    # (refusal rows never called Groq) to 0 so the sum stays numeric.
+    usage_by_day = [
+        {"day": str(day), "chats": c, "tokens": int(tok or 0)}
+        for day, c, tok in (
+            db.query(
+                func.date(Chat.created_at),
+                func.count(Chat.id),
+                func.coalesce(
+                    func.sum(
+                        func.coalesce(Chat.prompt_tokens, 0)
+                        + func.coalesce(Chat.completion_tokens, 0)
+                    ),
+                    0,
+                ),
+            )
+            .group_by(func.date(Chat.created_at))
+            .order_by(func.date(Chat.created_at).desc())
+            .limit(14)
+            .all()
+        )
+    ]
+
+    # The actionable list: the 50 most recent dislikes, each with the
+    # diagnostics needed to triage it without opening pgAdmin. response and
+    # chunks_sent are the raw stored values (chunks_sent already capped at
+    # ~6 KB by /chat); response is trimmed here to keep the payload light.
+    recent_dislikes = [
+        {
+            "chat_id": chat_row.id,
+            "created_at": chat_row.created_at.isoformat() if chat_row.created_at else None,
+            "query": chat_row.query,
+            "response": (chat_row.response or "")[:600],
+            "reason": fb.reason,
+            "source_type": chat_row.source_type,
+            "confidence_score": chat_row.confidence_score,
+            "district": chat_row.district,
+            "language": chat_row.language,
+            "chunks_sent": chat_row.chunks_sent,
+        }
+        for chat_row, fb in (
+            db.query(Chat, Feedback)
+            .join(Feedback, Feedback.chat_id == Chat.id)
+            .filter(Feedback.score == -1, Feedback.id.in_(latest_feedback_ids))
+            .order_by(Feedback.id.desc())
+            .limit(50)
+            .all()
+        )
+    ]
+
+    return {
+        "totals": {
+            "total_chats": total_chats,
+            "total_feedback": total_feedback,
+            "likes": likes,
+            "dislikes": dislikes,
+            "like_pct": like_pct,
+        },
+        "by_source_type": by_source_type,
+        "dislikes_by_reason": dislikes_by_reason,
+        "dislikes_by_district": dislikes_by_district,
+        "usage_by_day": usage_by_day,
+        "recent_dislikes": recent_dislikes,
+    }
 
 
 @app.get("/weather")

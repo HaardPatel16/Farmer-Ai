@@ -15,4 +15,8 @@ python-multipart>=0.0.9
 sentence-transformers>=2.7.0
 numpy>=1.26.0
 rembg>=2.0.50
+# CPU-only by default. On a machine with an NVIDIA GPU + CUDA installed,
+# swap this for `onnxruntime-gpu>=1.16.0` (uninstall onnxruntime first —
+# the two packages conflict) so rembg's background remover picks up
+# CUDAExecutionProvider automatically; see ml_model.py's _get_bg_session().
 onnxruntime>=1.16.0

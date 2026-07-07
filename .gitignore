@@ -11,6 +11,9 @@ venv/
 .vscode/
 .DS_Store
 
+# Claude Code — local tooling/config (launch configs, personal settings)
+.claude/
+
 # ML model weights — too large for GitHub
 ML model/*.pth
 

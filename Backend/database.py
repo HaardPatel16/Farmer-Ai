@@ -70,7 +70,22 @@ class Chat(Base):
     # caller if you want to bound row size).
     chunks_sent_count = Column(Integer, nullable=True)
     chunks_sent = Column(Text, nullable=True)
+    # Groq usage per request, so cumulative cost per session/user is
+    # queryable from pgAdmin without re-parsing logs. Nullable because
+    # older rows (and the local off-topic-refusal path, which never calls
+    # Groq) legitimately have no usage data.
+    prompt_tokens = Column(Integer, nullable=True)
+    completion_tokens = Column(Integer, nullable=True)
     created_at = Column(DateTime, default=utcnow_naive)
+
+    # Composite index so GET /chat/history?session_id=… can both filter
+    # and return rows in created_at order without an extra sort pass —
+    # Postgres can walk the index directly. The single-column session_id
+    # index above stays since /chat/sessions does a GROUP BY that's
+    # served by the leftmost column either way.
+    __table_args__ = (
+        Index("ix_chats_session_id_created_at", "session_id", "created_at"),
+    )
 
 
 class Feedback(Base):
@@ -78,7 +93,11 @@ class Feedback(Base):
     __tablename__ = "feedback"
 
     id = Column(Integer, primary_key=True, index=True)
-    chat_id = Column(Integer, ForeignKey("chats.id"), nullable=False)
+    # chat_id is indexed because DELETE /chat/session/{id} looks up all
+    # feedback rows for a session's chats via Feedback.chat_id.in_([…])
+    # before deleting them. Without the index that's a sequential scan
+    # of the whole feedback table per delete.
+    chat_id = Column(Integer, ForeignKey("chats.id"), nullable=False, index=True)
     score = Column(Integer, nullable=False)           # 1 = like, -1 = dislike
     reason = Column(String, nullable=True)             # only set for dislikes, e.g. 'wrong_info'
     created_at = Column(DateTime, default=utcnow_naive)

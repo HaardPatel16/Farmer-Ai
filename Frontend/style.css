@@ -1301,8 +1301,7 @@ body::before {
 }
 
 .chat-screen>.chat-wordmark,
-.chat-screen>.chat-window,
-.chat-screen>.typing-indicator {
+.chat-screen>.chat-window {
   width: 100%;
   max-width: 900px;
 }
@@ -1730,62 +1729,6 @@ body::before {
   cursor: default;
 }
 
-/* ── Typing indicator ── */
-.typing-indicator {
-  display: none;
-  align-items: flex-end;
-  gap: 10px;
-  padding: 0 0 12px;
-  animation: msgIn 0.2s ease both;
-}
-
-.typing-indicator.visible {
-  display: flex;
-}
-
-.typing-bubble {
-  background: var(--chat-surface);
-  border: 1.5px solid var(--chat-border);
-  border-radius: 16px 16px 16px 4px;
-  padding: 14px 18px;
-  display: flex;
-  gap: 5px;
-  align-items: center;
-  box-shadow: var(--chat-shadow);
-}
-
-.typing-bubble span {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--chat-green-light);
-  animation: bounce 1.2s infinite ease-in-out;
-}
-
-.typing-bubble span:nth-child(2) {
-  animation-delay: 0.18s;
-  background: var(--chat-gold);
-}
-
-.typing-bubble span:nth-child(3) {
-  animation-delay: 0.36s;
-  background: var(--chat-green);
-}
-
-@keyframes bounce {
-
-  0%,
-  60%,
-  100% {
-    transform: translateY(0);
-    opacity: 0.5;
-  }
-
-  30% {
-    transform: translateY(-6px);
-    opacity: 1;
-  }
-}
 
 /* ── Input area ──
    Fixed positioning escapes .chat-screen's box, so on the chat screen
@@ -3004,4 +2947,283 @@ body::before {
   .scheme-card { grid-template-columns: 3px 1fr; padding: 14px; }
   .scheme-actions { gap: 14px; margin-top: 10px; }
   .scheme-action { font-size: 0.78rem; }
+}
+
+/* ── Statistics (operator) dashboard ─────────────────────────────────────
+   Hidden behind the Settings panel. Mirrors the weather/market overlay
+   pattern (fixed backdrop, .open toggles display) and uses the shared
+   palette variables so it themes with light/dark automatically.
+
+   Colour language: green (--leaf) = positive / likes, warm red
+   (--stat-neg) = dislikes, wheat (--wheat) = usage & tokens. The through-
+   line signature is the like/dislike proportion bar, repeated at three
+   scales (KPI, per-source, per-day). */
+
+.stats-overlay { --stat-neg: #D64550; }
+
+/* ── Settings entry button — a real navigation action, not a text link.
+   Icon tile + title/subtitle + chevron so it reads as "opens a panel",
+   clearly distinct from the toggle rows above it. ── */
+.settings-link {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  width: 100%;
+  margin-top: 8px;
+  padding: 10px 10px 10px 8px;
+  background: none;
+  border: none;
+  border-top: 1px solid var(--border);
+  border-radius: 0 0 10px 10px;
+  color: var(--text);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+.settings-link:hover { background: var(--primary-pale); }
+.settings-link-icon {
+  flex: none;
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  background: var(--primary);
+  color: var(--text-inverse);
+}
+.settings-link-text { display: flex; flex-direction: column; line-height: 1.25; flex: 1; }
+.settings-link-title { font-size: 0.9rem; font-weight: 600; }
+.settings-link-sub { font-size: 0.72rem; color: var(--text-muted); }
+.settings-link-chevron { flex: none; color: var(--text-muted); transition: transform 0.15s ease; }
+.settings-link:hover .settings-link-chevron { transform: translateX(2px); color: var(--primary); }
+
+.stats-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 260;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: fadeIn 0.18s ease both;
+}
+.stats-overlay.open { display: flex; }
+
+.stats-modal {
+  background: var(--bg-card);
+  color: var(--text);
+  border: 1.5px solid var(--border);
+  border-radius: 18px;
+  width: min(780px, 100%);
+  max-height: 88vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+}
+
+.stats-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 17px 22px;
+  border-bottom: 1px solid var(--border);
+}
+.stats-modal-title { margin: 0; font-size: 1.15rem; font-weight: 700; letter-spacing: -0.01em; }
+.stats-modal-header-right { display: flex; align-items: center; gap: 6px; }
+.stats-refresh-btn,
+.stats-close-btn {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.stats-refresh-btn { font-size: 1.15rem; line-height: 1; }
+.stats-refresh-btn:hover,
+.stats-close-btn:hover { background: var(--primary-pale); color: var(--primary); }
+
+.stats-body { padding: 20px 22px 26px; overflow-y: auto; }
+.stats-loading,
+.stats-error,
+.stats-empty {
+  padding: 22px 16px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+.stats-error { color: var(--stat-neg); }
+.stats-empty-mini { padding: 10px 2px; color: var(--text-muted); font-size: 0.82rem; }
+
+/* ── KPI row ── */
+.stats-cards {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr 1fr;
+  gap: 11px;
+  margin-bottom: 6px;
+}
+.stat-kpi {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 13px;
+  padding: 13px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+.stat-kpi--wide { background: var(--primary-pale); border-color: transparent; }
+.stat-kpi-label {
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+}
+.stat-kpi-num { font-size: 1.7rem; font-weight: 800; line-height: 1.1; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+.stat-kpi-foot { font-size: 0.7rem; color: var(--text-muted); }
+.stat-pos { color: var(--leaf); }
+.stat-neg { color: var(--stat-neg); }
+
+/* Mini split bar under the satisfaction KPI. */
+.kpi-bar {
+  display: flex;
+  height: 6px;
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 3px 0 2px;
+  background: var(--border);
+}
+.kpi-bar-pos { background: var(--leaf); }
+.kpi-bar-neg { background: var(--stat-neg); }
+.kpi-bar--empty { background: var(--border); }
+
+/* ── Section headers with valence dot ── */
+.stats-section-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 26px 0 12px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+}
+.stats-dot { width: 8px; height: 8px; border-radius: 2px; flex: none; }
+.stats-dot--pos { background: var(--leaf); }
+.stats-dot--neg { background: var(--stat-neg); }
+.stats-dot--wheat { background: var(--wheat); }
+
+/* ── Signature: per-source satisfaction split bars ── */
+.sat-list { display: flex; flex-direction: column; gap: 14px; }
+.sat-row { display: flex; flex-direction: column; gap: 6px; }
+.sat-row-top { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; }
+.sat-src { font-size: 0.9rem; font-weight: 600; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+.sat-meta { font-size: 0.74rem; color: var(--text-muted); text-align: right; }
+.sat-bar {
+  display: flex;
+  height: 9px;
+  border-radius: 5px;
+  overflow: hidden;
+  background: var(--border);
+}
+.sat-bar-pos { background: var(--leaf); }
+.sat-bar-neg { background: var(--stat-neg); }
+.sat-bar--empty { background: repeating-linear-gradient(45deg, var(--border) 0 6px, transparent 6px 12px); }
+.sat-legend { display: flex; gap: 14px; font-size: 0.74rem; font-variant-numeric: tabular-nums; font-weight: 600; }
+
+/* ── Horizontal ranked bars (dislike breakdowns + usage) ── */
+.stats-mini-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+.hbar-row { display: grid; grid-template-columns: 92px 1fr auto; align-items: center; gap: 9px; padding: 4px 0; }
+.hbar-label { font-size: 0.8rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.hbar-track { height: 8px; border-radius: 4px; background: var(--border); overflow: hidden; }
+.hbar-fill { display: block; height: 100%; border-radius: 4px; min-width: 3px; }
+.hbar-neg { background: var(--stat-neg); }
+.hbar-wheat { background: var(--wheat); }
+.hbar-val { font-size: 0.8rem; font-weight: 700; font-variant-numeric: tabular-nums; min-width: 18px; text-align: right; }
+
+.usage-list { display: flex; flex-direction: column; gap: 2px; }
+.usage-row { display: grid; grid-template-columns: 96px 1fr auto auto; align-items: center; gap: 10px; padding: 4px 0; }
+.usage-day { font-size: 0.78rem; color: var(--text-muted); font-variant-numeric: tabular-nums; }
+.usage-chats { font-size: 0.82rem; font-weight: 700; font-variant-numeric: tabular-nums; min-width: 20px; text-align: right; }
+.usage-tokens { font-size: 0.74rem; color: var(--wheat-dark); font-variant-numeric: tabular-nums; min-width: 74px; text-align: right; }
+
+/* ── Dislikes to review ── */
+.stats-dislikes { display: flex; flex-direction: column; gap: 8px; }
+.stats-dislike {
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--stat-neg);
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--bg);
+  transition: border-color 0.15s ease;
+}
+.stats-dislike[open] { border-color: var(--primary-light); border-left-color: var(--stat-neg); }
+.stats-dislike > summary {
+  padding: 11px 13px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  list-style: none;
+}
+.stats-dislike > summary::-webkit-details-marker { display: none; }
+.stats-dislike-q { font-weight: 600; font-size: 0.9rem; }
+.stats-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.stats-tag {
+  font-size: 0.68rem;
+  padding: 2px 9px;
+  border-radius: 20px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+.stats-tag--reason { background: var(--stat-neg); border-color: transparent; color: #fff; font-weight: 600; }
+.stats-dislike-body { padding: 2px 13px 14px; font-size: 0.84rem; }
+.stats-dislike-label {
+  margin: 12px 0 5px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+}
+.stats-dislike-answer { white-space: pre-wrap; color: var(--text); line-height: 1.5; }
+.stats-chunks {
+  margin: 0;
+  max-height: 240px;
+  overflow: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 0.78rem;
+  line-height: 1.5;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+@media (max-width: 640px) {
+  .stats-cards { grid-template-columns: 1fr 1fr; }
+  .stat-kpi--wide { grid-column: span 2; }
+  .stats-mini-wrap { grid-template-columns: 1fr; gap: 14px; }
+  .stats-modal { max-height: 92vh; }
+  .hbar-row { grid-template-columns: 80px 1fr auto; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stats-overlay { animation: none; }
+  .settings-link-chevron { transition: none; }
 }

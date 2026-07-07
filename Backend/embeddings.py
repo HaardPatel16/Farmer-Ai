@@ -15,13 +15,15 @@ scorer misses (semantic synonymy — e.g. "cold storage" matching the
 Graceful fallback: if sentence-transformers isn't installed or model load
 fails, semantic_search() returns None and main.py just uses keyword results.
 
-Index lives in memory, lazy-built on first call. ~4000 chunks × 384-dim
-float32 ≈ 6 MB — trivial. First call after server restart takes 2-5 min on
-CPU to embed all chunks; subsequent queries cost ~10-50 ms.
+Index lives in memory, lazy-built on first call. ~15 000 chunks × 384-dim
+float32 ≈ 22 MB — trivial. First call after server restart takes 2-5 min on
+CPU to embed all chunks; subsequent queries cost ~1-5 ms (one matmul).
 """
 
 import threading
 import time
+
+import numpy as np
 
 # Sentence-transformer model identifier. paraphrase-multilingual-MiniLM-L12-v2
 # is ~120 MB, handles English + 50 other languages including Gujarati,
@@ -31,13 +33,39 @@ import time
 MODEL_NAME = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
 
 _model = None
-_chunks_index: list[dict] = []
+
+# Two parallel structures so the hot path can vectorize:
+#   _chunks_meta[i]   — dict with text/filename/districts for chunk i
+#   _embedding_matrix — float32 ndarray of shape (N, D), L2-normalized rows
+# Scoring becomes a single matmul (_embedding_matrix @ q_emb) instead of a
+# Python loop of N dot products. Both structures are written together
+# inside _ensure_indexed() under _load_lock and never mutated afterward.
+_chunks_meta: list[dict] = []
+_embedding_matrix: np.ndarray | None = None
+
 _load_lock = threading.Lock()
 _model_load_failed = False  # latched True if we tried and failed once
 _warming = False  # True while the one-time model load + index build is running
 _warm_started_at: float | None = None
 _warm_finished_at: float | None = None
 _warm_total_chunks: int = 0
+# Set when warmup raises an exception AFTER the model loaded — without this
+# the status endpoint would fall through to "idle_empty_kb" and an operator
+# tailing logs would assume the KB was empty rather than the encode crashed.
+_warm_error: str | None = None
+
+
+def _pick_device() -> str:
+    """Return 'cuda' if a CUDA-capable GPU is available, else 'cpu'.
+    Encapsulated so both embeddings.py and ml_model.py can call the same
+    logic — and so a future "force CPU" env var can land in one place."""
+    try:
+        import torch
+        if torch.cuda.is_available():
+            return "cuda"
+    except Exception:
+        pass
+    return "cpu"
 
 
 def _try_load_model():
@@ -51,7 +79,12 @@ def _try_load_model():
         return None
     try:
         from sentence_transformers import SentenceTransformer
-        _model = SentenceTransformer(MODEL_NAME)
+        device = _pick_device()
+        _model = SentenceTransformer(MODEL_NAME, device=device)
+        # Print once at load time so the operator can see whether the
+        # GPU was actually picked up — silent CPU fallback after a CUDA
+        # install attempt is otherwise easy to miss.
+        print(f"[embeddings] sentence-transformer running on {device.upper()}")
         return _model
     except Exception as e:
         print(f"[embeddings] could not load sentence-transformer model: {e}")
@@ -64,47 +97,70 @@ def _ensure_indexed(db):
     """Build the in-memory embedding index on first call. Reads every
     KnowledgeChunk row, embeds the text, stashes embedding + metadata.
     Cheap no-op on subsequent calls (just returns)."""
-    global _chunks_index, _warming, _warm_started_at, _warm_finished_at, _warm_total_chunks
-    if _chunks_index:
+    global _chunks_meta, _embedding_matrix
+    global _warming, _warm_started_at, _warm_finished_at, _warm_total_chunks, _warm_error
+    if _embedding_matrix is not None:
         return
     with _load_lock:
-        if _chunks_index:  # another thread won the race
+        if _embedding_matrix is not None:  # another thread won the race
             return
         _warming = True
         _warm_started_at = time.time()
-        print("[embeddings] ▶ warmup started — loading model + indexing chunks…")
+        _warm_error = None
+        # Plain ASCII only in these prints — the Windows default console
+        # (cp1252 / "charmap") raises UnicodeEncodeError on emoji like
+        # the previous ▶ ✓ ✗ arrows, which silently killed the warmup
+        # thread before a single chunk got encoded. That meant semantic
+        # search appeared "stuck warming" forever, and /chat fell back
+        # to keyword-only retrieval on every request.
+        print("[embeddings] >> warmup started -- loading model + indexing chunks...")
         try:
             model = _try_load_model()
             if model is None:
-                print("[embeddings] ✗ warmup aborted — model failed to load")
+                print("[embeddings] xx warmup aborted -- model failed to load")
                 return
-            print("[embeddings]   model loaded, reading chunks from DB…")
+            print("[embeddings]    model loaded, reading chunks from DB...")
             from database import KnowledgeChunk
             rows = db.query(KnowledgeChunk).all()
             _warm_total_chunks = len(rows)
             if not rows:
-                print("[embeddings] ✗ warmup aborted — knowledge_chunks table is empty")
+                print("[embeddings] xx warmup aborted -- knowledge_chunks table is empty")
                 return
             texts = [r.chunk_text for r in rows]
-            print(f"[embeddings]   encoding {len(texts)} chunks (one-time, ~2-5 min)…")
+            print(f"[embeddings]    encoding {len(texts)} chunks (one-time, ~2-5 min)...")
             emb = model.encode(
                 texts, batch_size=32, show_progress_bar=False, convert_to_numpy=True
             )
-            import numpy as np
+            # Ensure float32 contiguous so the matmul in semantic_search is
+            # fastest; SentenceTransformer.encode() already returns float32
+            # in practice but we don't want to silently take a hit if a
+            # future version changes that.
+            emb = np.ascontiguousarray(emb, dtype=np.float32)
             norms = np.linalg.norm(emb, axis=1, keepdims=True)
             norms[norms == 0] = 1.0
-            emb = emb / norms
-            _chunks_index = [
+            emb /= norms
+            _chunks_meta = [
                 {
                     "text": rows[i].chunk_text,
                     "filename": rows[i].source_filename,
                     "districts": rows[i].districts,
-                    "embedding": emb[i],
                 }
                 for i in range(len(rows))
             ]
+            _embedding_matrix = emb
             elapsed = time.time() - _warm_started_at
-            print(f"[embeddings] ✓ warmup complete — {len(_chunks_index)} chunks indexed in {elapsed:.1f}s. Semantic search ACTIVE.")
+            print(
+                f"[embeddings] OK warmup complete -- {len(_chunks_meta)} chunks indexed "
+                f"in {elapsed:.1f}s. Semantic search ACTIVE."
+            )
+        except Exception as e:
+            # Surface the failure in get_status() instead of letting it
+            # look like an empty KB. The daemon-thread caller in
+            # warm_index_in_background also prints, but get_status is
+            # what the frontend / operator polls.
+            _warm_error = f"{type(e).__name__}: {e}"
+            print(f"[embeddings] xx warmup failed -- {_warm_error}")
+            raise
         finally:
             _warming = False
             _warm_finished_at = time.time()
@@ -112,11 +168,16 @@ def _ensure_indexed(db):
 
 def get_status() -> dict:
     """Snapshot of the warmup state — read by GET /embeddings/status."""
-    if _chunks_index:
+    if _embedding_matrix is not None:
         state = "ready"
     elif _warming:
         state = "warming"
     elif _model_load_failed:
+        state = "failed"
+    elif _warm_error:
+        # The warmup ran far enough to load the model but the encode (or
+        # something else after) raised. Distinct from "failed" which is
+        # specifically a model-load failure.
         state = "failed"
     elif _warm_started_at is None:
         state = "not_started"
@@ -131,11 +192,12 @@ def get_status() -> dict:
 
     return {
         "state": state,
-        "chunks_indexed": len(_chunks_index),
-        "chunks_total": _warm_total_chunks or len(_chunks_index),
+        "chunks_indexed": len(_chunks_meta),
+        "chunks_total": _warm_total_chunks or len(_chunks_meta),
         "elapsed_seconds": elapsed,
         "model_name": MODEL_NAME,
         "model_load_failed": _model_load_failed,
+        "warm_error": _warm_error,
     }
 
 
@@ -181,47 +243,63 @@ def semantic_search(db, query: str, top_k: int = 5, district: str | None = None)
     # only search instead of blocking this request for minutes. The first
     # few /chat calls after a cold start will be keyword-only; once warm
     # completes, every subsequent call uses semantic results too.
-    if _warming and not _chunks_index:
+    if _warming and _embedding_matrix is None:
         return None
 
     model = _try_load_model()
     if model is None:
         return None
     _ensure_indexed(db)
-    if not _chunks_index:
+    if _embedding_matrix is None:
         return None
 
-    import numpy as np
     q_emb = model.encode([query], convert_to_numpy=True)[0]
     qn = np.linalg.norm(q_emb)
     if qn == 0:
         return []
-    q_emb = q_emb / qn
+    q_emb = (q_emb / qn).astype(np.float32, copy=False)
 
-    scored = []
-    for c in _chunks_index:
-        # District filtering: skip chunks tagged for districts that
-        # exclude the one we're asking about.
-        if district and c["districts"]:
-            chunk_districts = [d.strip() for d in c["districts"].split(",") if d.strip()]
-            if chunk_districts and district not in chunk_districts:
+    # Single matmul replaces the Python loop of N dot products. On 14k
+    # chunks this is ~1 ms vs ~50 ms loop-and-allocate. Cosine similarity
+    # because both sides are already L2-normalized.
+    sims = _embedding_matrix @ q_emb
+
+    # District filter as a boolean mask — only do the splitting work for
+    # chunks that actually have a districts tag, and bail early for the
+    # common Gujarat-wide case (districts is None).
+    if district:
+        for i, m in enumerate(_chunks_meta):
+            d_str = m["districts"]
+            if not d_str:
                 continue
-        # Pre-normalized vectors → cosine sim is dot product.
-        sim = float(q_emb @ c["embedding"])
-        scored.append((sim, c))
+            chunk_districts = [d.strip() for d in d_str.split(",") if d.strip()]
+            if chunk_districts and district not in chunk_districts:
+                # -inf so this chunk can't possibly land in the top_k
+                sims[i] = -np.inf
 
-    scored.sort(key=lambda x: x[0], reverse=True)
-    # Carry the chunk's filename and its already-computed normalized
-    # embedding through so the hybrid retriever in services.py can fuse
-    # and MMR-dedup without re-encoding anything.
-    return [
-        {
-            "text": c["text"],
-            "filename": c["filename"],
+    # Top-k without a full sort: argpartition gets the indices of the k
+    # largest similarities in O(N), then we sort just those k entries.
+    k = min(top_k, sims.shape[0])
+    if k <= 0:
+        return []
+    # If every chunk got filtered out (all -inf), bail.
+    if not np.isfinite(sims).any():
+        return []
+    top_unsorted = np.argpartition(-sims, k - 1)[:k]
+    top_indices = top_unsorted[np.argsort(-sims[top_unsorted])]
+
+    results = []
+    for idx in top_indices:
+        s = float(sims[idx])
+        if not np.isfinite(s):
+            # Filtered-out chunks made it into the partition only because
+            # there were fewer than k surviving chunks.
+            continue
+        m = _chunks_meta[idx]
+        results.append({
+            "text": m["text"],
+            "filename": m["filename"],
             "similarity": s,
-            "embedding": c["embedding"],
-        }
-        for s, c in scored[:top_k]
-    ]
-
-
+            "embedding": _embedding_matrix[idx],
+        })
+    return results
